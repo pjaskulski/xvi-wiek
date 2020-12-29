@@ -1,0 +1,25 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - cytaty{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Cytaty</h1>
+
+    <article>
+        <section>
+            {{if .Quotes}}
+                <div class="epigraph">
+                    {{range .Quotes}}
+                    <blockquote>
+                        <p>{{.Content}}</p>
+                        <footer>{{.Source}}</footer>
+                    </blockquote>          
+                    {{end}}
+                </div>
+            {{else}}
+                <p>Brak cytatów w bazie</p>
+            {{end}}
+        </section>
+    </article>
+{{end}}

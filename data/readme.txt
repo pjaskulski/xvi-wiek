@@ -1,0 +1,1 @@
+Format nazw plików: MM-DD.yaml

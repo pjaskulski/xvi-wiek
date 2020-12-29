@@ -1,0 +1,134 @@
+body {          
+    font-family: et-book, "Crimson Pro", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;           
+}
+
+header {
+    width: 87.5%;
+    height: 90px;
+    background-color: #111;
+    color: #fffff8;
+    text-align: center;
+    font-size: 4.5rem; 
+    padding-top: 5px;
+}
+
+.header-icons {
+    margin-top: -25px;
+    padding-right: 15px; 
+    float: right;
+}
+
+.footer {
+    width: 87.5%;
+    height: 150px;
+    background-color: #111;
+    color: #fffff8;
+    font-size: 1.2rem;
+    padding-top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.footer-title {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem;
+}
+
+.footer-info {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
+} 
+
+.footer-small {
+    margin-top: 0.0rem;
+    margin-bottom: 0.0rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 0.9rem;
+}
+
+.footer-hr {
+    width:200px;
+    margin-top: 15px;
+    margin-bottom: 10px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color:  #fffff8;
+    width: 87.5%;
+} 
+
+#menu {
+    text-align: center;
+    color: #111;
+    background-color: #fffff8;
+    padding-bottom: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li {
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 15px;
+}  
+
+#menu-link {
+    font-size: 1.5rem;    
+}
+
+.sidenote,
+.marginnote {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1060px) {
+    .footer {
+        height: 100px;
+    }
+    
+    .footer-hr, .footer-small {
+        display: none;
+    }     
+}
+
+
+@media (max-width: 760px) {
+    header {
+        width: 84%;
+        height: 60px;
+        background-color: #111;
+        color: #fffff8;
+        text-align: center;
+        font-size: 3rem; 
+        padding-top: 5px;
+    }
+    
+    .header-icons, .footer-info, .footer-hr, .footer-small {
+        display: none;
+    }
+
+    .footer {
+        height: 50px;
+    }
+
+    h1 {
+        font-weight: 400;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.2rem;
+    }         
+}

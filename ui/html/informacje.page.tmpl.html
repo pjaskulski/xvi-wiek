@@ -1,0 +1,70 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - informacje o stronie{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Informacje</h1>
+
+    <article>
+        <section>
+            <h2>O stronie</h2>
+            <p>Serwis zawiera kolekcję informacji dotyczących wydarzeń z okresu zbliżonego zakresem do XVI wieku,
+            potocznie nazywanego złotym wiekiem dziejów Polski. Jednakże dokładny zakres chronologiczny 
+            obejmuje lata 1490-1586, rok 1490 to rok urodzin Albrechta Hohenzollerna, 
+            1586 z kolei to rok śmierci Stefana Batorego. Nie wynika to z żadnych innych przesłanek niż
+            zainteresowania autora. Geograficznie prezentowane fakty i ciekawostki ograniczają się do
+            zasięgu ówczesnego Królestwa Polskiego i Prus Książęcych, oraz krain sąsiednich jeżeli w 
+            wydarzenia na ich terenie Królestwo Polskie było zaangażowane.
+            </p>
+
+            <p>Główna strona serwisu prezentuje wydarzenia z bieżącego dnia (o ile baza danych serwisu 
+            zawiera takie informacje), strona Cytaty zawiera wybrane fragmenty książek dotyczących historii 
+            XVI wieku, na stronie Książki można znaleźć listę publikacji aktualnie dostępnych w księganiach 
+            i wydawnictwach a dotyczących tego okresu.   
+            </p>
+
+            <h2>Informacje techniczne</h2>
+            <p>Serwis wykorzystuje styl <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> 
+            z dodatkiem fontu <a href="https://fonts.google.com/specimen/Crimson+Pro">Crimson Pro</a> 
+            Regular 400 i Regular 400 italic.</p>
+
+            <p>Backend serwisu obsługiwany jest przez program w języku Go, pliki yaml i mechanizm pamięci podręcznej
+            typu klucz-wartość (go-cache). Informacje dotyczące ciekawostek historycznych z XVI wieku, oprócz tej strony, 
+            można pobierać poprzez API serwisu, będą również publikowane na koncie @xvi-wiek w serwisie Twitter.
+            </p>
+            <p>Kod źródłowy strony dostępny jest w serwisie <a href="https://github.com/pjaskulski/xviwiek">Github</a>
+            .</p>
+
+            <h2>FAQ - czyli często zadawane pytania...</h2>
+
+            <p class="subtitle">1. Dlaczego ta strona nie wyświetla ostrzeżenia o 'cookies'?</p>
+            <p>Ten serwis po prostu nie korzysta z 'cookies' czyli ciasteczek, nie przechowuje IP odwiedzających,
+            nie interesuje się ich geolokalizacją, adresami e-mail itp. Dostarcza jedynie garść informacji 
+            i ciekawostek historycznych dla osób zainteresowanych historią Polski i Prus Książecych w XVI wieku. 
+            Część z linków do książek dotyczących tej tematyki, zamieszczonych na podstronie Książki, może 
+            w przyszłości stać się linkami afiliacyjnymi, to ewentualnie cała perfidia jaka może spotkać
+            odwiedzających, przynajmniej obecnie tylko na taką mnie stać ;-) 
+            </p>
+
+            <p class="subtitle">2. W jakim celu powstała taka kiepska kopia Wikipedii?</p>
+            <p>Z 'kiepska' pokornie się zgodzę, ale porównywanie z Wikipedią prostego serwisu, który 
+            wyświetla wydarzenia i ciekawostki historyczne chyba nie ma sensu. Notatki w tym serwisie
+            są prostsze, mniej encyklopedyczne, związane z konkretną datą, za to zwykle odsyłają do bardziej
+            naukowego źródła lub właśnie Wikipedii.</p>
+
+            <h2>Kontakt</h2>
+            <p>Problemy techniczne można a nawet należy zgłaszać w <a href="https://github.com/pjaskulski/xviwiek/issues">bazie zgłoszeń poblemów na Github</a>.
+            Kontakt w innych sprawach możliwy jest poprzez adres mailowy (widoczny na moim koncie Github).</p>
+
+            <blockquote>
+            <footer>
+            Życzę przyjemnej lektury<br>
+            Piotr Jaskulski
+            </blockquote>
+
+            </footer>
+        </section>    
+
+    </article>
+{{end}}

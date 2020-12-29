@@ -1,0 +1,38 @@
+---
+day: 10
+month: 4
+year: 1525
+title: Hołd pruski
+content: >- 
+    10 kwietnia 1525 [1][2][3] w Krakowie po zawarciu dwa dni wcześniej traktatu między 
+    królem Zygmuntem 	Starym a wielkim mistrzem zakonu krzyżackiego Albrechtem 
+    Hohenzollernem, Albrecht złożył hołd lenny królowi Polski, stając się 
+    świeckim księciem Prus i lennikiem królestwa. Hołd Albrechta Hohenzollerna 
+    był ostatnim hołdem wielkiego mistrza zakonu. Wcześniej w latach 1469-1493 
+    ceremonię taką przeprowadzono pięciokrotnie, co było efektem postanowień 
+    pokoju toruńskiego z 1466 roku (postanowień honorowanych tylko przez 
+    niektórych mistrzów zakonu). Jednocześnie hołd Albrecha Hohenzollerna był 
+    pierwszym z serii hołdów kolejnych władców Prus Książęcych, którą zakończyło 
+    podpisanie traktatów wielawsko-bydgoskich w 1657 r. zrywających zależność 
+    lenną Prus od Polski. Ostatni odbył się w Warszawie 6 października 1641 r., 
+    elektor Fryderyk Wilhelm Hohenzollern złożył hołd lenny Władysławowi IV 
+    Wazie.
+location: Kraków
+geo: 50.061151,19.936897
+people: Albrecht Hohenzollern, Zygmunt I Stary
+keywords: Prusy, Zakon krzyżacki
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Hołd pruski
+      url: "https://pl.wikipedia.org/wiki/Ho%C5%82d_pruski_1525" 
+    - id: 2
+      value: Wikipedia
+      urlName: Hołdy pruskie 1469-1641
+      url: "https://pl.wikipedia.org/wiki/Ho%C5%82dy_pruskie_1469%E2%80%931641"
+    - id: 3
+      value: Paweł Jasienica, Polska Jagiellonów, str. 245-247.
+      urlName: 
+      url: 

@@ -1,0 +1,28 @@
+---
+day: 31
+month: 12
+year: 1525
+title: Wpis testowy
+content: >- 
+    31 grudnia 1525 [1][2][3] w Gdańsku zawarto IV traktat obronny między 
+    królem Zygmuntem I Starym a wielkim mistrzem Jodą z zakonu zielonych 
+    snycerzy pustyni. 
+location: Gdańsk
+geo: 50.061151,19.936897
+people: Zygmunt I Stary, Joda
+keywords: snycerze
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Hołd pruski
+      url: "https://pl.wikipedia.org/wiki/Ho%C5%82d_pruski_1525" 
+    - id: 2
+      value: Wikipedia
+      urlName: Hołdy pruskie 1469-1641
+      url: "https://pl.wikipedia.org/wiki/Ho%C5%82dy_pruskie_1469%E2%80%931641"
+    - id: 3
+      value: Paweł Jasienica, Polska Jagiellonów, str. 245-247.
+      urlName: 
+      url: 

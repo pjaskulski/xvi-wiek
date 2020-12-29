@@ -1,0 +1,23 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - książki{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Książki</h1>
+
+    <article>
+        <section>
+            {{if .Books}}
+                {{range .Books}}
+                <p>{{.Author}}, <em>{{.Title}}</em>, {{.Year}}</p>
+                <hr>
+                {{end}}
+            {{else}}
+                <p>Brak książek w bazie</p>
+            {{end}}
+
+        </section>    
+
+    </article>
+{{end}}
