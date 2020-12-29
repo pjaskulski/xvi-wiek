@@ -1,4 +1,4 @@
-module github.com/pjaskulski/xvi-backend
+module github.com/pjaskulski/xvi-wiek
 
 go 1.15
 
