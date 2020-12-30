@@ -15,5 +15,5 @@
 # vendor/
 
 tls/
-pkg/models/mysql/setup/insert_data.sql
+ui/static/gallery/
 

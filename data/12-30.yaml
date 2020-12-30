@@ -4,15 +4,26 @@ month: 12
 year: 1525
 title: Wpis testowy
 content: >- 
-    30 grudnia 1525 [1][2][3] w Gdańsku zawarto III traktat obronny między 
+    {{{30 grudnia 1525}}} [1][2][3] w Gdańsku zawarto III traktat obronny między 
     królem Zygmuntem I Starym a wielkim mistrzem Jodą z zakonu zielonych 
-    snycerzy pustyni. 
+    snycerzy pustyni. Hołd Albrechta Hohenzollerna 
+    był ostatnim hołdem wielkiego mistrza zakonu. Wcześniej w latach 1469-1493 
+    ceremonię taką przeprowadzono pięciokrotnie, co było efektem postanowień 
+    {{pokoju}} {toruńskiego} z 1466 roku (postanowień honorowanych tylko przez 
+    niektórych mistrzów zakonu). Jednocześnie hołd Albrecha Hohenzollerna był 
+    {pierwszym z serii hołdów} kolejnych władców Prus Książęcych, którą zakończyło 
+    podpisanie traktatów wielawsko-bydgoskich w 1657 r. zrywających zależność 
+    lenną Prus od Polski. Ostatni odbył się w Warszawie 6 października 1641 r., 
+    elektor Fryderyk Wilhelm Hohenzollern złożył hołd lenny Władysławowi IV 
+    Wazie.
+contentTwitter: 30 grudnia 1525 w Gdańsku zawarto traktat między 
+    królem Zygmuntem I Starym a wielkim mistrzem Jodą. http://xvi-wiek/12/30
 location: Gdańsk
 geo: 50.061151,19.936897
 people: Zygmunt I Stary, Joda
 keywords: snycerze
-image:
-imageInfo: 
+image: rynek_krakow.jpg
+imageInfo: Rynek w Krakowie (ilustracja - max_gloin from Pixabay)
 sources: 
     - id: 1
       value: Wikipedia
@@ -23,6 +34,6 @@ sources:
       urlName: Hołdy pruskie 1469-1641
       url: "https://pl.wikipedia.org/wiki/Ho%C5%82dy_pruskie_1469%E2%80%931641"
     - id: 3
-      value: Paweł Jasienica, Polska Jagiellonów, str. 245-247.
+      value: Paweł Jasienica, {Polska Jagiellonów}, str. 245-247.
       urlName: 
       url: 

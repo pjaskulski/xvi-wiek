@@ -54,7 +54,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 		data = &templateDataFacts{Today: dayMonth, Facts: nil}
 	}
 
-	ts := app.templateCache["index.page.tmpl.html"]
+	ts := app.templateCache["index.page.gohtml"]
 	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
@@ -77,7 +77,7 @@ func (app *application) showQuotes(w http.ResponseWriter, r *http.Request) {
 
 	data := &templateDataQuotes{Quotes: quotes.(*[]Quote)}
 
-	ts := app.templateCache["cytaty.page.tmpl.html"]
+	ts := app.templateCache["cytaty.page.gohtml"]
 	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
@@ -100,7 +100,7 @@ func (app *application) showBooks(w http.ResponseWriter, r *http.Request) {
 
 	data := &templateDataBooks{Books: books.(*[]Book)}
 
-	ts := app.templateCache["ksiazki.page.tmpl.html"]
+	ts := app.templateCache["ksiazki.page.gohtml"]
 	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
@@ -115,7 +115,7 @@ func (app *application) showInformation(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
-	ts := app.templateCache["informacje.page.tmpl.html"]
+	ts := app.templateCache["informacje.page.gohtml"]
 	err := ts.Execute(w, nil)
 	if err != nil {
 		app.serverError(w, err)

@@ -9,17 +9,12 @@
     <article>    
         <section>
         {{if .Facts}}
-            {{range .Facts}}
-                <!-- <span class="newthought">10 kwietnia 1525</span> -->
-                
-                <!-- <label for="a" class="margin-toggle sidenote-number"></label>
-                <input type="checkbox" id="a" class="margin-toggle"/>
-                <span class="sidenote">Wikipedia: <a href="https://pl.wikipedia.org/wiki/Ho%C5%82d_pruski_1525">
-                Hołd pruski 1525</a>.</span>
-                --> 
-           
+            {{range .Facts}}                 
                 <p class="subtitle">{{.Title}}</p>
-                <p>{{.Content}}</p>
+                <p>{{.ContentHTML}}</p>
+                {{if .Image}}
+                    {{.ImageHTML}}
+                {{end}}
                 <hr>
             {{end}}
         {{else}}

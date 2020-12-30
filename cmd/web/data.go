@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"html/template"
 	"io/ioutil"
 	"path/filepath"
 	"time"
@@ -21,18 +22,20 @@ type Source struct {
 
 // Fact type
 type Fact struct {
-	Day       int      `yaml:"day"`
-	Month     int      `yaml:"month"`
-	Year      int      `yaml:"year"`
-	Title     string   `yaml:"title"`
-	Content   string   `yaml:"content"`
-	Location  string   `yaml:"location"`
-	Geo       string   `yaml:"geo"`
-	People    string   `yaml:"people"`
-	Keywords  string   `yaml:"keywords"`
-	Image     string   `yaml:"image"`
-	ImageInfo string   `yaml:"imageInfo"`
-	Sources   []Source `yaml:"sources"`
+	Day         int    `yaml:"day"`
+	Month       int    `yaml:"month"`
+	Year        int    `yaml:"year"`
+	Title       string `yaml:"title"`
+	Content     string `yaml:"content"`
+	ContentHTML template.HTML
+	Location    string `yaml:"location"`
+	Geo         string `yaml:"geo"`
+	People      string `yaml:"people"`
+	Keywords    string `yaml:"keywords"`
+	Image       string `yaml:"image"`
+	ImageInfo   string `yaml:"imageInfo"`
+	ImageHTML   template.HTML
+	Sources     []Source `yaml:"sources"`
 }
 
 // Quote type
@@ -77,6 +80,8 @@ func readFact(filename string) (*[]Fact, error) {
 	yamlDec := yaml.NewDecoder(r)
 
 	for yamlDec.Decode(&fact) == nil {
+		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.Sources))
+		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
 		result = append(result, fact)
 	}
 

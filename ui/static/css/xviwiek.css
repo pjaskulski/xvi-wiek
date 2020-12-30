@@ -90,10 +90,10 @@ li {
     font-size: 1.5rem;    
 }
 
-.sidenote,
+/*.sidenote,
 .marginnote {
     font-size: 1.4rem;
-}
+}*/
 
 @media (max-width: 1060px) {
     .footer {
