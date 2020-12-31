@@ -56,6 +56,7 @@ type Book struct {
 	ISBN        string `yaml:"ISBN"`
 	URL         string `yaml:"URL"`
 	URLHTML     template.HTML
+	URLName     string `yaml:"URLName"`
 	Image       string `yaml:"image"`
 	ImageHTML   template.HTML
 	Pages       int `yaml:"pages"`
@@ -129,7 +130,7 @@ func readBook() (*[]Book, error) {
 
 	for yamlDec.Decode(&book) == nil {
 		book.ImageHTML = template.HTML(prepareBookHTML(book.Image))
-		book.URLHTML = template.HTML(prepareURLHTML(book.URL))
+		book.URLHTML = template.HTML(prepareBookURLHTML(book.URL, book.URLName))
 		result = append(result, book)
 	}
 

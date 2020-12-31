@@ -10,9 +10,9 @@
         <section>
             {{if .Books}}
                 {{range .Books}}
+                {{if .Image}}{{.ImageHTML}}{{end}}
                 <p>
-                {{.Author}}, <em>{{.Title}}</em>, {{.Year}} 
-                {{if .Image}}{{.ImageHTML}}{{end}}               
+                {{.Author}}, <em>{{.Title}}</em>, {{.Year}}                                
                 <br>
                 Wydawnictwo: {{.Pubhause}}, {{.Where}}<br>
                 ISBN: {{.ISBN}}, stron: {{.Pages}} 
@@ -20,7 +20,7 @@
                 <p>{{.Description}}</p>
                 <p>
                 {{if .URL}}
-                    Książka dostępna w:<br>
+                    Książka (ebook) dostępna w księgarni:<br>
                     {{.URLHTML}}
                 {{end}}</p>
                 <hr class="hr-books">
@@ -29,7 +29,11 @@
                 <p>Brak książek w bazie</p>
             {{end}}
 
-        </section>    
+        </section>
+
+
+        <p class="small">Uwaga: opisy lub fragmenty opisów książek mogą pochodzić ze stron wydawców
+        lub księgarni.</p>    
 
     </article>
 {{end}}

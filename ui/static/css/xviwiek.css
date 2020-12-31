@@ -2,6 +2,13 @@ body {
     font-family: et-book, "Crimson Pro", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;           
 }
 
+p.small {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
 header {
     width: 87.5%;
     height: 90px;
@@ -92,6 +99,11 @@ li {
 
 .hr-books {
     margin-bottom: 2rem;
+}
+
+.hr-facts {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 /*.sidenote,
