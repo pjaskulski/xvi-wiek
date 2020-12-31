@@ -11,6 +11,22 @@ func filenameWithoutExtension(fn string) string {
 	return strings.TrimSuffix(fn, path.Ext(fn))
 }
 
+func prepareURLHTML(url string) string {
+	html := `<a href="[url]">[url]</a>`
+	html = strings.Replace(html, "[url]", url, -1)
+	return html
+}
+
+func prepareBookHTML(image string) string {
+	html := `
+	<p><label for="[image]" class="margin-toggle">&#8853;</label>
+	<input type="checkbox" id="[image]" class="margin-toggle"/>
+	<span class="marginnote"><img src="/static/books/[image]" width="150" alt=""/>
+	</p>`
+	html = strings.Replace(html, "[image]", image, -1)
+	return html
+}
+
 func prepareImageHTML(image string, imageInfo string) string {
 	html := `
 	<figure>

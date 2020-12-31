@@ -55,8 +55,10 @@ type Book struct {
 	Description string `yaml:"description"`
 	ISBN        string `yaml:"ISBN"`
 	URL         string `yaml:"URL"`
+	URLHTML     template.HTML
 	Image       string `yaml:"image"`
-	Pages       int    `yaml:"pages"`
+	ImageHTML   template.HTML
+	Pages       int `yaml:"pages"`
 }
 
 func createDataCache() *cache.Cache {
@@ -126,6 +128,8 @@ func readBook() (*[]Book, error) {
 	yamlDec := yaml.NewDecoder(r)
 
 	for yamlDec.Decode(&book) == nil {
+		book.ImageHTML = template.HTML(prepareBookHTML(book.Image))
+		book.URLHTML = template.HTML(prepareURLHTML(book.URL))
 		result = append(result, book)
 	}
 

@@ -9,7 +9,7 @@ header {
     color: #fffff8;
     text-align: center;
     font-size: 4.5rem; 
-    padding-top: 5px;
+    padding-top: 25px;
 }
 
 .header-icons {
@@ -88,6 +88,10 @@ li {
 
 #menu-link {
     font-size: 1.5rem;    
+}
+
+.hr-books {
+    margin-bottom: 2rem;
 }
 
 /*.sidenote,

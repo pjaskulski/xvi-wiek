@@ -10,8 +10,20 @@
         <section>
             {{if .Books}}
                 {{range .Books}}
-                <p>{{.Author}}, <em>{{.Title}}</em>, {{.Year}}</p>
-                <hr>
+                <p>
+                {{.Author}}, <em>{{.Title}}</em>, {{.Year}} 
+                {{if .Image}}{{.ImageHTML}}{{end}}               
+                <br>
+                Wydawnictwo: {{.Pubhause}}, {{.Where}}<br>
+                ISBN: {{.ISBN}}, stron: {{.Pages}} 
+                </p>
+                <p>{{.Description}}</p>
+                <p>
+                {{if .URL}}
+                    Książka dostępna w:<br>
+                    {{.URLHTML}}
+                {{end}}</p>
+                <hr class="hr-books">
                 {{end}}
             {{else}}
                 <p>Brak książek w bazie</p>
