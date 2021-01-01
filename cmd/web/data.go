@@ -22,6 +22,7 @@ type Source struct {
 
 // Fact type
 type Fact struct {
+	ID          string `yaml:"id"`
 	Day         int    `yaml:"day"`
 	Month       int    `yaml:"month"`
 	Year        int    `yaml:"year"`
@@ -83,7 +84,7 @@ func readFact(filename string) (*[]Fact, error) {
 	yamlDec := yaml.NewDecoder(r)
 
 	for yamlDec.Decode(&fact) == nil {
-		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.Sources))
+		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.ID, fact.Sources))
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
 		result = append(result, fact)
 	}

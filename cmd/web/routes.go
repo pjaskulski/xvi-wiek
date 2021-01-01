@@ -1,18 +1,49 @@
 package main
 
-import "net/http"
+import (
+	"net/http"
+	"strings"
 
-func (app *application) routes() *http.ServeMux {
+	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/middleware"
+)
+
+func (app *application) routes() http.Handler {
+	r := chi.NewRouter()
+	r.Use(middleware.Recoverer)
+
 	// procedury obsługi żądań http
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", app.showFacts)
-	mux.HandleFunc("/cytaty", app.showQuotes)
-	mux.HandleFunc("/ksiazki", app.showBooks)
-	mux.HandleFunc("/informacje", app.showInformation)
+	r.Get("/", app.showFacts)
+	r.Get("/cytaty", app.showQuotes)
+	r.Get("/ksiazki", app.showBooks)
+	r.Get("/informacje", app.showInformation)
+	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
+	// api
+	r.Get("/api/dzien/{month}/{day}", app.apiFactsByDay)
+	r.Get("/api/today", app.apiFactsToday)
 
 	// obsługa plików statycznych, w katalogu i podkatalogach pusty plik index.html
-	fileServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
+	FileServer(r, "/static/", http.Dir("./ui/static/"))
 
-	return mux
+	return r
+}
+
+// FileServer - obsługa plików statycznych
+func FileServer(r chi.Router, path string, root http.FileSystem) {
+	if strings.ContainsAny(path, "{}*") {
+		panic("FileServer does not permit any URL parameters.")
+	}
+
+	if path != "/" && path[len(path)-1] != '/' {
+		r.Get(path, http.RedirectHandler(path+"/", 301).ServeHTTP)
+		path += "/"
+	}
+	path += "*"
+
+	r.Get(path, func(w http.ResponseWriter, r *http.Request) {
+		rctx := chi.RouteContext(r.Context())
+		pathPrefix := strings.TrimSuffix(rctx.RoutePattern(), "/*")
+		fs := http.StripPrefix(pathPrefix, http.FileServer(root))
+		fs.ServeHTTP(w, r)
+	})
 }

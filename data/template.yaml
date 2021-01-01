@@ -1,15 +1,19 @@
 ---
+id:
 day:
 month:
 year:
 title:
-content:  
-    tekst
+content: >- 
+    Tekst
 location:
 geo:
 people:
 keywords:
+image:
+imageInfo: 
 sources: 
     - id:
       value:
+      urlName:
       url:

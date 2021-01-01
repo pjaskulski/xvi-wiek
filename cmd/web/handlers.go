@@ -4,7 +4,10 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"strconv"
 	"time"
+
+	"github.com/go-chi/chi"
 )
 
 type templateDataFacts struct {
@@ -117,6 +120,52 @@ func (app *application) showInformation(w http.ResponseWriter, r *http.Request) 
 
 	ts := app.templateCache["informacje.page.gohtml"]
 	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+// showFactsByDay
+func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
+	month, err := strconv.Atoi(chi.URLParam(r, "month"))
+	if err != nil || month < 1 || month > 12 {
+		app.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	day, err := strconv.Atoi(chi.URLParam(r, "day"))
+	if err != nil || day < 1 || day > 31 {
+		app.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	var isCorrectDate bool = true
+
+	if month == 2 && day > 29 {
+		isCorrectDate = false
+	}
+	if (month == 4 || month == 6 || month == 9 || month == 11) && day > 30 {
+		isCorrectDate = false
+	}
+	if !isCorrectDate {
+		app.clientError(w, http.StatusNotFound)
+		return
+	}
+
+	var data *templateDataFacts
+
+	name := fmt.Sprintf("%02d-%02d", month, day)
+	dayMonth := fmt.Sprintf("%d %s", day, monthName[month])
+
+	facts, ok := app.dataCache.Get(name)
+	if ok {
+		data = &templateDataFacts{Today: dayMonth, Facts: facts.(*[]Fact)}
+	} else {
+		data = &templateDataFacts{Today: dayMonth, Facts: nil}
+	}
+
+	ts := app.templateCache["index.page.gohtml"]
+	err = ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}

@@ -30,8 +30,8 @@
 
             <p>Główna strona serwisu prezentuje wydarzenia z bieżącego dnia (o ile baza danych serwisu 
             zawiera takie informacje), strona Cytaty zawiera wybrane fragmenty książek dotyczących historii 
-            XVI wieku, na stronie Książki można znaleźć listę publikacji aktualnie dostępnych w księganiach 
-            i wydawnictwach a dotyczących tego okresu.   
+            XVI wieku, na stronie Książki można znaleźć listę publikacji aktualnie dostępnych w księgarniach 
+            i wydawnictwach a dotyczących (przynajmniej częściowo) tego okresu.   
             </p>
 
             <h2>Informacje techniczne</h2>
@@ -39,9 +39,11 @@
             z dodatkiem fontu <a href="https://fonts.google.com/specimen/Crimson+Pro">Crimson Pro</a> 
             Regular 400 i Regular 400 italic.</p>
 
-            <p>Backend serwisu obsługiwany jest przez program w języku Go, pliki yaml i mechanizm pamięci podręcznej
-            typu klucz-wartość (go-cache). Informacje dotyczące ciekawostek historycznych z XVI wieku, oprócz tej strony, 
-            można pobierać poprzez API serwisu, będą również publikowane na koncie @xvi-wiek w serwisie Twitter.
+            <p>Backend serwisu obsługiwany jest przez program w języku <a href="https://golang.org/">Go</a>, 
+            pliki yaml i mechanizm pamięci podręcznej typu klucz-wartość (<a href="https://github.com/patrickmn/go-cache">
+            go-cache</a>). Informacje dotyczące 
+            ciekawostek historycznych z XVI wieku, oprócz tej strony, można pobierać poprzez API serwisu, 
+            będą również publikowane na koncie @xvi-wiek w serwisie Twitter.
             </p>
             <p>Kod źródłowy strony dostępny jest w serwisie <a href="https://github.com/pjaskulski/xviwiek">Github</a>
             .</p>
@@ -57,11 +59,17 @@
             odwiedzających, przynajmniej obecnie tylko na taką mnie stać ;-) 
             </p>
 
-            <p class="subtitle">2. Czy ten serwis ma sens, skoro wszystko jest w Wikipedii?</p>
+            <p class="subtitle">2. W sumie i tak wszystko jest w Wikipedii?</p>
             <p>Porównywanie z Wikipedią prostego serwisu, który wyświetla wydarzenia i ciekawostki 
             historyczne chyba nie ma sensu. Notatki w tym serwisie są prostsze, mniej encyklopedyczne, 
-            związane z konkretną datą, często zbyt szczegółowe by trafiły jako osobne hasło do Wikipedii
-            za to zwykle odsyłają do bardziej naukowego źródła lub właśnie Wikipedii.</p>
+            związane z konkretną datą, często dotyczą zbyt szczegółowych wydarzeń by trafiły jako 
+            osobne hasło do Wikipedii za to zwykle odsyłają do bardziej naukowego źródła 
+            lub właśnie Wikipedii.<br>
+            Przyczyny powstania tego serwisu były tak naprawdę dwie: XVI wiek to mój ulubiony okres
+            historii Polski a programowanie aplikacji webowych w języku Go od pewnego czasu zajmowało
+            pierwsze miejsce na mojej liście technologii do nauczenia. Kiedy moje starsze dziecko otrzymało
+            ocenę dostateczną z klasówki z historii, właśnie z XVI wieku, postanowiłem coś z tym zrobić
+            łącząc przyjemne z pożytecznym.</p>
 
             <p class="subtitle">3. Dlaczego w dziale Książki prezentowane są głównie ebooki?</p>
             <p>Fakt, serwis o historycznym charakterze kojarzy się z bardziej tradycyjnymi formami 

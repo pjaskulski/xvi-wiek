@@ -43,11 +43,14 @@ func prepareImageHTML(image string, imageInfo string) string {
 	return html
 }
 
-func prepareTextStyle(content string) string {
+func prepareTextStyle(content string, clear bool) string {
 	// kapitaliki
 	var rgx = regexp.MustCompile(`\{\{\{(.*?)\}\}\}`)
-	pre := "<span class=\"newthought\">"
-	post := "</span>"
+	var pre, post string
+	if !clear {
+		pre = "<span class=\"newthought\">"
+		post = "</span>"
+	}
 
 	textToSmallCaps := rgx.FindAllString(content, -1)
 
@@ -60,8 +63,10 @@ func prepareTextStyle(content string) string {
 
 	// pogrubienie
 	var rgxb = regexp.MustCompile(`\{\{(.*?)\}\}`)
-	pre = "<strong>"
-	post = "</strong>"
+	if !clear {
+		pre = "<strong>"
+		post = "</strong>"
+	}
 
 	textBold := rgxb.FindAllString(content, -1)
 
@@ -74,8 +79,10 @@ func prepareTextStyle(content string) string {
 
 	// italiki
 	var rgxi = regexp.MustCompile(`\{(.*?)\}`)
-	pre = "<em>"
-	post = "</em>"
+	if !clear {
+		pre = "<em>"
+		post = "</em>"
+	}
 
 	textItalic := rgxi.FindAllString(content, -1)
 
@@ -89,9 +96,9 @@ func prepareTextStyle(content string) string {
 	return content
 }
 
-func prepareFactHTML(content string, sources []Source) string {
+func prepareFactHTML(content string, id string, sources []Source) string {
 
-	content = prepareTextStyle(content)
+	content = prepareTextStyle(content, false)
 
 	pre := ` <label for="%s" class="margin-toggle sidenote-number"></label>
 <input type="checkbox" id="%s" class="margin-toggle"/>
@@ -99,8 +106,9 @@ func prepareFactHTML(content string, sources []Source) string {
 	post := `</span>`
 
 	for _, item := range sources {
-		preItem := fmt.Sprintf(pre, item.ID, item.ID)
-		value := prepareTextStyle(item.Value)
+		idQuote := fmt.Sprintf("%s-%s", id, item.ID)
+		preItem := fmt.Sprintf(pre, idQuote, idQuote)
+		value := prepareTextStyle(item.Value, false)
 		if item.URL != "" {
 			var nameURL string
 			if item.URLName != "" {
