@@ -11,10 +11,12 @@ Ikona Twitter pochodzi ze strony [Twitter Brand Resources](https://about.twitter
 
 ## API
 
-  /api/dzien/{month}/{day}
-  Zwraca wydarzenia z określonego dnia np. /api/dzien/4/10 zwróci
-  wydarzenia z 10 kwietnia.
+    /api/dzien/{month}/{day}
+  
+    Zwraca wydarzenia z określonego dnia np. /api/dzien/4/10 zwróci
+    wydarzenia z 10 kwietnia.
 
-  /api/today
-  Zwraca dzisiejsze wydarzenia, zapytanie uruchomione 1 stycznia 2020
-  zwróci wydarzenia z 1 stycznia.   
+    /api/today
+  
+    Zwraca dzisiejsze wydarzenia, zapytanie uruchomione 1 stycznia 2020
+    zwróci wydarzenia z 1 stycznia.   
