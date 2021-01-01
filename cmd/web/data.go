@@ -31,6 +31,7 @@ type Fact struct {
 	ContentHTML template.HTML
 	Location    string `yaml:"location"`
 	Geo         string `yaml:"geo"`
+	GeoHTML     template.HTML
 	People      string `yaml:"people"`
 	Keywords    string `yaml:"keywords"`
 	Image       string `yaml:"image"`
@@ -86,6 +87,9 @@ func readFact(filename string) (*[]Fact, error) {
 	for yamlDec.Decode(&fact) == nil {
 		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.ID, fact.Sources))
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
+		if fact.Geo != "" {
+			fact.GeoHTML = template.HTML(prepareGeoHTML(fact.Geo))
+		}
 		result = append(result, fact)
 	}
 

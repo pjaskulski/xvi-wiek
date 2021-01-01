@@ -11,6 +11,19 @@ func filenameWithoutExtension(fn string) string {
 	return strings.TrimSuffix(fn, path.Ext(fn))
 }
 
+func prepareGeoHTML(geo string) string {
+	html := `<span><a href="[geo]" class="no-tufte-underline">
+	<img src="/static/img/world.png" class="small-icon" alt="Położenie geograficzne na mapie"/></a>
+	</span>`
+	pos := strings.Split(geo, ",")
+	if len(pos) == 2 {
+		url := strings.Replace(`https://www.openstreetmap.org/?mlat=[lat]&mlon=[lon]&zoom=12`, "[lat]", pos[0], 1)
+		url = strings.Replace(url, "[lon]", pos[1], 1)
+		html = strings.Replace(html, "[geo]", url, 1)
+	}
+	return html
+}
+
 func prepareBookURLHTML(url string, urlname string) string {
 	html := `<a href="[url]">[urlname]</a>`
 	html = strings.Replace(html, "[url]", url, -1)

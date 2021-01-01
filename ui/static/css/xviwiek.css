@@ -113,6 +113,10 @@ article {
     margin-bottom: 2.5rem;
 }
 
+img.small-icon {
+    width: 24px;
+}
+
 @media (max-width: 1060px) {
     .footer {
         height: 100px;
