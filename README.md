@@ -4,6 +4,7 @@
 Serwis wykorzystuje styl [Tufte CSS](https://edwardtufte.github.io/tufte-css/) (licencja MIT )z dodatkiem fontu [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro) (licencja Open Font License) Regular 400 i Regular 400 italic.
 
 Backend serwisu obsługiwany jest przez program w języku Go, pliki yaml i mechanizm pamięci podręcznej typu klucz-wartość ([go-cache](https://github.com/patrickmn/go-cache), licencja MIT).
+W roli routera wykorzystywany jest [chi](https://github.com/go-chi/chi).
 
 Ikona Github pochodzi ze strony [GitHub Logos and Usage](https://github.com/logos).
 

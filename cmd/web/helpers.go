@@ -14,12 +14,12 @@ func filenameWithoutExtension(fn string) string {
 }
 
 func prepareGeoHTML(geo string) string {
-	html := `<span><a href="[geo]" class="no-tufte-underline">
+	html := `<span><a href="[geo]" target="_blank" class="no-tufte-underline">
 	<img src="/static/img/world.png" class="small-icon" alt="Położenie geograficzne na mapie"/></a>
 	</span>`
 	pos := strings.Split(geo, ",")
 	if len(pos) == 2 {
-		url := strings.Replace(`https://www.openstreetmap.org/?mlat=[lat]&mlon=[lon]&zoom=12`, "[lat]", pos[0], 1)
+		url := strings.Replace(`https://www.openstreetmap.org/?mlat=[lat]&mlon=[lon]&zoom=9`, "[lat]", pos[0], 1)
 		url = strings.Replace(url, "[lon]", pos[1], 1)
 		html = strings.Replace(html, "[geo]", url, 1)
 	}
