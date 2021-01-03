@@ -1,5 +1,6 @@
 # xvi-wiek.pl
-Źródła powstającego powoli serwisu z bazą danych wydarzeń historycznych z XVI wieku.
+Źródła powstającego powoli serwisu z bazą danych wydarzeń historycznych z XVI wieku. Serwis w wersji beta
+powinien być widoczny pod tym adresem: [xvi-wiek.pl](http://xvi-wiek.pl).
 
 Serwis wykorzystuje styl [Tufte CSS](https://edwardtufte.github.io/tufte-css/) (licencja MIT )z dodatkiem fontu [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro) (licencja Open Font License) Regular 400 i Regular 400 italic.
 
