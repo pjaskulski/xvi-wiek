@@ -22,22 +22,23 @@ type Source struct {
 
 // Fact type
 type Fact struct {
-	ID          string `yaml:"id"`
-	Day         int    `yaml:"day"`
-	Month       int    `yaml:"month"`
-	Year        int    `yaml:"year"`
-	Title       string `yaml:"title"`
-	Content     string `yaml:"content"`
-	ContentHTML template.HTML
-	Location    string `yaml:"location"`
-	Geo         string `yaml:"geo"`
-	GeoHTML     template.HTML
-	People      string `yaml:"people"`
-	Keywords    string `yaml:"keywords"`
-	Image       string `yaml:"image"`
-	ImageInfo   string `yaml:"imageInfo"`
-	ImageHTML   template.HTML
-	Sources     []Source `yaml:"sources"`
+	ID             string `yaml:"id"`
+	Day            int    `yaml:"day"`
+	Month          int    `yaml:"month"`
+	Year           int    `yaml:"year"`
+	Title          string `yaml:"title"`
+	Content        string `yaml:"content"`
+	ContentHTML    template.HTML
+	ContentTwitter string `yaml:"contentTwitter"`
+	Location       string `yaml:"location"`
+	Geo            string `yaml:"geo"`
+	GeoHTML        template.HTML
+	People         string `yaml:"people"`
+	Keywords       string `yaml:"keywords"`
+	Image          string `yaml:"image"`
+	ImageInfo      string `yaml:"imageInfo"`
+	ImageHTML      template.HTML
+	Sources        []Source `yaml:"sources"`
 }
 
 // Quote type

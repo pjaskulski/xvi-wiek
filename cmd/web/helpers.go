@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"path"
 	"regexp"
 	"strings"
+	"time"
 )
 
 func filenameWithoutExtension(fn string) string {
@@ -135,4 +137,10 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 	}
 
 	return content
+}
+
+// randomInt - funkcja zwraca losową liczbę całkowitą z podanego zakresu
+func randomInt(min int, max int) int {
+	rand.Seed(time.Now().UnixNano())
+	return rand.Intn(max-min+1) + min
 }

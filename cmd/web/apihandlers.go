@@ -29,6 +29,12 @@ type FactJSON struct {
 	Sources  []SourceJSON `json:"sources"`
 }
 
+// FactShortJSON type
+type FactShortJSON struct {
+	Date           string `json:"date"`
+	ContentTwitter string `json:"content"`
+}
+
 func clearField(value string) string {
 	value = prepareTextStyle(value, false)
 	return value
@@ -70,9 +76,34 @@ func toStructJSON(data interface{}) []FactJSON {
 	return factsJSON
 }
 
+// toShortStructJSON
+func toShortStructJSON(data interface{}) FactShortJSON {
+	factStruct := data.(*[]Fact)
+	factJSON := FactShortJSON{}
+
+	choice := randomInt(0, len(*factStruct)-1)
+
+	factJSON.Date = fmt.Sprintf("%02d-%02d-%04d", (*factStruct)[choice].Day, (*factStruct)[choice].Month, (*factStruct)[choice].Year)
+	factJSON.ContentTwitter = (*factStruct)[choice].ContentTwitter
+
+	return factJSON
+}
+
+// factResponseJSON
 func factResponseJSON(w http.ResponseWriter, code int, data interface{}) {
 	factsJSON := toStructJSON(data)
+
 	response, _ := json.Marshal(factsJSON)
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(code)
+	w.Write(response)
+}
+
+// factShortResponseJSON
+func factShortResponseJSON(w http.ResponseWriter, code int, data interface{}) {
+	factShortJSON := toShortStructJSON(data)
+
+	response, _ := json.Marshal(factShortJSON)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(code)
 	w.Write(response)
@@ -120,6 +151,17 @@ func (app *application) apiFactsToday(w http.ResponseWriter, r *http.Request) {
 	facts, ok := app.dataCache.Get(name)
 	if ok {
 		factResponseJSON(w, 200, facts)
+	} else {
+		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+	}
+}
+
+// apiFactsShort
+func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
+	name := fmt.Sprintf("%02d-%02d", int(time.Now().Month()), time.Now().Day())
+	facts, ok := app.dataCache.Get(name)
+	if ok {
+		factShortResponseJSON(w, 200, facts)
 	} else {
 		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 	}
