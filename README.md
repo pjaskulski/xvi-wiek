@@ -11,9 +11,7 @@ Ikona Github pochodzi ze strony [GitHub Logos and Usage](https://github.com/logo
 
 Ikona Twitter pochodzi ze strony [Twitter Brand Resources](https://about.twitter.com/en_us/company/brand-resources.html).  
 
-Dodatkowy mechanizm to bot wysyłający raz dziennie informacje o ciekawym wydarzeniu historycznym
-z tego dnia, które zdarzyło się w XVI wieku. Kod źródłowy bota dostępny jest w osobnym repozytorium:
-[xvi-wiek-bot](https://github.com/pjaskulski/xvi-wiek-bot). 
+Dodatkowy mechanizm to bot wysyłający raz dziennie na konto [@xvi-wiek](https://twitter.com/xvi_wiek) informację o ciekawym wydarzeniu historycznym, które zdarzyło się w XVI wieku właśnie w tym dniu. Kod źródłowy bota dostępny jest w osobnym repozytorium: [xvi-wiek-bot](https://github.com/pjaskulski/xvi-wiek-bot). 
 
 ## API
 
