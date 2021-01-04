@@ -24,7 +24,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/api/short", app.apiFactsShort) // zwraca skrócony opis dla Twittera
 
 	// obsługa plików statycznych, w katalogu i podkatalogach pusty plik index.html
-	FileServer(r, "/static/", http.Dir("./ui/static/"))
+	FileServer(r, "/static/", http.Dir(dirExecutable+"/ui/static/"))
 
 	return r
 }

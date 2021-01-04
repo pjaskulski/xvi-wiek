@@ -102,7 +102,7 @@ func readQuote() (*[]Quote, error) {
 	var result []Quote
 	var quote Quote
 
-	filename, _ := filepath.Abs(fmt.Sprintf("./data/quotes.yaml"))
+	filename, _ := filepath.Abs(dirExecutable + "/data/quotes.yaml")
 
 	fileBuf, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -124,7 +124,7 @@ func readBook() (*[]Book, error) {
 	var result []Book
 	var book Book
 
-	filename, _ := filepath.Abs(fmt.Sprintf("./data/books.yaml"))
+	filename := dirExecutable + "/data/books.yaml"
 
 	fileBuf, err := ioutil.ReadFile(filename)
 	if err != nil {
