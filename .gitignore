@@ -16,7 +16,5 @@
 
 tls/
 log/
-ui/static/gallery/
-ui/static/books/
 web
 
