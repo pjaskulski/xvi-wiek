@@ -23,6 +23,10 @@ type templateDataQuotes struct {
 	Quotes *[]Quote
 }
 
+type templateDataInformation struct {
+	NumberOfFacts int
+}
+
 var monthName = map[int]string{
 	1:  "stycznia",
 	2:  "lutego",
@@ -118,8 +122,10 @@ func (app *application) showInformation(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
+	data := &templateDataInformation{NumberOfFacts: numberOfFacts}
+
 	ts := app.templateCache["informacje.page.gohtml"]
-	err := ts.Execute(w, nil)
+	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}

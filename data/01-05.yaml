@@ -1,0 +1,38 @@
+---
+id: 1
+day: 5
+month: 1
+year: 1580
+title: Stefan Batory wprowadził nową ordynację menniczą 
+content: >-  
+      {{{5 stycznia 1580}}} roku król Stefan Batory wprowadził nową ordynację 
+      menniczą [1] (zwaną później „Stefanowską”[2]), która ujednolicała sposób 
+      bicia monet w Królestwie Polskim i na Litwie. Była to kontynuacja reform 
+      monetarnych króla, który poprzednią ordynację menniczą wydał 24 kwietnia 
+      1578 r. zakładając mennicę w Olkuszu, wykorzystującą kruszec srebrny 
+      z tamtejszych kopalń. Nowa ordynacja wprowadziła wspólną listę monet 
+      srebrnych: talar, półtalar, szóstak, trojak[3] grosz, półgrosz, szeląg, 
+      denar. Kwestii monet złotych nie regulowała, obowiązywały przepisy 
+      z czasów Zygmunta I Starego. 
+contentTwitter: >-
+      5 stycznia 1580 roku król Stefan Batory wprowadził nową ordynację menniczą, 
+      która ujednolicała sposób bicia monet w Królestwie Polskim i na Litwie.
+location:
+geo:
+people: Stefan Batory 
+keywords: monety srebrne
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: System monetarny w latach 1580-1623
+      url: "https://pl.wikipedia.org/wiki/Systemy_monetarne_w_Polsce#System_monetarny_w_latach_1580%E2%80%931623"
+    - id: 2
+      value: Wikipedia
+      urlName: Monety Stefana Batorego
+      url: "https://pl.wikipedia.org/wiki/Monety_Stefana_Batorego_(1579%E2%80%931586)"  
+    - id: 3
+      value: Youtube
+      urlName: Trojak Stefana Batorego, 1580
+      url: "https://www.youtube.com/watch?v=jLYHUhLkgkw"

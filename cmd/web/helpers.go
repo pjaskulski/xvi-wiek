@@ -27,7 +27,7 @@ func prepareGeoHTML(geo string) string {
 }
 
 func prepareBookURLHTML(url string, urlname string) string {
-	html := `<a href="[url]">[urlname]</a>`
+	html := `<a href="[url]" target="_blank">[urlname]</a>`
 	html = strings.Replace(html, "[url]", url, -1)
 	html = strings.Replace(html, "[urlname]", urlname, -1)
 	return html
@@ -131,7 +131,7 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 			} else {
 				nameURL = item.URL
 			}
-			value += fmt.Sprintf(" <a href=\"%s\">%s</a> ", item.URL, nameURL)
+			value += fmt.Sprintf(" <a href=\"%s\" target=\"_blank\">%s</a> ", item.URL, nameURL)
 		}
 		content = strings.Replace(content, "["+item.ID+"]", preItem+value+post, -1)
 	}

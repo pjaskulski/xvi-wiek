@@ -1,0 +1,35 @@
+---
+id: 1
+day: 4
+month: 1
+year: 1503
+title: Wysokie Mazowieckie uzyskuje prawa miejskie  
+content: >-  
+    {{{4 stycznia 1503}}} roku król Aleksander Jagiellończyk nadał miastu
+    Wysokie przywilej[1] z prawami miejskimi opartymi na prawie magdeburskim.
+    Miasta na prawach wywodzących się z prawa niemieckiego lokowano w Polsce aż
+    do drugiej połowy XVIII wieku[2]. Przywilej przyczynił się do szybszego rozwoju miasta,
+    które jeszcze w XVI wieku zyskało przydomek Mazowieckie, a w 1569 roku przestało być
+    miastem królewskim - król Zygmunt August nadał prawa do miasta Mikołajowi Radziwiłłowi.
+    Jak wiele innych polskich miast Wysokie Mazowieckie doznało znacznych zniszczeń 
+    w czasie burzliwego XVII wieku, głównie z powodu najazdu szwedzkiego - jeszcze w 1800 roku
+    liczba mieszkańców i budynków była zaledwie zbliżona do tej z 1580 roku.     
+contentTwitter: >-
+    4 stycznia 1503 roku król Aleksander Jagiellończyk nadał miastu
+    Wysokie przywilej z prawami miejskimi opartymi na prawie magdeburskim.
+location: Wysokie Mazowieckie
+geo: 52.9174,22.51
+people: Aleksander Jagiellończyk 
+keywords: prawa magdeburskie
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Wysokie Mazowieckie
+      url: "https://pl.wikipedia.org/wiki/Wysokie_Mazowieckie#Historia_miasta"
+    - id: 2
+      value: Wikipedia
+      urlName: Prawo magdeburskie
+      url: "https://pl.wikipedia.org/wiki/Prawo_magdeburskie"
+

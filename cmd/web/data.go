@@ -155,6 +155,7 @@ func (app *application) loadData(path string) error {
 		if err != nil {
 			return err
 		}
+		numberOfFacts += len(*facts)
 		app.dataCache.Add(name, facts, cache.NoExpiration)
 	}
 

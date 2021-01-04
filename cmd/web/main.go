@@ -22,6 +22,8 @@ type application struct {
 	dataCache     *cache.Cache
 }
 
+var numberOfFacts int
+
 func main() {
 	// konfiguracja przez parametr z linii komend
 	cfg := new(Config)
