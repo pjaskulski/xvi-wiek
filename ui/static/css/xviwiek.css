@@ -117,6 +117,13 @@ img.small-icon {
     width: 24px;
 }
 
+.simple-underline:link {
+    background: unset;
+    text-shadow: unset;
+    text-decoration: underline;
+}
+
+
 @media (max-width: 1060px) {
     .footer {
         height: 100px;
