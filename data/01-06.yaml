@@ -1,0 +1,38 @@
+---
+id: 1
+day: 6
+month: 1
+year: 1573 
+title: Rozpoczął obrady pierwszy sejm konwokacyjny Rzeczpospolitej Obojga Narodów
+content: >- 
+    {{{6 stycznia 1573}}} roku rozpoczął obrady pierwszy sejm konwokacyjny[1] 
+    w historii Rzeczypospolitej Obojga Narodów. Sejmem {konwokacyjnym}[2][3] nazywano 
+    pierwszy sejm po śmierci króla, na którym ustalano między innymi termin i 
+    miejsce wolnej elekcji. Pół roku wcześniej zmarł ostatni władca 
+    z dynastii Jagiellonów: Zygmunt August. W trakcie trwających do 28 stycznia 
+    prac sejmu oprócz problemów elekcji podjęto również uchwały podatkowe a 
+    także uchwalono akt konfederacji warszawskiej zapewniającej wolność wyznania 
+    szlachcie i równouprawnienie dla innowierców. 
+contentTwitter: >-
+    6 stycznia 1573 roku rozpoczął obrady pierwszy sejm konwokacyjny w historii 
+    Rzeczypospolitej Obojga Narodów, którego głównym zadaniem było przygotowanie elekcji
+    nowego władcy. 
+location: Warszawa
+geo: 52.2476,21.0138
+people: Zygmunt August
+keywords: sejm, elekcja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Sejm konwokacyjny 1573
+      url: https://pl.wikipedia.org/wiki/Sejm_konwokacyjny_1573
+    - id: 2
+      value: Wikipedia
+      urlName: Sejm konwokacyjny
+      url: https://pl.wikipedia.org/wiki/Sejm_konwokacyjny
+    - id: 3
+      value: HistMag
+      urlName: Skąd się wzięła konwokacja
+      url: https://histmag.org/Skad-sie-wziela-konwokacja-7480
