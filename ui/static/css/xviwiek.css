@@ -115,6 +115,10 @@ article {
 
 img.small-icon {
     width: 24px;
+    margin-top: 0;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .simple-underline:link {
