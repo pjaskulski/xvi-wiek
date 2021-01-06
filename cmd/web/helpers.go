@@ -115,9 +115,9 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 
 	content = prepareTextStyle(content, false)
 
-	pre := ` <label for="%s" class="margin-toggle sidenote-number"></label>
+	pre := `<label for="%s" class="margin-toggle sidenote-number"></label>
 <input type="checkbox" id="%s" class="margin-toggle"/>
-<span class="sidenote"> `
+<span class="sidenote">`
 	post := `</span>`
 
 	for _, item := range sources {
