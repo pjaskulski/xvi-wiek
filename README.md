@@ -24,3 +24,29 @@ Dodatkowy mechanizm to bot wysyłający raz dziennie na konto [@xvi-wiek](https:
   
     Zwraca dzisiejsze wydarzenia, zapytanie uruchomione 1 stycznia 2020
     zwróci wydarzenia z 1 stycznia.   
+
+Przykład odpowiedzi na zapytanie `https://xvi-wiek.pl/api/today`:
+
+```json
+[
+   {
+      "date":"07-01-1520",
+      "title":"Król Zygmunt I Stary wydał przywilej toruński",
+      "content":"7 stycznia 1520 roku król Zygmunt I Stary wydał przywilej toruński regulujący minimalny wymiar pańszczyzny (1 dzień w tygodniu od łana).  Rzeczywisty wymiar pańszczyzny często był już wówczas większy. Dodatkowo przywilej ten regulował prawo do wolnej żeglugi po Wiśle, ograniczając je tylko do szlachty, ograniczono także prawa miast do sprawowania sądów nad  szlachcicami, którzy popełnili przestępstwa na terenie miast. Moment wydania  przywileju przypada na okres przygotowań do wojny z zakonem krzyżackim,  król potrzebował zgody szlachty na zwiększenie podatków, w zamian szlachta oczekiwała i otrzymała przywileje, często kosztem innych stanów.",
+      "location":"Toruń",
+      "geo":"52.2476,21.0138",
+      "people":"Zygmunt I Stary",
+      "keywords":"przywilej",
+      "sources":[
+         {
+            "value":"Wikipedia",
+            "url":"https://pl.wikipedia.org/wiki/Przywilej_toru%C5%84ski_1520"
+         },
+         {
+            "value":"Przegląd Historyczny, 1913",
+            "url":"http://bazhum.muzhp.pl/media//files/Przeglad_Historyczny/Przeglad_Historyczny-r1913-t16-n2/Przeglad_Historyczny-r1913-t16-n2-s200-217/Przeglad_Historyczny-r1913-t16-n2-s200-217.pdf"
+         }
+      ]
+   }
+]
+```
