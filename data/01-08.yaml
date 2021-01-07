@@ -5,11 +5,13 @@ month: 1
 year: 1549 
 title: Król Zygmunt II August nadał Kozienicom prawa miejskie
 content: >- 
-    {{{8 stycznia 1520}}} roku król Zygmunt II August nadał prawa miejskie 
+    {{{8 stycznia 1549}}} roku król Zygmunt II August nadał prawa miejskie 
     Kozienicom. Stało się to podczas obrad sejmu w Piotrkowie w formie
-    przywileju dla starosty radomskiego Piotra Firleja.[1]
+    przywileju dla starosty radomskiego Piotra Firleja.[1] Kozienice już wcześniej
+    związały się z historią Jagiellonów, w 1467 roku na tutejszym królewskim dworze
+    myśliwskim przyszedł na świat Zygmunt I Stary.[2] 
 contentTwitter: >-
-    8 stycznia 1520 roku król Zygmunt II August nadał prawa miejskie 
+    8 stycznia 1549 roku król Zygmunt II August nadał prawa miejskie 
     Kozienicom. 
 location: Kozienice
 geo: 51.5855,21.548
@@ -22,3 +24,7 @@ sources:
       value: Wikipedia
       urlName: Kozienice
       url: https://pl.wikipedia.org/wiki/Kozienice
+    - id: 2
+      value: Wikipedia
+      urlName: Kozienice
+      url: https://pl.wikipedia.org/wiki/Kozienice#Historia

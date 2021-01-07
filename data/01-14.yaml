@@ -1,24 +1,28 @@
 ---
 id: 1
-day: 2
-month: 2
-year: 1494
-title: Urodziła się Bona Sforza 
+day: 14
+month: 1
+year: 1557
+title: Zakończył obrady sejm Królestwa polskiego w Warszawie
 content: >- 
-    {{{2 lutego 1494}}} roku w Vigevano urodziła się Bona Sforza, córka Giana 
-    Galeazza Sforzy i Izabeli Aragońskiej. Od 1518 roku żona Zygmunta I Starego, 
-    królowa Polski i wielka księżna litewska. Pochodziła z roku książąt Mediolanu.
+    {{{14 stycznia 1557}}} roku w Warszawie zakończył obrady sejm zwyczajny 
+    Królestwa polskiego.[1] Sejm zwołano 6 grudnia 1556 roku jako sejm zwykły, zamiast
+    oczekiwanego egzekucyjnego. Posłowie zajmowali się głównie problemami obronności,
+    szczególnie wielkiego księstwa litewskiego zagrożonego od strony inflanckiej.[2]
 contentTwitter: >-
-    13 stycznia 1502 roku mieszczanie bydgoscy uzyskali od króla Aleksandra
-    Jagiellończyka zwolnienie z cła na towary transportowane z Gdańska do Bydgoszczy.
-location:
-geo:
-people: Bona Sforza
-keywords: dynastia Jagiellonów
+    14 stycznia 1557 roku w Warszawie zakończył obrady sejm Królestwa polskiego. 
+location: Warszawa
+geo: 52.2476,21.0138
+people: 
+keywords: sejm
 image: 
 imageInfo: 
 sources: 
     - id: 1
       value: Wikipedia
-      urlName: Bona Sforza
-      url: https://pl.wikipedia.org/wiki/Bona_Sforza
+      urlName: Rok 1557
+      url: https://pl.wikipedia.org/wiki/1557
+    - id: 2
+      value: Dzieje sejmu
+      urlName: Sejm przekładany w czasie
+      url: https://www.dziejesejmu.pl/sejm-przekladany-w-czasie-sejm-w-warszawie-1556-1557-r,p185850201
