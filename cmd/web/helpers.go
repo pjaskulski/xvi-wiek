@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"path"
 	"regexp"
 	"strings"
@@ -143,4 +144,13 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 func randomInt(min int, max int) int {
 	rand.Seed(time.Now().UnixNano())
 	return rand.Intn(max-min+1) + min
+}
+
+// isRunByRun - funkcja sprawdza czy uruchomiono program przez go run
+// czy też program skompilowany, funkcja dla systemu Linux
+func isRunByRun() bool {
+	if strings.Index(os.Args[0], "/tmp/go-build") != -1 {
+		return true
+	}
+	return false
 }

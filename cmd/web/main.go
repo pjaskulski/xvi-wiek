@@ -37,7 +37,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	dirExecutable = path.Dir(ex)
+
+	if isRunByRun() {
+		dirExecutable = "."
+	} else {
+		dirExecutable = path.Dir(ex)
+	}
 
 	// logi z informacjami (->konsola) i błędami (->plik)
 	infoLog := log.New(os.Stdout, "INFO: \t", log.Ldate|log.Ltime)
