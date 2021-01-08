@@ -9,6 +9,10 @@ p.small {
     font-size: 1rem;
 }
 
+article p {
+    hyphens: auto;
+}
+
 header {
     width: 87.5%;
     height: 90px;
@@ -20,11 +24,11 @@ header {
     font-size: 4.5rem; 
     padding-top: 25px;
     margin-top: 25px;
-    border-top: 10px solid;
+    border-top: 10px solid;    
     border-top-color: #111;
-    border-bottom: 1px solid;
-    border-bottom-color: #111;    
     border-top-style: double;
+    border-bottom: 1px solid;
+    border-bottom-color: #111;        
 }
 
 .header-icons {
@@ -157,8 +161,6 @@ img.small-icon {
     header {
         width: 84%;
         height: 60px;
-        background-color: #111;
-        color: #fffff8;
         text-align: center;
         font-size: 3rem; 
         padding-top: 5px;
