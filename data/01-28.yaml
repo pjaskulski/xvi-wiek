@@ -15,8 +15,10 @@ content: >-
     się tylko 2 biskupów. Swoboda religijna otrzymana przez stan szlachecki była dużo
     większa niż podobne postanowienia nadane szlachcie austriackiej dwa lata wcześniej
     przez cesarza Maksymiliana II - tam wolność religijna (poza katolikami) objęła 
-    tylko luteran.[2]
-    Z czasem znaczenie konfederacji słabło wobec postępującej kontrreformacji.
+    tylko luteran.[2] Dalej w kwestii wolności wyznania szły za to postanowienia
+    edyktu z Torda, przyjętego przez zgromadzenie narodowe Siedmiogrodu 
+    28 stycznia 1568 r.[9] 
+    Z czasem znaczenie konfederacji warszawskiej słabło wobec postępującej kontrreformacji.
     W 1638 roku wyrokiem sądu sejmowego zamknięto słynną z wysokiego poziomu nauczania
     szkołę protestancką - Akademię Rakowską.[7]
     W 1718 roku usunięto z Sejmu ostatniego innowierczego posła - Andrzeja 
@@ -71,3 +73,8 @@ sources:
       value: Paweł Jasienica, "Rzeczpospolita Obojga Narodów. Dzieje Agonii", Warszawa, 1965, str 135
       urlName:
       url:
+    - id: 9
+      value: Wikipedia
+      urlName: Edict of Torda
+      url: https://en.wikipedia.org/wiki/Edict_of_Torda
+      
