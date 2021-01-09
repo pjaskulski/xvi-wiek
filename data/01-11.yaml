@@ -12,6 +12,9 @@ content: >-
     i rycerskich, nie obejmował on miast. Późniejsza o dwa lata Konfederacja warszawska
     przyjęta na sejmie konwokacyjnym w Warszawie gwarantowała polskiej szlachcie
     większą swobodę religijną a także "wieczysty pokój między rozróżnionymi w wierze". 
+    Nie była jednak najbardziej tolerancyjnym prawem w Europie Środkowej, dalej 
+    szły postanowienie edyktu z Torda, przyjętego przez zgromadzenie narodowe 
+    Siedmiogrodu 28 stycznia 1568 r.[2]  
 contentTwitter: >-
     11 stycznia 1571 roku cesarz Maksymilian II nadał szlachcie austriackiej
     prawo wyboru religii.
@@ -26,3 +29,7 @@ sources:
       value: Wikipedia
       urlName: Maximilian_II
       url: "https://de.wikipedia.org/wiki/Maximilian_II._(HRR)#Religionspolitik"
+    - id: 2
+      value: Wikipedia
+      urlName: Edict of Torda
+      url: https://en.wikipedia.org/wiki/Edict_of_Torda
