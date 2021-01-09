@@ -145,6 +145,15 @@ img.small-icon {
     text-decoration: underline;
 }
 
+td, th {
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: right;
+}
+
+table {
+    margin-bottom: 60px;
+}
 
 @media (max-width: 1060px) {
     .footer {

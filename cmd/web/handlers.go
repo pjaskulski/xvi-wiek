@@ -68,6 +68,21 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// showCalendar func
+func (app *application) showCalendar(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["kalendarz.page.gohtml"]
+	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
 // showQuotes func
 func (app *application) showQuotes(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {

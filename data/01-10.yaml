@@ -3,10 +3,11 @@ id: 1
 day: 10
 month: 1
 year: 1569
-title: 10 stycznia 1569 roku w Lublinie rozpoczął obrady sejm koronny 
+title: W Lublinie rozpoczął obrady sejm koronny 
 content: >- 
     {{{10 stycznia 1569}}} roku w Lublinie rozpoczął obrady sejm koronny, 
-    jednocześnie równolegle obradował też sejm litewski[1]. Głównym celem prac 
+    jednocześnie równolegle obradował też sejm litewski[1]. Marszałkiem sejmu 
+    został Stanisław Sędziwój Czarnkowski.[2] Głównym celem prac 
     sejmów było ustanowienie nowej unii polsko-litewskiej - krytyczna dla 
     przetrwania związku obu państw kwestia wobec braku potomków Zygmunta II 
     Augusta i spodziewanego końca dynastii Jagiellonów. Mimo wrogiej postawy 
@@ -28,3 +29,7 @@ sources:
       value: Wikipedia
       urlName: Unia Lubelska
       url: https://pl.wikipedia.org/wiki/Unia_lubelska
+    - id: 2
+      value: Wikipedia
+      urlName: Sejm 1569
+      url: https://pl.wikipedia.org/wiki/Sejm_1569

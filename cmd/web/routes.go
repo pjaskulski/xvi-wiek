@@ -15,6 +15,7 @@ func (app *application) routes() http.Handler {
 	// procedury obsługi żądań http
 	r.Get("/", app.showFacts)
 	r.Get("/cytaty", app.showQuotes)
+	r.Get("/kalendarz", app.showCalendar)
 	r.Get("/ksiazki", app.showBooks)
 	r.Get("/informacje", app.showInformation)
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
