@@ -31,6 +31,11 @@ header {
     border-bottom-color: #111;        
 }
 
+header .beta {
+    vertical-align: 60%;
+    font-size: 2.3rem;
+}
+
 .header-icons {
     margin-top: -25px;
     padding-right: 15px; 
@@ -171,8 +176,13 @@ table {
         width: 84%;
         height: 60px;
         text-align: center;
-        font-size: 3rem; 
+        font-size: 2.8rem; 
         padding-top: 5px;
+    }
+
+    header .beta {
+        vertical-align: 60%;
+        font-size: 1.3rem;
     }
     
     .header-icons, .footer-info, .footer-hr, .footer-small {
@@ -189,4 +199,11 @@ table {
         margin-bottom: 0.5rem;
         font-size: 2.2rem;
     }         
+}
+
+
+@media (max-width: 320px) {    
+    header .beta {
+        display: none;
+    }
 }
