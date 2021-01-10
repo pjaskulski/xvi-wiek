@@ -25,7 +25,7 @@ Dodatkowy mechanizm to bot wysyłający raz dziennie na konto [@xvi-wiek](https:
     Zwraca dzisiejsze wydarzenia, zapytanie uruchomione 1 stycznia 2020
     zwróci wydarzenia z 1 stycznia.   
 
-Przykład odpowiedzi na zapytanie `https://xvi-wiek.pl/api/today`:
+Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
 ```json
 [
