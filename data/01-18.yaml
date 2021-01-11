@@ -7,9 +7,11 @@ title: Rozpoczął obrady sejm walny Królestwa Polskiego
 content: >- 
        18 stycznia 1493 roku[1][2][3] w Piotrkowie rozpoczął obrady sejm walny Królestwa 
        Polskiego. Podczas prac sejmu potwierdzono przywileje i uchwalono podatki
-       (uniwersał o poborze). Przez wiele lat uważano sejm piotrkowski z 1493 r.
+       (uniwersał o poborze). Przez wiele lat[4][5] uważano sejm piotrkowski z 1493 r.
        za pierwszy sejm walny - dwuizbowy, jednakże obecne ustalenia wskazują,
-       że za taki należy uznać już zjazd piotrkowski z 1468 r.[4][5]
+       że za taki należy uznać już zjazd piotrkowski w roku 1468. Tam po raz pierwszy
+       zebrali się posłowie wybrani przez sejmiki ziemskie, obradując osobno jako izba 
+       poselska, osobno zaś obradowała rada królewska - senat.
 contentTwitter: >-
        18 stycznia 1493 roku w Piotrkowie rozpoczął obrady sejm walny Królestwa 
        Polskiego.
@@ -30,13 +32,13 @@ sources:
       url: https://www.wbc.poznan.pl/dlibra/publication/1306/edition/2048/content
     - id: 3
       value: dziejesejmu.pl
-      urlName: sejm-walny-piotrkow-1493
+      urlName: sejm walny piotrkow 1493
       url: https://www.dziejesejmu.pl/sejm-walny-piotrkow-1493-r,p1292595129  
     - id: 4
       value: >- 
           Wacław Uruszczak, "Najstarszy sejm walny koronny "dwuizbowy" w Piotrkowie w 1468 roku", w:
           "Narodziny Rzeczypospolitej : studia z dziejów średniowiecza i czasów wczesnonowożytnych", Kraków, 2012 
-      urlName:
+      urlName: Najstarszy Sejm Walny Koronny
       url: http://www.khpp.wpia.uj.edu.pl/documents/106750129/0/Najstarszy+Sejm+Walny+Koronny.pdf/b0e82a32-63eb-4b00-b6a1-2d4d6e52ce6c 
     - id: 5
       value: 550-lecie Parlamentaryzmu Rzeczypospolitej
