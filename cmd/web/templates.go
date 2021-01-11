@@ -9,6 +9,10 @@ func createTemplateCache(path string) (map[string]*template.Template, error) {
 
 	cache := map[string]*template.Template{}
 
+	var functions = template.FuncMap{
+		"dayFact": dayFact,
+	}
+
 	templateFiles, err := filepath.Glob(filepath.Join(path, "*.page.gohtml"))
 	if err != nil {
 		return nil, err
@@ -18,7 +22,9 @@ func createTemplateCache(path string) (map[string]*template.Template, error) {
 		name := filepath.Base(tFile)
 		var ts *template.Template
 
-		ts, err = template.ParseFiles(tFile)
+		ts, err = template.New(name).Funcs(functions).ParseFiles(tFile)
+
+		//ts, err = template.ParseFiles(tFile)
 		if err != nil {
 			return nil, err
 		}

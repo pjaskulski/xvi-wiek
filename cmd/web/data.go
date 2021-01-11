@@ -65,6 +65,9 @@ type Book struct {
 	Pages       int `yaml:"pages"`
 }
 
+// DayFactTable map
+var DayFactTable map[string]bool
+
 func createDataCache() *cache.Cache {
 	c := cache.New(5*time.Minute, 10*time.Minute)
 	return c
@@ -148,6 +151,9 @@ func (app *application) loadData(path string) error {
 	// wydarzenia
 	fmt.Println("Wczytywanie bazy wydarzeń...")
 
+	// mapa z listą dni - czy dla danego dnia istnieją wydarzenia w bazie
+	DayFactTable = make(map[string]bool)
+
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
 		name := filenameWithoutExtension(filepath.Base(tFile))
@@ -156,6 +162,7 @@ func (app *application) loadData(path string) error {
 			return err
 		}
 		numberOfFacts += len(*facts)
+		DayFactTable[name] = true
 		app.dataCache.Add(name, facts, cache.NoExpiration)
 	}
 
@@ -178,4 +185,17 @@ func (app *application) loadData(path string) error {
 	app.dataCache.Add("books", books, cache.NoExpiration)
 
 	return nil
+}
+
+// dayFact - funkcja zwraca fragment html z linkiem jeżeli dla danego dnia są wydarzenia
+// historyczne w bazie, lub sam numer dnia jeżeli ich nie ma.
+func dayFact(month int, day int) template.HTML {
+	name := fmt.Sprintf("%02d-%02d", month, day)
+
+	if DayFactTable[name] {
+		result := fmt.Sprintf(`<a href="/dzien/%d/%d">%d</a>`, month, day, day)
+		return template.HTML(result)
+	}
+
+	return template.HTML(fmt.Sprintf(`<span style="color: DarkGrey;">%d</span>`, day))
 }
