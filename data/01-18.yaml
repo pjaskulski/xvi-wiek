@@ -5,7 +5,7 @@ month: 1
 year: 1493
 title: Rozpoczął obrady sejm walny Królestwa Polskiego
 content: >- 
-       18 stycznia 1493 roku[1][2][3] w Piotrkowie rozpoczął obrady sejm walny Królestwa 
+       {{{18 stycznia 1493}}} roku[1][2][3] w Piotrkowie rozpoczął obrady sejm walny Królestwa 
        Polskiego. Podczas prac sejmu potwierdzono przywileje i uchwalono podatki
        (uniwersał o poborze). Przez wiele lat[4][5] uważano sejm piotrkowski z 1493 r.
        za pierwszy sejm walny - dwuizbowy, jednakże obecne ustalenia wskazują,
@@ -44,3 +44,30 @@ sources:
       value: 550-lecie Parlamentaryzmu Rzeczypospolitej
       urlName: Biblioteka sejmowa
       url: https://biblioteka.sejm.gov.pl/wp-content/uploads/2019/04/folder-PL.pdf
+---
+id: 1
+day: 18
+month: 1
+year: 1520
+title: Bitwa pod Pasłękiem - 1520
+content: >- 
+       {{{18 stycznia 1520}}} roku w czasie wojny Polski z zakonem krzyżackim 
+       (1519-21) doszło do bitwy między oddziałem krzyżackim dowodzonym przez wielkiego
+       mistrza Albrechta Hohenzollerna a wojskami koronnymi hetmana Mikołaja
+       Firleja.[1] Siły krzyżackie dokonały wypadu z Pasłęka na pobliski obóz 
+       wojsk polskich, zostały jednak odparte a wielki mistrz musiał schronić się
+       za murami miasta.
+contentTwitter: >-
+       18 stycznia 1520 roku wojska koronne hetmana Firleja zwyciężyły pod Pasłękiem 
+       oddziały krzyżacke dowodzone przez wielkiego mistrza Albrechta Hohenzollerna.
+location: Pasłęk
+geo: 54.0623,19.6597
+people: Albrecht Hohenzollern, Mikołaj Firlej
+keywords: zakon krzyżacki
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Wojna polsko-krzyżacka (1519-1521)
+      url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
