@@ -51,12 +51,19 @@ month: 1
 year: 1520
 title: Bitwa pod Pasłękiem - 1520
 content: >- 
-       {{{18 stycznia 1520}}} roku w czasie wojny Polski z zakonem krzyżackim 
-       (1519-21) doszło do bitwy między oddziałem krzyżackim dowodzonym przez wielkiego
-       mistrza Albrechta Hohenzollerna a wojskami koronnymi hetmana Mikołaja
-       Firleja.[1] Siły krzyżackie dokonały wypadu z Pasłęka na pobliski obóz 
-       wojsk polskich, zostały jednak odparte a wielki mistrz musiał schronić się
-       za murami miasta.
+       {{{18 stycznia 1520}}} roku podczas wojny Polski z zakonem krzyżackim 
+       (1519-21) doszło do bitwy między oddziałami zakonu a wojskami koronnymi 
+       hetmana Mikołaja Firleja.[1] Wojska królewskie przybyły pod Pasłęk 17 stycznia, 
+       odsiecz krzyżacką przyprowadził z Braniewa osobiście wielki mistrz Albrecht 
+       Hohenzollern.[2] Atak jego 1800 jezdnych i pieszych na obóz wojsk polskich 
+       został jednak odparty zmuszając wielkiego mistrza do odwrotu. Mimo zwycięstwa
+       w polu siły polskie rozpoczęły oblężenie Pasłęka dopiero w lutym, miasto było
+       jednak dobrze bronione a szturm zarządzony 21 lutego przez hetmana Firleja 
+       odparto. 15 marca zaniechano oblężenia a wojska królewskie wycofały się 
+       do Elbląga. Dopiero drugie oblężenie Pasłęka w kwietniu 1520 roku doprowadziło
+       do jego opanowania, w czym pomogły sprowadzone przez oddziały polskie armaty, 
+       zdobyto barbakan, wobec czego zamek został poddany przez jego załogę. 
+
 contentTwitter: >-
        18 stycznia 1520 roku wojska koronne hetmana Firleja zwyciężyły pod Pasłękiem 
        oddziały krzyżacke dowodzone przez wielkiego mistrza Albrechta Hohenzollerna.
@@ -71,3 +78,7 @@ sources:
       value: Wikipedia
       urlName: Wojna polsko-krzyżacka (1519-1521)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
+    - id: 2
+      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 64-67
+      urlName: 
+      url: 
