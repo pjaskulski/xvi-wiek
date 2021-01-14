@@ -1,0 +1,49 @@
+---
+id: 1
+day: 22
+month: 1
+year: 1525
+title: Początek rewolty luterańskich mieszczan w Gdańsku
+content: >- 
+       {{{22 stycznia 1525}}} roku w Gdańsku doszło do gwałtownych wystąpień
+       mieszczan wyznania luterańskiego (głównie pospólstwa) przeciwko władzom 
+       miasta, patrycjuszom i instytucjom kościoła katolickiego: likwidowano 
+       klasztory i profanowano święte obrazy.[1][2] Luteranie obalili dotychczasową 
+       radę miejską, zapewniając jednocześnie Zygmunta I Starego, 
+       że mimo zmiany religii i władz miasto zachowa posłuszeństwo wobec króla 
+       i państwa polskiego. Ich wystąpienie zostało jednak odebrane w Krakowie
+       jako wrogie, szczególnie w sytuacji nie zakończonych jeszcze układów z 
+       Albrechtem Hohenzollenrem. Posłów gdańskich uwięziono. W kwietniu 1526 r. 
+       Zygmunt przybył do Gdańska zbrojnie, mieszczanie nie stawiali oporu. 
+       Król przywrócił władzę patrycjatowi, skazał przywódców buntu na śmierć,
+       kościoły zwrócono katolikom a protestanccy kaznodzieje musieli opuścić 
+       Gdańsk. Wprowadził jednocześnie zmiany do ustroju miasta, powołując 
+       reprezentację pospólstwa zwaną 'Trzecim Ordynkiem'[2] (trzecim, po 
+       właściwej radzie miejskiej i ławie miejskiej)[4]. 
+contentTwitter: >-
+       {{{22 stycznia 1525 roku w Gdańsku doszło do gwałtownych wystąpień
+       mieszczan wyznania luterańskiego przeciwko władzom miasta i instytucjom
+       kościoła katolickiego.
+location: Gdańsk
+geo: 54.348,18.6438
+people: Zygmunt I Stary
+keywords: luteranie
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Tumult gdański 1525-1526
+      url: https://pl.wikipedia.org/wiki/Tumult_gda%C5%84ski_1525%E2%80%931526
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 61
+      urlName:
+      url:
+    - id: 3
+      value: Wikipedia
+      urlName: Danziger Aufruhr 1525
+      url: https://de.wikipedia.org/wiki/Danziger_Aufruhr_1525
+    - id: 4
+      value: gedanopedia.pl
+      urlName: Trzeci Ordynek
+      url: https://www.gedanopedia.pl/gdansk/?title=TRZECI_ORDYNEK
