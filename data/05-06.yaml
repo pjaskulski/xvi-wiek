@@ -1,30 +1,42 @@
 ---
 id: 1
-day: 12
-month: 1
-year: 1578
-title: Prapremiera "Odprawy posłów greckich"
+day: 6
+month: 5
+year: 1543
+title: Ślub Zygmunta Augusta i Elżbiety Habsburżanki
 content: >- 
-    {{{12 stycznia 1578}}} roku w Jazdowie pod Warszawą pierwszy raz wystawiono 
-    dramat Jana Kochanowskiego "Odprawa posłów greckich".[1] Przedstawienie uświetniło
-    uroczystości ślubne Jana Zamoyskiego, wówczas podkanclerzego koronnego z Krystyną
-    Radziwiłłówną. Wśród widzów była obecna para królewska: Stefan Batory i Anna 
-    Jagiellonka.[2]  
+    {{{6 maja 1543}}}[1] roku w Krakowie, w katedrze na Wawelu odbył się ślub 
+    Zygmunta II Augusta z Elżbietą Habsburżanką, córką arcyksięcia Austrii 
+    i króla Niemiec (a późniejszego cesarza) Ferdynanda I Habsburga oraz Anny 
+    Jagiellonki. Ślubu udzielał arcybiskup i prymas Polski Piotr Gamrat.[2] 
+    Małżeństwo planowano już od kilkunastu lat, pierwszy przedmałżeński traktat
+    podpisano w roku 1530, ostateczny osiem lat później - 16 czerwca 1538 r., 
+    w lipcu tego roku odbyły się oficjalne zaręczyny. Ze względu na bliskie 
+    pokrewieństwo Zygmunta i Elżbiety, konieczna była dyspensa udzielona przez 
+    papieża Klemensa VII w 1531 r.[3] Uroczystości weselne w Krakowie trwały 
+    dwa tygodnie, wcześniej dokonano również koronacji Elżbiety na królową 
+    Polski - Zygmunt August został koronowany już w wieku 10 lat, w 1530 r. 
+    Małżeństwo nie trwało długo, Elżbieta zmarła w 1545 r. mając zaledwie 19 lat.
 contentTwitter: >-
-    12 stycznia 1578 roku w Jazdowie pod Warszawą pierwszy raz wystawiono 
-    dramat Jana Kochanowskiego "Odprawa posłów greckich".
-location: Jazdów (obecnie część Warszawy)
-geo: 52.2158,21.0379
-people: Jan Kochanowski, Jan Zamoyski, Krystyna Radziwiłłówna, Stefan Batory, Anna Jagiellonka
-keywords: sztuka
+    6 maja 1543 roku w Krakowie, w katedrze na Wawelu odbył się ślub 
+    Zygmunta II Augusta z Elżbietą Habsburżanką, córką arcyksięcia Austrii 
+    Ferdynanda I Habsburga.
+location: Kraków
+geo: 50.0546,19.9352
+people: Zygmunt II August, Elżbieta Habsburżanka, Piot Gamrat, Klemens VII
+keywords: Jagiellonowie
 image: 
 imageInfo: 
 sources: 
     - id: 1
       value: Wikipedia
-      urlName: Odprawa posłów greckich
-      url: https://pl.wikipedia.org/wiki/Odprawa_pos%C5%82%C3%B3w_greckich
+      urlName: Zygmunt II August
+      url: https://pl.wikipedia.org/wiki/Zygmunt_II_August
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 207
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 81
       urlName:
       url:
+    - id: 3
+      value: Wikipedia
+      urlName: Elizabeth of Austria (1526-1545)
+      url: https://en.wikipedia.org/wiki/Elizabeth_of_Austria_(1526%E2%80%931545)
