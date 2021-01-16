@@ -1,0 +1,40 @@
+---
+id: 1
+day: 27
+month: 1
+year: 1527
+title: Bitwa pod Olszanicą
+content: >- 
+      {{{27 stycznia 1527}}}[1][2] roku książę Konstanty Ostrogski, hetman wielki 
+      litewski, dowodząc wspólnie z Andrzejem Niemirowiczem (wojewodą kijowskim) 
+      i Eustachym Daszkiewiczem (starostą czerkaskim i hetmanem Kozaków zaporowskich[4]) 
+      stoczył bitwę z Tatarami pod Olszanicą. Starcie zakończyło się wielkim 
+      zwycięstwem wojsk litewskich, Tatarzy ponieśli znaczne straty, uwolniono 
+      też kilkudziesięciotysięczny jasyr.[3] 
+contentTwitter: >-
+      27 stycznia 1527 roku książę Konstanty Ostrogski, dowodząc wspólnie z 
+      Andrzejem Niemirowiczem - wojewodą kijowskim i Eustachym Daszkiewiczem 
+      - starostą czerkaski stoczył bitwę z Tatarami pod Olszanicą.
+location: Olszanica
+geo: 49.6612,30.6409
+people: Konstanty Ostrogski
+keywords: Tatarzy
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Konstanty Ostrogski (hetman)
+      url: https://pl.wikipedia.org/wiki/Konstanty_Ostrogski_(hetman)
+    - id: 2
+      value: Wikipedia
+      urlName: Bitwa pod Olszanicą (1527)
+      url: https://pl.wikipedia.org/wiki/Bitwa_pod_Olszanic%C4%85_(1527)
+    - id: 3
+      value: wilanow-palac.pl
+      urlName: Andrzej Niemirowicz (Niemirycz)
+      url: https://www.wilanow-palac.pl/andrzej_niemirowicz_niemirycz_ok_1462_1541_zwyciezca_spod_olszanicy.html
+    - id: 4
+      value: Wikipedia
+      urlName: Eustachy Daszkiewicz
+      url: https://pl.wikipedia.org/wiki/Eustachy_Daszkiewicz
