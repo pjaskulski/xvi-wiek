@@ -1,0 +1,33 @@
+---
+id: 1
+day: 31
+month: 1
+year: 151
+title: Stefan Batory wydał przywilej lokacyjny dla miasta Radomyśl Wielki
+content: >- 
+      {{{31 stycznia 1581}}} roku król Stefan Batory wydał na rzecz Mikołaja Firleja
+      przywilej lokacyjny na prawie magdeburskim dla miasta Radomyśl Wielki.[1][2][4]
+      Mikołaj Firlej był wówczas kasztelanem bieleckim, w przyszłości miał zostać
+      wojewodą krakowskim.[3] 
+contentTwitter: >-
+      31 stycznia 1581 roku król Stefan Batory wydał na rzecz Mikołaja Firleja
+      przywilej lokacyjny na prawie magdeburskim dla miasta Radomyśl Wielki.
+location: Radomyśl Wielki
+geo: 50.196,21.2764
+people: Mikołaj Kopernik, Wilhelm von Schaumburg
+keywords: zakon krzyżacki
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Radomyśl Wielki
+      url: https://pl.wikipedia.org/wiki/Radomy%C5%9Bl_Wielki
+    - id: 2
+      value: naszemiasto.radomyslwielki.org.pl
+      urlName: Historia miasta
+      url: http://naszemiasto.radomyslwielki.org.pl/w-prasie-o-nas/
+    - id: 3
+      value: Wikipedia
+      urlName: Mikołaj Firlej (zm. 1601)
+      url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Firlej_(zm._1601)
