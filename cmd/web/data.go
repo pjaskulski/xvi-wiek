@@ -146,7 +146,7 @@ func readBook() (*[]Book, error) {
 	return &result, nil
 }
 
-// loadData
+// loadData - wczytuje podczas startu serwera dane do struktur w pamięci operacyjnej
 func (app *application) loadData(path string) error {
 	// wydarzenia
 	fmt.Println("Wczytywanie bazy wydarzeń...")
@@ -187,8 +187,10 @@ func (app *application) loadData(path string) error {
 	return nil
 }
 
-// dayFact - funkcja zwraca fragment html z linkiem jeżeli dla danego dnia są wydarzenia
-// historyczne w bazie, lub sam numer dnia jeżeli ich nie ma.
+/* dayFact - funkcja zwraca fragment html z linkiem jeżeli dla danego dnia są wydarzenia
+   historyczne w bazie, lub sam numer dnia (o szarym kolorze) jeżeli ich nie ma.
+   Wykorzystywana w kalendarzu.
+*/
 func dayFact(month int, day int) template.HTML {
 	name := fmt.Sprintf("%02d-%02d", month, day)
 
