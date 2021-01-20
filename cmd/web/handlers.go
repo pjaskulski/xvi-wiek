@@ -11,8 +11,9 @@ import (
 )
 
 type templateDataFacts struct {
-	Today string
-	Facts *[]Fact
+	Today      string
+	TitleOfDay string
+	Facts      *[]Fact
 }
 
 type templateDataBooks struct {
@@ -56,9 +57,9 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 	dayMonth := fmt.Sprintf("%d %s", today.Day(), monthName[int(today.Month())])
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		data = &templateDataFacts{Today: dayMonth, Facts: facts.(*[]Fact)}
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: facts.(*[]Fact)}
 	} else {
-		data = &templateDataFacts{Today: dayMonth, Facts: nil}
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: nil}
 	}
 
 	ts := app.templateCache["index.page.gohtml"]
@@ -180,12 +181,14 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		data = &templateDataFacts{Today: dayMonth, Facts: facts.(*[]Fact)}
+		tmp := facts.(*[]Fact)
+		titleOfDay := (*tmp)[0].Title
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, Facts: facts.(*[]Fact)}
 	} else {
-		data = &templateDataFacts{Today: dayMonth, Facts: nil}
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: nil}
 	}
 
-	ts := app.templateCache["index.page.gohtml"]
+	ts := app.templateCache["day.page.gohtml"]
 	err = ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)

@@ -1,0 +1,33 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - {{.TitleOfDay}}{{end}}
+
+{{define "main"}}
+    
+    <h1 id="tufte-css">Co wydarzyło się {{.Today}}</h1>
+
+    <article>
+        <section>
+        {{if .Facts}}
+            {{range .Facts}}                 
+                <p class="subtitle">{{.Title}}</p>
+                <p>{{.ContentHTML}}</p>
+                {{if .Image}}
+                    {{.ImageHTML}}
+                {{end}}
+                {{if .Geo}}
+                    <p>Miejsce wydarzenia: {{.Location}} {{.GeoHTML}}</p>
+                {{end}}                
+                <hr class="hr-facts">
+            {{end}}
+        {{else}}
+                <p class="subtitle">Brak danych</p>
+                <p>Dla wskazanej daty nie znaleziono wydarzeń historycznych w bazie danych.
+                Co nie znaczy, że nic ciekawego się nie zdarzyło, po prostu baza wydarzeń 
+                nie została jeszcze uzupełniona.</p>
+                <hr class="hr-facts">         
+        {{end}}        
+        </section> 
+    </article>
+    
+{{end}}
