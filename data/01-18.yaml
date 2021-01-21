@@ -56,14 +56,15 @@ content: >-
        hetmana Mikołaja Firleja.[1] Wojska królewskie przybyły pod Pasłęk 17 stycznia, 
        odsiecz krzyżacką przyprowadził z Braniewa osobiście wielki mistrz Albrecht 
        Hohenzollern.[2] Atak jego 1800 jezdnych i pieszych na obóz wojsk polskich 
-       został jednak odparty zmuszając wielkiego mistrza do odwrotu. Mimo zwycięstwa
+       został jednak odparty zmuszając wielkiego mistrza do odwrotu za mury miasta,
+       następnego dnia Albrecht wycofał się do Braniewa. Mimo zwycięstwa
        w polu siły polskie rozpoczęły oblężenie Pasłęka dopiero w lutym, miasto było
        jednak dobrze bronione a szturm zarządzony 21 lutego przez hetmana Firleja 
        odparto. 15 marca zaniechano oblężenia a wojska królewskie wycofały się 
        do Elbląga. Dopiero drugie oblężenie Pasłęka w kwietniu 1520 roku doprowadziło
-       do jego opanowania, w czym pomogły sprowadzone przez oddziały polskie armaty, 
-       zdobyto barbakan, wobec czego zamek został poddany przez jego załogę. 
-
+       do jego opanowania, w czym pomogła sprowadzona przez oddziały polskie ciężka 
+       artyleria, zdobyto barbakan, wobec czego zamek został poddany przez jego załogę
+       29 kwietnia 1520 r.[3]  
 contentTwitter: >-
        18 stycznia 1520 roku wojska koronne hetmana Firleja zwyciężyły pod Pasłękiem 
        oddziały krzyżacke dowodzone przez wielkiego mistrza Albrechta Hohenzollerna.
@@ -81,4 +82,8 @@ sources:
     - id: 2
       value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 64-67
       urlName: 
+      url: 
+    - id: 3
+      value: Marian Biskup, "Wojny polski z zakonem krzyżackim (1308-1521)", 2017
+      urlName:
       url: 

@@ -181,9 +181,9 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		tmp := facts.(*[]Fact)
-		titleOfDay := (*tmp)[0].Title
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, Facts: facts.(*[]Fact)}
+		tmpFacts := facts.(*[]Fact)
+		titleOfDay := (*tmpFacts)[0].Title
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, Facts: tmpFacts}
 	} else {
 		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: nil}
 	}
