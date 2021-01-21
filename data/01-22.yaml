@@ -17,9 +17,9 @@ content: >-
        Zygmunt przybył do Gdańska zbrojnie, mieszczanie nie stawiali oporu. 
        Król przywrócił władzę patrycjatowi, skazał przywódców buntu na śmierć,
        kościoły zwrócono katolikom a protestanccy kaznodzieje musieli opuścić 
-       Gdańsk. Wprowadził jednocześnie zmiany do ustroju miasta, powołując 
+       Gdańsk. Wprowadził jednocześnie zmiany do ustroju miasta[4], powołując 
        reprezentację pospólstwa zwaną 'Trzecim Ordynkiem' (trzecim, po 
-       właściwej radzie miejskiej i ławie miejskiej)[4]. 
+       właściwej radzie miejskiej i ławie miejskiej). 
 contentTwitter: >-
        {{{22 stycznia 1525 roku w Gdańsku doszło do gwałtownych wystąpień
        mieszczan wyznania luterańskiego przeciwko władzom miasta i instytucjom
@@ -28,8 +28,9 @@ location: Gdańsk
 geo: 54.348,18.6438
 people: Zygmunt I Stary
 keywords: luteranie
-image: 
-imageInfo: 
+image: gdansk-3625496_640.jpg
+imageInfo: >- 
+       Ilustracja: Gdańsk, Motława (fot. drzalek83/Pixabay).
 sources: 
     - id: 1
       value: Wikipedia
