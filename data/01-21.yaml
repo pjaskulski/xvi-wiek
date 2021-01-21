@@ -7,7 +7,10 @@ title: Krzyżacy zajęli Nowe Miasto
 content: >- 
        {{{21 stycznia 1521}}}[1] roku podczas wojny polsko-krzyżackiej (1519-21)
        wojska krzyżackie po pokonaniu dzień wcześniej oddziału polskiej jazdy 
-       rotmistrza Słupeckiego zajęły Nowe Miasto. 
+       rotmistrza Słupeckiego zajęły Nowe Miasto, które poddało się bez walki.
+       Stało się tak mimo apeli z Lubawy, gdzie stacjonowały polskie wojska zaciężne, 
+       by mieszczanie dochowali wierności królowi. Albrecht Hohenzollern zostawił
+       w mieście załogę i pomaszerował na Lidzbark Warmiński.[2]
 contentTwitter: >-
        21 stycznia 1521 roku podczas wojny polsko-krzyżackiej (1519-21)
        wojska krzyżackie po pokonaniu dzień wcześniej oddziału polskiej jazdy 
@@ -22,4 +25,8 @@ sources:
     - id: 1
       value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 88
       urlName: 
+      url: 
+    - id: 2
+      value: Marian Biskup, "Wojny polski z zakonem krzyżackim (1308-1521)", 2017
+      urlName:
       url: 
