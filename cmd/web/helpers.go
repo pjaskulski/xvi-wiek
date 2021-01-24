@@ -15,7 +15,7 @@ func filenameWithoutExtension(fn string) string {
 }
 
 func prepareGeoHTML(geo string) string {
-	html := `<span><a href="[geo]" target="_blank" class="no-tufte-underline">
+	html := `<span><a href="[geo]" target="_blank" rel="noopener" class="no-tufte-underline">
 	<img src="/static/img/world.png" class="small-icon" alt="Położenie geograficzne na mapie"/></a>
 	</span>`
 	pos := strings.Split(geo, ",")
@@ -28,7 +28,7 @@ func prepareGeoHTML(geo string) string {
 }
 
 func prepareBookURLHTML(url string, urlname string) string {
-	html := `<a href="[url]" target="_blank">[urlname]</a>`
+	html := `<a href="[url]" target="_blank" rel="noopener">[urlname]</a>`
 	html = strings.Replace(html, "[url]", url, -1)
 	html = strings.Replace(html, "[urlname]", urlname, -1)
 	return html
@@ -132,7 +132,7 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 			} else {
 				nameURL = item.URL
 			}
-			value += fmt.Sprintf(" <a href=\"%s\" target=\"_blank\">%s</a> ", item.URL, nameURL)
+			value += fmt.Sprintf(" <a href=\"%s\" target=\"_blank\" rel=\"noopener\">%s</a> ", item.URL, nameURL)
 		}
 		content = strings.Replace(content, "["+item.ID+"]", preItem+value+post, -1)
 	}
