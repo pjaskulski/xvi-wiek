@@ -7,13 +7,16 @@ title: Atak wojsk krzyżackich na Olsztyn
 content: >- 
       {{{26 stycznia 1521}}} roku wojska krzyżackie z Dobrego Miasta dowodzone 
       przez Wilhelma von Schaumburga próbowały przez zaskoczenie zająć Olsztyn.[1][2]
-      Bez powodzenia - miasto było dobrze przygotowane do obrony, do czego przyczynił 
+      Bez powodzenia - atakującym zabrakło długich drabin do forsowania murów[4] 
+      a miasto było dobrze przygotowane do obrony, do czego przyczynił 
       się Mikołaj Kopernik będący wówczas kapitulnym administratorem dóbr Olsztyna, 
-      m.in. ściągnięto z Elbląga hakownice, pomoc nadesłał też król Zygmunt I Stary 
-      w postaci oddziału stu zbrojnych.[3] Był to jeden z ostatnich akordów wojny 
-      polsko-krzyżackiej toczonej w latach 1519-21. Pod koniec stycznia 1521 
-      rozpoczęto najpierw w Toruniu, potem w Prabutach trudne negocjacje pokojowe, 
-      w kwietniu udało się uzgodnić czteroletni rozejm.
+      pomoc nadesłał też król Zygmunt I Stary w postaci oddziału stu zbrojnych.[3] 
+      Po tej nieudanej napaści postanowiono na wniosek Kopernika dodatkowo wzmocnić 
+      obronę Olsztyna ściągając w lutym 1521 r. z Elbląga hakownice, żywność i ołów. 
+      Był to jednak jeden z ostatnich akordów wojny polsko-krzyżackiej toczonej w latach 
+      1519-21. Pod koniec stycznia 1521 rozpoczęto najpierw w Toruniu, potem w 
+      Prabutach trudne negocjacje pokojowe, w kwietniu udało się uzgodnić czteroletni 
+      rozejm.
 contentTwitter: >-
       26 stycznia 1521 roku wojska krzyżackie z Dobrego Miasta dowodzone 
       przez Wilhelma von Schaumburga próbowały przez zaskoczenie zająć Olsztyn.
@@ -36,3 +39,7 @@ sources:
       value: Wikipedia
       urlName: Mikołaj Kopernik
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Kopernik
+    - id: 4
+      value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      urlName:
+      url:
