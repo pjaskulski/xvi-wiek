@@ -11,7 +11,7 @@ content: >-
     które w latach 1575-77 zajęły wojska Iwana IV Groźnego. Batory przeprowadził 
     trzy zwycięskie kampanie zakończone oblężeniem Pskowa, nieskutecznym ale
     atakowani jednocześnie przez Szwedów Rosjanie zostali zmuszeni do negocjacji
-    rozejmowych. Na mocy układu Rzeczpospolita odzyskała Inflanty i ziemię połocką. 
+    rozejmowych.[3] Na mocy układu Rzeczpospolita odzyskała Inflanty i ziemię połocką. 
     Rozejm zawarto na 10 lat, ale był później przedłużany i przetrwał do 1609 r.[2]    
 contentTwitter: >-
     15 stycznia 1582 roku w Jamie Zapolskim zawarto rozejm, który zakończył
@@ -31,3 +31,8 @@ sources:
       value: Wikipedia
       urlName: Wojna polsko-rosyjska (1577-1582)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-rosyjska_(1577%E2%80%931582)
+    - id: 3
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 231-232
+      urlName:
+      url:
+
