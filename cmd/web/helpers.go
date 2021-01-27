@@ -154,3 +154,28 @@ func isRunByRun() bool {
 	}
 	return false
 }
+
+// getPrevNextHTML func
+func getPrevNextHTML(month int, day int) string {
+	var prevnext string
+
+	daysInMonth := []int{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+
+	tmp := `<a href="/dzien/%d/%d">Poprzedni</a> dzień : Dzień <a href="/dzien/%d/%d">następny</a>`
+	tmpf := `<span style="color: gray;">Poprzedni dzień</span> : Dzień <a href="/dzien/%d/%d">następny</a>`
+	tmpl := `<a href="/dzien/%d/%d">Poprzedni</a> dzień : <span style="color: gray;">Dzień następny</span>`
+
+	if day == 1 && month == 1 {
+		prevnext = fmt.Sprintf(tmpf, 1, 2)
+	} else if day == 31 && month == 12 {
+		prevnext = fmt.Sprintf(tmpl, 12, 30)
+	} else if day == 1 {
+		prevnext = fmt.Sprintf(tmp, month-1, daysInMonth[month-1], month, day+1)
+	} else if day == daysInMonth[month] {
+		prevnext = fmt.Sprintf(tmp, month, day-1, month+1, 1)
+	} else {
+		prevnext = fmt.Sprintf(tmp, month, day-1, month, day+1)
+	}
+
+	return prevnext
+}

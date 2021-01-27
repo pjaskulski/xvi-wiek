@@ -8,7 +8,14 @@
 
     <article>
         <section>
-        {{if .Facts}}
+        <p>
+            <label for="day-nav" class="margin-toggle">&#8853;</label>
+            <input type="checkbox" id="day-nav" class="margin-toggle"/>
+            <span class="marginnote">
+            &#8678; {{.PrevNext}} &#8680;
+            </span>
+        </p>
+        {{if .Facts}}                        
             {{range .Facts}}                 
                 <p class="subtitle">{{.Title}}</p>
                 <p>{{.ContentHTML}}</p>

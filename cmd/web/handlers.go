@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"html/template"
 	"net/http"
 	"strconv"
 	"time"
@@ -13,6 +14,7 @@ import (
 type templateDataFacts struct {
 	Today      string
 	TitleOfDay string
+	PrevNext   template.HTML
 	Facts      *[]Fact
 }
 
@@ -174,6 +176,8 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	prevnext := template.HTML(getPrevNextHTML(month, day))
+
 	var data *templateDataFacts
 
 	name := fmt.Sprintf("%02d-%02d", month, day)
@@ -183,9 +187,9 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		tmpFacts := facts.(*[]Fact)
 		titleOfDay := (*tmpFacts)[0].Title
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, Facts: tmpFacts}
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, PrevNext: prevnext, Facts: tmpFacts}
 	} else {
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: nil}
+		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", PrevNext: prevnext, Facts: nil}
 	}
 
 	ts := app.templateCache["day.page.gohtml"]
