@@ -10,17 +10,23 @@ content: >-
     Zapewniały one wolność wyznania szlachcie w Rzeczypospolitej Obojga Narodów,
     równouprawnienie innowierców z katolikami, zabraniały władzom świeckim wspierania
     instytucji kościelnych w prześladowaniach religijnych. Konfederacja nadawała
-    też szlachcie prawo do narzucania swojej religii poddanym. Mimo udziału 
-    duchownych katolickich w redakcji tekstu konfederacji, pod uchwałą podpisało
-    się tylko 2 biskupów. Swoboda religijna otrzymana przez stan szlachecki była dużo
-    większa niż podobne postanowienia nadane szlachcie austriackiej dwa lata wcześniej
+    też szlachcie prawo do narzucania swojej religii poddanym. Podstawowym celem
+    uchwały było zapewnienie pokoju religijnego, na czym zależało zarówno szlachcie
+    katolickiej jak i protestantom. W tym okresie bowiem - pod koniec panowania 
+    Zygmunta Augusta i tuż po jego śmierci - dochodziło w Rzeczypospolitej do 
+    konfliktów na tle wyznaniowym np. w Krakowie, czy w Elblągu gdzie mieszczanie 
+    wyzania protestanckiego przejęli kościoły katolickie, wprowadzając wyłączość 
+    kultu protestanckiego.[10] W redakcji tekstu konfederacji brali udział duchowni 
+    katoliccy a komisji przewodniczył biskup kujawski Stanisław Karnkowski, 
+    jednak pod uchwałą podpisał się tylko jeden z biskupów - Franciszek Krasiński,
+    biskup krakowski. Swoboda religijna otrzymana przez stan szlachecki była dużo 
+    większa niż podobne postanowienia nadane szlachcie austriackiej dwa lata wcześniej 
     przez cesarza Maksymiliana II - tam wolność religijna (poza katolikami) objęła 
-    tylko luteran.[2] Dalej w kwestii wolności wyznania szły za to postanowienia
-    edyktu z Torda, przyjętego przez zgromadzenie narodowe Siedmiogrodu 
-    28 stycznia 1568 r.[9] 
-    Z czasem znaczenie konfederacji warszawskiej słabło wobec postępującej kontrreformacji.
-    W 1638 roku wyrokiem sądu sejmowego zamknięto słynną z wysokiego poziomu nauczania
-    szkołę protestancką - Akademię Rakowską.[7]
+    tylko luteran.[2] Dalej w kwestii wolności wyznania szły za to postanowienia 
+    edyktu z Torda, przyjętego przez zgromadzenie narodowe Siedmiogrodu 28 stycznia 
+    1568 r.[9] Z czasem znaczenie konfederacji warszawskiej słabło wobec postępującej 
+    kontrreformacji.W 1638 roku wyrokiem sądu sejmowego zamknięto słynną z wysokiego 
+    poziomu nauczania szkołę protestancką - Akademię Rakowską.[7]
     W 1718 roku usunięto z Sejmu ostatniego innowierczego posła - Andrzeja 
     Piotrowskiego, posła z ziemi wieluńskiej.[5][6] W 1724 roku w Toruniu doszło 
     do zamieszek między katolikami a protestantami, ukarano jednak tylko stronę 
@@ -77,4 +83,8 @@ sources:
       value: Wikipedia
       urlName: Edict of Torda
       url: https://en.wikipedia.org/wiki/Edict_of_Torda
+    - id: 10
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 158-159 
+      urlName:
+      url:
       
