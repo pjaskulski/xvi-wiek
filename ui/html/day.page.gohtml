@@ -3,18 +3,12 @@
 {{define "title"}}XVI wiek - {{.TitleOfDay}}{{end}}
 
 {{define "main"}}
+    <div class="prevnext">&#8678; {{.PrevNext}} &#8680;</div>
     
     <h1 id="tufte-css">Co wydarzyło się {{.Today}}</h1>
 
     <article>
-        <section>
-        <p>
-            <label for="day-nav" class="margin-toggle">&#8853;</label>
-            <input type="checkbox" id="day-nav" class="margin-toggle"/>
-            <span class="marginnote">
-            &#8678; {{.PrevNext}} &#8680;
-            </span>
-        </p>
+        <section>        
         {{if .Facts}}                        
             {{range .Facts}}                 
                 <p class="subtitle">{{.Title}}</p>
