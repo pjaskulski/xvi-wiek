@@ -13,6 +13,8 @@ Ikona Twitter pochodzi ze strony [Twitter Brand Resources](https://about.twitter
 
 Dodatkowy mechanizm to bot wysyłający raz dziennie na konto [@xvi-wiek](https://twitter.com/xvi_wiek) informację o ciekawym wydarzeniu historycznym, które zdarzyło się w XVI wieku właśnie w tym dniu. Kod źródłowy bota dostępny jest w osobnym repozytorium: [xvi-wiek-bot](https://github.com/pjaskulski/xvi-wiek-bot). 
 
+Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie, gdyby nie lektura [książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
+
 ## API
 
     GET /api/dzien/{month}/{day}
