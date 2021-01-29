@@ -1,0 +1,19 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - indeks chronologiczny{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Indeks chronologiczny</h1>
+
+    <article>
+        <section>                    
+            {{range $year, $facts := .}}
+                <h2 style="margin-bottom: 2rem;">{{$year}}</h2>
+                {{range $facts}}
+                    <p style="margin-left: 50px;">{{.Date}}: <em>{{.Title}}</em> {{.URLHTML}}</p>
+                {{end}}
+            {{end}}
+        </section>
+    </article>
+{{end}}

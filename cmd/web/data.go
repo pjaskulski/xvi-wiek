@@ -65,6 +65,19 @@ type Book struct {
 	Pages       int `yaml:"pages"`
 }
 
+// YearFact type
+type YearFact struct {
+	Date    string
+	Title   string
+	URLHTML template.HTML
+}
+
+// FactsByYear slice
+var FactsByYear map[int][]YearFact
+
+// YearIndex - posortowane lata
+//var YearIndex []int
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -94,6 +107,21 @@ func readFact(filename string) (*[]Fact, error) {
 		if fact.Geo != "" {
 			fact.GeoHTML = template.HTML(prepareGeoHTML(fact.Geo))
 		}
+
+		// uzupełnienie indeksu lat FactsByYear
+		tmp := &YearFact{}
+		tmp.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmp.Title = fact.Title
+		tmp.URLHTML = template.HTML(prepareYearFactHTML(fact.Month, fact.Day, fact.ID))
+		if facts, ok := FactsByYear[fact.Year]; ok {
+			facts = append(facts, *tmp)
+			FactsByYear[fact.Year] = facts
+		} else {
+			facts := make([]YearFact, 0)
+			facts = append(facts, *tmp)
+			FactsByYear[fact.Year] = facts
+		} // FactsByYear
+
 		result = append(result, fact)
 	}
 
@@ -154,6 +182,9 @@ func (app *application) loadData(path string) error {
 	// mapa z listą dni - czy dla danego dnia istnieją wydarzenia w bazie
 	DayFactTable = make(map[string]bool)
 
+	// mapa dla indeksu lat
+	FactsByYear = make(map[int][]YearFact)
+
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
 		name := filenameWithoutExtension(filepath.Base(tFile))
@@ -165,6 +196,12 @@ func (app *application) loadData(path string) error {
 		DayFactTable[name] = true
 		app.dataCache.Add(name, facts, cache.NoExpiration)
 	}
+
+	//YearIndex = make([]int, 0, len(FactsByYear))
+	//for k := range FactsByYear {
+	//	YearIndex = append(YearIndex, k)
+	//}
+	//sort.Ints(YearIndex)
 
 	// cytaty
 	fmt.Println("Wczytywanie bazy cytatów...")
