@@ -138,7 +138,7 @@ func readFact(filename string) (*[]Fact, error) {
 			tmpPeople.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpPeople.Title = fact.Title
 			tmpPeople.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
-			persons := strings.Split(fact.People, ",")
+			persons := strings.Split(fact.People, ";")
 			for _, person := range persons {
 				person = strings.TrimSpace(person)
 				if facts, ok := FactsByPeople[person]; ok {
