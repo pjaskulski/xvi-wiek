@@ -1,10 +1,10 @@
 {{template "base" .}}
 
-{{define "title"}}XVI wiek - indeks postaci{{end}}
+{{define "title"}}XVI wiek - indeks miejsc{{end}}
 
 {{define "main"}} 
 
-    <h1 id="tufte-css">Indeks postaci</h1>
+    <h1 id="tufte-css">Indeks miejsc</h1>
     
     <article>
         <section>
@@ -14,9 +14,9 @@
                 Ilustracja na podstawie: <a href="https://pixabay.com/users/jannijman-624456/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank"><br>
                 Jan Nijman</a> z <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank">Pixabay</a>
             </p>                                
-            {{range $person, $facts := .}}                
+            {{range $location, $facts := .}}                
                 <hr>
-                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$person}}</h2>
+                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$location}}</h2>
                 {{range $facts}}
                     <p style="margin-left: 30px;">{{.DateMonth}} - <em>{{.Title}}</em> {{.URLHTML}}</p>                    
                 {{end}}

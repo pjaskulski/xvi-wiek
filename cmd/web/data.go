@@ -89,6 +89,17 @@ type PeopleFact struct {
 // FactsByPeople slice
 var FactsByPeople map[string][]PeopleFact
 
+// LocationFact type
+type LocationFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByLocation slice
+var FactsByLocation map[string][]LocationFact
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -152,6 +163,24 @@ func readFact(filename string) (*[]Fact, error) {
 				}
 			}
 		} // FactsByPeople
+
+		// uzupełnienie indeksu lat FactsByLocation
+		tmpLocation := &LocationFact{}
+		tmpLocation.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmpLocation.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+		tmpLocation.Title = fact.Title
+		tmpLocation.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+		location := strings.TrimSpace(fact.Location)
+		if location != "" {
+			if facts, ok := FactsByLocation[location]; ok {
+				facts = append(facts, *tmpLocation)
+				FactsByLocation[location] = facts
+			} else {
+				facts := make([]LocationFact, 0)
+				facts = append(facts, *tmpLocation)
+				FactsByLocation[location] = facts
+			}
+		} // FactsByLocation
 
 		result = append(result, fact)
 	}
@@ -217,6 +246,8 @@ func (app *application) loadData(path string) error {
 	FactsByYear = make(map[int][]YearFact)
 	// mapa dla indeksu postaci
 	FactsByPeople = make(map[string][]PeopleFact)
+	// mapa dla indeksu miejsc
+	FactsByLocation = make(map[string][]LocationFact)
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
@@ -236,6 +267,14 @@ func (app *application) loadData(path string) error {
 			return facts[i].Date < facts[j].Date
 		})
 		FactsByPeople[person] = facts
+	}
+
+	// sortowanie wydarzeń historycznych dla miejsc
+	for location, facts := range FactsByLocation {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		FactsByLocation[location] = facts
 	}
 
 	// cytaty
