@@ -6,7 +6,7 @@ year: 1532
 title: Bitwa pod wsią Tarasauti koło Chocimia
 content: >- 
     {{{4 lutego 1532}}} roku oddziały polskie, zaskoczone podczas przeprawy
-    przez rzekę, zostały pokonane przez wojska mołdawskie.[1] 
+    przez rzekę[2], zostały pokonane przez wojska mołdawskie.[1] 
 contentTwitter: >-
     4 lutego 1532 roku oddziały polskie, zaskoczone podczas przeprawy
     przez rzekę, zostały pokonane przez wojska mołdawskie.
@@ -20,4 +20,9 @@ sources:
     - id: 1
       value: Muzeum Wojska Polskiego
       urlName: Kalendarium
-      url: http://www.muzeumwp.pl/kalendarium/02/    
+      url: http://www.muzeumwp.pl/kalendarium/02/ 
+    - id: 2
+      value: Żródła podają zwykle, że podczas przeprawy przez Dniestr. Współczesna
+             miejscowość Tarasivtsi leżąca w pobliżu Chocimia (ok. 30 km) znajduje 
+             się jednak nad Prutem, bliżej Chocimia (10 km) leży wioska Tarasivka, 
+             ale nie bezpośrednio nad Dniestrem a 4-5 km od rzeki. 
