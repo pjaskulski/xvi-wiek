@@ -228,3 +228,18 @@ func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 }
+
+// showPeople func
+func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["ludzie.page.gohtml"]
+	err := ts.Execute(w, FactsByPeople)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}

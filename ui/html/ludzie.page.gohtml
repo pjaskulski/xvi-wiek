@@ -1,10 +1,10 @@
 {{template "base" .}}
 
-{{define "title"}}XVI wiek - indeks chronologiczny{{end}}
+{{define "title"}}XVI wiek - indeks postaci{{end}}
 
 {{define "main"}} 
 
-    <h1 id="tufte-css">Indeks chronologiczny</h1>
+    <h1 id="tufte-css">Indeks postaci</h1>
     
     <article>
         <section>
@@ -15,8 +15,8 @@
                 Jan Nijman</a> z <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042">Pixabay</a>
             </p>                    
             <hr>
-            {{range $year, $facts := .}}                
-                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$year}}</h2>
+            {{range $person, $facts := .}}                
+                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$person}}</h2>
                 {{range $facts}}
                     <p style="margin-left: 30px;">{{.DateMonth}} - <em>{{.Title}}</em> {{.URLHTML}}</p>                    
                 {{end}}

@@ -20,7 +20,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/informacje", app.showInformation)
 	r.Get("/indeksy", app.showIndexes)
 	r.Get("/chronologia", app.showChronology)
-	//r.Get("/ludzie", app.showPeople)
+	r.Get("/ludzie", app.showPeople)
 	//r.Get("/miejsca", app.showPlaceOfEvents)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)

@@ -180,8 +180,8 @@ func getPrevNextHTML(month int, day int) string {
 	return prevnext
 }
 
-// prepareYearFactHTML func
-func prepareYearFactHTML(month int, day int, id string) string {
+// prepareFactLinkHTML func
+func prepareFactLinkHTML(month int, day int, id string) string {
 	html := `<a href="/dzien/%d/%d#%s" class="no-tufte-underline"> &#8680; </a>`
 	return fmt.Sprintf(html, month, day, id)
 }

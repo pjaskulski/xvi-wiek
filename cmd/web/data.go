@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/patrickmn/go-cache"
@@ -67,13 +68,25 @@ type Book struct {
 
 // YearFact type
 type YearFact struct {
-	Date    string
-	Title   string
-	URLHTML template.HTML
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
 }
 
 // FactsByYear slice
 var FactsByYear map[int][]YearFact
+
+// PeopleFact type
+type PeopleFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByPeople slice
+var FactsByPeople map[string][]PeopleFact
 
 // DayFactTable map
 var DayFactTable map[string]bool
@@ -104,18 +117,40 @@ func readFact(filename string) (*[]Fact, error) {
 		}
 
 		// uzupełnienie indeksu lat FactsByYear
-		tmp := &YearFact{}
-		tmp.Date = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
-		tmp.Title = fact.Title
-		tmp.URLHTML = template.HTML(prepareYearFactHTML(fact.Month, fact.Day, fact.ID))
+		tmpYear := &YearFact{}
+		tmpYear.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmpYear.DateMonth = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
+		tmpYear.Title = fact.Title
+		tmpYear.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 		if facts, ok := FactsByYear[fact.Year]; ok {
-			facts = append(facts, *tmp)
+			facts = append(facts, *tmpYear)
 			FactsByYear[fact.Year] = facts
 		} else {
 			facts := make([]YearFact, 0)
-			facts = append(facts, *tmp)
+			facts = append(facts, *tmpYear)
 			FactsByYear[fact.Year] = facts
 		} // FactsByYear
+
+		// uzupełnienie indeksu postaci FactsByPeople
+		if fact.People != "" {
+			tmpPeople := &PeopleFact{}
+			tmpPeople.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+			tmpPeople.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+			tmpPeople.Title = fact.Title
+			tmpPeople.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+			persons := strings.Split(fact.People, ",")
+			for _, person := range persons {
+				person = strings.TrimSpace(person)
+				if facts, ok := FactsByPeople[person]; ok {
+					facts = append(facts, *tmpPeople)
+					FactsByPeople[person] = facts
+				} else {
+					facts := make([]PeopleFact, 0)
+					facts = append(facts, *tmpPeople)
+					FactsByPeople[person] = facts
+				}
+			}
+		} // FactsByPeople
 
 		result = append(result, fact)
 	}
@@ -179,6 +214,8 @@ func (app *application) loadData(path string) error {
 
 	// mapa dla indeksu lat
 	FactsByYear = make(map[int][]YearFact)
+	// mapa dla indeksu postaci
+	FactsByPeople = make(map[string][]PeopleFact)
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
@@ -191,12 +228,6 @@ func (app *application) loadData(path string) error {
 		DayFactTable[name] = true
 		app.dataCache.Add(name, facts, cache.NoExpiration)
 	}
-
-	//YearIndex = make([]int, 0, len(FactsByYear))
-	//for k := range FactsByYear {
-	//	YearIndex = append(YearIndex, k)
-	//}
-	//sort.Ints(YearIndex)
 
 	// cytaty
 	fmt.Println("Wczytywanie bazy cytatów...")
