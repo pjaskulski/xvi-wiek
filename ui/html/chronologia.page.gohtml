@@ -16,9 +16,9 @@
             </p>                    
             <hr>
             {{range $year, $facts := .}}                
-                <h2 style="margin-bottom: 2rem;">{{$year}}</h2>
+                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$year}}</h2>
                 {{range $facts}}
-                    <p style="margin-left: 30px;">{{.Date}}: <em>{{.Title}}</em> {{.URLHTML}}</p>
+                    <p style="margin-left: 30px;">{{.Date}} - <em>{{.Title}}</em> {{.URLHTML}}</p>                    
                 {{end}}
             {{end}}
             <hr>

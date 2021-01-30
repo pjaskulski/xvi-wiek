@@ -75,9 +75,6 @@ type YearFact struct {
 // FactsByYear slice
 var FactsByYear map[int][]YearFact
 
-// YearIndex - posortowane lata
-//var YearIndex []int
-
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -90,8 +87,6 @@ func createDataCache() *cache.Cache {
 func readFact(filename string) (*[]Fact, error) {
 	var result []Fact
 	var fact Fact
-
-	//filename, _ := filepath.Abs(fmt.Sprintf("./data/%02d-%02d.yaml", month, day))
 
 	fileBuf, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -110,7 +105,7 @@ func readFact(filename string) (*[]Fact, error) {
 
 		// uzupełnienie indeksu lat FactsByYear
 		tmp := &YearFact{}
-		tmp.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmp.Date = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
 		tmp.Title = fact.Title
 		tmp.URLHTML = template.HTML(prepareYearFactHTML(fact.Month, fact.Day, fact.ID))
 		if facts, ok := FactsByYear[fact.Year]; ok {
