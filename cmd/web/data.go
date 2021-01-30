@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"path/filepath"
+	"sort"
 	"strings"
 	"time"
 
@@ -227,6 +228,14 @@ func (app *application) loadData(path string) error {
 		numberOfFacts += len(*facts)
 		DayFactTable[name] = true
 		app.dataCache.Add(name, facts, cache.NoExpiration)
+	}
+
+	// sortowanie wydarzeń historycznych dla postaci
+	for person, facts := range FactsByPeople {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		FactsByPeople[person] = facts
 	}
 
 	// cytaty
