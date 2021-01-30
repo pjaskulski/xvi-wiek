@@ -6,6 +6,8 @@ import (
 	"html/template"
 	"io/ioutil"
 	"path/filepath"
+	"sort"
+	"strings"
 	"time"
 
 	"github.com/patrickmn/go-cache"
@@ -65,6 +67,39 @@ type Book struct {
 	Pages       int `yaml:"pages"`
 }
 
+// YearFact type
+type YearFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByYear slice
+var FactsByYear map[int][]YearFact
+
+// PeopleFact type
+type PeopleFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByPeople slice
+var FactsByPeople map[string][]PeopleFact
+
+// LocationFact type
+type LocationFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByLocation slice
+var FactsByLocation map[string][]LocationFact
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -77,8 +112,6 @@ func createDataCache() *cache.Cache {
 func readFact(filename string) (*[]Fact, error) {
 	var result []Fact
 	var fact Fact
-
-	//filename, _ := filepath.Abs(fmt.Sprintf("./data/%02d-%02d.yaml", month, day))
 
 	fileBuf, err := ioutil.ReadFile(filename)
 	if err != nil {
@@ -94,6 +127,61 @@ func readFact(filename string) (*[]Fact, error) {
 		if fact.Geo != "" {
 			fact.GeoHTML = template.HTML(prepareGeoHTML(fact.Geo))
 		}
+
+		// uzupełnienie indeksu lat FactsByYear
+		tmpYear := &YearFact{}
+		tmpYear.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmpYear.DateMonth = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
+		tmpYear.Title = fact.Title
+		tmpYear.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+		if facts, ok := FactsByYear[fact.Year]; ok {
+			facts = append(facts, *tmpYear)
+			FactsByYear[fact.Year] = facts
+		} else {
+			facts := make([]YearFact, 0)
+			facts = append(facts, *tmpYear)
+			FactsByYear[fact.Year] = facts
+		} // FactsByYear
+
+		// uzupełnienie indeksu postaci FactsByPeople
+		if fact.People != "" {
+			tmpPeople := &PeopleFact{}
+			tmpPeople.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+			tmpPeople.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+			tmpPeople.Title = fact.Title
+			tmpPeople.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+			persons := strings.Split(fact.People, ";")
+			for _, person := range persons {
+				person = strings.TrimSpace(person)
+				if facts, ok := FactsByPeople[person]; ok {
+					facts = append(facts, *tmpPeople)
+					FactsByPeople[person] = facts
+				} else {
+					facts := make([]PeopleFact, 0)
+					facts = append(facts, *tmpPeople)
+					FactsByPeople[person] = facts
+				}
+			}
+		} // FactsByPeople
+
+		// uzupełnienie indeksu lat FactsByLocation
+		tmpLocation := &LocationFact{}
+		tmpLocation.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmpLocation.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+		tmpLocation.Title = fact.Title
+		tmpLocation.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+		location := strings.TrimSpace(fact.Location)
+		if location != "" {
+			if facts, ok := FactsByLocation[location]; ok {
+				facts = append(facts, *tmpLocation)
+				FactsByLocation[location] = facts
+			} else {
+				facts := make([]LocationFact, 0)
+				facts = append(facts, *tmpLocation)
+				FactsByLocation[location] = facts
+			}
+		} // FactsByLocation
+
 		result = append(result, fact)
 	}
 
@@ -154,6 +242,13 @@ func (app *application) loadData(path string) error {
 	// mapa z listą dni - czy dla danego dnia istnieją wydarzenia w bazie
 	DayFactTable = make(map[string]bool)
 
+	// mapa dla indeksu lat
+	FactsByYear = make(map[int][]YearFact)
+	// mapa dla indeksu postaci
+	FactsByPeople = make(map[string][]PeopleFact)
+	// mapa dla indeksu miejsc
+	FactsByLocation = make(map[string][]LocationFact)
+
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
 		name := filenameWithoutExtension(filepath.Base(tFile))
@@ -164,6 +259,22 @@ func (app *application) loadData(path string) error {
 		numberOfFacts += len(*facts)
 		DayFactTable[name] = true
 		app.dataCache.Add(name, facts, cache.NoExpiration)
+	}
+
+	// sortowanie wydarzeń historycznych dla postaci
+	for person, facts := range FactsByPeople {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		FactsByPeople[person] = facts
+	}
+
+	// sortowanie wydarzeń historycznych dla miejsc
+	for location, facts := range FactsByLocation {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		FactsByLocation[location] = facts
 	}
 
 	// cytaty

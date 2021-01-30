@@ -11,7 +11,7 @@
         <section>        
         {{if .Facts}}                        
             {{range .Facts}}                 
-                <p class="subtitle">{{.Title}}</p>
+                <p class="subtitle" id="{{.ID}}">{{.Title}}</p>
                 <p>{{.ContentHTML}}</p>
                 {{if .Image}}
                     {{.ImageHTML}}

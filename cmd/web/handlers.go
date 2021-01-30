@@ -198,3 +198,63 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 }
+
+// showIndexes func
+func (app *application) showIndexes(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["indeksy.page.gohtml"]
+	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+// showChronology func
+func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["chronologia.page.gohtml"]
+	err := ts.Execute(w, FactsByYear)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+// showPeople func
+func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["ludzie.page.gohtml"]
+	err := ts.Execute(w, FactsByPeople)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+// showLocation func
+func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		w.Header().Set("Allow", http.MethodGet)
+		app.clientError(w, http.StatusMethodNotAllowed)
+		return
+	}
+
+	ts := app.templateCache["miejsca.page.gohtml"]
+	err := ts.Execute(w, FactsByLocation)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}

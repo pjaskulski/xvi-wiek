@@ -1,0 +1,27 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - indeks postaci{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Indeks postaci</h1>
+    
+    <article>
+        <section>
+            <p><label for="image-1" class="margin-toggle">&#8853;</label>
+                <input type="checkbox" id="image-1" class="margin-toggle"/>
+                <span class="marginnote"><img src="/static/gallery/malbork-sepia-canvas.jpg" alt="Malbork, fragment zamku"/><br>
+                Ilustracja na podstawie: <a href="https://pixabay.com/users/jannijman-624456/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank"><br>
+                Jan Nijman</a> z <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank">Pixabay</a>
+            </p>                                
+            {{range $person, $facts := .}}                
+                <hr>
+                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$person}}</h2>
+                {{range $facts}}
+                    <p style="margin-left: 30px;">{{.DateMonth}} - <em>{{.Title}}</em> {{.URLHTML}}</p>                    
+                {{end}}
+            {{end}}
+            <hr>
+        </section>
+    </article>
+{{end}}
