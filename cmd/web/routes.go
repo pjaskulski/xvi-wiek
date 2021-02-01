@@ -22,6 +22,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/chronologia", app.showChronology)
 	r.Get("/ludzie", app.showPeople)
 	r.Get("/miejsca", app.showLocation)
+	r.Get("/slowa", app.showKeyword)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
 	// api

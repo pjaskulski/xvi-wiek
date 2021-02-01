@@ -100,6 +100,17 @@ type LocationFact struct {
 // FactsByLocation slice
 var FactsByLocation map[string][]LocationFact
 
+// KeywordFact type
+type KeywordFact struct {
+	Date      string
+	DateMonth string
+	Title     string
+	URLHTML   template.HTML
+}
+
+// FactsByKeyword slice
+var FactsByKeyword map[string][]KeywordFact
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -182,6 +193,27 @@ func readFact(filename string) (*[]Fact, error) {
 			}
 		} // FactsByLocation
 
+		// uzupełnienie indeksu postaci FactsByKeyword
+		if fact.Keywords != "" {
+			tmpKeyword := &KeywordFact{}
+			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+			tmpKeyword.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+			tmpKeyword.Title = fact.Title
+			tmpKeyword.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+			keywords := strings.Split(fact.Keywords, ";")
+			for _, keyword := range keywords {
+				keyword = strings.TrimSpace(keyword)
+				if facts, ok := FactsByKeyword[keyword]; ok {
+					facts = append(facts, *tmpKeyword)
+					FactsByKeyword[keyword] = facts
+				} else {
+					facts := make([]KeywordFact, 0)
+					facts = append(facts, *tmpKeyword)
+					FactsByKeyword[keyword] = facts
+				}
+			}
+		} // FactsByKeyword
+
 		result = append(result, fact)
 	}
 
@@ -248,6 +280,8 @@ func (app *application) loadData(path string) error {
 	FactsByPeople = make(map[string][]PeopleFact)
 	// mapa dla indeksu miejsc
 	FactsByLocation = make(map[string][]LocationFact)
+	// mapa dla indeksu słów kluczowych
+	FactsByKeyword = make(map[string][]KeywordFact)
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
@@ -275,6 +309,14 @@ func (app *application) loadData(path string) error {
 			return facts[i].Date < facts[j].Date
 		})
 		FactsByLocation[location] = facts
+	}
+
+	// sortowanie wydarzeń historycznych dla słów kluczowych
+	for keyword, facts := range FactsByKeyword {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		FactsByKeyword[keyword] = facts
 	}
 
 	// cytaty
