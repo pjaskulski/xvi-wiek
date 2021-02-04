@@ -1,0 +1,42 @@
+---
+id: 1
+day: 25
+month: 7
+year: 1549
+title: Urodził się Świętosław Orzelski, starosta radziejowski i poseł na sejm
+content: >- 
+    {{{25 lipca 1549}}} roku w Orlem urodził się Świętosław Orzelski, starosta 
+    radziejowski, poseł na sejm, luteranin.[3] W 1573 r. w czasie sejmu konwokacyjnego 
+    domagał się przeprowadzenia śledztwa w sprawie śmierci Zygmunta II Augusta.
+    W 1582 r. wygłosił w imieniu sejmu mowę dziękczynną ku czci Stefana Batorego
+    w uznaniu jego zwycięskiej wojny z Moskwą.[2] Był także historykiem, autorem
+    dzieła opisującego czasy wielkiego bezkrólewia w latach 1572-1576 - {Interregni 
+    Poloniae libri VIII}[4] wydanego w XIX wieku po polsku jako: {Bezkrólewia 
+    ksiąg ośmioro czyli Dzieje Polski od zgonu Zygmunta Augusta r. 1572 aż do r. 
+    1576}.[1]
+contentTwitter: >-
+    25 lipca 1549 roku w Orlem urodził się Świętosław Orzelski, starosta 
+    radziejowski, poseł na sejm, luteranin.
+location: Orle
+geo: 53.244167,17.518056
+people: Orzelski Świętosław
+keywords: sejm
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wielkopolska Biblioteka Cyfrowa
+      urlName: Bezkrólewia ksiąg ośmioro 
+      url: https://www.wbc.poznan.pl/dlibra/publication/51441/edition/67913 
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 160-282
+      urlName:
+      url:
+    - id: 3
+      value: Wikipedia
+      urlName: Świętosław Orzelski
+      url: https://pl.wikipedia.org/wiki/%C5%9Awi%C4%99tos%C5%82aw_Orzelski
+    - id: 4
+      value: Wikipedia
+      urlName: Interregni Poloniae libri VIII
+      url: https://pl.wikipedia.org/wiki/Interregni_Poloniae_libri_VIII
