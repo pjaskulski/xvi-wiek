@@ -19,10 +19,10 @@ func (app *application) routes() http.Handler {
 	r.Get("/ksiazki", app.showBooks)
 	r.Get("/informacje", app.showInformation)
 	r.Get("/indeksy", app.showIndexes)
-	r.Get("/chronologia", app.showChronology)
-	r.Get("/ludzie", app.showPeople)
-	r.Get("/miejsca", app.showLocation)
-	r.Get("/slowa", app.showKeyword)
+	r.Get("/indeksy/chronologia", app.showChronology)
+	r.Get("/indeksy/ludzie", app.showPeople)
+	r.Get("/indeksy/miejsca", app.showLocation)
+	r.Get("/indeksy/slowa", app.showKeyword)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
 	// api
