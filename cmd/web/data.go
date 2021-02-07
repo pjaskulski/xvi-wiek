@@ -269,7 +269,8 @@ func readBook() (*[]Book, error) {
 // loadData - wczytuje podczas startu serwera dane do struktur w pamięci operacyjnej
 func (app *application) loadData(path string) error {
 	// wydarzenia
-	fmt.Println("Wczytywanie bazy wydarzeń...")
+	app.infoLog.Printf("Wczytywanie bazy wydarzeń...")
+	start := time.Now()
 
 	// mapa z listą dni - czy dla danego dnia istnieją wydarzenia w bazie
 	DayFactTable = make(map[string]bool)
@@ -320,7 +321,7 @@ func (app *application) loadData(path string) error {
 	}
 
 	// cytaty
-	fmt.Println("Wczytywanie bazy cytatów...")
+	app.infoLog.Printf("Wczytywanie bazy cytatów...")
 
 	quotes, err := readQuote()
 	if err != nil {
@@ -329,13 +330,16 @@ func (app *application) loadData(path string) error {
 	app.dataCache.Add("quotes", quotes, cache.NoExpiration)
 
 	// książki
-	fmt.Println("Wczytywanie bazy książek...")
+	app.infoLog.Printf("Wczytywanie bazy książek...")
 
 	books, err := readBook()
 	if err != nil {
 		return err
 	}
 	app.dataCache.Add("books", books, cache.NoExpiration)
+
+	elapsed := time.Since(start)
+	app.infoLog.Printf("Czas wczytywania danych: %s", elapsed)
 
 	return nil
 }

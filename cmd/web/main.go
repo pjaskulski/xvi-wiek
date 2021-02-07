@@ -70,7 +70,7 @@ func main() {
 	// wczytane danych do pamięci podręcznej
 	err = app.loadData(dirExecutable + "/data/")
 	if err != nil {
-		errorLog.Fatal(err)
+		app.errorLog.Fatal(err)
 	}
 
 	// start serwera http
@@ -80,7 +80,7 @@ func main() {
 		Handler:  app.routes(),
 	}
 
-	infoLog.Printf("Start serwera, port :%s", cfg.Port)
+	app.infoLog.Printf("Start serwera, port :%s", cfg.Port)
 	err = serwer.ListenAndServe()
-	errorLog.Fatal(err)
+	app.errorLog.Fatal(err)
 }
