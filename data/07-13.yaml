@@ -5,25 +5,31 @@ month: 7
 year: 1552
 title: Wizyta Zygmunta II Augusta w Gdańsku
 content: >- 
-       {{{13 lipca 1552}}} roku podczas wizyty królewskiej w Gdańsku, Zygmunt
+       {{{13 lipca 1552}}} roku podczas wizyty królewskiej w Gdańsku[2], Zygmunt
        II August zwiedził miejscową stocznię i przyglądał się zwodowaniu nowego
        statku. Królowi towarzyszył książę pomorski Barnim XI. Tydzień później
-       władca wizytował warownię u ujścia Wisły, zwaną wówczas "latarnią".[1] Mieszczanie
-       gdańscy zadbali o wyjątkową oprawę wizyty, na cześć króla strzelały działa 
-       warowni i zakotwiczonych w pobliżu okrętów, przygotowano barkę wyściełaną 
-       czerwonym suknem i ozdobioną chorągwiami.     
+       władca wizytował warownię u ujścia Wisły, zwaną wówczas "latarnią".[1] 
+       Mieszczanie gdańscy zadbali o wyjątkową oprawę wizyty, na cześć króla 
+       strzelały działa warowni i zakotwiczonych w pobliżu okrętów, przygotowano 
+       barkę wyściełaną czerwonym suknem i ozdobioną chorągwiami, odbyły się 
+       liczne uczty i turnieje. Z Gdańska Zygmunt August wraz z dworem wyruszył 
+       do Królewca, gdzie zaprosił go Albrecht Hohenzollern.     
 contentTwitter: >-
        13 lipca 1552 roku podczas wizyty królewskiej w Gdańsku, Zygmunt
        II August zwiedził miejscową stocznię i przyglądał się zwodowaniu nowego
        statku. 
 location: Gdańsk
 geo: 
-people: Zygmunt II August; Barnim XI
-keywords: Jagiellonowie
+people: Zygmunt II August; Barnim XI; Albrecht Hohenzollern
+keywords: Jagiellonowie; morze
 image: 
 imageInfo: 
 sources: 
     - id: 1
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 42-44
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 43-44
       urlName: 
       url: 
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 124
+      urlName:
+      url:
