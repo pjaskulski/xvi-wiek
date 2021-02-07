@@ -17,10 +17,14 @@ type Config struct {
 }
 
 type application struct {
-	errorLog      *log.Logger
-	infoLog       *log.Logger
-	templateCache map[string]*template.Template
-	dataCache     *cache.Cache
+	errorLog        *log.Logger
+	infoLog         *log.Logger
+	templateCache   map[string]*template.Template
+	dataCache       *cache.Cache
+	FactsByYear     map[int][]YearFact
+	FactsByPeople   map[string][]PeopleFact
+	FactsByLocation map[string][]LocationFact
+	FactsByKeyword  map[string][]KeywordFact
 }
 
 var numberOfFacts int

@@ -75,9 +75,6 @@ type YearFact struct {
 	URLHTML   template.HTML
 }
 
-// FactsByYear slice
-var FactsByYear map[int][]YearFact
-
 // PeopleFact type
 type PeopleFact struct {
 	Date      string
@@ -85,9 +82,6 @@ type PeopleFact struct {
 	Title     string
 	URLHTML   template.HTML
 }
-
-// FactsByPeople slice
-var FactsByPeople map[string][]PeopleFact
 
 // LocationFact type
 type LocationFact struct {
@@ -97,9 +91,6 @@ type LocationFact struct {
 	URLHTML   template.HTML
 }
 
-// FactsByLocation slice
-var FactsByLocation map[string][]LocationFact
-
 // KeywordFact type
 type KeywordFact struct {
 	Date      string
@@ -107,9 +98,6 @@ type KeywordFact struct {
 	Title     string
 	URLHTML   template.HTML
 }
-
-// FactsByKeyword slice
-var FactsByKeyword map[string][]KeywordFact
 
 // DayFactTable map
 var DayFactTable map[string]bool
@@ -120,7 +108,7 @@ func createDataCache() *cache.Cache {
 }
 
 // readFact func
-func readFact(filename string) (*[]Fact, error) {
+func (app *application) readFact(filename string) (*[]Fact, error) {
 	var result []Fact
 	var fact Fact
 
@@ -145,13 +133,13 @@ func readFact(filename string) (*[]Fact, error) {
 		tmpYear.DateMonth = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
 		tmpYear.Title = fact.Title
 		tmpYear.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
-		if facts, ok := FactsByYear[fact.Year]; ok {
+		if facts, ok := app.FactsByYear[fact.Year]; ok {
 			facts = append(facts, *tmpYear)
-			FactsByYear[fact.Year] = facts
+			app.FactsByYear[fact.Year] = facts
 		} else {
 			facts := make([]YearFact, 0)
 			facts = append(facts, *tmpYear)
-			FactsByYear[fact.Year] = facts
+			app.FactsByYear[fact.Year] = facts
 		} // FactsByYear
 
 		// uzupełnienie indeksu postaci FactsByPeople
@@ -164,13 +152,13 @@ func readFact(filename string) (*[]Fact, error) {
 			persons := strings.Split(fact.People, ";")
 			for _, person := range persons {
 				person = strings.TrimSpace(person)
-				if facts, ok := FactsByPeople[person]; ok {
+				if facts, ok := app.FactsByPeople[person]; ok {
 					facts = append(facts, *tmpPeople)
-					FactsByPeople[person] = facts
+					app.FactsByPeople[person] = facts
 				} else {
 					facts := make([]PeopleFact, 0)
 					facts = append(facts, *tmpPeople)
-					FactsByPeople[person] = facts
+					app.FactsByPeople[person] = facts
 				}
 			}
 		} // FactsByPeople
@@ -183,13 +171,13 @@ func readFact(filename string) (*[]Fact, error) {
 		tmpLocation.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 		location := strings.TrimSpace(fact.Location)
 		if location != "" {
-			if facts, ok := FactsByLocation[location]; ok {
+			if facts, ok := app.FactsByLocation[location]; ok {
 				facts = append(facts, *tmpLocation)
-				FactsByLocation[location] = facts
+				app.FactsByLocation[location] = facts
 			} else {
 				facts := make([]LocationFact, 0)
 				facts = append(facts, *tmpLocation)
-				FactsByLocation[location] = facts
+				app.FactsByLocation[location] = facts
 			}
 		} // FactsByLocation
 
@@ -203,13 +191,13 @@ func readFact(filename string) (*[]Fact, error) {
 			keywords := strings.Split(fact.Keywords, ";")
 			for _, keyword := range keywords {
 				keyword = strings.TrimSpace(keyword)
-				if facts, ok := FactsByKeyword[keyword]; ok {
+				if facts, ok := app.FactsByKeyword[keyword]; ok {
 					facts = append(facts, *tmpKeyword)
-					FactsByKeyword[keyword] = facts
+					app.FactsByKeyword[keyword] = facts
 				} else {
 					facts := make([]KeywordFact, 0)
 					facts = append(facts, *tmpKeyword)
-					FactsByKeyword[keyword] = facts
+					app.FactsByKeyword[keyword] = facts
 				}
 			}
 		} // FactsByKeyword
@@ -221,7 +209,7 @@ func readFact(filename string) (*[]Fact, error) {
 }
 
 // readQuote func
-func readQuote() (*[]Quote, error) {
+func (app *application) readQuote() (*[]Quote, error) {
 	var result []Quote
 	var quote Quote
 
@@ -243,7 +231,7 @@ func readQuote() (*[]Quote, error) {
 }
 
 // readBook func
-func readBook() (*[]Book, error) {
+func (app *application) readBook() (*[]Book, error) {
 	var result []Book
 	var book Book
 
@@ -276,18 +264,18 @@ func (app *application) loadData(path string) error {
 	DayFactTable = make(map[string]bool)
 
 	// mapa dla indeksu lat
-	FactsByYear = make(map[int][]YearFact)
+	app.FactsByYear = make(map[int][]YearFact)
 	// mapa dla indeksu postaci
-	FactsByPeople = make(map[string][]PeopleFact)
+	app.FactsByPeople = make(map[string][]PeopleFact)
 	// mapa dla indeksu miejsc
-	FactsByLocation = make(map[string][]LocationFact)
+	app.FactsByLocation = make(map[string][]LocationFact)
 	// mapa dla indeksu słów kluczowych
-	FactsByKeyword = make(map[string][]KeywordFact)
+	app.FactsByKeyword = make(map[string][]KeywordFact)
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	for _, tFile := range dataFiles {
 		name := filenameWithoutExtension(filepath.Base(tFile))
-		facts, err := readFact(tFile)
+		facts, err := app.readFact(tFile)
 		if err != nil {
 			return err
 		}
@@ -297,33 +285,33 @@ func (app *application) loadData(path string) error {
 	}
 
 	// sortowanie wydarzeń historycznych dla postaci
-	for person, facts := range FactsByPeople {
+	for person, facts := range app.FactsByPeople {
 		sort.Slice(facts, func(i, j int) bool {
 			return facts[i].Date < facts[j].Date
 		})
-		FactsByPeople[person] = facts
+		app.FactsByPeople[person] = facts
 	}
 
 	// sortowanie wydarzeń historycznych dla miejsc
-	for location, facts := range FactsByLocation {
+	for location, facts := range app.FactsByLocation {
 		sort.Slice(facts, func(i, j int) bool {
 			return facts[i].Date < facts[j].Date
 		})
-		FactsByLocation[location] = facts
+		app.FactsByLocation[location] = facts
 	}
 
 	// sortowanie wydarzeń historycznych dla słów kluczowych
-	for keyword, facts := range FactsByKeyword {
+	for keyword, facts := range app.FactsByKeyword {
 		sort.Slice(facts, func(i, j int) bool {
 			return facts[i].Date < facts[j].Date
 		})
-		FactsByKeyword[keyword] = facts
+		app.FactsByKeyword[keyword] = facts
 	}
 
 	// cytaty
 	app.infoLog.Printf("Wczytywanie bazy cytatów...")
 
-	quotes, err := readQuote()
+	quotes, err := app.readQuote()
 	if err != nil {
 		return err
 	}
@@ -332,7 +320,7 @@ func (app *application) loadData(path string) error {
 	// książki
 	app.infoLog.Printf("Wczytywanie bazy książek...")
 
-	books, err := readBook()
+	books, err := app.readBook()
 	if err != nil {
 		return err
 	}

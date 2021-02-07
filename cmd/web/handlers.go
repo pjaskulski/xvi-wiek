@@ -223,7 +223,7 @@ func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ts := app.templateCache["chronologia.page.gohtml"]
-	err := ts.Execute(w, FactsByYear)
+	err := ts.Execute(w, app.FactsByYear)
 	if err != nil {
 		app.serverError(w, err)
 	}
@@ -238,7 +238,7 @@ func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ts := app.templateCache["ludzie.page.gohtml"]
-	err := ts.Execute(w, FactsByPeople)
+	err := ts.Execute(w, app.FactsByPeople)
 	if err != nil {
 		app.serverError(w, err)
 	}
@@ -253,7 +253,7 @@ func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ts := app.templateCache["miejsca.page.gohtml"]
-	err := ts.Execute(w, FactsByLocation)
+	err := ts.Execute(w, app.FactsByLocation)
 	if err != nil {
 		app.serverError(w, err)
 	}
@@ -268,7 +268,7 @@ func (app *application) showKeyword(w http.ResponseWriter, r *http.Request) {
 	}
 
 	ts := app.templateCache["slowa.page.gohtml"]
-	err := ts.Execute(w, FactsByKeyword)
+	err := ts.Execute(w, app.FactsByKeyword)
 	if err != nil {
 		app.serverError(w, err)
 	}
