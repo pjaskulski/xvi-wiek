@@ -60,7 +60,7 @@ func main() {
 	//bufor dla szablonów stron html
 	templateCache, err := createTemplateCache(dirExecutable + "/ui/html/")
 	if err != nil {
-		log.Fatal()
+		log.Fatal(err)
 	}
 
 	// aplikacja

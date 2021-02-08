@@ -59,9 +59,17 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 	dayMonth := fmt.Sprintf("%d %s", today.Day(), monthName[int(today.Month())])
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: facts.(*[]Fact)}
+		data = &templateDataFacts{
+			Today:      dayMonth,
+			TitleOfDay: "",
+			Facts:      facts.(*[]Fact),
+		}
 	} else {
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", Facts: nil}
+		data = &templateDataFacts{
+			Today:      dayMonth,
+			TitleOfDay: "",
+			Facts:      nil,
+		}
 	}
 
 	ts := app.templateCache["index.page.gohtml"]
@@ -73,11 +81,6 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 
 // showCalendar func
 func (app *application) showCalendar(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["kalendarz.page.gohtml"]
 	err := ts.Execute(w, nil)
@@ -88,11 +91,6 @@ func (app *application) showCalendar(w http.ResponseWriter, r *http.Request) {
 
 // showQuotes func
 func (app *application) showQuotes(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	quotes, ok := app.dataCache.Get("quotes")
 	if !ok {
@@ -111,11 +109,6 @@ func (app *application) showQuotes(w http.ResponseWriter, r *http.Request) {
 
 // showBooks func
 func (app *application) showBooks(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	books, ok := app.dataCache.Get("books")
 	if !ok {
@@ -134,11 +127,6 @@ func (app *application) showBooks(w http.ResponseWriter, r *http.Request) {
 
 // showInformation func
 func (app *application) showInformation(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	data := &templateDataInformation{NumberOfFacts: numberOfFacts}
 
@@ -187,9 +175,19 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		tmpFacts := facts.(*[]Fact)
 		titleOfDay := (*tmpFacts)[0].Title
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: titleOfDay, PrevNext: prevnext, Facts: tmpFacts}
+		data = &templateDataFacts{
+			Today:      dayMonth,
+			TitleOfDay: titleOfDay,
+			PrevNext:   prevnext,
+			Facts:      tmpFacts,
+		}
 	} else {
-		data = &templateDataFacts{Today: dayMonth, TitleOfDay: "", PrevNext: prevnext, Facts: nil}
+		data = &templateDataFacts{
+			Today:      dayMonth,
+			TitleOfDay: "",
+			PrevNext:   prevnext,
+			Facts:      nil,
+		}
 	}
 
 	ts := app.templateCache["day.page.gohtml"]
@@ -201,11 +199,6 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 
 // showIndexes func
 func (app *application) showIndexes(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["indeksy.page.gohtml"]
 	err := ts.Execute(w, nil)
@@ -216,11 +209,6 @@ func (app *application) showIndexes(w http.ResponseWriter, r *http.Request) {
 
 // showChronology func
 func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["chronologia.page.gohtml"]
 	err := ts.Execute(w, app.FactsByYear)
@@ -231,11 +219,6 @@ func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
 
 // showPeople func
 func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["ludzie.page.gohtml"]
 	err := ts.Execute(w, app.FactsByPeople)
@@ -246,11 +229,6 @@ func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 
 // showLocation func
 func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["miejsca.page.gohtml"]
 	err := ts.Execute(w, app.FactsByLocation)
@@ -261,11 +239,6 @@ func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 
 // showKeyword func
 func (app *application) showKeyword(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet {
-		w.Header().Set("Allow", http.MethodGet)
-		app.clientError(w, http.StatusMethodNotAllowed)
-		return
-	}
 
 	ts := app.templateCache["slowa.page.gohtml"]
 	err := ts.Execute(w, app.FactsByKeyword)
