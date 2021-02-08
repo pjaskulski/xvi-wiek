@@ -52,3 +52,13 @@ Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
    }
 ]
 ```
+
+## Zrzut ekranu
+
+![Screen](xvi-wiek.png)
+
+## TODO
+
+- [ ] uzupełnić dane 
+- [ ] możliwość automatycznego odświeżenia danych po wgraniu nowych/zmodyfikowanych 
+      plików YAML (program powinien monitorować katalog /data) 
