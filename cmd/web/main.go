@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"path"
+	"sync"
 
 	"github.com/patrickmn/go-cache"
 )
@@ -27,8 +28,12 @@ type application struct {
 	FactsByKeyword  map[string][]KeywordFact
 }
 
-var numberOfFacts int
-var dirExecutable string
+var (
+	numberOfFacts int
+	dirExecutable string
+	waitgroup     = sync.WaitGroup{}
+	lock          = sync.Mutex{}
+)
 
 func main() {
 	// konfiguracja przez parametr z linii komend

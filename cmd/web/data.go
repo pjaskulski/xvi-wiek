@@ -108,13 +108,17 @@ func createDataCache() *cache.Cache {
 }
 
 // readFact func
-func (app *application) readFact(filename string) (*[]Fact, error) {
+func (app *application) readFact(filename string) {
 	var result []Fact
 	var fact Fact
 
+	defer waitgroup.Done()
+
+	name := filenameWithoutExtension(filepath.Base(filename))
+
 	fileBuf, err := ioutil.ReadFile(filename)
 	if err != nil {
-		return nil, err
+		app.errorLog.Fatal(err)
 	}
 
 	r := bytes.NewReader(fileBuf)
@@ -133,6 +137,8 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 		tmpYear.DateMonth = fmt.Sprintf("%d %s", fact.Day, monthName[fact.Month])
 		tmpYear.Title = fact.Title
 		tmpYear.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+
+		lock.Lock()
 		if facts, ok := app.FactsByYear[fact.Year]; ok {
 			facts = append(facts, *tmpYear)
 			app.FactsByYear[fact.Year] = facts
@@ -141,6 +147,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 			facts = append(facts, *tmpYear)
 			app.FactsByYear[fact.Year] = facts
 		} // FactsByYear
+		lock.Unlock()
 
 		// uzupełnienie indeksu postaci FactsByPeople
 		if fact.People != "" {
@@ -152,6 +159,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 			persons := strings.Split(fact.People, ";")
 			for _, person := range persons {
 				person = strings.TrimSpace(person)
+				lock.Lock()
 				if facts, ok := app.FactsByPeople[person]; ok {
 					facts = append(facts, *tmpPeople)
 					app.FactsByPeople[person] = facts
@@ -160,6 +168,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 					facts = append(facts, *tmpPeople)
 					app.FactsByPeople[person] = facts
 				}
+				lock.Unlock()
 			}
 		} // FactsByPeople
 
@@ -171,6 +180,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 		tmpLocation.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 		location := strings.TrimSpace(fact.Location)
 		if location != "" {
+			lock.Lock()
 			if facts, ok := app.FactsByLocation[location]; ok {
 				facts = append(facts, *tmpLocation)
 				app.FactsByLocation[location] = facts
@@ -179,6 +189,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 				facts = append(facts, *tmpLocation)
 				app.FactsByLocation[location] = facts
 			}
+			lock.Unlock()
 		} // FactsByLocation
 
 		// uzupełnienie indeksu postaci FactsByKeyword
@@ -191,6 +202,7 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 			keywords := strings.Split(fact.Keywords, ";")
 			for _, keyword := range keywords {
 				keyword = strings.TrimSpace(keyword)
+				lock.Lock()
 				if facts, ok := app.FactsByKeyword[keyword]; ok {
 					facts = append(facts, *tmpKeyword)
 					app.FactsByKeyword[keyword] = facts
@@ -199,13 +211,18 @@ func (app *application) readFact(filename string) (*[]Fact, error) {
 					facts = append(facts, *tmpKeyword)
 					app.FactsByKeyword[keyword] = facts
 				}
+				lock.Unlock()
 			}
 		} // FactsByKeyword
 
 		result = append(result, fact)
 	}
 
-	return &result, nil
+	lock.Lock()
+	numberOfFacts += len(result)
+	DayFactTable[name] = true
+	app.dataCache.Add(name, &result, cache.NoExpiration)
+	lock.Unlock()
 }
 
 // readQuote func
@@ -273,15 +290,12 @@ func (app *application) loadData(path string) error {
 	app.FactsByKeyword = make(map[string][]KeywordFact)
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
-	for _, tFile := range dataFiles {
-		name := filenameWithoutExtension(filepath.Base(tFile))
-		facts, err := app.readFact(tFile)
-		if err != nil {
-			return err
+	if len(dataFiles) > 0 {
+		for _, tFile := range dataFiles {
+			waitgroup.Add(1)
+			go app.readFact(tFile)
 		}
-		numberOfFacts += len(*facts)
-		DayFactTable[name] = true
-		app.dataCache.Add(name, facts, cache.NoExpiration)
+		waitgroup.Wait()
 	}
 
 	// sortowanie wydarzeń historycznych dla postaci
