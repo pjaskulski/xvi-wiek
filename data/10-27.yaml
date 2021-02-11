@@ -26,8 +26,44 @@ sources:
     - id: 1
       value: Wikipedia
       urlName: Jan Dantyszek
-      url: ht   tps://pl.wikipedia.org/wiki/Jan_Dantyszek
+      url: https://pl.wikipedia.org/wiki/Jan_Dantyszek
     - id: 2
       value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 291
+      urlName:
+      url: 
+---
+id: 2
+day: 27
+month: 10
+year: 1505
+title: Zmarł Iwan III Srogi, wielki książę moskiewski
+content: >- 
+    {{{27 października 1505}}} roku w Moskwie zmarł Iwan III Srogi,
+    wielki książę moskiewski.[1][2] Władał ponad 40 lat odnosząc wiele sukcesów,
+    podbił m.in. księstwo Jarosławskie, Psków, Nowogród Wielki, Twer. Zakończył
+    trwającą ponad dwieście lat zależność od mongolskich najeźdźców. W czasach
+    panowania na tronie litewskim Aleksandra Jagiellończyka rozpoczął ataki
+    na państwo litewskie, zwyciężąjąc w wojnie z latch 1492-1494 i przyłączając
+    do swojego państwa Wiaźmę. Presji ze strony moskiewskiej na Litwę nie zakończył
+    pokój z 1494 r. ani małżeństwo córki Iwana - Heleny z Aleksandrem Jagiellończykiem.
+    Sześć lat później Iwan znów ruszył na ziemie Wielkiego Księstwa Litewskiego -
+    - z powodzeniem - zawarty w 1503 r. rozejm przyznawał Wielkiemu Księstwu 
+    Moskiewskiemu znaczą część terytorium Litwy.    
+contentTwitter: >-
+    27 października 1505 roku w Moskwie zmarł Iwan III Srogi, wielki książę 
+    moskiewski.  
+location: Moskwa
+geo: 55.7472,37.6227 
+people: Iwan III Srogi
+keywords: Rosja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Iwan III Srogi
+      url: https://pl.wikipedia.org/wiki/Iwan_III_Srogi
+    - id: 2
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 279
       urlName:
       url: 
