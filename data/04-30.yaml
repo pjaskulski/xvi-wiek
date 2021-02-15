@@ -1,0 +1,43 @@
+---
+id: 1
+day: 30
+month: 4
+year: 1520
+title: Wojska mazowieckie zdobyły zamek w Działdowie
+content: >- 
+    {{{30 kwietnia 1520}}} roku wojska mazowieckie walczące po stronie Królestwa
+    Polskiego w wojnie z zakonem krzyżackim zdobyły zamek w Działdowie.[2] Oblężenie 
+    trwało 9 tygodni, wójt działdowski Hans von der Gablentz zbiegł, załoga trafiła
+    do polskiej niewoli.[5] Zdobyty zamek obsadzono oddziałami z ziemi płockiej pod 
+    dowództwem kasztelana płockiego i sierpskiego Piotra Kryskiego z Drobina[3][4],
+    który w uznaniu zasług został działdowskim starostą i otrzymał 600 florenów nagrody.[1]  
+contentTwitter: >-
+    30 kwietnia 1520 roku wojska mazowieckie walczące po stronie Królestwa
+    Polskiego w wojnie z zakonem krzyżackim zdobyły zamek w Działdowie.
+location: Działdowo
+geo: 53.2381,20.1812
+people: Kryski Piotr
+keywords: Prusy; zakon krzyżacki
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Piotr Kryski
+      url: https://pl.wikipedia.org/wiki/Piotr_Kryski
+    - id: 2
+      value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      urlName:
+      url:   
+    - id: 3
+      value: Ryszard Zieliński, "Senatorowie płoccy (dokończenie)",Notatki Płockie 5/2-16, 24-30 
+      urlName:
+      url:
+    - id: 4
+      value: Słownik Historyczno-Geograficzny Ziem Polskich w Średniowieczu
+      urlName: Drobin
+      url: http://www.slownik.ihpan.edu.pl/search.php?id=12964
+    - id: 5
+      value: Muzeum Wojska Polskiego
+      urlName: Kalendarium
+      url: http://www.muzeumwp.pl/kalendarium/02/
