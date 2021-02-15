@@ -33,3 +33,37 @@ sources:
       value: Wikipedia
       urlName: Krzysztof Zborowski (podczaszy koronny)
       url: https://pl.wikipedia.org/wiki/Krzysztof_Zborowski_(podczaszy_koronny)
+---
+id: 2
+day: 22
+month: 2
+year: 1520
+title: Urodził sie Fryderyk III, książę legnicki z dynastii Piastów
+content: >- 
+    {{{22 lutego 1520}}} roku urodził się Fryderyk III, książę legnicki, prawnuk
+    Kazimierza Jagiellończyka.[2] W 1559 r. został  pozbawiony władzy i do śmierci
+    w 1570 r. przetrzymywano go w legnickim zamku.[1] Księstwo legnickie pozostawało
+    pod panowaniem Piastów aż do 1675 r.[3] kiedy to zmarł ostatni książę ze śląskiej
+    linii Piastów - Jerzy Wilhelm legnicki.
+contentTwitter: >-
+    22 lutego 1520 roku urodził się Fryderyk III, książę legnicki, prawnuk
+    Kazimierza Jagiellończyka.
+location: 
+geo: 
+people: Fryderyk III legnicki; Kazimierz Jagiellończyk
+keywords: Śląsk
+image:
+imageInfo: 
+sources: 
+    - id: 1
+      value: Ludwik Bazylow, "Księstwo legnickie w drugiej polowie xvi wieku na tle stosunku do Polski i Rzeszy niemieckiej", Śląski Kwartalnik Historyczy 'Sobótka' nr 4, 1971, str 486
+      urlName:
+      url:
+    - id: 2
+      value: Wikipedia
+      urlName: Fryderyk III legnicki
+      url: https://pl.wikipedia.org/wiki/Fryderyk_III_legnicki 
+    - id: 3 
+      value: Wikipedia
+      urlName: Księstwo legnickie
+      url: https://pl.wikipedia.org/wiki/Ksi%C4%99stwo_legnickie
