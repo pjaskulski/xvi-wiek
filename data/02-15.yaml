@@ -31,7 +31,7 @@ year: 1563
 title: Wojska moskiewskie zdobyły Połock
 content: >- 
        {{{15 lutego 1563}}} roku w trakcie wojny litewsko-moskiewskiej 1558-1570
-       wojska moskiewskie Iwana IV Groźnego po krótkim oblężeniu zdobyły Połock.[1]   
+       wojska moskiewskie Iwana IV Groźnego po krótkim oblężeniu zdobyły Połock.[1][4]   
        Zwycięzcy wzięli do niewoli wojewodę połockiego Stanisława Dowojno (był 
        przetrzymywany w Moskwie do 1567 r.[3]), dokonali okrutnej rzezi mieszkańców 
        a wszytkich miejscowych Żydów potopili w Dźwinie.[2] Tryumfujący Iwan IV 
@@ -58,3 +58,7 @@ sources:
       value: Wikipedia
       urlName: Stanisław Dowojno (wojewoda)
       url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Dowojno_(wojewoda)
+    - id: 4
+      value: Paweł Jasienica, Polska Jagiellonów, str. 399.
+      urlName: 
+      url: 
