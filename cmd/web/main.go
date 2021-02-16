@@ -1,13 +1,16 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
+	"os/signal"
 	"path"
 	"sync"
+	"time"
 
 	"github.com/patrickmn/go-cache"
 )
@@ -15,6 +18,12 @@ import (
 // Config struct
 type Config struct {
 	Port string
+}
+
+// SliceFactsByKeyword type
+type SliceFactsByKeyword struct {
+	Keyword        string
+	FactsByKeyword []KeywordFact
 }
 
 type application struct {
@@ -26,6 +35,7 @@ type application struct {
 	FactsByPeople   map[string][]PeopleFact
 	FactsByLocation map[string][]LocationFact
 	FactsByKeyword  map[string][]KeywordFact
+	SFactsByKeyword []SliceFactsByKeyword
 }
 
 var (
@@ -84,12 +94,30 @@ func main() {
 
 	// start serwera http
 	serwer := &http.Server{
-		Addr:     ":" + cfg.Port,
-		ErrorLog: errorLog,
-		Handler:  app.routes(),
+		Addr:         ":" + cfg.Port,
+		ErrorLog:     errorLog,
+		Handler:      app.routes(),
+		IdleTimeout:  120 * time.Second,
+		ReadTimeout:  3 * time.Second,
+		WriteTimeout: 3 * time.Second,
 	}
 
 	app.infoLog.Printf("Start serwera, port :%s", cfg.Port)
-	err = serwer.ListenAndServe()
-	app.errorLog.Fatal(err)
+
+	go func() {
+		err = serwer.ListenAndServe()
+		if err != nil {
+			app.errorLog.Fatal(err)
+		}
+	}()
+
+	sigChan := make(chan os.Signal)
+	signal.Notify(sigChan, os.Interrupt)
+	signal.Notify(sigChan, os.Kill)
+
+	sig := <-sigChan
+	app.infoLog.Println("Otrzymano sygnał zatrzymania programu", sig)
+
+	tc, _ := context.WithTimeout(context.Background(), 30*time.Second)
+	serwer.Shutdown(tc)
 }

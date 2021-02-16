@@ -241,7 +241,7 @@ func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 func (app *application) showKeyword(w http.ResponseWriter, r *http.Request) {
 
 	ts := app.templateCache["slowa.page.gohtml"]
-	err := ts.Execute(w, app.FactsByKeyword)
+	err := ts.Execute(w, app.SFactsByKeyword)
 	if err != nil {
 		app.serverError(w, err)
 	}
