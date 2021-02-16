@@ -330,7 +330,7 @@ func (app *application) loadData(path string) error {
 		app.SFactsByKeyword = append(app.SFactsByKeyword, temp)
 	}
 
-	cl := collate.New(language.French)
+	cl := collate.New(language.Polish)
 	sort.SliceStable(app.SFactsByKeyword, func(i, j int) bool {
 		return cl.CompareString(app.SFactsByKeyword[i].Keyword, app.SFactsByKeyword[j].Keyword) == -1
 	})
