@@ -1,0 +1,38 @@
+---
+id: 1
+day: 5
+month: 5
+year: 1523
+title: Nieudany zamach na Zygmunta I Starego
+content: >- 
+    {{{5 maja 1523}}}[1] roku w Krakowie zamachowiec strzelił w okno wieży wawelskiego 
+    zamku zwanej Kurzą Stopką (lub Kurzą Nogą)[3]. Kula z rusznicy rozbiła okno i 
+    przelatując obok króla utkwiła w suficie pomieszczenia.[2] Zygmunt Stary 
+    wieczorami spacerował po zamku i spoglądał na miasto z okien, sprawca
+    którego nigdy nie ustalono i nie złapano musiał znać zwyczaje władcy. Podejrzewano,
+    że próba zamachu miała związek z wprowadzonym właśnie przez Zygmunta podatkiem
+    od wyrobu piwa, miodu, wódki i wina.     
+contentTwitter: >-
+    5 maja 1523 roku w Krakowie zamachowiec strzelił w okno wieży wawelskiego 
+    zamku zwanej Kurzą Stopką, kula chybiła celu, królowi Zygmuntowi Staremu nic się
+    nie stało. 
+location: Kraków
+geo: 50.0546,19.9352
+people: Zygmunt I Stary
+keywords: Jagiellonowie
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Wikipedia
+      urlName: Zygmunt I Stary
+      url: https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
+    - id: 2
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965, str. 326
+      urlName:
+      url:
+    - id: 3
+      value: Wikipedia
+      urlName: Kurza Stopka na Wawelu
+      url: https://pl.wikipedia.org/wiki/Kurza_Stopka_na_Wawelu
+
