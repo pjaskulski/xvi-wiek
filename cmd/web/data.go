@@ -126,7 +126,9 @@ func (app *application) readFact(filename string) {
 	r := bytes.NewReader(fileBuf)
 	yamlDec := yaml.NewDecoder(r)
 
-	for yamlDec.Decode(&fact) == nil {
+	yamlErr := yamlDec.Decode(&fact)
+
+	for yamlErr == nil {
 		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.ID, fact.Sources))
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
 		if fact.Geo != "" {
@@ -218,6 +220,12 @@ func (app *application) readFact(filename string) {
 		} // FactsByKeyword
 
 		result = append(result, fact)
+
+		yamlErr = yamlDec.Decode(&fact)
+	}
+	// jeżeli był błądw pliku yaml, inny niż koniec pliku to zapis w logu
+	if yamlErr != nil && yamlErr.Error() != "EOF" {
+		app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", yamlErr)
 	}
 
 	lock.Lock()
