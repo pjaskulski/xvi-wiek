@@ -2,7 +2,7 @@
 Źródła powstającego powoli serwisu z bazą danych wydarzeń historycznych z XVI wieku. Serwis w wersji beta
 powinien być widoczny pod tym adresem: [xvi-wiek.pl](http://xvi-wiek.pl).
 
-Serwis wykorzystuje styl [Tufte CSS](https://edwardtufte.github.io/tufte-css/) (licencja MIT )z dodatkiem fontu [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro) (licencja Open Font License) Regular 400 i Regular 400 italic.
+Serwis wykorzystuje styl [Tufte CSS](https://edwardtufte.github.io/tufte-css/) (licencja MIT ) z dodatkiem fontu [Crimson Pro](https://fonts.google.com/specimen/Crimson+Pro) (licencja Open Font License) Regular 400 i Regular 400 italic.
 
 Backend serwisu obsługiwany jest przez program w języku Go, pliki yaml i mechanizm pamięci podręcznej typu klucz-wartość ([go-cache](https://github.com/patrickmn/go-cache), licencja MIT).
 W roli routera wykorzystywany jest [chi](https://github.com/go-chi/chi).
@@ -13,7 +13,8 @@ Ikona Twitter pochodzi ze strony [Twitter Brand Resources](https://about.twitter
 
 Dodatkowy mechanizm to bot wysyłający raz dziennie na konto [@xvi-wiek](https://twitter.com/xvi_wiek) informację o ciekawym wydarzeniu historycznym, które zdarzyło się w XVI wieku właśnie w tym dniu. Kod źródłowy bota dostępny jest w osobnym repozytorium: [xvi-wiek-bot](https://github.com/pjaskulski/xvi-wiek-bot). 
 
-Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie, gdyby nie lektura [książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
+Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w języku Go, gdyby nie lektura 
+[książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
 
 ## API
 
@@ -61,4 +62,5 @@ Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
 - [ ] uzupełnić dane 
 - [ ] możliwość automatycznego odświeżenia danych po wgraniu nowych/zmodyfikowanych 
-      plików YAML (program powinien monitorować katalog /data) 
+      plików YAML (program powinien monitorować katalog /data)
+- [ ] refactoring 
