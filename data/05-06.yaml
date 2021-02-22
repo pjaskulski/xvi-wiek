@@ -8,7 +8,7 @@ content: >-
     {{{6 maja 1543}}}[1] roku w Krakowie, w katedrze na Wawelu odbył się ślub 
     Zygmunta II Augusta z Elżbietą Habsburżanką, córką arcyksięcia Austrii 
     i króla Niemiec (a późniejszego cesarza) Ferdynanda I Habsburga oraz Anny 
-    Jagiellonki. Ślubu udzielał arcybiskup i prymas Polski Piotr Gamrat.[2] 
+    Jagiellonki.[3] Ślubu udzielał arcybiskup i prymas Polski Piotr Gamrat.[2] 
     Małżeństwo planowano już od kilkunastu lat, pierwszy przedmałżeński traktat
     podpisano w roku 1530, ostateczny osiem lat później - 16 czerwca 1538 r., 
     w lipcu tego roku odbyły się oficjalne zaręczyny. Ze względu na bliskie 
@@ -40,6 +40,10 @@ sources:
       value: Wikipedia
       urlName: Elizabeth of Austria (1526-1545)
       url: https://en.wikipedia.org/wiki/Elizabeth_of_Austria_(1526%E2%80%931545)
+    - id: 3
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965, str. 357
+      urlName:
+      url:
 ---
 id: 2
 day: 6
