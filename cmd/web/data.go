@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/go-playground/validator/v10"
 	"github.com/patrickmn/go-cache"
 	"golang.org/x/text/collate"
 	"golang.org/x/text/language"
@@ -26,12 +27,12 @@ type Source struct {
 
 // Fact type
 type Fact struct {
-	ID             string `yaml:"id"`
-	Day            int    `yaml:"day"`
-	Month          int    `yaml:"month"`
-	Year           int    `yaml:"year"`
-	Title          string `yaml:"title"`
-	Content        string `yaml:"content"`
+	ID             string `yaml:"id" validate:"required"`
+	Day            int    `yaml:"day" validate:"required"`
+	Month          int    `yaml:"month" validate:"required"`
+	Year           int    `yaml:"year" validate:"required"`
+	Title          string `yaml:"title" validate:"required"`
+	Content        string `yaml:"content" validate:"required"`
 	ContentHTML    template.HTML
 	ContentTwitter string `yaml:"contentTwitter"`
 	Location       string `yaml:"location"`
@@ -104,6 +105,12 @@ type KeywordFact struct {
 // DayFactTable map
 var DayFactTable map[string]bool
 
+// Validate func
+func (f *Fact) Validate() error {
+	validate := validator.New()
+	return validate.Struct(f)
+}
+
 func createDataCache() *cache.Cache {
 	c := cache.New(5*time.Minute, 10*time.Minute)
 	return c
@@ -129,6 +136,11 @@ func (app *application) readFact(filename string) {
 	yamlErr := yamlDec.Decode(&fact)
 
 	for yamlErr == nil {
+		err = fact.Validate()
+		if err != nil {
+			app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", err)
+		}
+
 		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.ID, fact.Sources))
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
 		if fact.Geo != "" {
