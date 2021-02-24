@@ -136,6 +136,9 @@ func (app *application) readFact(filename string) {
 	yamlErr := yamlDec.Decode(&fact)
 
 	for yamlErr == nil {
+		/* walidacja danych w strukturze fact (część pól jest wymaganych, brak nie
+		   zatrzymuje działania aplikacji, ale jest odnotowywany w logu).
+		*/
 		err = fact.Validate()
 		if err != nil {
 			app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", err)
@@ -235,7 +238,7 @@ func (app *application) readFact(filename string) {
 
 		yamlErr = yamlDec.Decode(&fact)
 	}
-	// jeżeli był błądw pliku yaml, inny niż koniec pliku to zapis w logu
+	// jeżeli był błąd w pliku yaml, inny niż koniec pliku to zapis w logu
 	if yamlErr != nil && yamlErr.Error() != "EOF" {
 		app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", yamlErr)
 	}
