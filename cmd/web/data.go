@@ -139,10 +139,12 @@ func (app *application) readFact(filename string) {
 		/* walidacja danych w strukturze fact (część pól jest wymaganych, brak nie
 		   zatrzymuje działania aplikacji, ale jest odnotowywany w logu).
 		*/
+		lock.Lock()
 		err = fact.Validate()
 		if err != nil {
 			app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", err)
 		}
+		lock.Unlock()
 
 		fact.ContentHTML = template.HTML(prepareFactHTML(fact.Content, fact.ID, fact.Sources))
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
@@ -238,12 +240,13 @@ func (app *application) readFact(filename string) {
 
 		yamlErr = yamlDec.Decode(&fact)
 	}
+
+	lock.Lock()
 	// jeżeli był błąd w pliku yaml, inny niż koniec pliku to zapis w logu
 	if yamlErr != nil && yamlErr.Error() != "EOF" {
 		app.errorLog.Println("file:", filepath.Base(filename)+",", "error:", yamlErr)
 	}
 
-	lock.Lock()
 	numberOfFacts += len(result)
 	DayFactTable[name] = true
 	app.dataCache.Add(name, &result, cache.NoExpiration)
