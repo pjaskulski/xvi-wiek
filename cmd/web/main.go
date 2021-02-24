@@ -65,7 +65,7 @@ func main() {
 
 	// logi z informacjami (->konsola) i błędami (->plik)
 	infoLog := log.New(os.Stdout, "INFO: \t", log.Ldate|log.Ltime)
-	fErr, err := os.OpenFile(dirExecutable+"/log/errors.log", os.O_RDWR|os.O_CREATE, 0666)
+	fErr, err := os.OpenFile(dirExecutable+"/log/errors.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
 		log.Fatal(err)
 	}
