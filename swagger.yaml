@@ -1,0 +1,79 @@
+basePath: /api
+definitions:
+  SourceJSON:
+    description: SourceJSON type
+    properties:
+      url:
+        type: string
+        x-go-name: URL
+      value:
+        type: string
+        x-go-name: Name
+    type: object
+    x-go-package: _/home/piotr/code/xvi-wiek/cmd/web
+info:
+  description: Dokumentacja API
+  title: Udostępnianie danych wydarzeń historycznych z serwisu XVI-wiek.pl
+  version: 1.0.0
+paths:
+  /dzien/{month}/{day}:
+    get:
+      description: zwraca wydarzenia historyczne dla wskazanego dnia
+      operationId: listaWydarzen
+      responses:
+        "200":
+          $ref: '#/responses/factsResponse'
+      tags:
+      - dzien
+  /short:
+    get:
+      description: zwraca skrócony opis wydarzenia historyczngo dla bieżąceo dnia
+      operationId: listaWydarzen
+      responses:
+        "200":
+          $ref: '#/responses/factsShortResponse'
+      tags:
+      - short
+  /today:
+    get:
+      description: zwraca wydarzenia historyczne dla bieżącego dnia
+      operationId: listaWydarzen
+      responses:
+        "200":
+          $ref: '#/responses/factsResponse'
+      tags:
+      - today
+produces:
+- application/json
+responses:
+  factsResponse:
+    description: FactJSON type
+    headers:
+      content:
+        type: string
+      date:
+        type: string
+      geo:
+        type: string
+      keywords:
+        type: string
+      location:
+        type: string
+      people:
+        type: string
+      sources:
+        items:
+          $ref: '#/definitions/SourceJSON'
+        type: array
+      title:
+        type: string
+  factsShortResponse:
+    description: FactShortJSON type
+    headers:
+      content:
+        type: string
+      date:
+        type: string
+schemes:
+- http
+swagger: "2.0"

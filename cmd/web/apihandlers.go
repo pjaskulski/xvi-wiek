@@ -1,3 +1,16 @@
+// Udostępnianie danych wydarzeń historycznych z serwisu XVI-wiek.pl
+//
+// Dokumentacja API
+//
+// Schemes: http
+// BasePath: /api
+// Version: 1.0.0
+//
+// Consumes:
+// -
+// Produces:
+// - application/json
+// swagger:meta
 package main
 
 import (
@@ -18,6 +31,7 @@ type SourceJSON struct {
 }
 
 // FactJSON type
+// swagger:response factsResponse
 type FactJSON struct {
 	Date     string       `json:"date"`
 	Title    string       `json:"title"`
@@ -30,6 +44,7 @@ type FactJSON struct {
 }
 
 // FactShortJSON type
+// swagger:response factsShortResponse
 type FactShortJSON struct {
 	Date           string `json:"date"`
 	ContentTwitter string `json:"content"`
@@ -109,6 +124,11 @@ func factShortResponseJSON(w http.ResponseWriter, code int, data interface{}) {
 	w.Write(response)
 }
 
+// swagger:route GET /dzien/{month}/{day} dzien listaWydarzen
+// zwraca wydarzenia historyczne dla wskazanego dnia
+// responses:
+//   200: factsResponse
+
 // apiFactsByDay
 func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	month, err := strconv.Atoi(chi.URLParam(r, "month"))
@@ -145,6 +165,11 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// swagger:route GET /today today listaWydarzen
+// zwraca wydarzenia historyczne dla bieżącego dnia
+// responses:
+//   200: factsResponse
+
 // apiFactsToday
 func (app *application) apiFactsToday(w http.ResponseWriter, r *http.Request) {
 	name := fmt.Sprintf("%02d-%02d", int(time.Now().Month()), time.Now().Day())
@@ -155,6 +180,11 @@ func (app *application) apiFactsToday(w http.ResponseWriter, r *http.Request) {
 		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 	}
 }
+
+// swagger:route GET /short short listaWydarzen
+// zwraca skrócony opis wydarzenia historyczngo dla bieżąceo dnia
+// responses:
+//   200: factsShortResponse
 
 // apiFactsShort
 func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
