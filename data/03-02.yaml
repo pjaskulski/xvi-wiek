@@ -1,0 +1,41 @@
+---
+id: 1
+day: 2
+month: 3
+year: 1493
+title: Sejm walny w Piotrkowie uchwalił uniwersał o poborze.
+content: >- 
+    {{{2 marca 1493}}}[1][2][3] roku sejm walny Królestwa Polskiego uchwalił uniwersał
+    o poborze, w XVI wieku była to uchwała sejmowa nakładająca podatki. Sejm, który 
+    obradował od 18 stycznia do 4 marca był uważany za pierwszy, w którym wyodrębniono 
+    osobną izbę poselską, obecnie wskazuje się[4] że izba poselska funkcjonowała 
+    już podczas zjazdu piotrkowskiego z 1468 r. 
+contentTwitter: >-
+    2 marca 1493 roku sejm walny Królestwa Polskiego uchwalił uniwersał
+    o poborze.
+location: Piotrków
+geo: 51.4088,19.6868 
+people: 
+keywords: sejm
+image: 
+imageInfo: 
+sources:         
+    - id: 1
+      value: Wikipedia
+      urlName: Sejm walny 1493
+      url: https://pl.wikipedia.org/wiki/Sejm_walny_1493
+    - id: 2
+      value: Władysław Konopczyński, "Chronologia Sejmów Polskich 1493-1793", str. 132
+      urlName: Wielkopolska Biblioteka Cyfrowa
+      url: https://www.wbc.poznan.pl/dlibra/publication/1306/edition/2048/content
+    - id: 3
+      value: Sejm walny. Piotrków 1493 r.
+      urlName: dziejesejmu.pl
+      url: https://www.dziejesejmu.pl/sejm-walny-piotrkow-1493-r,p1292595129
+    - id: 4
+      value: >- 
+          Wacław Uruszczak, "Najstarszy sejm walny koronny "dwuizbowy" w Piotrkowie w 1468 roku", w:
+          "Narodziny Rzeczypospolitej : studia z dziejów średniowiecza i czasów wczesnonowożytnych", Kraków, 2012 
+      urlName: Najstarszy Sejm Walny Koronny
+      url: http://www.khpp.wpia.uj.edu.pl/documents/106750129/0/Najstarszy+Sejm+Walny+Koronny.pdf/b0e82a32-63eb-4b00-b6a1-2d4d6e52ce6c 
+
