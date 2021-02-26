@@ -118,6 +118,8 @@ func main() {
 	sig := <-sigChan
 	app.infoLog.Println("Otrzymano sygnał zatrzymania programu", sig)
 
-	tc, _ := context.WithTimeout(context.Background(), 30*time.Second)
+	tc, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
 	serwer.Shutdown(tc)
 }
