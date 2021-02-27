@@ -209,6 +209,7 @@ func (app *application) showIndexes(w http.ResponseWriter, r *http.Request) {
 
 // showChronology func
 func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
+	//w.Header().Set("Content-Type", "text/html")
 
 	ts := app.templateCache["chronologia.page.gohtml"]
 	err := ts.Execute(w, app.FactsByYear)

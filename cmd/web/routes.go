@@ -7,12 +7,26 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
+	//"github.com/go-chi/cors"
 )
 
 func (app *application) routes() http.Handler {
 	r := chi.NewRouter()
+
+	r.Use(middleware.RequestID)
+	//r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
+	//r.Use(middleware.Compress(5))
+
+	// r.Use(cors.Handler(cors.Options{
+	// 	AllowedOrigins:   []string{"*"},
+	// 	AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+	// 	AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
+	// 	ExposedHeaders:   []string{"Link"},
+	// 	AllowCredentials: true,
+	// 	MaxAge:           300,
+	// }))
 
 	// procedury obsługi żądań http
 	r.Get("/", app.showFacts)
