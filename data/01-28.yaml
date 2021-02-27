@@ -18,8 +18,8 @@ content: >-
     wyznania protestanckiego przejęli kościoły katolickie, wprowadzając wyłączność 
     kultu protestanckiego.[10] W redakcji tekstu konfederacji brali udział duchowni 
     katoliccy a komisji przewodniczył biskup kujawski Stanisław Karnkowski, 
-    jednak pod uchwałą podpisał się tylko jeden z biskupów - Franciszek Krasiński,
-    biskup krakowski. \\ 
+    jednak pod uchwałą podpisał się tylko Franciszek Krasiński, biskup krakowski 
+    oraz biskup kamieniecki Dionizy Secygniowski. \\ 
     Swoboda religijna otrzymana przez stan szlachecki była dużo 
     większa niż podobne postanowienia nadane szlachcie austriackiej dwa lata wcześniej 
     przez cesarza Maksymiliana II - tam wolność religijna (poza katolikami) objęła 
@@ -29,6 +29,10 @@ content: >-
     Z czasem znaczenie konfederacji warszawskiej słabło wobec postępującej 
     kontrreformacji.W 1638 roku wyrokiem sądu sejmowego zamknięto słynną z wysokiego 
     poziomu nauczania szkołę protestancką - Akademię Rakowską.[7]
+    Wyznawcy prawosławia cieszyli się w Królestwie Polskim równouprawnieniem od czasów
+    Kazimierza Wielkiego, zaczęło się to jednak zmieniać od zawarcia w 1596 r. 
+    unii brzeskiej. W 1676 r. zakazano im kontaktów z patriarchatem konstantynopolitańskim, w 1699 
+    roku zabroniono dostępu do urzędów miejskich.[11]
     W 1718 roku usunięto z Sejmu ostatniego innowierczego posła - Andrzeja 
     Piotrowskiego, posła z ziemi wieluńskiej.[5][6] W 1724 roku w Toruniu doszło 
     do zamieszek między katolikami a protestantami, ukarano jednak tylko stronę 
@@ -89,3 +93,7 @@ sources:
       value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 158-159 
       urlName:
       url:
+    - id: 11
+      value: Antoni Mironowicz, "Kościół Prawosławny w dziejach Rzeczypospolitej", Elpis 1/1, 1999, str. 104
+      urlName:
+      url: 
