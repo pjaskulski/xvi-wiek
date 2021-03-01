@@ -55,7 +55,7 @@ func (app *application) routes() http.Handler {
 // FileServer - obsługa plików statycznych
 func FileServer(r chi.Router, path string, root http.FileSystem) {
 	if strings.ContainsAny(path, "{}*") {
-		panic("FileServer does not permit any URL parameters.")
+		panic("FileServer nie zezwala na żadne parametry adresu URL.")
 	}
 
 	if path != "/" && path[len(path)-1] != '/' {
