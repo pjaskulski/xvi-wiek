@@ -1,0 +1,47 @@
+---
+id: 1
+day: 6
+month: 3
+year: 1528
+title: Bitwa pod Koszycami
+content: >- 
+    {{{6 marca 1528}}} roku pod Koszycami, w trakcie wojny domowej na Węgrzech, doszło do 
+    bitwy między wojskami Jana Zapoyli a siłami Ferdynanda Habsburga.[2] Po stronie Jana
+    Zapoyli walczyły polskie posiłki dowodzone przez Jakuba Sęcygniewskiego[1] - mimo
+    formalnego dekretu królewskiego (Zygmunta Starego) z 4 marca nakazującego 
+    natychmiastowy powrót do Korony wszystkim żołnierzom przebywającym zagranicą.[4]
+    Bitwa zakończyła się zdecydowanym zwycięstwem armii Ferdynanda Habsburga. Zginęło m. in. 
+    300 żołnierzy polskich. Pokonany Jan Zapoyla znalazł schronienie w Polsce, 12 marca 1528 r. 
+    zamieszkał na zamku Kamienieckich w Odrzykoniu, później przeniósł się do Tarnowa.[5] 
+    Rok później wrócił do gry o tron uznając się wasalem Sulejmana Wspaniałego[3], 
+    zmagania habsbursko-tureckie pozwoliły mu zostać władcą Siedmiogrodu. 
+contentTwitter: >-
+    6 marca 1528 roku pod Koszycami, w trakcie wojny domowej na Węgrzech, doszło do 
+    bitwy między wojskami Jana Zapoyli a siłami Ferdynanda Habsburga.
+location: Koszyce
+geo: 48.7145,21.2503
+people: Sęcygniewski Jakub; Jan Zapoyla; Ferdynand Habsburg
+keywords: 
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      value: Wikipedia
+      urlName: Jakub Secygniowski
+      url: https://pl.wikipedia.org/wiki/Jakub_Secygniowski
+    - id: 2
+      value: Muzeum Wojska Polskiego
+      urlName: Kalendarium Dziejów Oręża Polskiego
+      url: http://www.muzeumwp.pl/kalendarium/03-06/
+    - id: 3
+      value: Wikipedia
+      urlName: Jan Zapoyla
+      url: https://pl.wikipedia.org/wiki/Jan_Z%C3%A1polya
+    - id: 4
+      value: Karol Łopatecki, "'Disciplina militaris' w wojskach Rzeczypospolitej do połowy XVII wieku", 2012, str. 71
+      urlName:
+      url:
+    - id: 5
+      value: Krzysztof Baczkowski ,"Polska i jej sąsiedzi za Jagiellonów", 2012, str. 538
+      urlName:
+      url:
