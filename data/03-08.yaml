@@ -6,13 +6,13 @@ year: 1521
 title: Nieudany atak wojsk krzyżackich na Elbląg 
 content: >- 
     {{{8 marca 1521}}} roku oddział wojsk krzyżackich wysłany przez Albrechta 
-    Hohenzollerna z Królewca zaatakował Elbląg. Siły krzyżackie liczyły około 
+    Hohenzollerna z Królewca zaatakował Elbląg.[2] Siły krzyżackie liczyły około 
     2000 pieszych pod dowództwem Moryca Knebela i Kaspra von Schwalbacha. Atak 
     nastąpił rano i częściowo zaskoczył obrońców zdołano jednak odeprzeć napaść
     a rotmistrz krzyżacki Knebel został śmiertelnie ranny. Do legendy przeszła
-    łopata, którą obrońcy przecięli linę trzymającą kratę warownej Bramy Targowej
-    zamykając wejście przed napastnikami. Siły krzyżace zmuszone zostały do odwrotu
-    do Tolkmicka.       
+    łopata,[1] którą podobno obrońcy przecięli linę trzymającą kratę warownej 
+    Bramy Targowej zamykając wejście przed napastnikami. Siły krzyżackie zmuszone 
+    zostały do odwrotu do Tolkmicka.       
 contentTwitter: >-
     8 marca 1521 roku oddział wojsk krzyżackich wysłany przez Albrechta 
     Hohenzollerna z Królewca zaatakował Elbląg.
@@ -27,4 +27,8 @@ sources:
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
       urlName:
       url: 
+    - id: 2
+      value: Wikipedia
+      urlName: Wojna polsko-krzyżacka (1519-1521)
+      url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
     
