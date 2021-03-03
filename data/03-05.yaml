@@ -42,5 +42,37 @@ sources:
       value: Andrzej Gładysz, "Rejestr dworzan konnych Zygmunta I Starego wysłanych do walki z Krzyżakami pustoszącymi Mazowsze na przełomie lipca i sierpnia 1520 roku", Przegląd Historyczno-Wojskowy, 2020, nr 4(274), str. 177 
       urlName: Przegląd Historyczno-Wojskowy
       url: https://wbh.wp.mil.pl/c/pages/atts/2020/12/Andrzej_Gadysz_Rejestr_dworzan_konnych_Zygmunta_I_Starego_wysanych_do_walki_z_Krzyzakami_pustoszacymi_Mazowsze_na_przeomie_lipca_i_sierpnia_1520_roku.pdf
-      
-      
+---
+id: 2
+day: 5
+month: 3
+year: 1562
+title: Gothard Kettler złożył hołd lenny Zygmuntowi Augustowi
+content: >- 
+    {{{5 marca 1562}}} roku w Rydze wielki mistrz zakonu krzyżackiego w Inflantach 
+    Gothard Kettler, złożył hołd lenny Zygmuntowi II Augustowi.[1] W zastępstwie króla
+    hołd przyjmował Mikołaj Radziwił Czarny. Zakon w Inflantach od kilku lat przechodził
+    kryzys w obliczu naporu państwa moskiewskiego oraz ataków szwedzkich. Wielki 
+    mistrz postanowił oddać się po opiekę Wielkiego Księstwa Litewskiego i Królestwa 
+    Polskiego, z którymi zawarł układ w Wilnie w 1561 r.[2] Układ, podobnie jak 
+    kilkadziesiąt lat wcześniej w przypadku zakonu krzyżackiego w Prusach, oznaczał 
+    sekularyzację zakonu i inkorporacje jego ziem do Korony i Litwy. Sam wielki 
+    mistrz założył dynatię Kettlerów, która władała Kurlandią do początku XVIII wieku.
+contentTwitter: >-
+    5 marca 1562 roku w Rydze wielki mistrz zakonu krzyżackiego w Inflantach 
+    Gothard Kettler, złożył hołd lenny Zygmuntowi II Augustowi.
+location: Ryga
+geo: 56.9465,24.1033
+people: Kettler Gothard; Zygmunt II August 
+keywords: Kurlandia
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      value: Wikipedia
+      urlName: Księstwo Kurlandii i Semigalii
+      url: https://pl.wikipedia.org/wiki/Ksi%C4%99stwo_Kurlandii_i_Semigalii
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 127
+      urlName:
+      url: 
