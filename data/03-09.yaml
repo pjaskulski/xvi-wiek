@@ -6,7 +6,7 @@ year: 1558
 title: Wydano dzieło "Consilium rationis bellicae" Jana Tarnowskiego  
 content: >- 
     {{{9 marca 1558}}} wydano drukiem dzieło "Consilium rationis bellicae"
-    (Rada sprawy wojennej) hetmana Jana Amora Tarnowskiego (1488-1561).[1] Książka
+    (Rada sprawy wojennej) hetmana Jana Amora Tarnowskiego (1488-1561).[1][4] Książka
     ta (wydana po polsku) była najlepszym podręcznikiem sztuki wojskowej 
     XVI-wiecznej Polski i Litwy.[2] Jej autor wsławił się w 1531 r. świetnym zwycięstwem 
     pod Obertynem nad wojskami mołdawskimi hospodara Piotra Raresza, walczył także 
@@ -34,4 +34,8 @@ sources:
       value: Wikipedia
       urlName: Jan Amor Tarnowski
       url: https://pl.wikipedia.org/wiki/Jan_Amor_Tarnowski
+    - id: 4
+      value: Śląska Biblioteka Cyfrowa 
+      urlName: Consilium rationis bellicae Jana Tarnowskiego
+      url: https://www.sbc.org.pl/dlibra/show-content/publication/edition/4093?id=4093
     
