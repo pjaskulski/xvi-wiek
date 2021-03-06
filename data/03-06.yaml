@@ -3,21 +3,22 @@ id: 1
 day: 6
 month: 3
 year: 1528
-title: Bitwa pod Koszycami
+title: Bitwa pod Koszycami (Sziną)
 content: >- 
-    {{{6 marca 1528}}} roku pod Koszycami, w trakcie wojny domowej na Węgrzech, doszło do 
+    {{{6 marca 1528}}} roku pod Koszycami (dokładnie w okolicach Koszyc, koło 
+    wioski Szina, obecnie Seňa), w trakcie wojny domowej na Węgrzech, doszło do 
     bitwy między wojskami Jana Zapoyli a siłami Ferdynanda Habsburga.[2] Po stronie Jana
     Zapoyli walczyły polskie posiłki dowodzone przez Jakuba Sęcygniewskiego[1] - mimo
     formalnego dekretu królewskiego (Zygmunta Starego) z 4 marca nakazującego 
     natychmiastowy powrót do Korony wszystkim żołnierzom przebywającym zagranicą.[4]
     Bitwa zakończyła się zdecydowanym zwycięstwem armii Ferdynanda Habsburga. Zginęło m. in. 
-    300 żołnierzy polskich. Pokonany Jan Zapoyla znalazł schronienie w Polsce, 12 marca 1528 r. 
+    300 żołnierzy polskich.[6] Pokonany Jan Zapoyla znalazł schronienie w Polsce, 12 marca 1528 r. 
     zamieszkał na zamku Kamienieckich w Odrzykoniu, później przeniósł się do Tarnowa.[5] 
     Rok później wrócił do gry o tron uznając się wasalem Sulejmana Wspaniałego[3], 
     zmagania habsbursko-tureckie pozwoliły mu zostać władcą Siedmiogrodu. 
 contentTwitter: >-
-    6 marca 1528 roku pod Koszycami, w trakcie wojny domowej na Węgrzech, doszło do 
-    bitwy między wojskami Jana Zapoyli a siłami Ferdynanda Habsburga.
+    6 marca 1528 roku pod Koszycami (w pobliżu wioski Szina), w trakcie wojny domowej 
+    na Węgrzech, doszło do bitwy między wojskami Jana Zapoyli a siłami Ferdynanda Habsburga.
 location: Koszyce
 geo: 48.7145,21.2503
 people: Sęcygniewski Jakub; Jan Zapoyla; Ferdynand Habsburg
@@ -45,3 +46,7 @@ sources:
       value: Krzysztof Baczkowski ,"Polska i jej sąsiedzi za Jagiellonów", 2012, str. 538
       urlName:
       url:
+    - id: 6
+      value: Źródła węgierskie podają 20 marca 1528 jako datę bitwy
+      urlName: Szinai csata
+      url: https://hu.wikipedia.org/wiki/Szinai_csata
