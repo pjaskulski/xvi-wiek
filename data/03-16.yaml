@@ -14,10 +14,14 @@ content: >-
     sejmu - zjazd stanów pruskich, posiadający dwie izby: szlachecką i mieszczańską.
     Dawne dobra zakonne stały się własnością koronną, przynosząc panującym znaczne
     dochody - terytorium Prus Królewskich należało do najlepiej zagospodarowanych
-    i najbogatszych części Królestwa.[3] Podczas sejmu lubelskiego, dekretem Zygmunta 
+    i najbogatszych części Królestwa.[3] Podczas sejmu lubelskiego w 1569 r. dekretem Zygmunta 
     II Augusta dokonano włączenia Prus do Korony.[2] Posłowie pruscy zasiadali od 
     tej pory w sejmie Rzeczypospolitej, zrównano Prusy Królewskie z resztą Korony
-    pod względem obowiązków podatkowych i służby wojskowej.  
+    pod względem obowiązków podatkowych i służby wojskowej. Zachowano jednak odrębny
+    skarb pruski oraz odrębne przepisy prawa oparte na prawie chełmińskim. Wzorem
+    innych prowincji Rzeczypospolitej zaczęto zwoływać Sejmik Generalny Prus Królewskich[4],
+    składający się z senatu i izby poselskiej w której do połowy XVII wieku oprócz
+    szlachty zasiadali też przedstawiciele małych miast.     
 contentTwitter: >-
     16 marca 1569 roku w Lublinie, podczas obrad sejmu polsko-litewskiego  
     inkorporowano Prusy Królewskie do Królestwa Polskiego.
@@ -40,3 +44,7 @@ sources:
       value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 55, 148
       urlName:
       url:
+    - id: 4
+      value: Wikipedia
+      urlName: Sejmik generalny Prus Królewskich
+      url: https://pl.wikipedia.org/wiki/Sejmik_generalny_Prus_Kr%C3%B3lewskich
