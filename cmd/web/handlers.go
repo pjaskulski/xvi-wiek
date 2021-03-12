@@ -247,3 +247,13 @@ func (app *application) showKeyword(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 }
+
+// showPDF func
+func (app *application) showPDF(w http.ResponseWriter, r *http.Request) {
+
+	ts := app.templateCache["pdf.page.gohtml"]
+	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}

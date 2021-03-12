@@ -39,6 +39,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/indeksy/ludzie", app.showPeople)
 	r.Get("/indeksy/miejsca", app.showLocation)
 	r.Get("/indeksy/slowa", app.showKeyword)
+	r.Get("/pdf", app.showPDF)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
 	// api
