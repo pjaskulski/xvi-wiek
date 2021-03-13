@@ -193,7 +193,7 @@ func (app *application) readFact(filename string) {
 			}
 		} // FactsByPeople
 
-		// uzupełnienie indeksu lat FactsByLocation
+		// uzupełnienie indeksu miejsc FactsByLocation
 		tmpLocation := &LocationFact{}
 		tmpLocation.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 		tmpLocation.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
@@ -213,7 +213,7 @@ func (app *application) readFact(filename string) {
 			lock.Unlock()
 		} // FactsByLocation
 
-		// uzupełnienie indeksu postaci FactsByKeyword
+		// uzupełnienie indeksu słów kluczowych FactsByKeyword
 		if fact.Keywords != "" {
 			tmpKeyword := &KeywordFact{}
 			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
