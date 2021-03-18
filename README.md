@@ -28,6 +28,10 @@ Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w jęz
     Zwraca dzisiejsze wydarzenia, zapytanie uruchomione 1 stycznia 2020
     zwróci wydarzenia z 1 stycznia.   
 
+    Domyślnie zapytania zwracają wynik w formacie json, ale można także otrzymać 
+    wynik w formacie xml ustawiając Content-Type na 'application/xml' w nagłówku 
+    zapytania http.
+
 Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
 ```json
@@ -52,6 +56,26 @@ Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
       ]
    }
 ]
+```
+
+Przykład odpowiedzi na zapytanie `curl --header "Content-Type: application/xml" https://xvi-wiek.pl/api/today`:
+
+
+```xml
+<HistoricalEvent>
+    <date>18-03-1584</date>
+    <title>Zmarł Iwan IV Groźny</title>
+    <content>18 marca 1584 roku w Moskwie podczas rozgrywania partii szachów zmarł  Iwan IV Groźny, wielki książę moskiewski, który jako pierwszy przybrał tytuł  cara. Prowadził agresywną politykę rozwoju terytorialnego swojego państwa, zaanektował Chanat Kazański i Chanat Astrachański, zaatakował zakon krzyżacki  w Inflantach, za panowania Zygmunta II Augusta i Stefana Batorego toczył liczne wojny z Litwą i Polską, zakończone w 1582 r. pokojem w Jamie Zapolskim.  Bezskutecznie starał się o rękę Anny Jagiellonki, a podczas elekcji 1573 r. -  o koronę Rzeczypospolitej.   </content>
+    <location>Moskwa</location>
+    <geo>55.7549,37.6227</geo>
+    <people>Iwan IV Groźny</people>
+    <keywords>Rosja</keywords>
+    <sources>
+        <value>Wikipedia</value>
+        <url>https://pl.wikipedia.org/wiki/Iwan_IV_Gro%C5%BAny</url>
+    </sources>
+</HistoricalEvent>
+
 ```
 
 ## Zrzut ekranu
