@@ -85,6 +85,4 @@ Przykład odpowiedzi na zapytanie `curl --header "Content-Type: application/xml"
 ## TODO
 
 - [ ] uzupełnić dane 
-- [ ] możliwość automatycznego odświeżenia danych po wgraniu nowych/zmodyfikowanych 
-      plików YAML (program powinien monitorować katalog /data)
 - [ ] refactoring 
