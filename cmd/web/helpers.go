@@ -70,11 +70,9 @@ func prepareTextStyle(content string, clear bool) string {
 
 	textToSmallCaps := rgx.FindAllString(content, -1)
 
-	if textToSmallCaps != nil {
-		for _, item := range textToSmallCaps {
-			textHTML := pre + item[3:len(item)-3] + post
-			content = strings.Replace(content, item, textHTML, -1)
-		}
+	for _, item := range textToSmallCaps {
+		textHTML := pre + item[3:len(item)-3] + post
+		content = strings.Replace(content, item, textHTML, -1)
 	}
 
 	// pogrubienie
@@ -86,11 +84,9 @@ func prepareTextStyle(content string, clear bool) string {
 
 	textBold := rgxb.FindAllString(content, -1)
 
-	if textBold != nil {
-		for _, item := range textBold {
-			textHTML := pre + item[2:len(item)-2] + post
-			content = strings.Replace(content, item, textHTML, -1)
-		}
+	for _, item := range textBold {
+		textHTML := pre + item[2:len(item)-2] + post
+		content = strings.Replace(content, item, textHTML, -1)
 	}
 
 	// italiki
@@ -102,11 +98,9 @@ func prepareTextStyle(content string, clear bool) string {
 
 	textItalic := rgxi.FindAllString(content, -1)
 
-	if textItalic != nil {
-		for _, item := range textItalic {
-			textHTML := pre + item[1:len(item)-1] + post
-			content = strings.Replace(content, item, textHTML, -1)
-		}
+	for _, item := range textItalic {
+		textHTML := pre + item[1:len(item)-1] + post
+		content = strings.Replace(content, item, textHTML, -1)
 	}
 
 	// złamanie wiersza
@@ -152,10 +146,7 @@ func randomInt(min int, max int) int {
 // isRunByRun - funkcja sprawdza czy uruchomiono program przez go run
 // czy też program skompilowany, funkcja dla systemu Linux
 func isRunByRun() bool {
-	if strings.Index(os.Args[0], "/tmp/go-build") != -1 {
-		return true
-	}
-	return false
+	return strings.Contains(os.Args[0], "/tmp/go-build")
 }
 
 // getPrevNextHTML func

@@ -51,10 +51,10 @@ type ShortHistoricalEvent struct {
 	ContentTwitter string `json:"content" xml:"content"`
 }
 
-func clearField(value string) string {
-	value = prepareTextStyle(value, false)
-	return value
-}
+//func clearField(value string) string {
+//	value = prepareTextStyle(value, false)
+//	return value
+//}
 
 func errorJSON(w http.ResponseWriter, code int, msg string) {
 	w.Header().Set("Content-Type", "application/json")
