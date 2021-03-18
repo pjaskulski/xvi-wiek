@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "e9b1ba4b-05ee-4167-9b16-370db6a4923a",
+		"name": "xvi-wiek.pl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API: Today - xml",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].date).to.eql(\"26-02-1506\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://xvi-wiek.pl/api/today",
+					"protocol": "https",
+					"host": [
+						"xvi-wiek",
+						"pl"
+					],
+					"path": [
+						"api",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API: Today - json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].date).to.eql(\"26-02-1506\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xvi-wiek.pl/api/today",
+					"protocol": "https",
+					"host": [
+						"xvi-wiek",
+						"pl"
+					],
+					"path": [
+						"api",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API: Short - xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://xvi-wiek.pl/api/short",
+					"protocol": "https",
+					"host": [
+						"xvi-wiek",
+						"pl"
+					],
+					"path": [
+						"api",
+						"short"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API: Short - json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/short",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"short"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API: Date - xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://xvi-wiek.pl/api/dzien/3/24",
+					"protocol": "https",
+					"host": [
+						"xvi-wiek",
+						"pl"
+					],
+					"path": [
+						"api",
+						"dzien",
+						"3",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API: Date - json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xvi-wiek.pl/api/dzien/3/24",
+					"protocol": "https",
+					"host": [
+						"xvi-wiek",
+						"pl"
+					],
+					"path": [
+						"api",
+						"dzien",
+						"3",
+						"24"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

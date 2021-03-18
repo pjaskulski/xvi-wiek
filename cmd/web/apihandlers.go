@@ -15,6 +15,7 @@ package main
 
 import (
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -26,28 +27,28 @@ import (
 
 // SourceJSON type
 type SourceJSON struct {
-	Name string `json:"value"`
-	URL  string `json:"url"`
+	Name string `json:"value" xml:"value"`
+	URL  string `json:"url" xml:"url"`
 }
 
-// FactJSON type
+// HistoricalEvent type
 // swagger:response factsResponse
-type FactJSON struct {
-	Date     string       `json:"date"`
-	Title    string       `json:"title"`
-	Content  string       `json:"content"`
-	Location string       `json:"location"`
-	Geo      string       `json:"geo"`
-	People   string       `json:"people"`
-	Keywords string       `json:"keywords"`
-	Sources  []SourceJSON `json:"sources"`
+type HistoricalEvent struct {
+	Date     string       `json:"date" xml:"date"`
+	Title    string       `json:"title" xml:"title"`
+	Content  string       `json:"content" xml:"content"`
+	Location string       `json:"location" xml:"location"`
+	Geo      string       `json:"geo" xml:"geo"`
+	People   string       `json:"people" xml:"people"`
+	Keywords string       `json:"keywords" xml:"keywords"`
+	Sources  []SourceJSON `json:"sources" xml:"sources"`
 }
 
-// FactShortJSON type
+//  type ShortHistoricalEvent
 // swagger:response factsShortResponse
-type FactShortJSON struct {
-	Date           string `json:"date"`
-	ContentTwitter string `json:"content"`
+type ShortHistoricalEvent struct {
+	Date           string `json:"date" xml:"date"`
+	ContentTwitter string `json:"content" xml:"content"`
 }
 
 func clearField(value string) string {
@@ -62,11 +63,11 @@ func errorJSON(w http.ResponseWriter, code int, msg string) {
 	w.Write(response)
 }
 
-func toStructJSON(data interface{}) []FactJSON {
+func toStructJSON(data interface{}) []HistoricalEvent {
 	factStruct := data.(*[]Fact)
 
-	factsJSON := []FactJSON{}
-	factJSON := FactJSON{}
+	factsJSON := []HistoricalEvent{}
+	factJSON := HistoricalEvent{}
 	sourceJSON := SourceJSON{}
 
 	for _, item := range *factStruct {
@@ -92,9 +93,9 @@ func toStructJSON(data interface{}) []FactJSON {
 }
 
 // toShortStructJSON
-func toShortStructJSON(data interface{}) FactShortJSON {
+func toShortStructJSON(data interface{}) ShortHistoricalEvent {
 	factStruct := data.(*[]Fact)
-	factJSON := FactShortJSON{}
+	factJSON := ShortHistoricalEvent{}
 
 	choice := randomInt(0, len(*factStruct)-1)
 
@@ -105,23 +106,33 @@ func toShortStructJSON(data interface{}) FactShortJSON {
 }
 
 // factResponseJSON
-func factResponseJSON(w http.ResponseWriter, code int, data interface{}) {
+func factResponseJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
 	factsJSON := toStructJSON(data)
 
-	response, _ := json.Marshal(factsJSON)
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(code)
-	w.Write(response)
+	if contentType == "application/xml" {
+		w.Header().Add("Content-Type", "application/xml")
+		xml.NewEncoder(w).Encode(factsJSON)
+	} else {
+		response, _ := json.Marshal(factsJSON)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(code)
+		w.Write(response)
+	}
 }
 
 // factShortResponseJSON
-func factShortResponseJSON(w http.ResponseWriter, code int, data interface{}) {
+func factShortResponseJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
 	factShortJSON := toShortStructJSON(data)
 
-	response, _ := json.Marshal(factShortJSON)
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(code)
-	w.Write(response)
+	if contentType == "application/xml" {
+		w.Header().Add("Content-Type", "application/xml")
+		xml.NewEncoder(w).Encode(factShortJSON)
+	} else {
+		response, _ := json.Marshal(factShortJSON)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(code)
+		w.Write(response)
+	}
 }
 
 // swagger:route GET /dzien/{month}/{day} dzien listaWydarzen
@@ -159,7 +170,7 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	name := fmt.Sprintf("%02d-%02d", month, day)
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		factResponseJSON(w, 200, facts)
+		factResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
 		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 	}
@@ -175,7 +186,7 @@ func (app *application) apiFactsToday(w http.ResponseWriter, r *http.Request) {
 	name := fmt.Sprintf("%02d-%02d", int(time.Now().Month()), time.Now().Day())
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		factResponseJSON(w, 200, facts)
+		factResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
 		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 	}
@@ -191,7 +202,7 @@ func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
 	name := fmt.Sprintf("%02d-%02d", int(time.Now().Month()), time.Now().Day())
 	facts, ok := app.dataCache.Get(name)
 	if ok {
-		factShortResponseJSON(w, 200, facts)
+		factShortResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
 		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 	}
