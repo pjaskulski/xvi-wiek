@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// funkcja zwraca nazwę pliku bez rozszerzenia
 func filenameWithoutExtension(fn string) string {
 	return strings.TrimSuffix(fn, path.Ext(fn))
 }
