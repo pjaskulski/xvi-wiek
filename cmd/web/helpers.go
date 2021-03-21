@@ -105,7 +105,7 @@ func prepareTextStyle(content string, clear bool) string {
 	}
 
 	// złamanie wiersza
-	content = strings.Replace(content, "\\", "<br>", -1)
+	content = strings.Replace(content, `\\`, "<br>", -1)
 
 	return content
 }
