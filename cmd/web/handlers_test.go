@@ -38,7 +38,7 @@ func createTestEnv() *application {
 	return app
 }
 
-func TestHandlers(t *testing.T) {
+func TestHandlersCorrectPath(t *testing.T) {
 
 	// środowisko do testów
 	appTest := createTestEnv()
@@ -47,6 +47,7 @@ func TestHandlers(t *testing.T) {
 	ts := httptest.NewServer(appTest.routes())
 	defer ts.Close()
 
+	// definicje testów
 	tests := []struct {
 		route    string
 		expected string
@@ -124,5 +125,59 @@ func TestHandlers(t *testing.T) {
 		if !strings.Contains(bodyText, test.expected) {
 			t.Errorf("handler %q brak oczekiwanego w 'body' tekstu: %q", test.route, test.expected)
 		}
+	}
+}
+
+func TestHandlersInvalidPath(t *testing.T) {
+	// środowisko do testów
+	appTest := createTestEnv()
+
+	// serwer testowy
+	ts := httptest.NewServer(appTest.routes())
+	defer ts.Close()
+
+	// definicje testów
+	tests := []struct {
+		route  string
+		status int
+	}{
+		{
+			route:  "/about",
+			status: 404,
+		},
+		{
+			route:  "/dzien/2/30",
+			status: 404,
+		},
+		{
+			route:  "/dzien/15/19",
+			status: 404,
+		},
+		{
+			route:  "/dzien/1/3a",
+			status: 404,
+		},
+		{
+			route:  "/dzien/aaa/bbb",
+			status: 404,
+		},
+		{
+			route:  "/dzien/10",
+			status: 404,
+		},
+	}
+
+	for _, test := range tests {
+		appTest.infoLog.Println("RUN handler: ", test.route)
+
+		rs, err := ts.Client().Get(ts.URL + test.route)
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		if rs.StatusCode != test.status {
+			t.Errorf("http status, oczekiwano %d; otrzymano %d", test.status, rs.StatusCode)
+		}
+		defer rs.Body.Close()
 	}
 }
