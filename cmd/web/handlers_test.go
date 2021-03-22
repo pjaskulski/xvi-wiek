@@ -38,7 +38,7 @@ func createTestEnv() *application {
 	return app
 }
 
-func TestInformacje(t *testing.T) {
+func TestHandlers(t *testing.T) {
 
 	// środowisko do testów
 	appTest := createTestEnv()
@@ -47,377 +47,82 @@ func TestInformacje(t *testing.T) {
 	ts := httptest.NewServer(appTest.routes())
 	defer ts.Close()
 
-	rs, err := ts.Client().Get(ts.URL + "/informacje")
-	if err != nil {
-		t.Fatal(err)
+	tests := []struct {
+		route    string
+		expected string
+	}{
+		{
+			route:    "/",
+			expected: `Co wydarzyło się`,
+		},
+		{
+			route:    "/informacje",
+			expected: "Główna strona serwisu prezentuje wydarzenia z bieżącego dnia",
+		},
+		{
+			route:    "/cytaty",
+			expected: "Teraz porządki francuskie chciał Henryk",
+		},
+		{
+			route:    "/indeksy",
+			expected: "indeks wydarzeń historycznych według lat",
+		},
+		{
+			route:    "/indeksy/chronologia",
+			expected: "1490",
+		},
+		{
+			route:    "/indeksy/ludzie",
+			expected: "Albrecht Fryderyk Hohenzollern",
+		},
+		{
+			route:    "/indeksy/miejsca",
+			expected: "Ansbach",
+		},
+		{
+			route:    "/indeksy/slowa",
+			expected: "dyplomacja",
+		},
+		{
+			route:    "/pdf",
+			expected: `<strong><a href="/static/pdf/xvi-wiek.pdf">xvi-wiek.pdf</a></strong> - zawartość serwisu jako ebook`,
+		},
+		{
+			route:    "/kalendarz",
+			expected: `Styczeń`,
+		},
+		{
+			route:    "/ksiazki",
+			expected: `Uwaga: opisy lub fragmenty opisów książek mogą pochodzić ze stron wydawców`,
+		},
+		{
+			route:    "/dzien/3/22",
+			expected: `Wołogoszcz`,
+		},
 	}
 
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "Główna strona serwisu prezentuje wydarzenia z bieżącego dnia"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestCytaty(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/cytaty")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "Teraz porządki francuskie chciał Henryk"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestIndeksy(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/indeksy")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "indeks wydarzeń historycznych według lat"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestIndeksyChronologia(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/indeksy/chronologia")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "1490"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestIndeksyLudzie(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/indeksy/ludzie")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "Albrecht Fryderyk Hohenzollern"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestIndeksyMiejsca(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/indeksy/miejsca")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "Ansbach"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestIndeksySlowaKluczowe(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/indeksy/slowa")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := "dyplomacja"
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestEbook(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/pdf")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := `<strong><a href="/static/pdf/xvi-wiek.pdf">xvi-wiek.pdf</a></strong> - zawartość serwisu jako ebook`
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestKalendarz(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/kalendarz")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := `Styczeń`
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestKsiazki(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/ksiazki")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := `Uwaga: opisy lub fragmenty opisów książek mogą pochodzić ze stron wydawców`
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestHome(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := `Co wydarzyło się`
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
-	}
-}
-
-func TestDay22Marca(t *testing.T) {
-
-	// środowisko do testów
-	appTest := createTestEnv()
-
-	// serwer testowy
-	ts := httptest.NewServer(appTest.routes())
-	defer ts.Close()
-
-	rs, err := ts.Client().Get(ts.URL + "/dzien/3/22")
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	if rs.StatusCode != http.StatusOK {
-		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
-	}
-	defer rs.Body.Close()
-
-	body, err := ioutil.ReadAll(rs.Body)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	bodyText := string(body)
-
-	fragment := `Wołogoszcz`
-	if !strings.Contains(bodyText, fragment) {
-		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
+	for _, test := range tests {
+		appTest.infoLog.Println("RUN handler: ", test.route)
+
+		rs, err := ts.Client().Get(ts.URL + test.route)
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		if rs.StatusCode != http.StatusOK {
+			t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
+		}
+		defer rs.Body.Close()
+
+		body, err := ioutil.ReadAll(rs.Body)
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		bodyText := string(body)
+
+		if !strings.Contains(bodyText, test.expected) {
+			t.Errorf("handler %q brak oczekiwanego w 'body' tekstu: %q", test.route, test.expected)
+		}
 	}
 }
