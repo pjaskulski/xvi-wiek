@@ -134,6 +134,134 @@ func TestIndeksy(t *testing.T) {
 	}
 }
 
+func TestIndeksyChronologia(t *testing.T) {
+
+	// środowisko do testów
+	appTest := createTestEnv()
+
+	// serwer testowy
+	ts := httptest.NewServer(appTest.routes())
+	defer ts.Close()
+
+	rs, err := ts.Client().Get(ts.URL + "/indeksy/chronologia")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if rs.StatusCode != http.StatusOK {
+		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
+	}
+	defer rs.Body.Close()
+
+	body, err := ioutil.ReadAll(rs.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	bodyText := string(body)
+
+	fragment := "1490"
+	if !strings.Contains(bodyText, fragment) {
+		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
+	}
+}
+
+func TestIndeksyLudzie(t *testing.T) {
+
+	// środowisko do testów
+	appTest := createTestEnv()
+
+	// serwer testowy
+	ts := httptest.NewServer(appTest.routes())
+	defer ts.Close()
+
+	rs, err := ts.Client().Get(ts.URL + "/indeksy/ludzie")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if rs.StatusCode != http.StatusOK {
+		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
+	}
+	defer rs.Body.Close()
+
+	body, err := ioutil.ReadAll(rs.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	bodyText := string(body)
+
+	fragment := "Albrecht Fryderyk Hohenzollern"
+	if !strings.Contains(bodyText, fragment) {
+		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
+	}
+}
+
+func TestIndeksyMiejsca(t *testing.T) {
+
+	// środowisko do testów
+	appTest := createTestEnv()
+
+	// serwer testowy
+	ts := httptest.NewServer(appTest.routes())
+	defer ts.Close()
+
+	rs, err := ts.Client().Get(ts.URL + "/indeksy/miejsca")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if rs.StatusCode != http.StatusOK {
+		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
+	}
+	defer rs.Body.Close()
+
+	body, err := ioutil.ReadAll(rs.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	bodyText := string(body)
+
+	fragment := "Ansbach"
+	if !strings.Contains(bodyText, fragment) {
+		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
+	}
+}
+
+func TestIndeksySlowaKluczowe(t *testing.T) {
+
+	// środowisko do testów
+	appTest := createTestEnv()
+
+	// serwer testowy
+	ts := httptest.NewServer(appTest.routes())
+	defer ts.Close()
+
+	rs, err := ts.Client().Get(ts.URL + "/indeksy/slowa")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if rs.StatusCode != http.StatusOK {
+		t.Errorf("oczekiwano %d; otrzymano %d", http.StatusOK, rs.StatusCode)
+	}
+	defer rs.Body.Close()
+
+	body, err := ioutil.ReadAll(rs.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	bodyText := string(body)
+
+	fragment := "dyplomacja"
+	if !strings.Contains(bodyText, fragment) {
+		t.Errorf("brak oczekiwanego w 'body' tekstu: %q", fragment)
+	}
+}
+
 func TestEbook(t *testing.T) {
 
 	// środowisko do testów
