@@ -18,7 +18,7 @@ Treść serwisu jest także dostępna w formie [ebooka](https://www.xvi-wiek.pl/
 Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w języku Go, gdyby nie lektura 
 [książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
 
-TESTY: coverage: **66.7%**
+TESTY: coverage: **81.2%**
 
 ## API
 
