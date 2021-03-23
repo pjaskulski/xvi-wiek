@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"io/ioutil"
+	"net/http"
 	"net/http/httptest"
 	"testing"
 )
@@ -18,53 +19,106 @@ func TestApiHandlers(t *testing.T) {
 
 	// definicje testów
 	tests := []struct {
-		route       string
-		status      int
-		contentType string
+		route               string
+		headerContentType   string
+		status              int
+		responseContentType string
 	}{
 		{
-			route:       "/api/dzien/1/1",
-			status:      200,
-			contentType: "application/json",
+			route:               "/api/dzien/1/1",
+			headerContentType:   "application/json",
+			status:              200,
+			responseContentType: "application/json",
 		},
 		{
-			route:       "/api/dzien/3/24",
-			status:      200,
-			contentType: "application/json",
+			route:               "/api/dzien/1/1",
+			headerContentType:   "application/xml",
+			status:              200,
+			responseContentType: "application/xml",
 		},
 		{
-			route:       "/api/today",
-			status:      200,
-			contentType: "application/json",
+			route:               "/api/dzien/3/24",
+			headerContentType:   "application/json",
+			status:              200,
+			responseContentType: "application/json",
 		},
 		{
-			route:       "/api/short",
-			status:      200,
-			contentType: "application/json",
+			route:               "/api/today",
+			headerContentType:   "application/json",
+			status:              200,
+			responseContentType: "application/json",
 		},
 		{
-			route:       "/api/dzien/2/30",
-			status:      404,
-			contentType: "application/json",
+			route:               "/api/today",
+			headerContentType:   "application/xml",
+			status:              200,
+			responseContentType: "application/xml",
 		},
 		{
-			route:       "/api/dzien/100",
-			status:      404,
-			contentType: "application/json",
+			route:               "/api/short",
+			headerContentType:   "application/json",
+			status:              200,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/short",
+			headerContentType:   "application/xml",
+			status:              200,
+			responseContentType: "application/xml",
+		},
+		{
+			route:               "/api/dzien/2/30",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/dzien/2/30",
+			headerContentType:   "application/xml",
+			status:              404,
+			responseContentType: "application/xml",
+		},
+		{
+			route:               "/api/dzien/100",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/dzien/100",
+			headerContentType:   "application/xml",
+			status:              404,
+			responseContentType: "application/xml",
+		},
+		{
+			route:               "/api/dzien/1/400",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/dzien/1/400",
+			headerContentType:   "application/xml",
+			status:              404,
+			responseContentType: "application/xml",
 		},
 	}
 
 	for _, test := range tests {
-		appTest.infoLog.Println("API, GET: ", test.route)
+		appTest.infoLog.Println("API, GET: ", test.route, "Content-Type: ", test.headerContentType)
 
-		rs, err := ts.Client().Get(ts.URL + test.route)
+		client := ts.Client()
+		req, _ := http.NewRequest("GET", ts.URL+test.route, nil)
+		req.Header.Set("Content-Type", test.headerContentType)
+		rs, err := client.Do(req)
+
 		if err != nil {
 			t.Fatal(err)
 		}
 
 		contentType := rs.Header.Get("Content-type")
-		if contentType != test.contentType {
-			t.Errorf("content-type: oczekiwano %s; otrzymano %s", test.contentType, contentType)
+		if contentType != test.responseContentType {
+			t.Errorf("content-type: oczekiwano %s; otrzymano %s", test.responseContentType, contentType)
 		}
 
 		if rs.StatusCode != test.status {
@@ -77,7 +131,7 @@ func TestApiHandlers(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		if !json.Valid(body) {
+		if test.headerContentType == "application/json" && !json.Valid(body) {
 			t.Errorf("GET %q otrzymano niepoprawną odpowiedź json: %q", test.route, string(body))
 		}
 	}
