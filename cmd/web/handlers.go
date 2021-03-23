@@ -49,7 +49,7 @@ var monthName = map[int]string{
 // showFacts func
 func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
-		app.notFoundError(w)
+		app.notFoundError(w, r)
 		return
 	}
 
@@ -142,13 +142,13 @@ func (app *application) showInformation(w http.ResponseWriter, r *http.Request) 
 func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 	month, err := strconv.Atoi(chi.URLParam(r, "month"))
 	if err != nil || month < 1 || month > 12 {
-		app.clientError(w, http.StatusNotFound)
+		app.clientError(w, r, http.StatusNotFound)
 		return
 	}
 
 	day, err := strconv.Atoi(chi.URLParam(r, "day"))
 	if err != nil || day < 1 || day > 31 {
-		app.clientError(w, http.StatusNotFound)
+		app.clientError(w, r, http.StatusNotFound)
 		return
 	}
 
@@ -161,7 +161,7 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 		isCorrectDate = false
 	}
 	if !isCorrectDate {
-		app.clientError(w, http.StatusNotFound)
+		app.showNotFound(w, r)
 		return
 	}
 

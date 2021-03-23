@@ -13,10 +13,14 @@ func (app *application) serverError(w http.ResponseWriter, err error) {
 	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }
 
-func (app *application) clientError(w http.ResponseWriter, status int) {
+func (app *application) clientError(w http.ResponseWriter, r *http.Request, status int) {
+	if status == http.StatusNotFound {
+		app.showNotFound(w, r)
+		return
+	}
 	http.Error(w, http.StatusText(status), status)
 }
 
-func (app *application) notFoundError(w http.ResponseWriter) {
-	app.clientError(w, http.StatusNotFound)
+func (app *application) notFoundError(w http.ResponseWriter, r *http.Request) {
+	app.clientError(w, r, http.StatusNotFound)
 }
