@@ -1,7 +1,9 @@
 package main
 
 import (
+	"encoding/xml"
 	"fmt"
+	"io"
 	"math/rand"
 	"os"
 	"path"
@@ -179,4 +181,15 @@ func getPrevNextHTML(month int, day int) string {
 func prepareFactLinkHTML(month int, day int, id string) string {
 	html := `<a href="/dzien/%d/%d#%s" class="no-tufte-underline"> &#8680; </a>`
 	return fmt.Sprintf(html, month, day, id)
+}
+
+// IsValidXML - func from: https://stackoverflow.com/questions/53476012/how-to-validate-a-xml
+func IsValidXML(input string) bool {
+	decoder := xml.NewDecoder(strings.NewReader(input))
+	for {
+		err := decoder.Decode(new(interface{}))
+		if err != nil {
+			return err == io.EOF
+		}
+	}
 }

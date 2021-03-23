@@ -134,5 +134,9 @@ func TestApiHandlers(t *testing.T) {
 		if test.headerContentType == "application/json" && !json.Valid(body) {
 			t.Errorf("GET %q otrzymano niepoprawną odpowiedź json: %q", test.route, string(body))
 		}
+
+		if test.headerContentType == "application/xml" && !IsValidXML(string(body)) {
+			t.Errorf("GET %q otrzymano niepoprawną odpowiedź xml: %q", test.route, string(body))
+		}
 	}
 }
