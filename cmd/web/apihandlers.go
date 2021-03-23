@@ -63,6 +63,13 @@ func errorJSON(w http.ResponseWriter, code int, msg string) {
 	w.Write(response)
 }
 
+func errorXML(w http.ResponseWriter, code int, msg string) {
+	w.Header().Set("Content-Type", "application/xml")
+	w.WriteHeader(code)
+	response := fmt.Sprintf("<error><title>%d</title><content>%s</content></error>", code, msg)
+	w.Write([]byte(response))
+}
+
 func toStructJSON(data interface{}) []HistoricalEvent {
 	factStruct := data.(*[]Fact)
 
@@ -144,13 +151,21 @@ func factShortResponseJSON(w http.ResponseWriter, code int, contentType string, 
 func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	month, err := strconv.Atoi(chi.URLParam(r, "month"))
 	if err != nil || month < 1 || month > 12 {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 		return
 	}
 
 	day, err := strconv.Atoi(chi.URLParam(r, "day"))
 	if err != nil || day < 1 || day > 31 {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 		return
 	}
 
@@ -163,7 +178,11 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 		isCorrectDate = false
 	}
 	if !isCorrectDate {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 		return
 	}
 
@@ -172,7 +191,11 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		factResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 	}
 }
 
@@ -188,7 +211,11 @@ func (app *application) apiFactsToday(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		factResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 	}
 }
 
@@ -204,6 +231,10 @@ func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		factShortResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
-		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		if r.Header.Get("Content-Type") == "application/xml" {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
 	}
 }

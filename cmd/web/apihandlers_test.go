@@ -47,6 +47,11 @@ func TestApiHandlers(t *testing.T) {
 			status:      404,
 			contentType: "application/json",
 		},
+		{
+			route:       "/api/dzien/100",
+			status:      404,
+			contentType: "application/json",
+		},
 	}
 
 	for _, test := range tests {
@@ -73,7 +78,7 @@ func TestApiHandlers(t *testing.T) {
 		}
 
 		if !json.Valid(body) {
-			t.Errorf("GET %q otrzymano niepoprawną odpowiedź json", test.route)
+			t.Errorf("GET %q otrzymano niepoprawną odpowiedź json: %q", test.route, string(body))
 		}
 	}
 }

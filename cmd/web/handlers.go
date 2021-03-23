@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"net/http"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -255,5 +256,27 @@ func (app *application) showPDF(w http.ResponseWriter, r *http.Request) {
 	err := ts.Execute(w, nil)
 	if err != nil {
 		app.serverError(w, err)
+	}
+}
+
+// showNotFound func
+func (app *application) showNotFound(w http.ResponseWriter, r *http.Request) {
+	var isAPI bool = false
+
+	if strings.Contains(r.URL.String(), `/api/`) {
+		isAPI = true
+	}
+
+	if r.Header.Get("Content-Type") == "application/xml" {
+		errorXML(w, 404, "Błędne zapytanie lub brak danych")
+	} else if r.Header.Get("Content-Type") == "application/json" || isAPI {
+		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+	} else {
+		ts := app.templateCache["notfound.page.gohtml"]
+		w.WriteHeader(404)
+		err := ts.Execute(w, nil)
+		if err != nil {
+			app.serverError(w, err)
+		}
 	}
 }
