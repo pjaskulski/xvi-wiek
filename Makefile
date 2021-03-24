@@ -11,6 +11,18 @@ coverage:
 	go test -race -coverprofile=coverage.out ./cmd/web 
 	go tool cover -html coverage.out -o coverage.html
 
+cyclo:
+	gocyclo -over 15 ./cmd/web
+
+vet:
+	go vet ./cmd/web
+
+gosec:
+	gosec -quiet -exclude G104 ./cmd/web
+
+unparam:
+	unparam ./cmd/web
+
 run: 
 	go run ./cmd/web
 
