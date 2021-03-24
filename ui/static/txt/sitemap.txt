@@ -2,6 +2,12 @@ https://xvi-wiek.pl/kalendarz
 https://xvi-wiek.pl/ksiazki
 https://xvi-wiek.pl/cytaty
 https://xvi-wiek.pl/informacje
+https://xvi-wiek.pl/pdf
+https://xvi-wiek.pl/indeksy
+https://xvi-wiek.pl/indeksy/chronologia
+https://xvi-wiek.pl/indeksy/ludzie
+https://xvi-wiek.pl/indeksy/miejsca
+https://xvi-wiek.pl/indeksy/slowa
 https://xvi-wiek.pl/dzien/1/1
 https://xvi-wiek.pl/dzien/1/3
 https://xvi-wiek.pl/dzien/1/4
@@ -37,6 +43,8 @@ https://xvi-wiek.pl/dzien/2/12
 https://xvi-wiek.pl/dzien/3/4
 https://xvi-wiek.pl/dzien/3/10
 https://xvi-wiek.pl/dzien/3/20
+https://xvi-wiek.pl/dzien/3/23
+https://xvi-wiek.pl/dzien/3/24
 https://xvi-wiek.pl/dzien/3/28
 https://xvi-wiek.pl/dzien/4/4
 https://xvi-wiek.pl/dzien/4/10
