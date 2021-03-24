@@ -7,6 +7,10 @@ test:
 cover: 
 	go test -cover ./cmd/web
 
+coverage:
+	go test -race -coverprofile=coverage.out ./cmd/web 
+	go tool cover -html coverage.out -o coverage.html
+
 run: 
 	go run ./cmd/web
 

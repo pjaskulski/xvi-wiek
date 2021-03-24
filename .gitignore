@@ -20,5 +20,7 @@ xvi-wiek
 .vscode/
 yaml2latex
 xvi-wiek.tex
+coverage.out
+coverage.html
 
 

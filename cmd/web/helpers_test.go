@@ -66,7 +66,7 @@ func TestPrepareTextStyle(t *testing.T) {
 		{
 			name:  "złamanie_linii",
 			input: `po tym słowie \\ następuje nowa linia tekstu`,
-			want:  `po tym słowie <br> następuje nowa linia tekstu`,
+			want:  `po tym słowie </p><p> następuje nowa linia tekstu`,
 		},
 	}
 
