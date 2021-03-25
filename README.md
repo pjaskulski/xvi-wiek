@@ -22,7 +22,7 @@ Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w jęz
 
 `go test -cover ./cmd/web`
 
-coverage: **81.6%** of statements
+coverage: **82.5%** of statements
 
 ## API
 

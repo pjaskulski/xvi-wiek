@@ -102,6 +102,18 @@ func TestApiHandlers(t *testing.T) {
 			status:              404,
 			responseContentType: "application/xml",
 		},
+		{
+			route:               "/api/dzien/18/9",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/dzien/18/9",
+			headerContentType:   "application/xml",
+			status:              404,
+			responseContentType: "application/xml",
+		},
 	}
 
 	for _, test := range tests {
