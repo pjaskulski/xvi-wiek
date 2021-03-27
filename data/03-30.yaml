@@ -1,0 +1,38 @@
+---
+id: 1
+day: 30
+month: 3
+year: 1505
+title: Rozpoczął obrady sejm w Radomiu, podczas którego uchwalono konstytucję Nihil novi  
+content: >- 
+    {{{30 marca 1505}}} roku w Radomiu rozpoczął obrady sejm Królestwa Polskiego
+    z udziałem przedstawicieli szlachty litewskiej, podczas którego uchwalono konstytucję
+    nazywaną później {Nihil novi}.[2] Jej pełna nazwa brzmiała {nihil novi sine communi consensu},
+    oznaczając "nic nowego bez zgody powszechnej"[1], przez co rozumiano zgodę stanu szlacheckiego.
+    Nowe prawo ograniczało władzę króla na rzecz szlachty, podobne trendy (wzrost 
+    znaczenia magnatów i szlachty) można było zauważyć w tamtym okresie także w 
+    innych krajach[3], np. w Czechach w wyniku przyjęcia tzw. "Konstytucji 
+    Władysławowskiej" w 1500 r. 
+contentTwitter: >-
+    30 marca 1505 roku w Radomiu rozpoczął obrady sejm Królestwa Polskiego
+    z udziałem przedstawicieli szlachty litewskiej, podczas którego uchwalono konstytucję
+    nazywaną później Nihil novi.
+location: Radom
+geo: 51.4026,21.1528 
+people:  
+keywords: sejm
+image:
+imageInfo: 
+sources:     
+    - id: 1
+      value: Wikipedia
+      urlName: Nihil novi
+      url: https://pl.wikipedia.org/wiki/Nihil_novi
+    - id: 2
+      value: dziejesejmu.pl
+      urlName: Słynny sejm w Radomiu. 1505 r.
+      url: https://www.dziejesejmu.pl/slynny-sejm-w-radomiu-1505-r,p325620432
+    - id: 3
+      value: Wikipedia
+      urlName: Władysław II Jagiellończyk
+      url: https://pl.wikipedia.org/wiki/W%C5%82adys%C5%82aw_II_Jagiello%C5%84czyk
