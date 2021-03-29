@@ -1,0 +1,31 @@
+---
+id: 1
+day: 2
+month: 4
+year: 1548
+title: Jan Tarnowski został hetmanem wielkim koronnym
+content: >- 
+    {{{2 kwietnia 1527}}} roku król Zygmunt Stary mianował Jana Amora Tarnowskiego
+    hetmanem wielkim koronnym.[1] Jan Tarnowski był wybitym dowódcą, wsławionym m.in.
+    zwycięstwem nad wojskami mołdawskimi pod Obertynem w 1531 r.[2] Był też teoretykiem
+    wojskowości, opracował i wydał drukiem w języku polski dzieło {Consilium rationis bellicae}
+    (Rada sprawy wojennej), uznawane za najwybitniejszy przykład polskiego piśmiennictwa 
+    wojskowego w XVI wieku.
+contentTwitter: >-
+    2 kwietnia 1527 roku król Zygmunt Stary mianował Jana Amora Tarnowskiego
+    hetmanem wielkim koronnym.
+location:
+geo:
+people: Zygmunt I Stary; Tarnowski Jan
+keywords: wojskowość
+image:
+imageInfo: 
+sources:     
+    - id: 1
+      value: wilanow-palac.pl
+      urlName: Jan Tarnowski (1488-1561) – praktyk i teoretyk
+      url: https://www.wilanow-palac.pl/jan_tarnowski_1488_1561_praktyk_i_teoretyk.html
+    - id: 2
+      value: Wikipedia
+      urlName: Jan Amor Tarnowski
+      url: https://pl.wikipedia.org/wiki/Jan_Amor_Tarnowski
