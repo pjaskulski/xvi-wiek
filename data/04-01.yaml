@@ -1,0 +1,34 @@
+---
+id: 1
+day: 1
+month: 4
+year: 1548
+title: Zmarł Zygmunt I Stary
+content: >- 
+    {{{1 kwietnia 1548}}} roku w Krakowie, na Wawelu zmarł król Zygmunt I Stary,
+    przedostatni władca Królestwa Polskiego z dynastii Jagiellonów.[1] Miał 81 lat. 
+    26 lipca 1548 rozpoczęły się trzydniowe uroczystości pogrzebowe w których wzięli
+    udział liczni przedstawiciele sąsiednich państw:[2] posłowie cesarza Karola V, 
+    króla Ferdynanda I Habsburga, elektorów Rzeszy, książąt śląskich, książę pruski 
+    Albrecht Hohenzollern przybył osobiście. Następcą Zygmunta Starego został 
+    jego syn Zygmunt II August, koronowany już w 1530 r. Ze względu na kontrowersje dotyczące
+    małżeństwa nowego władcy z Barbarą Radziwiłówną jej koronacja odbyła się
+    dopiero w grudniu 1550 r.
+contentTwitter: >-
+    1 kwietnia 1548 roku w Krakowie, na Wawelu zmarł król Zygmunt I Stary,
+    przedostatni władca Królestwa Polskiego z dynastii Jagiellonów.
+location: Kraków 
+geo: 50.0546,19.9352
+people: Zygmunt I Stary; Albrecht Hohenzollern
+keywords: Jagiellonowie
+image:
+imageInfo: 
+sources:     
+    - id: 1
+      value: Wikipedia
+      urlName: Zygmunt I Stary
+      url: https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 89-92
+      urlName:
+      url:
