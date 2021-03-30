@@ -79,6 +79,12 @@ func TestApiHandlers(t *testing.T) {
 			responseContentType: "application/xml",
 		},
 		{
+			route:               "/api/dzien/4/31",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
 			route:               "/api/dzien/100",
 			headerContentType:   "application/json",
 			status:              404,
@@ -98,6 +104,18 @@ func TestApiHandlers(t *testing.T) {
 		},
 		{
 			route:               "/api/dzien/1/400",
+			headerContentType:   "application/xml",
+			status:              404,
+			responseContentType: "application/xml",
+		},
+		{
+			route:               "/api/dzien/06/10",
+			headerContentType:   "application/json",
+			status:              404,
+			responseContentType: "application/json",
+		},
+		{
+			route:               "/api/dzien/06/10",
 			headerContentType:   "application/xml",
 			status:              404,
 			responseContentType: "application/xml",
