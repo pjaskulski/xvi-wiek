@@ -9,7 +9,7 @@ content: >-
     Akademii Krakowskiej, biblista.[1] Pochodził z mieszczańskiej rodziny Niczów 
     z Lwowa, stąd przydomek "Lwowianin" czyli {Leopolita}, pod którym był bardziej 
     znany. Był redaktorem polskiego przekładu Biblii[2], wydanej w 1561 r. przez 
-    Szarffenbergów.[3] Obecnie uważa się że autorem przekładu był nieznany tłumacz,
+    Szarffenbergów.[3][5] Obecnie uważa się, że autorem przekładu był nieznany tłumacz,
     natomiast Jan Nicz dokonał prac redakcyjnych, stąd też przyjęła się nazwa tłumaczenia:
     {Biblia Leopolity}, choć funkcjonuje także określenie {Biblia Szarffenbergowska}
     od nazwiska rodziny słynnych drukarzy krakowskich, zleceniodawców tłumaczenia.
@@ -44,3 +44,7 @@ sources:
       value: Wikipedia
       urlName: Nowy Testament w przekładzie Stanisława Murzynowskiego
       url: https://pl.wikipedia.org/wiki/Nowy_Testament_w_przek%C5%82adzie_Stanis%C5%82awa_Murzynowskiego
+    - id: 5
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 116
+      urlName:
+      url:
