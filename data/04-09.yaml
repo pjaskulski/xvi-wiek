@@ -1,0 +1,36 @@
+---
+id: 1
+day: 9
+month: 4
+year: 1570
+title: Rozpoczął obrady synod protestantów w Sandomierzu
+content: >- 
+    {{{9 kwietnia 1570}}} roku w Sandomierzu rozpoczął obrady synod przedstawicieli
+    głównych odłamów protestantów w Polsce (z wyłączeniem braci polskich).[1] Próbowano
+    doprowadzić do zjednoczenia obozu protestanckiego w jednej organizacji kościelnej. 
+    Przygotowany przez kalwinistów projekt wspólnego wyznania wiary został jednak odrzucony
+    przez luteran. 14 kwietnia podpisano jedynie tzw. zgodę sandomierską, która zakładała 
+    wzajemne uznawanie sakramentów i kaznodziejów przy zachowaniu odrębnej obrzędowości.
+    Odrzucono ze wspólnoty protestanckiej braci polskich. Opracowano także projekt ustawy sejmowej
+    która miała doprowadzić do zagwarantowania tolerancji religijnej,[2] jednak 
+    podczas sejmu 1570 r. król Zygmunt II August postanowił przełożyć dyskusję 
+    na ten temat na następny sejm. Ustawę taką, nazwaną konfederacją warszawską
+    uchwalono dopiero w 1573 r. na sejmie konwokacyjnym.    
+contentTwitter: >-
+    9 kwietnia 1570 roku w Sandomierzu rozpoczął obrady synod przedstawicieli
+    głównych odłamów protestantów w Polsce (z wyłączeniem braci polskich).
+location: Sandomierz
+geo: 50.6812,21.7488
+people: 
+keywords: reformacja
+image:
+imageInfo:
+sources:
+    - id: 1
+      value: Wikipedia
+      urlName: Zgoda sandomierska
+      url: https://pl.wikipedia.org/wiki/Zgoda_sandomierska
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 149-150
+      urlName:
+      url:
