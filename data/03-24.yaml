@@ -8,16 +8,18 @@ content: >-
     {{{24 marca 1568}}} roku w Knyszynie Zygmunt II August powołał do życia Komisję
     Morską ({Commissio Ma­ritima}), mającą zajmować się sprawami morskimi, obroną 
     wybrzeża i nadzorowaniem floty kaperskiej.[1][4] Przewodniczącym ({primarius commissarius}) 
-    Komisji został kasztelan Jan Kostka, sekretarzem Kasper Geschkau, w jej skład 
+    Komisji został kasztelan gdański Jan Kostka, sekretarzem Kasper Geschkau, w jej skład 
     wchodziło jeszcze 5 osób, m. in. starosta Krzysztof Konarski, dworzanin i komornik 
     królewski Andrzej Swarożyński, Wa­lenty Uberfeldt - komisarz skarbu i inspektor 
     leśny.[2] Komisarze mieli obradować w Gdańsku, gdzie król miał udostępnić im swój 
     dom[3] oraz dał pełnomocnictwo do stałego zastępstwa króla wobec władz Gdańska. 
     Członkowie komisji i ich rodziny byli wyłączeni spod jurysdykcji miasta, podlegali bezpośrednio 
-    Zygmuntowi II Augustowi. Król zadbał o finansowanie Komisji przeznaczając na 
+    Zygmuntowi II Augustowi. Król zadbał o finansowanie nowej instytucji przeznaczając na 
     ten cel dochody zamku malborskiego, dochody z towarów leśnych, jednak zadaniem 
     Komisji oprócz dbania o flotę i interesy morskie Korony było także częściowo 
-    regulowanie spraw pożyczek władcy, co mocno obciążyło dochody Komisji. 
+    regulowanie spraw pożyczek władcy, co mocno obciążyło dochody Komisji Morskiej. \\ 
+    Jan Kostka, poprzez drugą żonę Zofię skoligacony z mazowiecką linią Piastów,[5]  
+    miał w przyszłości zostać jednym z kandydatów do polskiej korony.
 contentTwitter: >-
     24 marca 1568 roku w Knyszynie Zygmunt II August powołał do życia Komisję
     Morską (Commissio Ma­ritima), mającą zajmować się sprawami morskimi, obroną 
@@ -49,3 +51,7 @@ sources:
       value: Wikipedia
       urlName: Gdańsk wobec polityki bałtyckiej ostatnich Jagiellonów
       url: https://pl.wikipedia.org/wiki/Gda%C5%84sk_wobec_polityki_ba%C5%82tyckiej_ostatnich_Jagiellon%C3%B3w
+    - id: 5
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 66
+      urlName:
+      url:
