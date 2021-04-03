@@ -150,6 +150,10 @@ func TestHandlersInvalidPath(t *testing.T) {
 			status: 404,
 		},
 		{
+			route:  "/dzien/4/31",
+			status: 404,
+		},
+		{
 			route:  "/dzien/15/19",
 			status: 404,
 		},
