@@ -100,6 +100,18 @@ func TestHandlersCorrectPath(t *testing.T) {
 			route:    "/dzien/3/22",
 			expected: `Wołogoszcz`,
 		},
+		{
+			route:    "/dzien/12/1",
+			expected: "Brak danych", // dane na ten dzień jeszcze nie wprowadzone, zwraca 200 i informację
+		},
+		{
+			route:    "/dzien/12/31",
+			expected: "Brak danych", // dane na ten dzień jeszcze nie wprowadzone, zwraca 200 i informację
+		},
+		{
+			route:    "/dzien/03/31",
+			expected: "Jan Benedykt Solfa",
+		},
 	}
 
 	for _, test := range tests {
