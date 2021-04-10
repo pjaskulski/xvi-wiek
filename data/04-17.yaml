@@ -1,0 +1,37 @@
+---
+id: 1
+day: 17
+month: 4
+year: 1577
+title: Bitwa pod Lubiszewem
+content: >- 
+    {{{17 kwietnia 1577}}} roku pod Lubiszewem doszło do bitwy między wojskami polskimi
+    a oddziałami Gdańska, który nie uznał elekcji Stefana Batorego.[1] Armia 
+    gdańska składała się z niemieckich żołnierzy zaciężnych i zmobilizowanych 
+    mieszkańców dowodzonych przez doświadczonego najemnika Jana Winkelbrucha.[2]
+    Wojskami koronnymi, wyraźnie słabszymi liczebnie, dowodził hetman Jan Zborowski.[3]
+    Mimo przewagi przeciwnika odniósł zdecydowane zwycięstwo a straty Gdańszczan
+    były ogromne. Konflikt króla z miastem zakończył się jeszcze w tym samym roku
+    ugodą zawartą w grudniu 1577 r. 
+contentTwitter: >-
+    17 kwietnia 1577 roku doszło do bitwy między wojskami polskimi a oddziałami 
+    Gdańska, który nie uznał elekcji Stefana Batorego.
+location: Lubiszewo
+geo: 54.0877,18.7044
+people: Stefan Batory; Winkelbruch Jan; Zborowski Jan  
+keywords: Gdańsk
+image:
+imageInfo:
+sources:
+    - id: 1
+      value: Wikipedia
+      urlName: Bitwa pod Lubiszewem
+      url: https://pl.wikipedia.org/wiki/Bitwa_pod_Lubiszewem 
+    - id: 2
+      value: Wikipedia
+      urlName: Jan Winkelbruch
+      url: https://pl.wikipedia.org/wiki/Jan_Winkelbruch
+    - id: 3
+      value: Wikipedia
+      urlName: Jan Zborowski
+      url: https://pl.wikipedia.org/wiki/Jan_Zborowski
