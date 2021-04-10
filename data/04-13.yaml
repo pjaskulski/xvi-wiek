@@ -5,15 +5,23 @@ month: 4
 year: 1501
 title: Stanisław Chodecki z Chodcza zostaje dowódcą obrony potocznej i starostą lwowskim  
 content: >- 
-    {{{13 kwietnia 1501}}} roku  Stanisław Chodecki z Chodcza[1] zostaje mianowany dowódcą 
-    obrony potocznej, będąc jednocześnie starostą lwowskim. Była to częsta praktyka
-    wynikająca z faktu iż wojska zaciężne składające się na obronę potoczną były zbyt 
-    nieliczne by przeciwstawiać się większym napadom tatarskim, zaś starosta miał prawo
-    zarządzać pospolitym ruszeniem ze swojego terenu. Na początku 1501 roku król Jan Olbracht
+    {{{13 kwietnia 1501}}} roku  Stanisław Chodecki z Chodcza[1] zostaje mianowany 
+    dowódcą obrony potocznej. Stanisław z Chodcza został jednocześnie starostą lwowskim, 
+    łączenie tych funkcji było wówczas częstą praktyką wynikającą z faktu, iż 
+    wojska zaciężne składające się na obronę potoczną były zbyt nieliczne by przeciwstawiać 
+    się większym napadom tatarskim, zaś starosta miał prawo zarządzać pospolitym 
+    ruszeniem ze swojego terenu. Chodecki nazywany często hetmanem polnym koronnym[3] 
+    pełnił tą funkcję już wcześniej w latach 1492-1499. Na początku 1501 roku król Jan Olbracht
     starał się wzmocnić siły obrony potocznej przeprowadzając nowe zaciągi, w marcu i kwietniu
     wydano listy przepowiednie dla 13 chorągwi jazdy i dwóch rot pieszych.[2] Niestety
-    sytuację pogorszyła śmierć króla w Toruniu w tym samym roku, zebrane wojska (2500 zaciężnych) 
-    nie zostały opłacone, co doprowadziło do rabunków dóbr kościelnych w Małopolsce.   
+    plany pokrzyżowała przedwczesna śmierć króla w Toruniu w tym samym roku, zebrane 
+    siły (ponad 2500 zaciężnych) nie zostały opłacone, co doprowadziło wzburzone 
+    wojska do rabunków dóbr kościelnych w Małopolsce. Brak finansowania obrony 
+    potocznej doprowadził do konfliktu Chodeckiego z senatem Królestwa, w efekcie 
+    jego miejsce zajął starosta przemyski Mikołaj Kreza. Dopiero następca Olbrachta, 
+    Aleksander Jagiellończyk w 1502 roku zawiera nowe umowy z rotmistrzami wojsk 
+    zaciężnych, które liczą wówczas ok. 2300 jazdy i 400 pieszych a ich dowódcą 
+    ponownie zostaje Stanisław z Chodcza.    
 contentTwitter: >-
     13 kwietnia 1501 roku  Stanisław Chodecki z Chodcza zostaje mianowany dowódcą 
     obrony potocznej, będąc jednocześnie starostą lwowskim.
@@ -32,3 +40,7 @@ sources:
       value: Zdzisław Spieralski, "Z dziejów wojen polsko-mołdawskich", Studia i materiały do historii wojskowości, t. XI, cz. II, 1965, str. 84 
       urlName: 
       url:
+    - id: 3
+      value: Mirosław Nagielski, "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", 2005,  str. 391
+      urlName:
+      url: 
