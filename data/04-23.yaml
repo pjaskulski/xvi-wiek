@@ -1,0 +1,32 @@
+---
+id: 1
+day: 23
+month: 4
+year: 1576
+title: Stefan Batory przybył do Krakowa
+content: >- 
+    {{{23 kwietnia 1576}}} roku w poniedziałek wielkanocny król elekt Stefan Batory przybył do Krakowa. 
+    Już wcześniej, w lutym, zaprzysiągł pacta conventa i przekazał władzę nad Siedmiogrodem swojemu bratu 
+    Krzysztofowi.[2] Batory wybrany przez szlachtę na małżonka Anny Jagiellonki i króla Polski został koronowany
+    1 maja w katedrze wawelskiej, biskup Stanisław Karnkowski udzielił jednocześnie
+    ślubu parze królewskiej.[1] Objęcie władzy nie przebiegało całkowicie pokojowo, Batory musiał
+    pokonać zwolenników Maksymiliana II Habsburga oraz opór Gdańska, który uznał jego władzę
+    dopiero pod koniec 1577 r.   
+contentTwitter: >-
+    23 kwietnia 1576 roku w poniedziałek wielkanocny Stefan Batory przybył do Krakowa, 
+    tydzień później został koronowany na króla Polski.
+location: Kraków
+geo: 50.0546,19.9352
+people: Stefan Batory; Anna Jagiellonka
+keywords: elekcje
+image:
+imageInfo:
+sources:    
+    - id: 1
+      value: Wikipedia
+      urlName: Stefan Batory
+      url: https://pl.wikipedia.org/wiki/Stefan_Batory
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 190
+      urlName:
+      url:
