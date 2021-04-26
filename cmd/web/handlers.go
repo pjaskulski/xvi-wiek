@@ -233,7 +233,7 @@ func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 
 	ts := app.templateCache["miejsca.page.gohtml"]
-	err := ts.Execute(w, app.FactsByLocation)
+	err := ts.Execute(w, app.SFactsByLocation)
 	if err != nil {
 		app.serverError(w, err)
 	}

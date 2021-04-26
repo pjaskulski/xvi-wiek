@@ -27,16 +27,23 @@ type SliceFactsByKeyword struct {
 	FactsByKeyword []KeywordFact
 }
 
+// SliceFactsByLocation type
+type SliceFactsByLocation struct {
+	Location        string
+	FactsByLocation []LocationFact
+}
+
 type application struct {
-	errorLog        *log.Logger
-	infoLog         *log.Logger
-	templateCache   map[string]*template.Template
-	dataCache       *cache.Cache
-	FactsByYear     map[int][]YearFact
-	FactsByPeople   map[string][]PeopleFact
-	FactsByLocation map[string][]LocationFact
-	FactsByKeyword  map[string][]KeywordFact
-	SFactsByKeyword []SliceFactsByKeyword
+	errorLog         *log.Logger
+	infoLog          *log.Logger
+	templateCache    map[string]*template.Template
+	dataCache        *cache.Cache
+	FactsByYear      map[int][]YearFact
+	FactsByPeople    map[string][]PeopleFact
+	FactsByLocation  map[string][]LocationFact
+	FactsByKeyword   map[string][]KeywordFact
+	SFactsByKeyword  []SliceFactsByKeyword
+	SFactsByLocation []SliceFactsByLocation
 }
 
 var (
