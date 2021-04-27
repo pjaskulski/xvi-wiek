@@ -223,7 +223,7 @@ func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
 func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 
 	ts := app.templateCache["ludzie.page.gohtml"]
-	err := ts.Execute(w, app.FactsByPeople)
+	err := ts.Execute(w, app.SFactsByPeople)
 	if err != nil {
 		app.serverError(w, err)
 	}

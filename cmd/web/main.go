@@ -33,6 +33,12 @@ type SliceFactsByLocation struct {
 	FactsByLocation []LocationFact
 }
 
+// SliceFactsByPeople type
+type SliceFactsByPeople struct {
+	People        string
+	FactsByPeople []PeopleFact
+}
+
 type application struct {
 	errorLog         *log.Logger
 	infoLog          *log.Logger
@@ -44,6 +50,7 @@ type application struct {
 	FactsByKeyword   map[string][]KeywordFact
 	SFactsByKeyword  []SliceFactsByKeyword
 	SFactsByLocation []SliceFactsByLocation
+	SFactsByPeople   []SliceFactsByPeople
 }
 
 var (

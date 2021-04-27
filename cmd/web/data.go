@@ -370,6 +370,15 @@ func (app *application) loadData(path string) error {
 		return cl.CompareString(app.SFactsByLocation[i].Location, app.SFactsByLocation[j].Location) == -1
 	})
 
+	// dodatkowy slice dla szablonu (people)
+	for key, facts := range app.FactsByPeople {
+		temp := SliceFactsByPeople{People: key, FactsByPeople: facts}
+		app.SFactsByPeople = append(app.SFactsByPeople, temp)
+	}
+	sort.SliceStable(app.SFactsByPeople, func(i, j int) bool {
+		return cl.CompareString(app.SFactsByPeople[i].People, app.SFactsByPeople[j].People) == -1
+	})
+
 	// cytaty
 	app.infoLog.Printf("Wczytywanie bazy cytatów...")
 
