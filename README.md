@@ -18,7 +18,7 @@ Treść serwisu jest także dostępna w formie [ebooka](https://www.xvi-wiek.pl/
 Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w języku Go, gdyby nie lektura 
 [książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
 
-English version:
+**English version**:
 
 Sources of a slowly emerging "XVI wiek" (16th century) service with a database of historical events from the 16th century (mainly about the Kingdom of Poland and Prussia and neighbouring states). The beta version of the service should be visible at this address: [xvi-wiek.pl](https://xvi-wiek.pl).
 
