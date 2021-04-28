@@ -18,6 +18,26 @@ Treść serwisu jest także dostępna w formie [ebooka](https://www.xvi-wiek.pl/
 Ten serwis zapewne nie powstałby, przynajmniej nie w takiej formie i nie w języku Go, gdyby nie lektura 
 [książki](https://lets-go.alexedwards.net/) Alexa Edwardsa "Let's Go! Learn to Build Professional Web Applications With Golang".
 
+English version:
+
+Sources of a slowly emerging "XVI wiek" (16th century) service with a database of historical events from the 16th century (mainly about the Kingdom of Poland and Prussia and neighbouring states). The beta version of the service should be visible at this address: [xvi-wiek.pl](https://xvi-wiek.pl).
+
+App uses the Tufte CSS style (MIT license) with the addition of the Crimson Pro font (Open Font License) Regular 400 and Regular 400 italic.
+
+The backend is supported by a Go program, yaml files and a key-value cache mechanism (go-cache, MIT license). Chi is used as a router. Data validation - validator package.
+
+The Github icon is from the GitHub Logos and Usage page.
+
+The Twitter icon comes from the Twitter Brand Resources page.
+
+An additional mechanism is a bot that sends information once a day to the @xvi-century twitter account about an interesting historical event that happened in the 16th century on that day. The bot source code is available in a separate repository: xvi-wiek-bot.
+
+The content of the service is also available as an ebook (pdf). Automatic conversion from yaml files to LaTeX format is done by the yaml2latex program, whose source code is available in a separate repository: xvi-wiek-yaml2latex.
+
+This service probably would not have been created, at least not in this form and not in the Go language, if I hadn't read the Alex Edwards' book "Let's Go! Learn to Build Professional Web Applications With Golang".
+
+Translated with www.DeepL.com/Translator (free version)
+
 ## TESTY 
 
 `go test -cover ./cmd/web`
