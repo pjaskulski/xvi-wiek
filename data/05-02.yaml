@@ -6,8 +6,11 @@ year: 1503
 title: Mikołaj Kamieniecki został hetmanem wielkim koronnym
 content: >- 
     {{{2 maja 1503}}} roku król Aleksander Jagiellończyk mianował Mikołaja Kamienieckiego
-    hetmanem wielkim koronnym.[1] Kamieniecki wsławił się podczas walk z Tatarami,
-    zwyciężąjąc ich pod Łopusznem w 1512 r., wcześniej skutecznie walczył z hospodarem
+    hetmanem wielkim koronnym.[1] Mikołaj Kamieniecki wcześniej otrzymał tytuł hetmana
+    'krakowskiego' jednak ze względu na to, iż miał nadzorować hetmana polnego potrzebny był
+    bardziej adekwatny tytuł. W formularzu wici wysłanym przez króla następnego dnia hetman wymieniony
+    już został jako {regni campiductor generalis}.[2] Kamieniecki wsławił się podczas walk z Tatarami,
+    zwyciężając ich pod Łopusznem w 1512 r., wcześniej skutecznie walczył z hospodarem
     mołdawskim Bogdanem III Jednookim pod Chocimiem w roku 1509. Funkcję hetmana wielkiego
     koronnego pełnił do śmierci w 1515 r. Nie miał dzieci, był za to opiekunem 
     Jana Tarnowskiego, przyszłego hetmana, zwycięskiego wodza spod Obertyna i autora
@@ -25,5 +28,10 @@ sources:
     - id: 1
       value: Mirosław Nagielski (red), "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", Warszawa 2005, str. 25
       urlName: 
-      url: 
+      url:
+    - id: 2
+      value: >-
+        Katarzyna Niemczyk, "Kamienieccy herbu Pilawa: z dziejów kariery i awansu szlachty polskiej do 1535/1536 roku", Wydawnictwo Uniwersytetu Śląskiego, Katowice 2016, str. 177 
+      urlName:
+      url:
     
