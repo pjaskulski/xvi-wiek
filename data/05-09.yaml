@@ -5,12 +5,14 @@ month: 5
 year: 1573
 title: Zakończono głosowanie podczas pierwszej wolnej elekcji w 1573 roku
 content: >- 
-    {{{9 maja 1573}}} roku we wsi Kamień pod Warszawą (obecnie część praskiej części miasta)
-    zakończono zbieranie głosów podczas sejmu elekcyjnego, zebranego po śmierci Zygmunta II
-    Augusta.[1][2] Głosowanie rozpoczęto 3 maja, wśród najpoważniejszych kandydatów byli
-    Henryk Walezy i Ernest Habsburg. 22 z 32 województw poparły kandydaturę francuską.
-    Przeciwnicy Walezego, w tym wielu protestantów skupionych wokół marszałka wielkiego 
-    koronnego Jana Firleja, opuścili obóz sejmowy przenosząc się do niedalekiego Grochowa. 
+    {{{9 maja 1573}}} roku we wsi Kamień pod Warszawą (obecnie część praskiej 
+    części miasta) zakończono zbieranie głosów podczas sejmu elekcyjnego, zebranego 
+    po śmierci Zygmunta II Augusta.[1][2] Głosowanie rozpoczęto 3 maja, wśród 
+    najpoważniejszych kandydatów byli Henryk Walezy i Ernest Habsburg. 22 z 32 
+    województw poparły kandydaturę francuską.[4] Przeciwnicy Walezego, w tym wielu 
+    protestantów skupionych wokół marszałka wielkiego koronnego Jana Firleja, 
+    opuścili obóz sejmowy przenosząc się do niedalekiego Grochowa. Oczekiwano zatwierdzenia 
+    aktu Konfederacji Warszawskiej i zredagowania ostatecznej wersji artykułów Henrykowskich.   
     Doszło do rokowań zakończonych zgodą dzięki pośrednictwu Piotra Zborowskiego. Do historii 
     przeszły słowa, którymi Jan Firlej uzasadniał porozumienie:[3] {"Widzę to na 
     oko Miłościwi Pa­nowie, a bracia, który nam za skaraniem jakimś Pańskim za grzechy 
@@ -19,7 +21,7 @@ content: >-
     się już tak wielom ludzi upodobało, cosz rzec, lepiej jest nam na to pozwolić, 
     a niźli drogiej ojczyźnie swej zguby i rozlania krwie braciej miłej życzyć"}.
     11 maja prymas Jakub Uchański mianował Henryka Walezego królem Polski i wielkim 
-    księciem Litwy. 
+    księciem Litwy.
 contentTwitter: >-
     9 maja 1573 roku w Krzemieniu pod Warszawą (obecnie część praskiej części miasta)
     zakończono zbieranie głosów podczas sejmu elekcyjnego, zebranego po śmierci Zygmunta II
@@ -43,3 +45,7 @@ sources:
       value: Ewa Dubas-Urwanowicz, "Koronne zjazdy szlacheckie w dwóch pierwszych bezkrólewiach po śmierci Zygmunta Augusta", Białystok 1998, str. 280
       urlName:
       url: 
+    - id: 4
+      value: kamionek.warszawa.pl
+      urlName: 1573 rok – Pierwsza wolna elekcja na polach wsi Kamień...
+      url: http://kamionek.warszawa.pl/196-2/1573-rok-pierwsza-elekcja-viritim-na-polach-wsi-kamien/
