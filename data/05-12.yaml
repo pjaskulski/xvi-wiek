@@ -5,8 +5,8 @@ month: 5
 year: 1563
 title: Zmarł Jan Ocieski, dyplomata i kanclerz wielki koronny
 content: >- 
-    {{{12 maja 1563}}} roku zmarł Jan Ocieski, kanclerz wielki koronny za panowania
-    Zygmunta II Augusta. Wcześniej sekretarz królewski i dyplomata w służbie Zygmunta
+    {{{12 maja 1563}}} roku w Krakowie zmarł Jan Ocieski, kanclerz wielki koronny za panowania
+    Zygmunta II Augusta.[3] Wcześniej sekretarz królewski i dyplomata w służbie Zygmunta
     Starego.[1] Wielokrotnie posłował do Turcji, Rzymu, w 1540 roku przebywał na dworze
     cesarza Karola V, zajmując się sprawami królowej Bony. Popierał szlachecki ruch 
     egzekucyjny, kanclerzem wielkim koronnym został w 1552 r. Szesnastowieczny kronikarz
@@ -21,10 +21,10 @@ contentTwitter: >-
     12 maja 1563 roku zmarł Jan Ocieski, kanclerz wielki koronny za panowania
     Zygmunta II Augusta. Wcześniej sekretarz królewski i dyplomata w służbie Zygmunta
     Starego.
-location:
-geo: 
-people: Ocieski Jan
-keywords: Jagiellonowie;dyplomacja
+location: 50.0546,19.9352
+geo: Kraków
+people: Ocieski Jan; Zygmunt I Stary; Zygmunt II August; Albrecht Hohenzollern
+keywords: Jagiellonowie; dyplomacja
 image:
 imageInfo: 
 sources: 
@@ -36,3 +36,7 @@ sources:
       value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 92
       urlName:
       url:
+    - id: 3
+      value: Encyklopedia PWN
+      urlName: Ocieski Jan
+      url: https://encyklopedia.pwn.pl/haslo/Ocieski-Jan;3949695.html
