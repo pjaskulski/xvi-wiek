@@ -36,8 +36,6 @@ The content of the service is also available as an ebook (pdf). Automatic conver
 
 This service probably would not have been created, at least not in this form and not in the Go language, if I hadn't read the Alex Edwards' book "Let's Go! Learn to Build Professional Web Applications With Golang".
 
-Translated with www.DeepL.com/Translator (free version)
-
 ## TESTY 
 
 `go test -cover ./cmd/web`
