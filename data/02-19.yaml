@@ -8,10 +8,14 @@ content: >-
     {{{19 lutego 1520}}} roku w Toruniu król Zygmunt I Stary wydał edykt, w którym
     zabraniał swoim poddanym handlu z państwem krzyżackim.[1] Nakaz dotyczył głównie
     mieszkańców miast Prus Królewskich a związany był z toczącą się właśnie wojną 
-    Królestwa z zakonem krzyżackim. W tym samym dniu król wydał polecenie by 
-    ściągnięto z Krakowa ciężkie działa dla polskiej armii. Artyleria ta, w postaci
-    12 armat burzących[2] została użyta w pierwszej kolejności podczas skutecznego 
-    oblężenia Pasłęka w kwietniu 1520 r.
+    Królestwa z zakonem krzyżackim. Zakaz handlu z ziemiami pozostającymi pod panowaniem
+    państwa zakonnego był uchwalony już wcześniej, podczas sejmu krakowskiego 1518 roku,
+    czyli jeszcze przed wojną. Tekst edyktu z 24 marca 1518 mówił o odpowiedzi na działania
+    mistrza zakonu, który zabronił wywozu wszelkich towarów do Polski, wskazywano
+    także na przypadki rabunków i gwałtów doświadczanych przez kupców polskich na ziemiach zakonu.[3]  
+    Również 19 lutego 1520 r. król wydał polecenie by ściągnięto z Krakowa ciężkie działa 
+    dla polskiej armii. Artyleria ta, w postaci 12 armat burzących[2] została 
+    użyta w pierwszej kolejności podczas skutecznego oblężenia Pasłęka w kwietniu 1520 r.
 contentTwitter: >-
     19 lutego 1520 roku w Toruniu król Zygmunt I Stary wydał edykt, w którym
     zabraniał swoim poddanym handlu z państwem krzyżackim.
@@ -30,3 +34,7 @@ sources:
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
       urlName:
       url:
+    - id: 3
+      value: Roman Rybarski, "Handel i polityka handlowa Polski w XVI stuleciu", tom I, 1928, str. 321
+      urlName:
+      url: 
