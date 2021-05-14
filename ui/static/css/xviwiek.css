@@ -157,6 +157,12 @@ img.small-icon {
     font-size: 1.5rem;
 }
 
+.currentDay {
+    font-weight: bold;
+    color: purple;
+    font-size: 1.6rem;
+}
+
 td, th {
     font-size: 1.4rem;
     padding: 10px;

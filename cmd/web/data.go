@@ -408,12 +408,27 @@ func (app *application) loadData(path string) error {
    Wykorzystywana w kalendarzu.
 */
 func dayFact(month int, day int) template.HTML {
+	var result string
+
 	name := fmt.Sprintf("%02d-%02d", month, day)
 
+	today := time.Now()
+	today_month := int(today.Month())
+	today_day := today.Day()
+
 	if DayFactTable[name] {
-		result := fmt.Sprintf(`<a href="/dzien/%d/%d">%d</a>`, month, day, day)
+		if today_month == month && today_day == day {
+			result = fmt.Sprintf(`<span class="currentDay"><a href="/dzien/%d/%d">%d</a></span>`, month, day, day)
+		} else {
+			result = fmt.Sprintf(`<a href="/dzien/%d/%d">%d</a>`, month, day, day)
+		}
 		return template.HTML(result)
 	}
 
-	return template.HTML(fmt.Sprintf(`<span style="color: DarkGrey;">%d</span>`, day))
+	if today_month == month && today_day == day {
+		result = fmt.Sprintf(`<span class="currentDay">%d</span>`, day)
+	} else {
+		result = fmt.Sprintf(`<span style="color: DarkGrey;">%d</span>`, day)
+	}
+	return template.HTML(result)
 }
