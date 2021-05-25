@@ -326,6 +326,14 @@ func (app *application) loadData(path string) error {
 		waitgroup.Wait()
 	}
 
+	// sortowanie wydarzeń historycznych dla lat
+	for year, facts := range app.FactsByYear {
+		sort.Slice(facts, func(i, j int) bool {
+			return facts[i].Date < facts[j].Date
+		})
+		app.FactsByYear[year] = facts
+	}
+
 	// sortowanie wydarzeń historycznych dla postaci
 	for person, facts := range app.FactsByPeople {
 		sort.Slice(facts, func(i, j int) bool {
