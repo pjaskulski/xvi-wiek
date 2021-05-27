@@ -127,6 +127,24 @@ article {
     padding: 2rem 0rem;
 }
 
+h2.inter {
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 2.5rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+h3.inter {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+    line-height: 1;
+}
+
 .hr-books {
     margin-bottom: 2rem;
 }

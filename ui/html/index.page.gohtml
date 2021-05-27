@@ -22,6 +22,14 @@
                 {{end}}                
                 <hr class="hr-facts">
             {{end}}
+
+            <h2 class="inter">Interesujące?</h2> 
+            <h3 class="inter">Zobacz inne ciekawe wydarzenia historyczne:</h3>
+            {{range $kFact := .KeyFacts}}
+                <p style="margin-left: 30px;">{{$kFact.DateMonth}} - <em>{{$kFact.Title}}</em> {{$kFact.URLHTML}}</p>                    
+            {{end}}            
+            <hr class="hr-facts">
+
         {{else}}
                 <p class="subtitle">Brak danych</p>
                 <p>Dla wskazanej daty nie znaleziono wydarzeń historycznych w bazie danych.

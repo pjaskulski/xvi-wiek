@@ -17,6 +17,7 @@ type templateDataFacts struct {
 	TitleOfDay string
 	PrevNext   template.HTML
 	Facts      *[]Fact
+	KeyFacts   []KeywordFact
 }
 
 type templateDataBooks struct {
@@ -54,22 +55,92 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var data *templateDataFacts
+	var tKeyFacts []KeywordFact
 
 	today := time.Now()
 	name := fmt.Sprintf("%02d-%02d", int(today.Month()), today.Day())
 	dayMonth := fmt.Sprintf("%d %s", today.Day(), monthName[int(today.Month())])
 	facts, ok := app.dataCache.Get(name)
 	if ok {
+		var tmpFactTitle []string
+		tFacts := facts.(*[]Fact)
+		// zapis tytułów wydarzeń już prezentowanych na stronie by nie proponować
+		// ich jeszcze raz
+		for _, item := range *tFacts {
+			tmpFactTitle = append(tmpFactTitle, item.Title)
+		}
+
+		// uzupełnienie listy propozycji kolejnych ciekawych wydarzeń
+		// na podstawie słów kluczowych z już wyświetlancych wydarzeń
+		for _, item := range *tFacts {
+			if item.Keywords != "" {
+				keywords := strings.Split(item.Keywords, ";")
+				for _, keyword := range keywords {
+					keyword = strings.TrimSpace(keyword)
+					if facts, ok := app.FactsByKeyword[keyword]; ok {
+						for _, kItem := range facts {
+							if !inSlice(tmpFactTitle, kItem.Title) {
+								tKeyFacts = append(tKeyFacts, kItem)
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// jeżeli nie było słów kluczowych, uzupełnienie listy na podstawie
+		// listy postaci (o ile jakieś występują w wyświetlanych już wydarzeniach)
+		if len(tKeyFacts) == 0 {
+			for _, item := range *tFacts {
+				if item.People != "" {
+					people := strings.Split(item.People, ";")
+					for _, person := range people {
+						person = strings.TrimSpace(person)
+						if facts, ok := app.FactsByPeople[person]; ok {
+							for _, kItem := range facts {
+								if !inSlice(tmpFactTitle, kItem.Title) {
+									tKeyFacts = append(tKeyFacts, KeywordFact(kItem))
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// liczbę podpowiadanych wydarzeń należy ograniczyć do trzech
+		// wydarzenia są losowane, mogą więc różnić się przy każdym odświeżeniu strony
+		if len(tKeyFacts) > 3 {
+			var tmpThree []int
+			var tmpKeyFacts []KeywordFact
+
+			for len(tmpThree) < 3 {
+				num := randomInt(0, len(tKeyFacts)-1)
+				if !inSliceInt(tmpThree, num) {
+					tmpThree = append(tmpThree, num)
+				}
+			}
+
+			for n := range tmpThree {
+				tmpKeyFacts = append(tmpKeyFacts, tKeyFacts[n])
+			}
+
+			tKeyFacts = nil
+			tKeyFacts = append(tKeyFacts, tmpKeyFacts...)
+		}
+
 		data = &templateDataFacts{
 			Today:      dayMonth,
 			TitleOfDay: "",
 			Facts:      facts.(*[]Fact),
+			KeyFacts:   tKeyFacts,
 		}
 	} else {
 		data = &templateDataFacts{
 			Today:      dayMonth,
 			TitleOfDay: "",
 			Facts:      nil,
+			KeyFacts:   nil,
 		}
 	}
 

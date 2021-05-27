@@ -193,3 +193,23 @@ func IsValidXML(input string) bool {
 		}
 	}
 }
+
+// inSlice - function checks if the specified string is present in the specified slice
+func inSlice(slice []string, val string) bool {
+	for _, item := range slice {
+		if item == val {
+			return true
+		}
+	}
+	return false
+}
+
+// inSliceInt - function checks if the specified integer is present in the specified slice
+func inSliceInt(slice []int, val int) bool {
+	for _, item := range slice {
+		if item == val {
+			return true
+		}
+	}
+	return false
+}
