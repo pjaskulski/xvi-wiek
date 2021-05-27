@@ -154,6 +154,13 @@ h3.inter {
     margin-bottom: 2.5rem;
 }
 
+.hr-inter {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    height: 1px;
+    width: 25%;
+}
+
 img.small-icon {
     width: 24px;
     margin-top: 0;

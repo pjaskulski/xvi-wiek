@@ -80,10 +80,11 @@ type YearFact struct {
 
 // PeopleFact type
 type PeopleFact struct {
-	Date      string
-	DateMonth string
-	Title     string
-	URLHTML   template.HTML
+	Date           string
+	DateMonth      string
+	Title          string
+	ContentTwitter string
+	URLHTML        template.HTML
 }
 
 // LocationFact type
@@ -96,10 +97,11 @@ type LocationFact struct {
 
 // KeywordFact type
 type KeywordFact struct {
-	Date      string
-	DateMonth string
-	Title     string
-	URLHTML   template.HTML
+	Date           string
+	DateMonth      string
+	Title          string
+	ContentTwitter string
+	URLHTML        template.HTML
 }
 
 // DayFactTable map
@@ -176,6 +178,7 @@ func (app *application) readFact(filename string) {
 			tmpPeople.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 			tmpPeople.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpPeople.Title = fact.Title
+			tmpPeople.ContentTwitter = fact.ContentTwitter
 			tmpPeople.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 			persons := strings.Split(fact.People, ";")
 			for _, person := range persons {
@@ -219,6 +222,7 @@ func (app *application) readFact(filename string) {
 			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 			tmpKeyword.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpKeyword.Title = fact.Title
+			tmpKeyword.ContentTwitter = fact.ContentTwitter
 			tmpKeyword.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 			keywords := strings.Split(fact.Keywords, ";")
 			for _, keyword := range keywords {
