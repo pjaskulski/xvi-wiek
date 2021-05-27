@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -111,6 +112,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 		// liczbę podpowiadanych wydarzeń należy ograniczyć do trzech
 		// wydarzenia są losowane, mogą więc różnić się przy każdym odświeżeniu strony
 		if len(tKeyFacts) > 3 {
+
 			var tmpThree []int
 			var tmpKeyFacts []KeywordFact
 
@@ -121,12 +123,16 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 
-			for n := range tmpThree {
+			for _, n := range tmpThree {
 				tmpKeyFacts = append(tmpKeyFacts, tKeyFacts[n])
 			}
 
 			tKeyFacts = nil
 			tKeyFacts = append(tKeyFacts, tmpKeyFacts...)
+
+			sort.Slice(tKeyFacts, func(i, j int) bool {
+				return tKeyFacts[i].Date < tKeyFacts[j].Date
+			})
 		}
 
 		data = &templateDataFacts{
