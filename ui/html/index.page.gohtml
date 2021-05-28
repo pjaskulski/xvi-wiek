@@ -35,6 +35,15 @@
             {{end}}            
             <hr class="hr-facts">
 
+            <h2 class="inter">Cytat dnia</h2>
+                <div class="epigraph-one">                    
+                    <blockquote>
+                        <p>{{.TodayQuote.Content}}</p>
+                        <footer>{{.TodayQuote.Source}}</footer>
+                    </blockquote>                              
+                </div>                            
+            <hr class="hr-facts">
+
         {{else}}
                 <p class="subtitle">Brak danych</p>
                 <p>Dla wskazanej daty nie znaleziono wydarzeń historycznych w bazie danych.

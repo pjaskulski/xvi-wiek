@@ -19,6 +19,7 @@ type templateDataFacts struct {
 	PrevNext   template.HTML
 	Facts      *[]Fact
 	KeyFacts   []KeywordFact
+	TodayQuote Quote
 }
 
 type templateDataBooks struct {
@@ -31,6 +32,11 @@ type templateDataQuotes struct {
 
 type templateDataInformation struct {
 	NumberOfFacts int
+}
+
+type quoteOfTheDay struct {
+	Date         string
+	CurrentQuote Quote
 }
 
 var monthName = map[int]string{
@@ -46,6 +52,27 @@ var monthName = map[int]string{
 	10: "października",
 	11: "listopada",
 	12: "grudnia",
+}
+
+func (app *application) getQuote() error {
+
+	today := time.Now()
+	day := fmt.Sprintf("%02d-%02d-%04d", today.Day(), int(today.Month()), today.Year())
+
+	if app.TodaysQuote.Date != day {
+		tmpQuotes, ok := app.dataCache.Get("quotes")
+		if !ok {
+			return errors.New("błąd podczas odczytu bazy cytatów")
+		}
+
+		quotes := tmpQuotes.(*[]Quote)
+		id := randomInt(0, len(*quotes)-1)
+
+		app.TodaysQuote.CurrentQuote = (*quotes)[id]
+		app.TodaysQuote.Date = day
+	}
+
+	return nil
 }
 
 // showFacts func
@@ -135,11 +162,15 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			})
 		}
 
+		// Quote Of The Day
+		app.getQuote()
+
 		data = &templateDataFacts{
 			Today:      dayMonth,
 			TitleOfDay: "",
 			Facts:      facts.(*[]Fact),
 			KeyFacts:   tKeyFacts,
+			TodayQuote: app.TodaysQuote.CurrentQuote,
 		}
 	} else {
 		data = &templateDataFacts{
@@ -147,6 +178,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			TitleOfDay: "",
 			Facts:      nil,
 			KeyFacts:   nil,
+			TodayQuote: Quote{},
 		}
 	}
 

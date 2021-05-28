@@ -48,6 +48,7 @@ type Fact struct {
 
 // Quote type
 type Quote struct {
+	ID      string `yaml:"id"`
 	Content string `yaml:"content"`
 	Source  string `yaml:"source"`
 }

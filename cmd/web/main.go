@@ -51,6 +51,7 @@ type application struct {
 	SFactsByKeyword  []SliceFactsByKeyword
 	SFactsByLocation []SliceFactsByLocation
 	SFactsByPeople   []SliceFactsByPeople
+	TodaysQuote      quoteOfTheDay
 }
 
 var (
