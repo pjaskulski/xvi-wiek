@@ -7,8 +7,25 @@ import (
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
+	"golang.org/x/time/rate"
 	//"github.com/go-chi/cors"
 )
+
+// LimitMiddleware func - limity zapytań API
+func LimitMiddleware(next http.Handler) http.Handler {
+	// globalny limit - do 20 zapytań na sekundę
+	limiter := rate.NewLimiter(20, 20)
+
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// limity tylko dla zapytań API
+		if strings.Contains(r.URL.String(), "/api/") && !limiter.Allow() {
+			errorJSON(w, http.StatusTooManyRequests, "przekroczono limit zapytań API")
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
 
 func (app *application) routes() http.Handler {
 	r := chi.NewRouter()
@@ -17,6 +34,8 @@ func (app *application) routes() http.Handler {
 	//r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
+	r.Use(LimitMiddleware)
+
 	//r.Use(middleware.Compress(5))
 
 	// r.Use(cors.Handler(cors.Options{
