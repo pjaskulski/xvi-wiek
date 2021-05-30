@@ -58,6 +58,8 @@ coverage: **84.1%** of statements
     wynik w formacie xml ustawiając Content-Type na 'application/xml' w nagłówku 
     zapytania http.
 
+Liczba zapytań API jest obecnie ograniczona (globalnie bez względu na IP) do ok. 20 na sekundę.
+ 
 Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
 ```json
