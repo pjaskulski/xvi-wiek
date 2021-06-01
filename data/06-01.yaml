@@ -40,12 +40,13 @@ content: >-
      {{{1 czerwca 1564}}} roku w Lublinie podczas procesji Bożego Ciała lubelski 
      szlachcic, znany działacz reformacyjny i poeta Erazm Otwinowski wyrwał monstrancję 
      z rąk księdza, krzycząc: "{Bóg jest w niebie, a więc nie ma go w chlebie, nie 
-     ma go w tej puszce}".[1] Następnie monstrancję podeptał i zbiegł z miasta. Sprawcę,
-     jako szlachcica, postawiono przed sądem sejmowym i oskarżono o bluźnierstwo.
-     Skutecznie bronił go Mikołaj Rej, Otwinowski został skazany tylko na zapłatę 
-     za zniszczoną monstrancję.[2] Był wyznawcą kalwinizmu, lecz kilka lat po opisanych
-     wydarzeniach zmienił wyznanie i przystąpił do braci polskich (arian). Pod 
-     koniec życia przeniósł się do Rakowa, tam zmarł w 1614 r. 
+     ma go w tej puszce}".[1] Następnie monstrancję podeptał i uciekł chroniąc się 
+     przed zemstą tłumu w domu protestanta Piotra Suchodolskiego,[3] później zbiegł 
+     z miasta. Sprawcę, jako szlachcica, postawiono przed sądem sejmowym i oskarżono 
+     o bluźnierstwo. Skutecznie bronił go Mikołaj Rej, Otwinowski został skazany 
+     tylko na zapłatę za zniszczoną monstrancję.[2] Był wyznawcą kalwinizmu, lecz 
+     kilka lat po opisanych wydarzeniach zmienił wyznanie i przystąpił do braci 
+     polskich (arian).[4] Pod koniec życia przeniósł się do Rakowa, tam zmarł w 1614 r. 
 contentTwitter: >-
      1 czerwca 1564 roku w Lublinie podczas procesji Bożego Ciała lubelski 
      szlachcic i znany działacz reformacyjny Erazm Otwinowski wyrwał monstrancję 
@@ -65,3 +66,11 @@ sources:
       value: Wikipedia
       urlName: Erazm Otwinowski
       url: https://pl.wikipedia.org/wiki/Erazm_Otwinowski
+    - id: 3
+      value: Janusz Tazbir, "Bluźniercy, którzy uszli karze", Nauka 1/2011, str. 8
+      urlName:
+      url: 
+    - id: 4
+      value: hrabiatytus.pl
+      urlName: Erazm Otwinowski i jego proces. Jak karano profanację hostii w Polsce XVI wieku?
+      url: https://hrabiatytus.pl/2019/07/18/erazm-otwinowski-i-jego-proces-jak-karano-profanacje-hostii-w-polsce-xvi-wieku/
