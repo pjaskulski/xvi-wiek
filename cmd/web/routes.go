@@ -13,8 +13,8 @@ import (
 
 // LimitMiddleware func - limity zapytań API
 func LimitMiddleware(next http.Handler) http.Handler {
-	// globalny limit - do 20 zapytań na sekundę
-	limiter := rate.NewLimiter(20, 20)
+	// globalny limit - 10 tokenów na zapytania, odświeżanych 5 razy na sekundę
+	limiter := rate.NewLimiter(5, 10)
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// limity tylko dla zapytań API
