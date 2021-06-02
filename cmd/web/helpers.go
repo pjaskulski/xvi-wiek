@@ -213,3 +213,14 @@ func inSliceInt(slice []int, val int) bool {
 	}
 	return false
 }
+
+// inSliceInt - function checks if the specified KeywordFact struct (Title field must be unique)
+// is present in the specified slice
+func inSliceKeywordFact(slice []KeywordFact, val KeywordFact) bool {
+	for _, item := range slice {
+		if item.Title == val.Title {
+			return true
+		}
+	}
+	return false
+}

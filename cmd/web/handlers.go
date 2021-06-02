@@ -107,7 +107,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 					keyword = strings.TrimSpace(keyword)
 					if facts, ok := app.FactsByKeyword[keyword]; ok {
 						for _, kItem := range facts {
-							if !inSlice(tmpFactTitle, kItem.Title) {
+							if !inSlice(tmpFactTitle, kItem.Title) && !inSliceKeywordFact(tKeyFacts, kItem) {
 								tKeyFacts = append(tKeyFacts, kItem)
 							}
 						}
@@ -126,7 +126,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 						person = strings.TrimSpace(person)
 						if facts, ok := app.FactsByPeople[person]; ok {
 							for _, kItem := range facts {
-								if !inSlice(tmpFactTitle, kItem.Title) {
+								if !inSlice(tmpFactTitle, kItem.Title) && !inSliceKeywordFact(tKeyFacts, KeywordFact(kItem)) {
 									tKeyFacts = append(tKeyFacts, KeywordFact(kItem))
 								}
 							}
@@ -147,6 +147,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 				num := randomInt(0, len(tKeyFacts)-1)
 				if !inSliceInt(tmpThree, num) {
 					tmpThree = append(tmpThree, num)
+
 				}
 			}
 
