@@ -59,7 +59,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/indeksy/miejsca", app.showLocation)
 	r.Get("/indeksy/slowa", app.showKeyword)
 	r.Get("/pdf", app.showPDF)
-	r.Get("/search", app.searchHandler)
+	r.Get("/szukaj", app.searchHandler)
 	r.Get("/wyniki", app.resultHandler)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
