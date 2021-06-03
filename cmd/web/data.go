@@ -268,7 +268,9 @@ func (app *application) readFact(filename string) {
 		tmpSearch.Title = fact.Title
 		tmpSearch.Content = fact.Content + " " + fact.Location + " " + fact.People + " " + tmpSearch.Keywords
 		tmpSearch.ContentTwitter = fact.ContentTwitter
+		lock.Lock()
 		app.FactsForSearch = append(app.FactsForSearch, *tmpSearch)
+		lock.Unlock()
 		// FactsForSearch
 
 		result = append(result, fact)
