@@ -9,6 +9,13 @@ p.small {
     font-size: 1rem;
 }
 
+p.explanation {
+    font-style: normal;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
 span.search-par {
     font-style: italic;
     color: purple;
