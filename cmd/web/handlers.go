@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"net/url"
 	"sort"
 	"strconv"
 	"strings"
@@ -37,6 +38,12 @@ type templateDataInformation struct {
 type quoteOfTheDay struct {
 	Date         string
 	CurrentQuote Quote
+}
+
+type templateDataSearchResults struct {
+	Query string
+	Count int
+	Facts *[]KeywordFact
 }
 
 var monthName = map[int]string{
@@ -388,5 +395,49 @@ func (app *application) showNotFound(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			app.serverError(w, err)
 		}
+	}
+}
+
+func (app *application) searchHandler(w http.ResponseWriter, r *http.Request) {
+	ts := app.templateCache["search.page.gohtml"]
+	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+func (app *application) resultHandler(w http.ResponseWriter, r *http.Request) {
+
+	var data *templateDataSearchResults
+
+	u, err := url.Parse(r.URL.String())
+	if err != nil {
+		app.serverError(w, err)
+		return
+	}
+
+	params := u.Query()
+	searchQuery := params.Get("q")
+
+	searchFacts, ok := app.searchInFacts(searchQuery)
+
+	if ok {
+		data = &templateDataSearchResults{
+			Query: searchQuery,
+			Count: len(*searchFacts),
+			Facts: searchFacts,
+		}
+	} else {
+		data = &templateDataSearchResults{
+			Query: searchQuery,
+			Count: 0,
+			Facts: nil,
+		}
+	}
+
+	ts := app.templateCache["wyniki.page.gohtml"]
+	err = ts.Execute(w, data)
+	if err != nil {
+		app.serverError(w, err)
 	}
 }

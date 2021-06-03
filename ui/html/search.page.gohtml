@@ -1,0 +1,35 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - Wyszukiwanie{{end}}
+{{define "meta_description"}}"Strona wyszukiwania (podstrona serwisu XVI wiek - ciekawe wydarzenia historyczne w Polsce i krajach sąsiednich)"{{end}}
+{{define "canonical"}}<link rel="canonical" href="https://xvi-wiek.pl/search" />{{end}}
+
+{{define "main"}}
+    
+    <h1 id="tufte-css">Wyszukiwanie</h1>
+
+    <article>
+        <section>
+
+        <form action="/wyniki" method="GET">
+          <label for="xvi-szukaj" class="label-szukaj">
+          Szukaj w bazie wydarzeń:
+          </label>
+          <input
+            autofocus
+            id="xvi-szukaj"
+            class="search-input"
+            value=""
+            maxlength="128"
+            minlength="3"
+            placeholder="słowo kluczowe, postać, miejsce..."
+            type="search"
+            name="q"
+          />
+          <input type="Submit" value="Szukaj">
+        </form>
+                
+        </section> 
+    </article>
+    
+{{end}}

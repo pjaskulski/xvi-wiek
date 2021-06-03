@@ -105,6 +105,22 @@ type KeywordFact struct {
 	URLHTML        template.HTML
 }
 
+// SearchFact type
+type SearchFact struct {
+	ID             string
+	Day            int
+	Month          int
+	Year           int
+	Date           string
+	DateMonth      string
+	Title          string
+	Content        string
+	ContentTwitter string
+	Location       string
+	People         string
+	Keywords       string
+}
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -240,6 +256,20 @@ func (app *application) readFact(filename string) {
 				lock.Unlock()
 			}
 		} // FactsByKeyword
+
+		// uzupełnienie struktury do wyszukiwania FactsForSearch
+		tmpSearch := &SearchFact{}
+		tmpSearch.ID = fact.ID
+		tmpSearch.Day = fact.Day
+		tmpSearch.Month = fact.Month
+		tmpSearch.Year = fact.Year
+		tmpSearch.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+		tmpSearch.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+		tmpSearch.Title = fact.Title
+		tmpSearch.Content = fact.Content + " " + fact.Location + " " + fact.People + " " + tmpSearch.Keywords
+		tmpSearch.ContentTwitter = fact.ContentTwitter
+		app.FactsForSearch = append(app.FactsForSearch, *tmpSearch)
+		// FactsForSearch
 
 		result = append(result, fact)
 
@@ -444,4 +474,29 @@ func dayFact(month int, day int) template.HTML {
 		result = fmt.Sprintf(`<span style="color: DarkGrey;">%d</span>`, day)
 	}
 	return template.HTML(result)
+}
+
+// serachInFacts func - wyszukuje podany string w bazie wydarzeń
+// tymczasowo - prymitywne skanowanie struktur przy każdym wyszukiwaniu, bez indeksowania
+func (app *application) searchInFacts(word string) (*[]KeywordFact, bool) {
+
+	var searchFacts []KeywordFact
+
+	for _, fact := range app.FactsForSearch {
+		if strings.Contains(fact.Content, word) {
+			tmpKeyword := &KeywordFact{}
+			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
+			tmpKeyword.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
+			tmpKeyword.Title = fact.Title
+			tmpKeyword.ContentTwitter = fact.ContentTwitter
+			tmpKeyword.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
+			searchFacts = append(searchFacts, *tmpKeyword)
+		}
+	}
+
+	if len(searchFacts) > 0 {
+		return &searchFacts, true
+	}
+
+	return nil, false
 }

@@ -9,6 +9,11 @@ p.small {
     font-size: 1rem;
 }
 
+span.search-par {
+    font-style: italic;
+    color: purple;
+}
+
 article p {
     hyphens: auto;
 }
@@ -222,6 +227,38 @@ table {
     margin-bottom: 60px;
 }
 
+label.label-szukaj {
+    display: block; 
+    margin-bottom: 10px; 
+    font-size: 1.4rem;
+}
+
+/* formularze */
+input[type=search] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+  }
+  
+  input[type=submit] {
+    width: 12%;
+    background-color: #fdfbfb;
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.2rem;
+  }
+
 @media (max-width: 1060px) {
     .footer {
         height: 100px;
@@ -273,6 +310,16 @@ table {
         margin-bottom: 3em;
         margin-right: 0em;
     }
+
+    input[type=search] {
+        width: 50%;
+        font-size: 1.2rem;
+      }
+      
+    input[type=submit] {
+        width: 22%;
+        font-size: 1.2rem;
+      }
 }
 
 
