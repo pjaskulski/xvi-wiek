@@ -479,7 +479,7 @@ func dayFact(month int, day int) template.HTML {
 }
 
 // serachInFacts func - wyszukuje podany string w bazie wydarzeń
-// tymczasowo - prymitywne skanowanie struktur przy każdym wyszukiwaniu, bez indeksowania
+// tymczasowo - prymitywne skanowanie slice struktur przy każdym wyszukiwaniu, bez indeksowania
 func (app *application) searchInFacts(word string) (*[]KeywordFact, bool) {
 
 	var searchFacts []KeywordFact
@@ -497,6 +497,10 @@ func (app *application) searchInFacts(word string) (*[]KeywordFact, bool) {
 	}
 
 	if len(searchFacts) > 0 {
+		// zwraca posortowany slice według dat
+		sort.Slice(searchFacts, func(i, j int) bool {
+			return searchFacts[i].Date < searchFacts[j].Date
+		})
 		return &searchFacts, true
 	}
 
