@@ -61,7 +61,7 @@ func LimitCleaner() {
 		lock.Lock()
 
 		for ip, client := range clients {
-			if time.Since(client.lastSeen) > 3*time.Hour {
+			if time.Since(client.lastSeen) > 2*time.Hour {
 				delete(clients, ip)
 			}
 		}
