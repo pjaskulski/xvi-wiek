@@ -1,6 +1,7 @@
 package main
 
 import (
+	"net"
 	"net/http"
 	"strings"
 	"time"
@@ -13,18 +14,60 @@ import (
 
 // LimitMiddleware func - limity zapytań API
 func LimitMiddleware(next http.Handler) http.Handler {
-	// globalny limit - 10 tokenów na zapytania, odświeżanych 5 razy na sekundę
-	limiter := rate.NewLimiter(100, 20)
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+
 		// limity tylko dla zapytań API
-		if strings.Contains(r.URL.String(), "/api/") && !limiter.Allow() {
-			errorJSON(w, http.StatusTooManyRequests, "przekroczono limit zapytań API")
-			return
+		if strings.Contains(r.URL.String(), "/api/") {
+			ip, _, err := net.SplitHostPort(r.RemoteAddr)
+			if err != nil {
+				errorJSON(w, http.StatusBadRequest, err.Error())
+				return
+			}
+
+			// Lock the mutex to prevent this code from being executed concurrently
+			lock.Lock()
+
+			// sprawdza czy ip clienta jest już w mapie, jeżeli nie tworzy nowy limiter
+			if _, found := clients[ip]; !found {
+				// 10 tokenów na zapytania, odświeżanych 5 razy na sekundę
+				clients[ip] = &client{limiter: rate.NewLimiter(5, 10)}
+			}
+
+			// data i czas, kiedy ostatnio widziano kienta z danego ip
+			clients[ip].lastSeen = time.Now()
+
+			// jeżeli limit nie pozwala na obsługę kolejnego zapytania zwracany jest błąd 429
+			if !clients[ip].limiter.Allow() {
+				lock.Unlock()
+				errorJSON(w, http.StatusTooManyRequests, "przekroczono limit zapytań API")
+				return
+			}
+
+			// unlock the mutex before calling the next handler in the chain
+			lock.Unlock()
 		}
 
 		next.ServeHTTP(w, r)
 	})
+}
+
+// LimitCleaner - funkcja czyści mapę klientów ze starych wpisów (starszych
+// niż trzy godziny)
+func LimitCleaner() {
+	for {
+		time.Sleep(time.Hour)
+
+		lock.Lock()
+
+		for ip, client := range clients {
+			if time.Since(client.lastSeen) > 3*time.Hour {
+				delete(clients, ip)
+			}
+		}
+
+		lock.Unlock()
+	}
 }
 
 func (app *application) routes() http.Handler {
@@ -67,7 +110,8 @@ func (app *application) routes() http.Handler {
 	r.Route("/api", func(r chi.Router) {
 		r.Get("/dzien/{month}/{day}", app.apiFactsByDay)
 		r.Get("/today", app.apiFactsToday)
-		r.Get("/short", app.apiFactsShort) // zwraca skrócony opis dla Twittera
+		r.Get("/short", app.apiFactsShort)        // zwraca skrócony opis dla Twittera
+		r.Get("/healthcheck", app.apiHealthcheck) // testowy endpoint - status api
 	})
 
 	// obługa 404 not found

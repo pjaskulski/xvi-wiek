@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/patrickmn/go-cache"
+	"golang.org/x/time/rate"
 )
 
 // Config struct
@@ -55,11 +56,18 @@ type application struct {
 	FactsForSearch   []SearchFact
 }
 
+// client type - struktura do zapisywania danych klienta po ip (limit api)
+type client struct {
+	limiter  *rate.Limiter
+	lastSeen time.Time
+}
+
 var (
 	numberOfFacts int
 	dirExecutable string
 	waitgroup     = sync.WaitGroup{}
 	lock          = sync.Mutex{}
+	clients       = make(map[string]*client)
 )
 
 func main() {
@@ -118,6 +126,9 @@ func main() {
 		ReadTimeout:  3 * time.Second,
 		WriteTimeout: 3 * time.Second,
 	}
+
+	// uruchomienie goroutine z funkcją czyszczenia mapy danych klientów (limitowanie api)
+	go LimitCleaner()
 
 	app.infoLog.Printf("Start serwera, port :%s", cfg.Port)
 

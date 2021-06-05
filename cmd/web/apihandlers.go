@@ -51,6 +51,12 @@ type ShortHistoricalEvent struct {
 	ContentTwitter string `json:"content" xml:"content"`
 }
 
+// type HealthcheckEvent
+type HealthcheckEvent struct {
+	Status  string `json:"status" xml:"status"`
+	Version string `json:"version" xml:"version"`
+}
+
 //func clearField(value string) string {
 //	value = prepareTextStyle(value, false)
 //	return value
@@ -112,6 +118,16 @@ func toShortStructJSON(data interface{}) ShortHistoricalEvent {
 	return factJSON
 }
 
+// toHealthcheckStructJSON
+func toHealthcheckStructJSON() HealthcheckEvent {
+	factJSON := HealthcheckEvent{}
+
+	factJSON.Status = "dostępny"
+	factJSON.Version = "1.0.0"
+
+	return factJSON
+}
+
 // factResponseJSON
 func factResponseJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
 	factsJSON := toStructJSON(data)
@@ -136,6 +152,21 @@ func factShortResponseJSON(w http.ResponseWriter, code int, contentType string, 
 		xml.NewEncoder(w).Encode(factShortJSON)
 	} else {
 		response, _ := json.Marshal(factShortJSON)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(code)
+		w.Write(response)
+	}
+}
+
+// healthcheckResponseJSON
+func healthcheckResponseJSON(w http.ResponseWriter, code int, contentType string) {
+	healthcheckJSON := toHealthcheckStructJSON()
+
+	if contentType == "application/xml" {
+		w.Header().Add("Content-Type", "application/xml")
+		xml.NewEncoder(w).Encode(healthcheckJSON)
+	} else {
+		response, _ := json.Marshal(healthcheckJSON)
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(code)
 		w.Write(response)
@@ -237,4 +268,8 @@ func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
 			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 		}
 	}
+}
+
+func (app *application) apiHealthcheck(w http.ResponseWriter, r *http.Request) {
+	healthcheckResponseJSON(w, 200, r.Header.Get("Content-Type"))
 }

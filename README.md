@@ -58,7 +58,11 @@ coverage: **84.1%** of statements
     wynik w formacie xml ustawiając Content-Type na 'application/xml' w nagłówku 
     zapytania http.
 
-Liczba zapytań API jest obecnie ograniczona (globalnie bez względu na IP) do ok. 20 na sekundę.
+    GET /api/healthcheck
+
+    Zwraca informacje o statusie api (zwykle: "dostępny") i wersji (obecnie: "1.0.0") 
+
+Liczba zapytań API jest obecnie ograniczona (z uwzględnieniem IP klienta) do około 10 na sekundę.
  
 Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
