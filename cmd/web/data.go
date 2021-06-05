@@ -266,7 +266,7 @@ func (app *application) readFact(filename string) {
 		tmpSearch.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 		tmpSearch.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 		tmpSearch.Title = fact.Title
-		tmpSearch.Content = fact.Content + " " + fact.Location + " " + fact.People + " " + tmpSearch.Keywords
+		tmpSearch.Content = fact.Content + " " + fact.Location + " " + fact.People + " " + fact.Keywords
 		tmpSearch.ContentTwitter = fact.ContentTwitter
 		lock.Lock()
 		app.FactsForSearch = append(app.FactsForSearch, *tmpSearch)
@@ -485,6 +485,7 @@ func (app *application) searchInFacts(word string) (*[]KeywordFact, bool) {
 	var searchFacts []KeywordFact
 
 	for _, fact := range app.FactsForSearch {
+
 		if strings.Contains(fact.Content, word) {
 			tmpKeyword := &KeywordFact{}
 			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
