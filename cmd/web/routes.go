@@ -53,7 +53,7 @@ func LimitMiddleware(next http.Handler) http.Handler {
 }
 
 // LimitCleaner - funkcja czyści mapę klientów ze starych wpisów (starszych
-// niż trzy godziny)
+// niż dwie godziny)
 func LimitCleaner() {
 	for {
 		time.Sleep(time.Hour)
