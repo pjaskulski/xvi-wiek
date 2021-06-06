@@ -3,27 +3,34 @@ id: 1
 day: 29
 month: 7
 year: 1571
-title: 29 lipca 1571 roku flotylla duńska napadła na port w Pucku 
+title: Flotylla duńska napadła na port w Pucku 
 content: >- 
     {{{29 lipca 1571}}} roku flotylla 8 okrętów duńskich po dowództwem admirała
-    Franka napadła na port w Pucku, będący wówczas siedzibą polskiej floty 
-    kaperskiej.[1] Duńczycy zdobyli i uprowadzili do Kopenhagi 13 okrętów kaperskich 
-    oraz 5 statków handlowych. Wcześniej w okolicach Helu flotylla duńska zniszczyła 
-    2 inne okręty kaperskie, w efekcie tych działań znaczna część polskiej floty 
-    przestała istnieć. Historia polskiej floty sięga czasów wojny trzynastoletniej 
-    kiedy to okręty gdańskie i elbląskie z wojskiem królewskim na pokładzie starły
-    się (zwycięsko) z flotą krzyżacką w bitwie w zatoce Świeżej. 
+    Jerzego Daa napadła na port w Pucku, będący wówczas siedzibą polskiej floty 
+    kaperskiej.[1] Duńczycy zdobyli i uprowadzili do Kopenhagi 4 okręty kaperskie 
+    oraz 5 zdobycznych statków handlowych, duńskich i lubeckich. Wcześniej w okolicach 
+    Helu flotylla duńska zniszczyła 2 inne okręty kaperskie, w efekcie tych działań trzecia 
+    część floty strażników morza przestała istnieć. Uprowadzone statki i okręty oraz
+    26 jeńców (w tym jednego z kapitanów straży) Duńczycy przywieźli do Kopenhagi,
+    następnie kaprów uznanych za piratów ścięto w Helsingör i pochowano na plaży. 
+    Straty polskie, choć dotkliwe, nie spowodowały zaprzestania działalności kaprów,
+    dlatego Duńczycy już w sierpniu wyprawili kolejną flotę tym razem dowodzoną przez 
+    admirała Sylwestra Franka, która dotarła w pobliże Gdańska. Tym razem jednak
+    nie odniosła większych sukcesów, gdyż okręty straży schroniły się zawczasu w porcie
+    gdańskim wpuszczone tam na wyraźny rozkaz Zygmunta Augusta. 
 contentTwitter: >-
-    29 lipca 1571 roku duńska flotylla admirała Franka napadła na port w Pucku
-    zdobywając i uprowadzając 13 okrętów polskiej floty kaperskiej.
+    29 lipca 1571 roku duńska flotylla admirała Jerzego Daa napadła na port w Pucku
+    uprowadzając 4 okręty polskiej floty kaperskiej oraz 5 statków handlowych
+    zdobytych wcześniej przez kaprów.
 location: Puck
 geo: 54.7212,18.4116
-people: 
+people: Zygmunt II August; Daa Jerzy; Frank Sylwester
 keywords: morze
 image: 
 imageInfo: 
 sources: 
     - id: 1
-      value: Wikipedia
-      urlName: Atak floty duńskiej na Puck 1571
-      url: https://pl.wikipedia.org/wiki/Atak_floty_du%C5%84skiej_na_Puck_1571
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 169
+      urlName:
+      url: 
+
