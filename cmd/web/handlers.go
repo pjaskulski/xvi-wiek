@@ -21,6 +21,7 @@ type templateDataFacts struct {
 	Facts      *[]Fact
 	KeyFacts   []KeywordFact
 	TodayQuote Quote
+	DayUrlPath string
 }
 
 type templateDataBooks struct {
@@ -287,6 +288,7 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 	var data *templateDataFacts
 
 	name := fmt.Sprintf("%02d-%02d", month, day)
+	dayUrlPath := fmt.Sprintf("%d/%d", month, day)
 	dayMonth := fmt.Sprintf("%d %s", day, monthName[month])
 
 	facts, ok := app.dataCache.Get(name)
@@ -298,6 +300,7 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 			TitleOfDay: titleOfDay,
 			PrevNext:   prevnext,
 			Facts:      tmpFacts,
+			DayUrlPath: dayUrlPath,
 		}
 	} else {
 		data = &templateDataFacts{
@@ -305,6 +308,7 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 			TitleOfDay: "",
 			PrevNext:   prevnext,
 			Facts:      nil,
+			DayUrlPath: dayUrlPath,
 		}
 	}
 
