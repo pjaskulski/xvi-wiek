@@ -158,9 +158,9 @@ func getPrevNextHTML(month int, day int) string {
 
 	daysInMonth := []int{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 
-	tmp := `<a href="/dzien/%d/%d">Poprzedni</a> dzień : Dzień <a href="/dzien/%d/%d">następny</a>`
-	tmpf := `<span style="color: gray;">Poprzedni dzień</span> : Dzień <a href="/dzien/%d/%d">następny</a>`
-	tmpl := `<a href="/dzien/%d/%d">Poprzedni</a> dzień : <span style="color: gray;">Dzień następny</span>`
+	tmp := `<a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <a href="/dzien/%d/%d">Następny</a>`
+	tmpf := `<span style="color: gray;">Poprzedni</span> : Dzień : <a href="/dzien/%d/%d">Następny</a>`
+	tmpl := `<a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <span style="color: gray;">Następny</span>`
 
 	if day == 1 && month == 1 {
 		prevnext = fmt.Sprintf(tmpf, 1, 2)
