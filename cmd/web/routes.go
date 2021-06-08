@@ -70,6 +70,17 @@ func LimitCleaner() {
 	}
 }
 
+// func enableCORS - middleware ustawia w nagłówku Access-Control-Allow-Origin
+// (tylko dla zapytań API)
+func enableCORS(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if strings.Contains(r.URL.String(), "/api/") {
+			w.Header().Set("Access-Control-Allow-Origin", "*")
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func (app *application) routes() http.Handler {
 	r := chi.NewRouter()
 
@@ -77,6 +88,7 @@ func (app *application) routes() http.Handler {
 	//r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
+	r.Use(enableCORS)
 	r.Use(LimitMiddleware)
 
 	//r.Use(middleware.Compress(5))
