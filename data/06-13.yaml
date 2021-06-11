@@ -13,7 +13,7 @@ content: >-
      gdzie mieli zostać straceni, zmianę wyroku na wygnanie z Prus Królewskich 
      wyprosił u króla książę Albrecht Hohenzollern. Luterańscy mieszkańcy Gdańska, 
      otrzymali dwa tygodnie na powrót na łono kościoła rzymskiego lub emigrację, księża
-     katoliccy sympatyzujący z Lutrem jedynie dobę na podobną decyzję. Twarde działania
+     katoliccy sympatyzujący z Lutrem jedynie dobę na podobną decyzję.[3] Twarde działania
      Zygmunta Starego nie wykorzeniły jednak protestanckich sympatii gdańskich mieszczan,
      czemu sprzyjało sąsiedztwo luterańskich Prus Książęcych. W latach 1557/58 Gdańsk,
      Toruń i Elbląg uzyskały od Zygmunta II Augusta przywileje religijne, nie tyle
@@ -39,4 +39,8 @@ sources:
       value: Wikipedia
       urlName: Reformacja w Polsce 
       url: https://pl.wikipedia.org/wiki/Reformacja_w_Polsce
+    - id: 3
+      value: old.luteranie.pl
+      urlName: Rozwój Reformacji na Pomorzu (Janusz Małłek)
+      url: http://old.luteranie.pl/www/biblioteka/dhistoria/pomorze-mallek.htm
     
