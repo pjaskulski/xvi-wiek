@@ -40,7 +40,7 @@ header {
     border-top-color: #111;
     border-top-style: double;
     border-bottom: 1px solid;
-    border-bottom-color: #111;        
+    border-bottom-color: rgb(221, 99, 18);        
 }
 
 header .beta {
@@ -67,7 +67,7 @@ header .beta {
     padding-right: 5px;
     text-align: center;
     border-top: 1px solid;
-    border-top-color: #111;
+    border-top-color: rgb(221, 99, 18);
     border-bottom: 10px solid;
     border-bottom-color: #111;
     border-bottom-style: double;
