@@ -158,20 +158,20 @@ func getPrevNextHTML(month int, day int) string {
 
 	daysInMonth := []int{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 
-	tmp := `<a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <a href="/dzien/%d/%d">Następny</a>`
-	tmpf := `<span style="color: gray;">Poprzedni</span> : Dzień : <a href="/dzien/%d/%d">Następny</a>`
-	tmpl := `<a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <span style="color: gray;">Następny</span>`
+	tmp := `<a href="/dzien/%d/%d" class="no-tufte-underline">&#8678;</a> <a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <a href="/dzien/%d/%d">Następny</a> <a href="/dzien/%d/%d" class="no-tufte-underline">&#8680;</a>`
+	tmpf := `<span style="color: gray;">Poprzedni</span> : Dzień : <a href="/dzien/%d/%d">Następny</a> <a href="/dzien/%d/%d" class="no-tufte-underline">&#8680;</a>`
+	tmpl := `<a href="/dzien/%d/%d" class="no-tufte-underline">&#8678;</a> <a href="/dzien/%d/%d">Poprzedni</a> : Dzień : <span style="color: gray;">Następny</span>`
 
 	if day == 1 && month == 1 {
-		prevnext = fmt.Sprintf(tmpf, 1, 2)
+		prevnext = fmt.Sprintf(tmpf, 1, 2, 1, 2)
 	} else if day == 31 && month == 12 {
-		prevnext = fmt.Sprintf(tmpl, 12, 30)
+		prevnext = fmt.Sprintf(tmpl, 12, 30, 12, 30)
 	} else if day == 1 {
-		prevnext = fmt.Sprintf(tmp, month-1, daysInMonth[month-1], month, day+1)
+		prevnext = fmt.Sprintf(tmp, month-1, daysInMonth[month-1], month-1, daysInMonth[month-1], month, day+1, month, day+1)
 	} else if day == daysInMonth[month] {
-		prevnext = fmt.Sprintf(tmp, month, day-1, month+1, 1)
+		prevnext = fmt.Sprintf(tmp, month, day-1, month, day-1, month+1, 1, month+1, 1)
 	} else {
-		prevnext = fmt.Sprintf(tmp, month, day-1, month, day+1)
+		prevnext = fmt.Sprintf(tmp, month, day-1, month, day-1, month, day+1, month, day+1)
 	}
 
 	return prevnext
