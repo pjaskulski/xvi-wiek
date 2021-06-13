@@ -1,0 +1,38 @@
+---
+id: 1
+day: 18
+month: 6
+year: 1574
+title: Ucieczka Henryka Walezego do Francji
+content: >- 
+    W nocy z {{{18 na 19 czerwca 1574}}} roku Henryk Walezy po 146 dniach panowania
+    ucieka z Krakowa do Francji. Stało sie tak po dotarciu do Polski pierwszych
+    informacji o śmierci Karola IX, króla Francji i brata Henryka, który stał się
+    w tym momencie spadkobiercą francuskiej korony.[2] Ucieczka króla miała dramatyczny
+    przebieg, według przekazów Henryk wyruszył z Krakowa w nocy z małym pocztem.
+    Wyjazd władcy nie został jednak niezauważony, podkomorzy krakowski Jan Tęczyński,
+    wyruszył w pościg. Doścignął władcę już za pobliską granicą z cesarstwem - w Pszczynie.
+    Henryk obiecał Tęczyńskiemu powrót do Polski, a podkomorzy ciął się własną szablą 
+    w ramię i na swoją krew przysięgał wierność królowi.[1] Początkowo wierzono w
+    powrót króla, podobnie sam Henryk Walezy liczył na utrzymanie tronu i władzy 
+    w obu państwach. Wkrótce jednak stało się jasne, że Rzeczpospolitą czeka kolejna 
+    elekcja.   
+contentTwitter: >-
+    W nocy z 18 na 19 czerwca 1574 roku Henryk Walezy po 146 dniach panowania
+    ucieka z Krakowa do Francji. Stało sie tak po dotarciu do Polski pierwszych
+    informacji o śmierci francuskiego króla Karola IX, brata Henryka.
+location: Kraków
+geo: 50.0546,19.9352
+people: Henryk Walezy
+keywords: elekcje 
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 182
+      urlName:
+      url:
+    - id: 2
+      value: Wikipedia
+      urlName: Henryk Walezy - Ucieczka do Francji 
+      url: https://pl.wikipedia.org/wiki/Henryk_III_Walezy#Ucieczka_do_Francji 
