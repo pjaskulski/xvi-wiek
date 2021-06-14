@@ -14,7 +14,7 @@ content: >-
      na morzu Bałtyckim opierały się bowiem na okrętach kaperskich. Prace finansowane 
      były przez Komisję Morską a koszty wyniosły ponad 7000 złotych oraz wydane 
      osobno przez skarb pruski prawie 650 grzywien na wynagrodzenie mistrzów weneckich. 
-     Oprócz dużego dwumasztowego galeonu budowano także dwa statki pomocnicze: 
+     Oprócz dużego dwumasztowego[6] galeonu budowano także dwa statki pomocnicze: 
      "fregatę" (fragada) - jednomasztową jednostkę z 8 wiosłami oraz mniejszą łódź - "bat" 
      również z jednym masztem. Mniejsze jednostki zbudowano, "fregatę" wysłano 
      nawet na Hel, natomiast prace nad wyposażeniem galeonu trwały do 1572 roku.[3] 
@@ -54,5 +54,9 @@ sources:
     - id: 5
       value: Odnaleziono zapiski dotyczące rozebrania w 1587 okrętu w Elblągu "dla starości spróchniałego", nie wiadomo jednak czy chodzi o galeon Zygmunta (zob. Wikipedia wyżej) 
       urlName: 
-      url: 
+      url:
+    - id: 6
+      value: Dwa maszty wynikają wprost z publikacji S. Bodniaka i z rejestru wydatków podskarbiego Jana Bąkowskiego, choć są tam zapisy sugerujące że masztów mogło być więcej, późniejsze rekonstrukcje (Mieczysław Boczar, 1973) sugerują 3 maszty.
+      urlName:
+      url:  
     
