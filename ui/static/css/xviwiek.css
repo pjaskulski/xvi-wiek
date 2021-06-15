@@ -185,6 +185,10 @@ div.indeksy-menu > a {
     margin-right: 1rem;
 }
 
+div.indeksy-menu > a:hover {
+    color: purple;
+}
+
 
 /* Chapter Epigraphs */
 div.epigraph-one {
