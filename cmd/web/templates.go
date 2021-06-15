@@ -3,6 +3,7 @@ package main
 import (
 	"html/template"
 	"path/filepath"
+	"strings"
 )
 
 func createTemplateCache(path string) (map[string]*template.Template, error) {
@@ -10,7 +11,8 @@ func createTemplateCache(path string) (map[string]*template.Template, error) {
 	cache := map[string]*template.Template{}
 
 	var functions = template.FuncMap{
-		"dayFact": dayFact,
+		"dayFact":     dayFact,
+		"firstLetter": firstLetter,
 	}
 
 	templateFiles, err := filepath.Glob(filepath.Join(path, "*.page.gohtml"))
@@ -36,4 +38,15 @@ func createTemplateCache(path string) (map[string]*template.Template, error) {
 		cache[name] = ts
 	}
 	return cache, nil
+}
+
+// firstLetter - helper func, return first letter of word
+func firstLetter(word string) string {
+	var result string = ""
+
+	if len(word) > 0 {
+		result = strings.ToLower(word)[:1]
+	}
+
+	return result
 }

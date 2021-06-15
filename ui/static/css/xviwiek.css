@@ -173,6 +173,19 @@ h3.inter {
     width: 25%;
 }
 
+div.indeksy-menu {
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    max-width: 65%;
+    line-height: 175%;
+}
+
+div.indeksy-menu > a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
 /* Chapter Epigraphs */
 div.epigraph-one {
     margin: 2em 0;
@@ -220,7 +233,7 @@ img.small-icon {
 
 .currentDay {
     font-weight: bold;
-    color: purple;
+    color: crimson;
     font-size: 1.6rem;
 }
 

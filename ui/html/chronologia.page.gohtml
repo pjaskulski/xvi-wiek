@@ -9,6 +9,19 @@
 
     <h1 id="tufte-css">Indeks chronologiczny</h1>
     
+    <div class="indeksy-menu">
+        <a href="#1490">1490</a> &#10625; 
+        <a href="#1500">1500</a> &#10625; 
+        <a href="#1510">1510</a> &#10625; 
+        <a href="#1520">1520</a> &#10625; 
+        <a href="#1530">1530</a> &#10625;
+        <a href="#1540">1540</a> &#10625;
+        <a href="#1550">1550</a> &#10625;
+        <a href="#1560">1560</a> &#10625;
+        <a href="#1570">1570</a> &#10625;
+        <a href="#1580">1580</a>
+    </div>
+    
     <article>
         <section>
             <p><label for="image-1" class="margin-toggle">&#8853;</label>
@@ -19,7 +32,7 @@
             </p>                                
             {{range $year, $facts := .}}                
                 <hr>
-                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;">{{$year}}</h2>
+                <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;" id="{{$year}}">{{$year}}</h2>
                 {{range $facts}}
                     <p style="margin-left: 30px;">{{.DateMonth}} - <em>{{.Title}}</em> {{.URLHTML}}</p>                    
                 {{end}}
