@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="keywords" content="XVI wiek, złoty wiek, wydarzenia historyczne, Jagiellonowie, historia, ciekawostki, renesans, odrodzenie, Królestwo Polskie, Prusy Książęce, Prusy Królewskie, Zygmunt August, Zygmunt Stary, Albrecht Hohenzollern, Stefan Batory, Jan Zamoyski, Jan Tarnowski, Jan Olbracht, Aleksander Jagiellończyk">    
-    <meta name="description" content={{ template "meta_description" .}}>
+    <meta name="description" content={{ template "meta_description" . }}>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/tufte.css">
     <link rel="stylesheet" href="/static/css/latex.css">
@@ -15,6 +15,10 @@
     <meta name="google-site-verification" content="AfUVBwRc2w87KzW2_mHpj9VxG_U9cPxUtkPmjCEVTz8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{template "title" .}}</title>
+    <meta property ="og:title" content={{ template "meta_title" .}}>
+    <meta property="og:description" content={{ template "meta_description" .}}>
+    <meta name="twitter:title" content={{ template "meta_title" .}}>
+    <meta name="twitter:description" content={{ template "meta_description" .}}>
   </head>
 
   <body>    
