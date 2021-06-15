@@ -15,13 +15,14 @@ import (
 )
 
 type templateDataFacts struct {
-	Today      string
-	TitleOfDay string
-	PrevNext   template.HTML
-	Facts      *[]Fact
-	KeyFacts   []KeywordFact
-	TodayQuote Quote
-	DayUrlPath string
+	Today            string
+	TitleOfDay       string
+	DescritpionOfDay string
+	PrevNext         template.HTML
+	Facts            *[]Fact
+	KeyFacts         []KeywordFact
+	TodayQuote       Quote
+	DayUrlPath       string
 }
 
 type templateDataBooks struct {
@@ -175,19 +176,21 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 		app.getQuote()
 
 		data = &templateDataFacts{
-			Today:      dayMonth,
-			TitleOfDay: "",
-			Facts:      facts.(*[]Fact),
-			KeyFacts:   tKeyFacts,
-			TodayQuote: app.TodaysQuote.CurrentQuote,
+			Today:            dayMonth,
+			TitleOfDay:       "",
+			DescritpionOfDay: "",
+			Facts:            facts.(*[]Fact),
+			KeyFacts:         tKeyFacts,
+			TodayQuote:       app.TodaysQuote.CurrentQuote,
 		}
 	} else {
 		data = &templateDataFacts{
-			Today:      dayMonth,
-			TitleOfDay: "",
-			Facts:      nil,
-			KeyFacts:   nil,
-			TodayQuote: Quote{},
+			Today:            dayMonth,
+			TitleOfDay:       "",
+			DescritpionOfDay: "",
+			Facts:            nil,
+			KeyFacts:         nil,
+			TodayQuote:       Quote{},
 		}
 	}
 
@@ -295,20 +298,23 @@ func (app *application) showFactsByDay(w http.ResponseWriter, r *http.Request) {
 	if ok {
 		tmpFacts := facts.(*[]Fact)
 		titleOfDay := (*tmpFacts)[0].Title
+		descriptionOfDay := (*tmpFacts)[0].ContentTwitter
 		data = &templateDataFacts{
-			Today:      dayMonth,
-			TitleOfDay: titleOfDay,
-			PrevNext:   prevnext,
-			Facts:      tmpFacts,
-			DayUrlPath: dayUrlPath,
+			Today:            dayMonth,
+			TitleOfDay:       titleOfDay,
+			DescritpionOfDay: descriptionOfDay,
+			PrevNext:         prevnext,
+			Facts:            tmpFacts,
+			DayUrlPath:       dayUrlPath,
 		}
 	} else {
 		data = &templateDataFacts{
-			Today:      dayMonth,
-			TitleOfDay: "",
-			PrevNext:   prevnext,
-			Facts:      nil,
-			DayUrlPath: dayUrlPath,
+			Today:            dayMonth,
+			TitleOfDay:       "",
+			DescritpionOfDay: "",
+			PrevNext:         prevnext,
+			Facts:            nil,
+			DayUrlPath:       dayUrlPath,
 		}
 	}
 
