@@ -5,12 +5,15 @@ month: 2
 year: 1526
 title: Ślub Albrechta Hohenzollenra i Doroty Oldenburg
 content: >-
-    {{{12 lutego 1526}}} roku[2] odbył się ślub księcia Albrechta Hohenzollerna, władcy Prus 
-    i Doroty Oldenburg, córki Fryderyka I, króla Danii i Norwegii.[3] Niektóre 
-    źródła [1] podają 1 lipca 1526 roku jako datę ślubu.
+    {{{12 lutego 1526}}} roku[2] odbył się ślub ({per procura}?) księcia Albrechta 
+    Hohenzollerna, władcy Prus i Doroty Oldenburg, córki Fryderyka I, króla Danii 
+    i Norwegii.[3] Zawarcie małżeństwa wspierał niemiecki kanclerz króla Fryderyka
+    Wolfgang von Utenhof, królewna otrzymała w posagu 20 tys. guldenów. Dorota 
+    wraz ze swoim orszakiem przypłynęła do Królewca 22 czerwca,[4] tam 1 lipca 
+    1526 roku[1] odbyły się oficjalne uroczystości ślubne.
 contentTwitter: >- 
-    12 lutego 1526 odbył się ślub księcia Albrechta Hohenzollerna, władcy Prus 
-    Książęcych i Doroty Oldenburg, córki Fryderyka I, króla Danii i Norwegii.
+    12 lutego 1526 zawarto małżeństwo między księciem Albrechta Hohenzollerna, władcą Prus 
+    Książęcych i Dorotą Oldenburg, córką Fryderyka I, króla Danii i Norwegii.
 location: 
 geo:
 people: Albrecht Hohenzollern; Oldenburg Dorota
@@ -30,3 +33,7 @@ sources:
       value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
       urlName:
       url: 
+    - id: 4
+      value: Dansk biografisk Lexikon
+      urlName: Dorothea, Hertuginde af Preussen
+      url: http://runeberg.org/dbl/4/0310.html
