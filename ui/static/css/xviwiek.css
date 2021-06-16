@@ -189,6 +189,22 @@ div.indeksy-menu > a:hover {
     color: purple;
 }
 
+div.preface {
+    max-width: 55%;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 125%;
+    border-top: 1px solid;
+    border-top-color: lightgrey;
+    border-bottom: 1px solid;
+    border-bottom-color: lightgray;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
 
 /* Chapter Epigraphs */
 div.epigraph-one {
@@ -327,6 +343,15 @@ input[type=search] {
         margin-top: 2rem;
         margin-bottom: 0.5rem;
         font-size: 2.2rem;
+    }
+
+    div.preface {
+        max-width: 80%;
+        font-size: 1rem;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px;
     }
     
     div.epigraph-one > blockquote {
