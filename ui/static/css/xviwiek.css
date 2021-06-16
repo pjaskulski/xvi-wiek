@@ -54,6 +54,10 @@ header .beta {
     float: right;
 }
 
+.footer-icons {
+    display: none;    
+}
+
 .footer {
     width: 87.5%;
     height: 150px;
@@ -336,6 +340,16 @@ input[type=search] {
 
     .footer {
         height: 50px;
+    }
+    
+    .footer-icons {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .footer-icons > a {
+        margin-right: 20px;
     }
 
     h1 {
