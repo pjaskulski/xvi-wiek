@@ -375,12 +375,12 @@ input[type=search] {
     }
 
     input[type=search] {
-        width: 50%;
+        width: 58%;
         font-size: 1.2rem;
       }
       
     input[type=submit] {
-        width: 22%;
+        width: 32%;
         font-size: 1.2rem;
       }
 }
