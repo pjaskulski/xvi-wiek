@@ -40,7 +40,7 @@ This service probably would not have been created, at least not in this form and
 
 `go test -cover ./cmd/web`
 
-coverage: **84.1%** of statements
+coverage: **68.1%** of statements
 
 ## API
 
@@ -61,6 +61,19 @@ coverage: **84.1%** of statements
     GET /api/healthcheck
 
     Zwraca informacje o statusie api (zwykle: "dostępny") i wersji (obecnie: "1.0.0") 
+
+    GET /api/fact/6/10/1
+
+    Zwraca wydarzenie historyczne z 10 czerwca o id = 1 (może istnieć kilka wydarzeń w tym samym dniu)
+
+    GET /api/find?searchQuery=Firlej
+
+    Zwraca wynik wyszukiwania dla słowa np. Firlej w postaci listy wydarzeń historycznych
+    w których wystąpiło szukane słowo.
+
+    GET  /api/find?searchQuery=Jan%20Kostka
+
+    Podobnie, zwraca wynik wyszukiwania dla postaci "Jan Kostka"
 
 Liczba zapytań API jest obecnie ograniczona (z uwzględnieniem IP klienta) do około 10 na sekundę.
  
