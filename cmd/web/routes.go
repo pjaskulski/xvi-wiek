@@ -89,7 +89,10 @@ func (app *application) routes() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
 	r.Use(enableCORS)
-	r.Use(LimitMiddleware)
+	// bez limitów podczas uruchamiania testów
+	if !isTesting {
+		r.Use(LimitMiddleware)
+	}
 
 	//r.Use(middleware.Compress(5))
 
@@ -124,6 +127,9 @@ func (app *application) routes() http.Handler {
 		r.Get("/today", app.apiFactsToday)
 		r.Get("/short", app.apiFactsShort)        // zwraca skrócony opis dla Twittera
 		r.Get("/healthcheck", app.apiHealthcheck) // testowy endpoint - status api
+		r.Get("/fact/{month}/{day}/{id}", app.apiFactByDayAndID)
+		// r.Get("/find/{searchQuery}")
+		r.Get("/find", app.apiSearchFacts)
 	})
 
 	// obługa 404 not found

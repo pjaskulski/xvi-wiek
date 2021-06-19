@@ -10,6 +10,9 @@ import (
 
 func TestApiHandlers(t *testing.T) {
 
+	// czy tryb testowania
+	isTesting = true
+
 	// środowisko do testów
 	appTest := createTestEnv()
 
@@ -109,13 +112,13 @@ func TestApiHandlers(t *testing.T) {
 			responseContentType: "application/xml",
 		},
 		{
-			route:               "/api/dzien/06/10",
+			route:               "/api/dzien/10/24",
 			headerContentType:   "application/json",
 			status:              404,
 			responseContentType: "application/json",
 		},
 		{
-			route:               "/api/dzien/06/10",
+			route:               "/api/dzien/10/24",
 			headerContentType:   "application/xml",
 			status:              404,
 			responseContentType: "application/xml",

@@ -68,6 +68,7 @@ var (
 	waitgroup     = sync.WaitGroup{}
 	lock          = sync.Mutex{}
 	clients       = make(map[string]*client)
+	isTesting     bool
 )
 
 func main() {
@@ -128,7 +129,9 @@ func main() {
 	}
 
 	// uruchomienie goroutine z funkcją czyszczenia mapy danych klientów (limitowanie api)
-	go LimitCleaner()
+	if !isTesting {
+		go LimitCleaner()
+	}
 
 	app.infoLog.Printf("Start serwera, port :%s", cfg.Port)
 

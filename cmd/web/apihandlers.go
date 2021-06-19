@@ -44,6 +44,16 @@ type HistoricalEvent struct {
 	Sources  []SourceJSON `json:"sources" xml:"sources"`
 }
 
+// type SearchHistoricalEvent
+type SearchHistoricalEvent struct {
+	ID             string `json:"id" xml:"id"`
+	Date           string `json:"date" xml:"date"`
+	Day            string `json:"day" xml:"day"`
+	Month          string `json:"month" xml:"month"`
+	Title          string `json:"title" xml:"title"`
+	ContentTwitter string `json:"content" xml:"content"`
+}
+
 //  type ShortHistoricalEvent
 // swagger:response factsShortResponse
 type ShortHistoricalEvent struct {
@@ -105,6 +115,63 @@ func toStructJSON(data interface{}) []HistoricalEvent {
 	return factsJSON
 }
 
+// toSearchStructJSON
+func toSearchStructJSON(data interface{}) []SearchHistoricalEvent {
+	factStruct := data.(*[]KeywordFact)
+
+	factsJSON := []SearchHistoricalEvent{}
+	factJSON := SearchHistoricalEvent{}
+
+	for _, item := range *factStruct {
+		factJSON.ID = item.ID
+		factJSON.Date = item.Date
+		// pola Day i Month uzupełniane na podstawie daty, wartości typu "05"
+		// muszą być zamienione na "5"
+		if len(item.Date) == 10 {
+			factJSON.Day = item.Date[8:]
+			tmp, err := strconv.Atoi(factJSON.Day)
+			if err == nil {
+				factJSON.Day = strconv.Itoa(tmp)
+			}
+			factJSON.Month = item.Date[5:7]
+			tmp, err = strconv.Atoi(factJSON.Month)
+			if err == nil {
+				factJSON.Month = strconv.Itoa(tmp)
+			}
+		}
+		factJSON.Title = item.Title
+		factJSON.ContentTwitter = item.ContentTwitter
+
+		factsJSON = append(factsJSON, factJSON)
+	}
+
+	return factsJSON
+}
+
+// toStructOneJSON
+func toStructOneJSON(data interface{}) HistoricalEvent {
+	factStruct := data.(Fact)
+	factJSON := HistoricalEvent{}
+	sourceJSON := SourceJSON{}
+
+	factJSON.Date = fmt.Sprintf("%02d-%02d-%04d", factStruct.Day, factStruct.Month, factStruct.Year)
+	factJSON.Title = factStruct.Title
+	factJSON.Content = prepareTextStyle(factStruct.Content, true)
+	factJSON.Location = factStruct.Location
+	factJSON.People = factStruct.People
+	factJSON.Geo = factStruct.Geo
+	factJSON.Keywords = factStruct.Keywords
+
+	for _, itemSource := range factStruct.Sources {
+		sourceJSON.Name = itemSource.Value
+		sourceJSON.URL = itemSource.URL
+		factJSON.Sources = append(factJSON.Sources, sourceJSON)
+		factJSON.Content = strings.Replace(factJSON.Content, "["+itemSource.ID+"]", "", -1)
+	}
+
+	return factJSON
+}
+
 // toShortStructJSON
 func toShortStructJSON(data interface{}) ShortHistoricalEvent {
 	factStruct := data.(*[]Fact)
@@ -143,6 +210,36 @@ func factResponseJSON(w http.ResponseWriter, code int, contentType string, data 
 	}
 }
 
+// factSearchResponseJSON
+func factSearchResponseJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
+	factsJSON := toSearchStructJSON(data)
+
+	if contentType == "application/xml" {
+		w.Header().Add("Content-Type", "application/xml")
+		xml.NewEncoder(w).Encode(factsJSON)
+	} else {
+		response, _ := json.Marshal(factsJSON)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(code)
+		w.Write(response)
+	}
+}
+
+// factResponseOneJSON
+func factResponseOneJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
+	factJSON := toStructOneJSON(data)
+
+	if contentType == "application/xml" {
+		w.Header().Add("Content-Type", "application/xml")
+		xml.NewEncoder(w).Encode(factJSON)
+	} else {
+		response, _ := json.Marshal(factJSON)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(code)
+		w.Write(response)
+	}
+}
+
 // factShortResponseJSON
 func factShortResponseJSON(w http.ResponseWriter, code int, contentType string, data interface{}) {
 	factShortJSON := toShortStructJSON(data)
@@ -173,32 +270,8 @@ func healthcheckResponseJSON(w http.ResponseWriter, code int, contentType string
 	}
 }
 
-// swagger:route GET /dzien/{month}/{day} dzien listaWydarzen
-// zwraca wydarzenia historyczne dla wskazanego dnia
-// responses:
-//   200: factsResponse
-
-// apiFactsByDay
-func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
-	month, err := strconv.Atoi(chi.URLParam(r, "month"))
-	if err != nil || month < 1 || month > 12 {
-		if r.Header.Get("Content-Type") == "application/xml" {
-			errorXML(w, 404, "Błędne zapytanie lub brak danych")
-		} else {
-			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
-		}
-		return
-	}
-
-	day, err := strconv.Atoi(chi.URLParam(r, "day"))
-	if err != nil || day < 1 || day > 31 {
-		if r.Header.Get("Content-Type") == "application/xml" {
-			errorXML(w, 404, "Błędne zapytanie lub brak danych")
-		} else {
-			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
-		}
-		return
-	}
+// getFactsByDay
+func (app *application) getFactsByDay(month, day int) (interface{}, bool) {
 
 	var isCorrectDate bool = true
 
@@ -208,8 +281,33 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 	if (month == 4 || month == 6 || month == 9 || month == 11) && day > 30 {
 		isCorrectDate = false
 	}
+
 	if !isCorrectDate {
-		if r.Header.Get("Content-Type") == "application/xml" {
+		return nil, false
+	}
+
+	name := fmt.Sprintf("%02d-%02d", month, day)
+	facts, ok := app.dataCache.Get(name)
+	if ok {
+		return facts, true
+	}
+
+	return nil, false
+}
+
+// swagger:route GET /dzien/{month}/{day} dzien listaWydarzen
+// zwraca wydarzenia historyczne dla wskazanego dnia
+// responses:
+//   200: factsResponse
+
+// apiFactsByDay
+func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
+
+	var isContentXML bool = r.Header.Get("Content-Type") == "application/xml"
+
+	month, err := strconv.Atoi(chi.URLParam(r, "month"))
+	if err != nil || month < 1 || month > 12 {
+		if isContentXML {
 			errorXML(w, 404, "Błędne zapytanie lub brak danych")
 		} else {
 			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
@@ -217,17 +315,82 @@ func (app *application) apiFactsByDay(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	name := fmt.Sprintf("%02d-%02d", month, day)
-	facts, ok := app.dataCache.Get(name)
+	day, err := strconv.Atoi(chi.URLParam(r, "day"))
+	if err != nil || day < 1 || day > 31 {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
+		return
+	}
+
+	facts, ok := app.getFactsByDay(month, day)
+
 	if ok {
 		factResponseJSON(w, 200, r.Header.Get("Content-Type"), facts)
 	} else {
-		if r.Header.Get("Content-Type") == "application/xml" {
+		if isContentXML {
 			errorXML(w, 404, "Błędne zapytanie lub brak danych")
 		} else {
 			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
 		}
 	}
+}
+
+// apiFactByDayAndID
+func (app *application) apiFactByDayAndID(w http.ResponseWriter, r *http.Request) {
+
+	var isContentXML bool = r.Header.Get("Content-Type") == "application/xml"
+
+	month, err := strconv.Atoi(chi.URLParam(r, "month"))
+	if err != nil || month < 1 || month > 12 {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
+		return
+	}
+
+	day, err := strconv.Atoi(chi.URLParam(r, "day"))
+	if err != nil || day < 1 || day > 31 {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
+		return
+	}
+
+	id := chi.URLParam(r, "id")
+	if len(id) == 0 {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
+		return
+	}
+
+	facts, ok := app.getFactsByDay(month, day)
+
+	if ok {
+		itemFacts := facts.(*[]Fact)
+		for _, item := range *itemFacts {
+			if item.ID == id {
+				factResponseOneJSON(w, 200, r.Header.Get("Content-Type"), item)
+				return
+			}
+		}
+	}
+
+	if isContentXML {
+		errorXML(w, 404, "Błędne zapytanie lub brak danych")
+	} else {
+		errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+	}
+
 }
 
 // swagger:route GET /today today listaWydarzen
@@ -270,6 +433,42 @@ func (app *application) apiFactsShort(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// swagger:route GET /healthcheck healthcheck HealthcheckEvent
+// zwraca status serwisu
+// responses:
+//   200: healthcheckResponse
+
+// apiHealthcheck
 func (app *application) apiHealthcheck(w http.ResponseWriter, r *http.Request) {
 	healthcheckResponseJSON(w, 200, r.Header.Get("Content-Type"))
+}
+
+// apiSearchFacts
+func (app *application) apiSearchFacts(w http.ResponseWriter, r *http.Request) {
+
+	var isContentXML bool = r.Header.Get("Content-Type") == "application/xml"
+
+	// searchQuery := chi.URLParam(r, "searchQuery")
+	searchQuery := r.URL.Query().Get("searchQuery")
+
+	if len(searchQuery) < 3 {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie, tekst do wyszukiwania powinien zawierać co najmniej 3 znaki")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie, tekst do wyszukiwania powinien zawierać co najmniej 3 znaki")
+		}
+		return
+	}
+
+	searchFacts, ok := app.searchInFacts(searchQuery)
+	if ok {
+		factSearchResponseJSON(w, 200, r.Header.Get("Content-Type"), searchFacts)
+	} else {
+		if isContentXML {
+			errorXML(w, 404, "Błędne zapytanie lub brak danych")
+		} else {
+			errorJSON(w, 404, "Błędne zapytanie lub brak danych")
+		}
+	}
+
 }

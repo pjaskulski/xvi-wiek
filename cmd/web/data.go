@@ -81,6 +81,7 @@ type YearFact struct {
 
 // PeopleFact type
 type PeopleFact struct {
+	ID             string
 	Date           string
 	DateMonth      string
 	Title          string
@@ -90,6 +91,7 @@ type PeopleFact struct {
 
 // LocationFact type
 type LocationFact struct {
+	ID             string
 	Date           string
 	DateMonth      string
 	Title          string
@@ -99,6 +101,7 @@ type LocationFact struct {
 
 // KeywordFact type
 type KeywordFact struct {
+	ID             string
 	Date           string
 	DateMonth      string
 	Title          string
@@ -193,6 +196,7 @@ func (app *application) readFact(filename string) {
 		// uzupełnienie indeksu postaci FactsByPeople
 		if fact.People != "" {
 			tmpPeople := &PeopleFact{}
+			tmpPeople.ID = fact.ID
 			tmpPeople.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 			tmpPeople.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpPeople.Title = fact.Title
@@ -216,6 +220,7 @@ func (app *application) readFact(filename string) {
 
 		// uzupełnienie indeksu miejsc FactsByLocation
 		tmpLocation := &LocationFact{}
+		tmpLocation.ID = fact.ID
 		tmpLocation.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 		tmpLocation.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 		tmpLocation.Title = fact.Title
@@ -238,6 +243,7 @@ func (app *application) readFact(filename string) {
 		// uzupełnienie indeksu słów kluczowych FactsByKeyword
 		if fact.Keywords != "" {
 			tmpKeyword := &KeywordFact{}
+			tmpKeyword.ID = fact.ID
 			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 			tmpKeyword.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpKeyword.Title = fact.Title
@@ -490,6 +496,7 @@ func (app *application) searchInFacts(word string) (*[]KeywordFact, bool) {
 
 		if strings.Contains(fact.Content, word) {
 			tmpKeyword := &KeywordFact{}
+			tmpKeyword.ID = fact.ID
 			tmpKeyword.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 			tmpKeyword.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 			tmpKeyword.Title = fact.Title
