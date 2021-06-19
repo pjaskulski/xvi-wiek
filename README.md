@@ -69,7 +69,8 @@ coverage: **68.1%** of statements
     GET /api/find?searchQuery=Firlej
 
     Zwraca wynik wyszukiwania dla słowa np. Firlej w postaci listy wydarzeń historycznych
-    w których wystąpiło szukane słowo.
+    w których wystąpiło szukane słowo. Zwracana lista wydarzeń zawiera tylko podstawowe
+    informacje: data, dzień, miesiąc, tytuł, skrót treści i id wydarzenia, następnie zapytaniem /api/fact np. GET /api/fact/6/10/1 można pobrać pełną treść wydarzenia
 
     GET  /api/find?searchQuery=Jan%20Kostka
 
