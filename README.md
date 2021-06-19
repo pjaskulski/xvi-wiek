@@ -64,19 +64,23 @@ coverage: **68.1%** of statements
 
     GET /api/fact/6/10/1
 
-    Zwraca wydarzenie historyczne z 10 czerwca o id = 1 (może istnieć kilka wydarzeń w tym samym dniu)
+    Zwraca wydarzenie historyczne z 10 czerwca o id = 1 (może istnieć kilka wydarzeń 
+    w tym samym dniu)
 
     GET /api/find?searchQuery=Firlej
 
-    Zwraca wynik wyszukiwania dla słowa np. Firlej w postaci listy wydarzeń historycznych
-    w których wystąpiło szukane słowo. Zwracana lista wydarzeń zawiera tylko podstawowe
-    informacje: data, dzień, miesiąc, tytuł, skrót treści i id wydarzenia, następnie zapytaniem /api/fact np. GET /api/fact/6/10/1 można pobrać pełną treść wydarzenia
+    Zwraca wynik wyszukiwania dla słowa np. Firlej w postaci listy wydarzeń 
+    historycznych w których wystąpiło szukane słowo. Zwracana lista wydarzeń 
+    zawiera tylko podstawowe informacje: data, dzień, miesiąc, tytuł, skrót 
+    treści i id wydarzenia, następnie zapytaniem /api/fact np. GET /api/fact/6/10/1 
+    można pobrać pełną treść wydarzenia
 
     GET  /api/find?searchQuery=Jan%20Kostka
 
     Podobnie, zwraca wynik wyszukiwania dla postaci "Jan Kostka"
 
-Liczba zapytań API jest obecnie ograniczona (z uwzględnieniem IP klienta) do około 10 na sekundę.
+Liczba zapytań API jest obecnie ograniczona (z uwzględnieniem IP klienta) do 
+około 10 na sekundę.
  
 Przykład odpowiedzi na zapytanie `curl https://xvi-wiek.pl/api/today`:
 
@@ -129,6 +133,14 @@ Przykład odpowiedzi na zapytanie `curl --header "Content-Type: application/xml"
 ![Screen](xvi-wiek.png)
 
 ![Screen](xvi-wiek-2.png)
+
+![Screen](xvi-wiek-3.png)
+
+![Screen](xvi-wiek-4.png)
+
+![Screen](xvi-wiek-5.png)
+
+![Screen](xvi-wiek-6.png)
 
 ## TODO
 
