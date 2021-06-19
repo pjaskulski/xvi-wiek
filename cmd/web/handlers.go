@@ -444,17 +444,26 @@ func (app *application) resultHandler(w http.ResponseWriter, r *http.Request) {
 	params := u.Query()
 	searchQuery := params.Get("q")
 
-	searchFacts, ok := app.searchInFacts(searchQuery)
+	if len(searchQuery) >= 3 {
 
-	if ok {
-		data = &templateDataSearchResults{
-			Query: searchQuery,
-			Count: len(*searchFacts),
-			Facts: searchFacts,
+		searchFacts, ok := app.searchInFacts(searchQuery)
+
+		if ok {
+			data = &templateDataSearchResults{
+				Query: searchQuery,
+				Count: len(*searchFacts),
+				Facts: searchFacts,
+			}
+		} else {
+			data = &templateDataSearchResults{
+				Query: searchQuery,
+				Count: 0,
+				Facts: nil,
+			}
 		}
 	} else {
 		data = &templateDataSearchResults{
-			Query: searchQuery,
+			Query: "nie przeprowadzono wyszukiwania, należy wpisać co najmniej 3 znaki, podano: " + searchQuery,
 			Count: 0,
 			Facts: nil,
 		}
