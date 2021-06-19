@@ -123,9 +123,11 @@ Przykład odpowiedzi na zapytanie `curl --header "Content-Type: application/xml"
 
 ```
 
-## Zrzut ekranu
+## Zrzuty ekranu
 
 ![Screen](xvi-wiek.png)
+
+![Screen](xvi-wiek-2.png)
 
 ## TODO
 
