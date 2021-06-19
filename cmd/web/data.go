@@ -90,10 +90,11 @@ type PeopleFact struct {
 
 // LocationFact type
 type LocationFact struct {
-	Date      string
-	DateMonth string
-	Title     string
-	URLHTML   template.HTML
+	Date           string
+	DateMonth      string
+	Title          string
+	ContentTwitter string
+	URLHTML        template.HTML
 }
 
 // KeywordFact type
@@ -218,6 +219,7 @@ func (app *application) readFact(filename string) {
 		tmpLocation.Date = fmt.Sprintf("%04d-%02d-%02d", fact.Year, fact.Month, fact.Day)
 		tmpLocation.DateMonth = fmt.Sprintf("%d %s %d", fact.Day, monthName[fact.Month], fact.Year)
 		tmpLocation.Title = fact.Title
+		tmpLocation.ContentTwitter = fact.ContentTwitter
 		tmpLocation.URLHTML = template.HTML(prepareFactLinkHTML(fact.Month, fact.Day, fact.ID))
 		location := strings.TrimSpace(fact.Location)
 		if location != "" {

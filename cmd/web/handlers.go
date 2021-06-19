@@ -145,6 +145,21 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
+		// jeżeli nie było słów kluczowych ani postaci, uzupełnienie listy na podstawie
+		// lokalizacji wydarzenia
+		if len(tKeyFacts) == 0 {
+			for _, item := range *tFacts {
+				loc := strings.TrimSpace(item.Location)
+				if facts, ok := app.FactsByLocation[loc]; ok {
+					for _, kItem := range facts {
+						if !inSlice(tmpFactTitle, kItem.Title) && !inSliceKeywordFact(tKeyFacts, KeywordFact(kItem)) {
+							tKeyFacts = append(tKeyFacts, KeywordFact(kItem))
+						}
+					}
+				}
+			}
+		}
+
 		// liczbę podpowiadanych wydarzeń należy ograniczyć do trzech
 		// wydarzenia są losowane, mogą więc różnić się przy każdym odświeżeniu strony
 		if len(tKeyFacts) > 3 {
