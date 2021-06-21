@@ -23,6 +23,7 @@ type templateDataFacts struct {
 	Facts            *[]Fact
 	KeyFacts         []KeywordFact
 	TodayQuote       Quote
+	TodayBook        Book
 	DayUrlPath       string
 }
 
@@ -41,6 +42,11 @@ type templateDataInformation struct {
 type quoteOfTheDay struct {
 	Date         string
 	CurrentQuote Quote
+}
+
+type bookOfTheDay struct {
+	Date        string
+	CurrentBook Book
 }
 
 type templateDataSearchResults struct {
@@ -80,6 +86,28 @@ func (app *application) getQuote() error {
 
 		app.TodaysQuote.CurrentQuote = (*quotes)[id]
 		app.TodaysQuote.Date = day
+	}
+
+	return nil
+}
+
+// getBook
+func (app *application) getBook() error {
+
+	today := time.Now()
+	day := fmt.Sprintf("%02d-%02d-%04d", today.Day(), int(today.Month()), today.Year())
+
+	if app.TodaysBook.Date != day {
+		tmpBooks, ok := app.dataCache.Get("books")
+		if !ok {
+			return errors.New("błąd podczas odczytu bazy książek")
+		}
+
+		books := tmpBooks.(*[]Book)
+		id := randomInt(0, len(*books)-1)
+
+		app.TodaysBook.CurrentBook = (*books)[id]
+		app.TodaysBook.Date = day
 	}
 
 	return nil
@@ -191,6 +219,9 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 		// Quote Of The Day
 		app.getQuote()
 
+		// Book Of The Day
+		app.getBook()
+
 		data = &templateDataFacts{
 			Today:            dayMonth,
 			TitleOfDay:       "",
@@ -198,6 +229,7 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			Facts:            facts.(*[]Fact),
 			KeyFacts:         tKeyFacts,
 			TodayQuote:       app.TodaysQuote.CurrentQuote,
+			TodayBook:        app.TodaysBook.CurrentBook,
 		}
 	} else {
 		data = &templateDataFacts{

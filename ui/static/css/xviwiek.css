@@ -16,6 +16,12 @@ p.explanation {
     font-size: 1rem;
 }
 
+p.book-description {
+    font-style: normal;
+    font-size: 1.1rem;    
+    line-height: 145%;
+}
+
 span.search-par {
     font-style: italic;
     color: purple;

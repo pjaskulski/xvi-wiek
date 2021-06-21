@@ -45,6 +45,21 @@
                 </div>                            
             <hr class="hr-facts">
 
+            <h2 class="inter">Książka dnia</h2>
+                {{if .TodayBook.Image}}{{.TodayBook.ImageHTML}}{{end}}
+                <p>
+                    {{.TodayBook.Author}}, <em>{{.TodayBook.Title}}</em>, {{.TodayBook.Year}}<br>
+                    Wydawnictwo: {{.TodayBook.Pubhause}}<br>
+                </p>
+                <p class="book-description">{{.TodayBook.Description}}</p>
+                
+                {{if .TodayBook.URL}}
+                    <p>
+                        Książka (lub ebook) dostępna w księgarni: {{.TodayBook.URLHTML}}
+                    </p>
+                {{end}}                             
+            <hr class="hr-facts">
+
         {{else}}
                 <p class="subtitle">Brak danych</p>
                 <p>Dla wskazanej daty nie znaleziono wydarzeń historycznych w bazie danych.

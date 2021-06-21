@@ -53,6 +53,7 @@ type application struct {
 	SFactsByLocation []SliceFactsByLocation
 	SFactsByPeople   []SliceFactsByPeople
 	TodaysQuote      quoteOfTheDay
+	TodaysBook       bookOfTheDay
 	FactsForSearch   []SearchFact
 }
 
