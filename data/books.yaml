@@ -204,3 +204,35 @@ URLName: amazon.com
 URL: https://www.amazon.com/Making-Polish-Lithuanian-Union-1385-1569-History-ebook/dp/B07FPN43YY/ 
 image: frost_2018.png
 pages: 592
+---
+author: Adam Vetulani 
+title: >-
+    Lenno pruskie. Od traktatu krakowskiego do śmierci księcia Albrechta 1525-1568
+year: 2015 (1930)
+pubhause: Napoleon V
+where: Oświęcim
+type: book
+description: >-
+    Wznowienie studium historyczno-prawnego z 1930 roku.  
+ISBN: 978-83-7889-444-5
+URLName: napoleonv.pl
+URL: https://napoleonv.pl/lenno-pruskie-od-traktatu-krakowskiego-do-smierci-ksiecia-albrechta-1525-1568
+image: vetulani_2015.png
+pages: 230
+---
+author: Marian Biskup 
+title: >-
+    Wojna Pruska, czyli wojna Polski z zakonem krzyżackim z lat 1519-1521 u źródeł sekularyzacji Prus Krzyżackich    
+year: 2019 
+pubhause: Napoleon V
+where: Oświęcim
+type: book
+description: >-
+    (opis wydawcy): "W swojej książce Marian Biskup omawia przyczyny oraz potencjał 
+    stron walczących w "Wojnie Pruskiej", fazy działań militarnych, próby rozjemstwa 
+    oraz pertraktacji pokojowych, a także dokonuje ogólnej charakterystyki lat 1519-1521."  
+ISBN: 978-83-8178-192-3
+URLName: napoleonv.pl 
+URL: https://napoleonv.pl/wojna-pruska-czyli-wojna-polski-z-zakonem-krzyzackim-z-lat-1519-1521-u-zrodel-sekularyzacji-prus-krzyzackich
+image: biskup_2019.png
+pages: 519
