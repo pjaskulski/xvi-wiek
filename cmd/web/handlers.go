@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode/utf8"
 
 	"github.com/go-chi/chi"
 )
@@ -444,7 +445,7 @@ func (app *application) resultHandler(w http.ResponseWriter, r *http.Request) {
 	params := u.Query()
 	searchQuery := params.Get("q")
 
-	if len(searchQuery) >= 3 {
+	if utf8.RuneCountInString(searchQuery) >= 3 {
 
 		searchFacts, ok := app.searchInFacts(searchQuery)
 

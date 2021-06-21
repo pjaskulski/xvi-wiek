@@ -21,6 +21,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode/utf8"
 
 	"github.com/go-chi/chi"
 )
@@ -451,7 +452,7 @@ func (app *application) apiSearchFacts(w http.ResponseWriter, r *http.Request) {
 	// searchQuery := chi.URLParam(r, "searchQuery")
 	searchQuery := r.URL.Query().Get("searchQuery")
 
-	if len(searchQuery) < 3 {
+	if utf8.RuneCountInString(searchQuery) < 3 {
 		if isContentXML {
 			errorXML(w, 404, "Błędne zapytanie, tekst do wyszukiwania powinien zawierać co najmniej 3 znaki")
 		} else {
