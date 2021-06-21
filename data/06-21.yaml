@@ -12,7 +12,7 @@ content: >-
     Komisją Morską i strażnikami morza, na protest Komisji miasto odpowiedziało,
     iż komendant Latarni postępował zgodnie ze swoimi obowiązkami. Te wydarzenia,
     a przede wszystkim osądzenie i ścięcie dwa dni później (23 czerwca) 11 kaprów 
-    królewskich przez Gdańsk, doprowadziły podczas sejmu lubelskiego w 1569 roku
+    królewskich przez Gdańsk,[3] doprowadziły podczas sejmu lubelskiego w 1569 roku
     do oskarżenia o obrazę majestatu i procesu władz miasta.        
 contentTwitter: >-
     21 czerwca 1568 roku załoga strzegącej ujścia Wisły gdańskiej twierdzy zwanej      
@@ -33,3 +33,7 @@ sources:
       value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 117
       urlName:
       url: 
+    - id: 3
+      value: A dokładniej - jak pisze S. Bodniak - kaprów powieszono, później martwym już obcięto głowy i ustawiono dla postrachu na poprzecznej belce.
+      urlName:
+      url:
