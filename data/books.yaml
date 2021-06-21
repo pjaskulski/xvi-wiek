@@ -141,10 +141,29 @@ where: Warszawa
 type: ebook
 description: >-
     (opis wydawcy): "Opowieść o tym, co zostało w polskiej pamięci zakłamane, albo z niej wyparte. 
-    To historia 90 proc. Polaków -- ubogich i niewykształconych, tych, którzy mieli ciężko pracować 
-    i słuchać narodowych elit -- od początku Polski aż do czasów współczesnych..." 
+    To historia 90 proc. Polaków - ubogich i niewykształconych, tych, którzy mieli ciężko pracować 
+    i słuchać narodowych elit - od początku Polski aż do czasów współczesnych..." 
 ISBN: 9788301205461
 URLName: ebookpoint.pl
 URL: https://ebookpoint.pl/ksiazki/ludowa-historia-polski-adam-leszczynski,e_1uwf.htm
 image: leszczynski_2020.png
 pages: 698
+---
+author: Sławomir Koper
+title: Jagiellonowie. Złoty wiek
+year: 2021
+pubhause: Bellona
+where: Warszawa
+type: book
+description: >-
+    (opis wydawcy): "Sławomir Koper, miłośnik historii i jej popularyzator, zaprasza 
+    w fascynującą podróż do czasów ostatnich Jagiellonów. Historyczną eskapadę 
+    po najciekawszych zabytkach jednej z najpotężniejszych dynastii Europy odbywa 
+    wraz z synem. Pod rządami i mecenatem Jagiellonów nastąpił rozkwit kultury 
+    i sztuki, okres ten przez historyków określany jest mianem złotego wieku 
+    w dziejach Polski..."  
+ISBN: 9788311157965
+URLName: bellona.pl
+URL: https://www.bellona.pl/tytul/jagiellonowie-zloty-wiek/
+image: koper_2021.png
+pages: 438
