@@ -1,0 +1,38 @@
+---
+id: 1
+day: 24
+month: 6
+year: 1575
+title: Tumult "cmentarny" w Krakowie
+content: >- 
+    {{{24 czerwca 1575}}} roku w Krakowie doszło do zamieszek na tle religijnym,
+    w wyniku których studenci krakowscy wraz z częścią mieszczan zdewastowali 
+    miejscowy cmentarz ewangelicki.[1] Początkowo zamierzano ponownie zniszczyć 
+    świeżo odbudowany po zamieszkach w 1574 roku zbór kalwiński przy ulicy św. Jana, 
+    jednak ten napad odparto a tłum ruszył w stronę położonego na przedmieściach 
+    cmentarza protestanckiego. Wyciągnięto m. in. szczątki zmarłego kilka lat 
+    wcześniej Stanisława Myszkowskiego,[2][3] wojewody krakowskiego, i wleczono je po 
+    mieście.     
+contentTwitter: >-
+    24 czerwca 1575 roku w Krakowie doszło do zamieszek na tle religijnym,
+    w wyniku których studenci krakowscy wraz z częścią mieszczan zdewastowali 
+    miejscowy cmentarz ewangelicki.
+location: Kraków  
+geo: 50.0546,19.9352
+people: Myszkowski Stanisław
+keywords: reformacja
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      value: Wikipedia
+      urlName: Tumult cmentarny
+      url: https://pl.wikipedia.org/wiki/Tumult_cmentarny
+    - id: 2
+      value: Wikipedia
+      urlName: Stanisław Myszkowski (zm. 1570)
+      url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Myszkowski_(zm._1570)
+    - id: 3
+      value: dziejekrakowa.pl
+      urlName: Wiek XVI
+      url: https://dziejekrakowa.pl/index.php/kronika/wiek-xvi/66-wiek-xvi-1551-1575.html
