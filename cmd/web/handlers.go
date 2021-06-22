@@ -171,9 +171,10 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		// jeżeli nie było słów kluczowych, uzupełnienie listy na podstawie
+		// jeżeli zabrakło wydarzeń na podstawie słów kluczowych by otrzymać listę co
+		// najmniej trzech wydarzeń, uzupełnienie listy na podstawie
 		// listy postaci (o ile jakieś występują w wyświetlanych już wydarzeniach)
-		if len(tKeyFacts) == 0 {
+		if len(tKeyFacts) < 3 {
 			for _, item := range *tFacts {
 				if item.People != "" {
 					people := strings.Split(item.People, ";")
@@ -183,6 +184,9 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 							for _, kItem := range facts {
 								if !inSlice(tmpFactTitle, kItem.Title) && !inSliceKeywordFact(tKeyFacts, KeywordFact(kItem)) {
 									tKeyFacts = append(tKeyFacts, KeywordFact(kItem))
+									if len(tKeyFacts) >= 3 {
+										break
+									}
 								}
 							}
 						}
@@ -191,15 +195,18 @@ func (app *application) showFacts(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		// jeżeli nie było słów kluczowych ani postaci, uzupełnienie listy na podstawie
-		// lokalizacji wydarzenia
-		if len(tKeyFacts) == 0 {
+		// jeżeli zabrakło wydarzeń na podstawie słów kluczowych i postaci by otrzymać listę co
+		// najmniej trzech wydarzeń, uzupełnienie listy na podstawie lokalizacji wydarzenia
+		if len(tKeyFacts) < 3 {
 			for _, item := range *tFacts {
 				loc := strings.TrimSpace(item.Location)
 				if facts, ok := app.FactsByLocation[loc]; ok {
 					for _, kItem := range facts {
 						if !inSlice(tmpFactTitle, kItem.Title) && !inSliceKeywordFact(tKeyFacts, KeywordFact(kItem)) {
 							tKeyFacts = append(tKeyFacts, KeywordFact(kItem))
+							if len(tKeyFacts) >= 3 {
+								break
+							}
 						}
 					}
 				}
