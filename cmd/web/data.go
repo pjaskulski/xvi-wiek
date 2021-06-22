@@ -17,7 +17,8 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// Source type
+// Source type - źródła informacji: książki, artykuły naukowe i popularne,
+// artykuły z wikipedii, strony internetowe
 type Source struct {
 	ID      string `yaml:"id"`
 	Value   string `yaml:"value"`
@@ -25,7 +26,7 @@ type Source struct {
 	URL     string `yaml:"url"`
 }
 
-// Fact type
+// Fact type - wydarzenie historyczne
 type Fact struct {
 	ID             string `yaml:"id" validate:"required"`
 	Day            int    `yaml:"day" validate:"required"`
@@ -55,6 +56,7 @@ type Quote struct {
 
 // Book type
 type Book struct {
+	ID          string `yaml:"id"`
 	Author      string `yaml:"author"`
 	Title       string `yaml:"title"`
 	Year        string `yaml:"year"`
