@@ -224,3 +224,21 @@ func inSliceKeywordFact(slice []KeywordFact, val KeywordFact) bool {
 	}
 	return false
 }
+
+// prepareNavigationPeopleIndexHTML func
+func prepareNavigationIndexHTML(indexLetter []string) string {
+
+	var html string
+	var counter int
+
+	for _, item := range indexLetter {
+		counter += 1
+		if counter < len(indexLetter) {
+			html += fmt.Sprintf(`<a href="#%s">%s</a>&#10625;`, item, strings.ToUpper(item)) + "\n"
+		} else {
+			html += fmt.Sprintf(`<a href="#%s">%s</a>`, item, strings.ToUpper(item)) + "\n"
+		}
+	}
+
+	return html
+}

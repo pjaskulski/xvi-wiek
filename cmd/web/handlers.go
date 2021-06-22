@@ -13,6 +13,8 @@ import (
 	"unicode/utf8"
 
 	"github.com/go-chi/chi"
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 )
 
 type templateDataFacts struct {
@@ -53,6 +55,21 @@ type templateDataSearchResults struct {
 	Query string
 	Count int
 	Facts *[]KeywordFact
+}
+
+type templateDataPeople struct {
+	Navigation     template.HTML
+	SFactsByPeople []SliceFactsByPeople
+}
+
+type templateDataLocation struct {
+	Navigation       template.HTML
+	SFactsByLocation []SliceFactsByLocation
+}
+
+type templateDataKeyword struct {
+	Navigation      template.HTML
+	SFactsByKeyword []SliceFactsByKeyword
 }
 
 var monthName = map[int]string{
@@ -398,7 +415,31 @@ func (app *application) showChronology(w http.ResponseWriter, r *http.Request) {
 func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 
 	ts := app.templateCache["ludzie.page.gohtml"]
-	err := ts.Execute(w, app.SFactsByPeople)
+
+	var tmpLetters []string
+
+	for _, item := range app.SFactsByPeople {
+		letter := firstLetter(item.People)
+		if !inSlice(tmpLetters, letter) {
+			tmpLetters = append(tmpLetters, letter)
+		}
+	}
+
+	// sortowanie po polsku
+	cl := collate.New(language.Polish)
+	sort.SliceStable(tmpLetters, func(i, j int) bool {
+		return cl.CompareString(tmpLetters[i], tmpLetters[j]) == -1
+	})
+
+	var data *templateDataPeople
+	var navigation template.HTML = template.HTML(prepareNavigationIndexHTML(tmpLetters))
+
+	data = &templateDataPeople{
+		Navigation:     navigation,
+		SFactsByPeople: app.SFactsByPeople,
+	}
+
+	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}
@@ -407,8 +448,31 @@ func (app *application) showPeople(w http.ResponseWriter, r *http.Request) {
 // showLocation func
 func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 
+	var tmpLetters []string
+
+	for _, item := range app.SFactsByLocation {
+		letter := firstLetter(item.Location)
+		if !inSlice(tmpLetters, letter) {
+			tmpLetters = append(tmpLetters, letter)
+		}
+	}
+
+	// sortowanie po polsku
+	cl := collate.New(language.Polish)
+	sort.SliceStable(tmpLetters, func(i, j int) bool {
+		return cl.CompareString(tmpLetters[i], tmpLetters[j]) == -1
+	})
+
+	var data *templateDataLocation
+	var navigation template.HTML = template.HTML(prepareNavigationIndexHTML(tmpLetters))
+
+	data = &templateDataLocation{
+		Navigation:       navigation,
+		SFactsByLocation: app.SFactsByLocation,
+	}
+
 	ts := app.templateCache["miejsca.page.gohtml"]
-	err := ts.Execute(w, app.SFactsByLocation)
+	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}
@@ -417,8 +481,31 @@ func (app *application) showLocation(w http.ResponseWriter, r *http.Request) {
 // showKeyword func
 func (app *application) showKeyword(w http.ResponseWriter, r *http.Request) {
 
+	var tmpLetters []string
+
+	for _, item := range app.SFactsByKeyword {
+		letter := firstLetter(item.Keyword)
+		if !inSlice(tmpLetters, letter) {
+			tmpLetters = append(tmpLetters, letter)
+		}
+	}
+
+	// sortowanie po polsku
+	cl := collate.New(language.Polish)
+	sort.SliceStable(tmpLetters, func(i, j int) bool {
+		return cl.CompareString(tmpLetters[i], tmpLetters[j]) == -1
+	})
+
+	var data *templateDataKeyword
+	var navigation template.HTML = template.HTML(prepareNavigationIndexHTML(tmpLetters))
+
+	data = &templateDataKeyword{
+		Navigation:      navigation,
+		SFactsByKeyword: app.SFactsByKeyword,
+	}
+
 	ts := app.templateCache["slowa.page.gohtml"]
-	err := ts.Execute(w, app.SFactsByKeyword)
+	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}

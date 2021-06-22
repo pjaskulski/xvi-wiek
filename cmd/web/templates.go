@@ -45,7 +45,7 @@ func firstLetter(word string) string {
 	var result string = ""
 
 	if len(word) > 0 {
-		result = strings.ToLower(word)[:1]
+		result = strings.ToLower(string([]rune(word)[:1]))
 	}
 
 	return result

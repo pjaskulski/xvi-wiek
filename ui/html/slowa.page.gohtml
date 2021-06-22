@@ -10,33 +10,9 @@
     <h1 id="tufte-css">Indeks słów kluczowych</h1>
 
     <div class="indeksy-menu">
-        <a href="#a">A</a>&#10625; 
-        <a href="#b">B</a>&#10625; 
-        <a href="#c">C</a>&#10625; 
-        <a href="#d">D</a>&#10625; 
-        <a href="#e">E</a>&#10625;
-        <a href="#f">F</a>&#10625;
-        <a href="#g">G</a>&#10625;
-        <a href="#h">H</a>&#10625;
-        <a href="#i">I</a>&#10625;
-        <a href="#j">J</a>&#10625;
-        <a href="#k">K</a>&#10625;
-        <a href="#l">L</a>&#10625;
-        <a href="#m">M</a>&#10625;
-        <a href="#n">N</a>&#10625;
-        <a href="#o">O</a>&#10625;
-        <a href="#p">P</a>&#10625;
-        <a href="#q">Q</a>&#10625;
-        <a href="#r">R</a>&#10625;
-        <a href="#s">S</a>&#10625;
-        <a href="#t">T</a>&#10625;
-        <a href="#u">U</a>&#10625;
-        <a href="#w">W</a>&#10625;
-        <a href="#x">X</a>&#10625;
-        <a href="#y">Y</a>&#10625;
-        <a href="#z">Z</a>
+        {{ .Navigation}}
     </div>
-    
+
     <article>
         <section>
             <p><label for="image-1" class="margin-toggle">&#8853;</label>
@@ -45,7 +21,7 @@
                 Ilustracja na podstawie: <a href="https://pixabay.com/users/jannijman-624456/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank"><br>
                 Jan Nijman</a> z <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1104042" rel="noopener" target="_blank">Pixabay</a>
             </p>                                
-            {{range $factbykeyword := .}}                
+            {{range $factbykeyword := .SFactsByKeyword}}                
                 <hr>
                 <h2 style="margin-bottom: 1rem; margin-top: 1.4rem;" id="{{firstLetter $factbykeyword.Keyword}}">{{$factbykeyword.Keyword}}</h2>
                 {{range $facts := $factbykeyword.FactsByKeyword}}
