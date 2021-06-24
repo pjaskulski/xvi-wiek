@@ -1,0 +1,37 @@
+---
+id: 1
+day: 30
+month: 6
+year: 1494
+title: Pożar północnej części Krakowa
+content: >- 
+    W nocy z {{{29 na 30 czerwca 1494}}} roku "około uderzenia drugiej godziny 
+    w nocy" w północnej części Krakowa wybuchł pożar, spłonęło 8 ulic.[2] O spowodowanie 
+    nieszczęścia oskarżano Żydów zamieszkujących okolice św. Szczepana, domy żydowskie
+    które ocalały z pożaru zostały wówczas splądrowane. Kronikarze zanotowali wówczas
+    obecność posłów tureckich w Krakowie,[3] którzy przestraszeni żywiołem "układszy 
+    na wielbłądy swoje rzeczy pojechali precz"[1]. Prawdopodobnie skutkiem pożaru
+    były przenosiny żydowskich mieszkańców Krakowa do Kazimierza.  
+contentTwitter: >-
+    W nocy z 29 na 30 czerwca 1494 roku "około uderzenia drugiej godziny 
+    w nocy" w północnej części Krakowa wybuchł pożar, spłonęło 8 ulic.
+location: Kraków
+geo: 50.0546,19.9352 
+people: 
+keywords: 
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      value: Hanna Zaremska, "Żydzi w średniowiecznej Polsce. Gmina Krakowska", Warszawa 2011, str. 501
+      urlName:
+      url: 
+    - id: 2
+      value: Wikipedia
+      urlName: Kalendarium historii Krakowa
+      url: https://pl.wikipedia.org/wiki/Kalendarium_historii_Krakowa#Lata_1454%E2%80%931795_%E2%80%93_okres_I_Rzeczypospolitej
+    - id: 3
+      value: Jan Olbracht ratyfikował niedawno (28 czerwca) w obecności posła tureckiego Chaidara traktat rozejmowy z sułtanem tureckim Bajazydem II.
+      urlName:
+      url: 
+    

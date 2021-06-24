@@ -11,7 +11,7 @@ content: >-
     w 1562 r. w Wilnie. Urodzona w 1526 r. Katarzyna była o 11 lat starsza od 
     swojego małżonka. Zygmunt przyszedł na świat na zamku Gripsholm gdzie jego rodzice 
     przebywali w niewoli uwięzieni przez przyrodniego brata Jana - Eryka XIV władcę 
-    Szwecji. Rok później odmienił się los przyszłego króla Rzeczypospolitej, po 
+    Szwecji.[2] Rok później odmienił się los przyszłego króla Rzeczypospolitej, po 
     uwolnieniu z więzienia przez Radę Królestwa Szwecji książę Jan obalił Eryka XIV 
     zostając królem Szwecji, jako Jan III Waza. Zygmunt Waza został tym samym 
     następcą szwedzkiego tronu.
@@ -29,3 +29,7 @@ sources:
       value: Wikipedia
       urlName: Zygmunt III Waza
       url: https://pl.wikipedia.org/wiki/Zygmunt_III_Waza
+    - id: 2
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 264 
+      urlName:
+      url:
