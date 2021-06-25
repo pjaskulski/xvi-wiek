@@ -1,8 +1,10 @@
 package main
 
 import (
+	"expvar"
 	"net"
 	"net/http"
+	"runtime"
 	"strings"
 	"time"
 
@@ -121,6 +123,14 @@ func (app *application) routes() http.Handler {
 	r.Get("/wyniki", app.resultHandler)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
+
+	if isRunByRun() {
+		expvar.Publish("goroutines", expvar.Func(func() interface{} {
+			return runtime.NumGoroutine()
+		}))
+		r.Handle("/monitor", expvar.Handler())
+	}
+
 	// api
 	r.Route("/api", func(r chi.Router) {
 		r.Get("/dzien/{month}/{day}", app.apiFactsByDay)
