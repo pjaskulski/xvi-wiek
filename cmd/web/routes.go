@@ -91,6 +91,7 @@ func (app *application) routes() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
 	r.Use(enableCORS)
+	r.Use(app.appMetrics)
 	// bez limitów podczas uruchamiania testów
 	if !isTesting {
 		r.Use(LimitMiddleware)
@@ -168,5 +169,16 @@ func FileServer(r chi.Router, path string, root http.FileSystem) {
 		pathPrefix := strings.TrimSuffix(rctx.RoutePattern(), "/*")
 		fs := http.StripPrefix(pathPrefix, http.FileServer(root))
 		fs.ServeHTTP(w, r)
+	})
+}
+
+// appMetric func - metryki dla aplikacji
+func (app *application) appMetrics(next http.Handler) http.Handler {
+	totalRequestIn := expvar.NewInt("total_request_in")
+
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		totalRequestIn.Add(1)
+
+		next.ServeHTTP(w, r)
 	})
 }
