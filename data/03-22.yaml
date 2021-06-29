@@ -22,6 +22,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Kazimierz VII
       url: https://pl.wikipedia.org/wiki/Kazimierz_VII

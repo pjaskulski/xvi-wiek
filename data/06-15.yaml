@@ -25,15 +25,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Elżbieta Habsburżanka
       url: https://pl.wikipedia.org/wiki/El%C5%BCbieta_Habsbur%C5%BCanka
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965, str. 363
+      type: reference
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      page: str. 363
       urlName:
       url:
     - id: 3
+      type: reference
       value: Urszula Borkowska, "Dynastia Jagiellonów w Polsce", Warszawa, 2011 
+      page: 
       urlName:
       url: 
-

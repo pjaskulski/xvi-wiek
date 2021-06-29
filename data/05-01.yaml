@@ -30,14 +30,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Janusz Małłek, "Prusy Książęce a Prusy Królewskie w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie nr 53, 1976, str. 215
+      type: reference
+      value: Janusz Małłek, "Prusy Książęce a Prusy Królewskie w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie nr 53, 1976
+      page: str. 215
       urlName: 
       url: 
     - id: 2
-      value: Ludwik Kolankowski, "Zygmunt August, Wielki Książę Litwy do roku 1548", Lwów 1913, str. 255 
+      type: reference
+      value: Ludwik Kolankowski, "Zygmunt August, Wielki Książę Litwy do roku 1548", Lwów 1913
+      page: str. 255 
       urlName: Federacja Bibliotek Cyfrowych
       url: https://fbc.pionier.net.pl/details/nnnZnkr
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: I wojna szmalkaldzka
       url: https://pl.wikipedia.org/wiki/I_wojna_szmalkaldzka

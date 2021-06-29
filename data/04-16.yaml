@@ -21,14 +21,20 @@ image:
 imageInfo:
 sources:
     - id: 1
-      value: Teresa Borawska, "Prawnicy w otoczeniu Mikołaja Kopernika", Komunikaty Warmińsko-Mazurskie nr 2(280), 2013, str. 303
+      type: reference
+      value: Teresa Borawska, "Prawnicy w otoczeniu Mikołaja Kopernika", Komunikaty Warmińsko-Mazurskie nr 2(280), 2013
+      page: str. 303
       urlName: 
       url: 
     - id: 2
-      value: Marcin Woźniczko, "Celnicy na Ziemi Łódzkiej. Historia polskiej służby celnej", Wiadomości celne, 7/2016, str. 35
+      type: reference
+      value: Marcin Woźniczko, "Celnicy na Ziemi Łódzkiej. Historia polskiej służby celnej", Wiadomości celne, 7/2016
+      page: str. 35
       urlName: 
       url:
     - id: 3
+      type: internet
       value: dziejesejmu.pl
+      page:
       urlName: Na przedwiośniu. Sejm w Piotrkowie. 1509 r.
       url: https://www.dziejesejmu.pl/na-przedwiosniu-sejm-w-piotrkowie-1509-r,p1878825355

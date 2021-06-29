@@ -27,26 +27,38 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jakub Secygniowski
       url: https://pl.wikipedia.org/wiki/Jakub_Secygniowski
     - id: 2
+      type: internet
       value: Muzeum Wojska Polskiego
+      page:
       urlName: Kalendarium Dziejów Oręża Polskiego
       url: http://www.muzeumwp.pl/kalendarium/03-06/
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Jan Zapolya
       url: https://pl.wikipedia.org/wiki/Jan_Z%C3%A1polya
     - id: 4
-      value: Karol Łopatecki, "'Disciplina militaris' w wojskach Rzeczypospolitej do połowy XVII wieku", 2012, str. 71
+      type: reference
+      value: Karol Łopatecki, "'Disciplina militaris' w wojskach Rzeczypospolitej do połowy XVII wieku", 2012
+      page: str. 71
       urlName:
       url:
     - id: 5
-      value: Krzysztof Baczkowski ,"Polska i jej sąsiedzi za Jagiellonów", 2012, str. 538
+      type: reference
+      value: Krzysztof Baczkowski ,"Polska i jej sąsiedzi za Jagiellonów", 2012
+      page: str. 538
       urlName:
       url:
     - id: 6
+      type: note
       value: Źródła węgierskie podają 20 marca 1528 jako datę bitwy
+      page:
       urlName: Szinai csata
       url: https://hu.wikipedia.org/wiki/Szinai_csata

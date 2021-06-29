@@ -29,22 +29,32 @@ image:
 imageInfo:
 sources:
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Jan Leopolita (młodszy)
       url: https://pl.wikipedia.org/wiki/Jan_Leopolita_(m%C5%82odszy)
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Biblia Leopolity
       url: https://pl.wikipedia.org/wiki/Biblia_Leopolity
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Szarffenbergowie (rodzina)
       url: https://pl.wikipedia.org/wiki/Szarffenbergowie_(rodzina)
     - id: 4
+      type: internet
       value: Wikipedia
+      page:
       urlName: Nowy Testament w przekładzie Stanisława Murzynowskiego
       url: https://pl.wikipedia.org/wiki/Nowy_Testament_w_przek%C5%82adzie_Stanis%C5%82awa_Murzynowskiego
     - id: 5
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 116
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 116
       urlName:
       url:

@@ -23,6 +23,8 @@ image:
 imageInfo:
 sources:    
     - id: 1
-      value: Stanisław Bodniak, "Najdawniejszy plan porozumienia Polski z Moskwą przeciw Niemcom", Pamiętnik Biblioteki Kórnickiej 4, 1947, str. 81
+      type: reference
+      value: Stanisław Bodniak, "Najdawniejszy plan porozumienia Polski z Moskwą przeciw Niemcom", Pamiętnik Biblioteki Kórnickiej 4, 1947
+      page: str. 81
       urlName:
       url:

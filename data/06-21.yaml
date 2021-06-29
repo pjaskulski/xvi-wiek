@@ -26,14 +26,20 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Gdańsk wobec polityki bałtyckiej ostatnich Jagiellonów
       url: https://pl.wikipedia.org/wiki/Gda%C5%84sk_wobec_polityki_ba%C5%82tyckiej_ostatnich_Jagiellon%C3%B3w
     - id: 2
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 117
+      type: reference
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946
+      page: str. 117
       urlName:
       url: 
     - id: 3
+      type: note
       value: A dokładniej - jak pisze S. Bodniak - kaprów powieszono, później martwym już obcięto głowy i ustawiono dla postrachu na poprzecznej belce.
+      page:
       urlName:
       url:

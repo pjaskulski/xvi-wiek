@@ -27,18 +27,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: reference
       value: Jacek Wijaczka, "Kontakty dyplomatyczne Prus Książęcych z Francją w latach 1525—1568", Komunikaty Mazursko-Warmińskie nr 1, 3-12, 1994
+      page:
       urlName: bazhum.muzhp.pl
       url: http://bazhum.muzhp.pl/media//files/Komunikaty_Mazursko_Warminskie/Komunikaty_Mazursko_Warminskie-r1994-t-n1/Komunikaty_Mazursko_Warminskie-r1994-t-n1-s3-12/Komunikaty_Mazursko_Warminskie-r1994-t-n1-s3-12.pdf
     - id: 2
+      type: reference
       value: Andrzej Kamieński, "Zakon Krzyżacki wobec koronacji elektora brandenburskiegoFryderyka III na króla w Prusach", Roczniki Historyczne, Rocznik LXXXIII — 2017
+      page:
       urlName:
       url:
     - id: 3
+      type: note
       value: Niektóre źródła podają 18 stycznia np. niemiecka wersja Wikipedii
+      page:
       urlName: Albrecht (Preussen)
       url: https://de.wikipedia.org/wiki/Albrecht_(Preu%C3%9Fen)
     - id: 4
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 62
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 62
       urlName:
       url:

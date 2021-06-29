@@ -28,18 +28,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Wojna polsko-krzyżacka (1519-1521)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
     - id: 2
-      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 88
+      type: reference
+      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015
+      page: str. 88
       urlName: 
       url:
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Mikołaj Kopernik
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Kopernik
     - id: 4
+      type: reference
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      page: 
       urlName:
       url:

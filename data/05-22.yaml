@@ -31,6 +31,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Jacek Wijaczka, "Reformacja w Koronie w XVI w. - sukces czy niepowodzenie?", Gdański Rocznik Ewangelicki, vol. VIII, 2014, str. 21-22
+      type: reference
+      value: Jacek Wijaczka, "Reformacja w Koronie w XVI w. - sukces czy niepowodzenie?", Gdański Rocznik Ewangelicki, vol. VIII, 2014
+      page: str. 21-22
       urlName:
       url: 

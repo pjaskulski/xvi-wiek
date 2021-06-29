@@ -30,18 +30,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Pokój w Kamieńcu Podolskim 1510
       url: https://pl.wikipedia.org/wiki/Pok%C3%B3j_w_Kamie%C5%84cu_Podolskim_1510
     - id: 2
-      value: Katarzyna Niemczyk, "Problem Pokucia, spornego terytorium polsko-mołdawskiego w końcu XV i początku XVI wieku, Studia Historyczne, R. LVII, 2014, Z. 2 (226), str 173
+      type: reference
+      value: Katarzyna Niemczyk, "Problem Pokucia, spornego terytorium polsko-mołdawskiego w końcu XV i początku XVI wieku, Studia Historyczne, R. LVII, 2014, Z. 2 (226)
+      page: str 173
       urlName: Central European Journal Of Social Sciences And Humanities  
       url: http://cejsh.icm.edu.pl/cejsh/element/bwmeta1.element.pan-sh-yid-2014-iid-2-art-000000000001/c/Niemczyk20SH202226202014.pdf
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Elżbieta Jagiellonka (1482-1517)
       url: https://pl.wikipedia.org/wiki/El%C5%BCbieta_Jagiellonka_(1482%E2%80%931517)
     - id: 4
+      type: internet
       value: Wikipedia
+      page:
       urlName: Bogdan III the One-Eyed
       url: https://en.wikipedia.org/wiki/Bogdan_III_the_One-Eyed

@@ -24,15 +24,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Kwartalnik Naukowy wydawany w połączeniu prac Miłośników Umiejętności, Tom Pierwszy, Zeszyt 1, Kraków 1835, str. 44
+      type: reference
+      value: Kwartalnik Naukowy wydawany w połączeniu prac Miłośników Umiejętności, Tom Pierwszy, Zeszyt 1, Kraków 1835
+      page: str. 44
       urlName: 
       url: 
     - id: 2
-      value: Adam Moniuszko, Prawo sądowe Rzeczpospolitej szlacheckiej (XVI-XVIII w.), Warszawa 2017, str. 76
+      type: reference
+      value: Adam Moniuszko, Prawo sądowe Rzeczpospolitej szlacheckiej (XVI-XVIII w.), Warszawa 2017
+      page: str. 76
       urlName:
       url:
     - id: 3
-      value: Przemysław Sianko, Granica mazowiecko-litewska do 1569 roku. Kształtowanie się, rola społeczna, (Rozprawa doktorska), Białystok 2019,  str. 220
+      type: reference
+      value: Przemysław Sianko, Granica mazowiecko-litewska do 1569 roku. Kształtowanie się, rola społeczna, (Rozprawa doktorska), Białystok 2019
+      page: str. 220
       urlName:
       url:
-    

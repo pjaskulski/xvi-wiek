@@ -32,26 +32,36 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Komisja Morska
       url: https://pl.wikipedia.org/wiki/Komisja_Morska
     - id: 2
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", 1946, str. 103-105
+      type: reference
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", 1946
+      page: str. 103-105
       urlName:
       url:
     - id: 3
+      type: note
       value: >-
           W rzeczywistości król nie posiadał jeszcze domu w Gdańsku, jego przedstawiciele 
           próbowali zakupić taką nieruchomość, ostatecznie upomniano miasto w sprawie niewykonanego
           od czasów Kazimierza Jagiellończyka zobowiązania do budowy domu królewskiego. Komisja 
           obradowała jednak częściej w Malborku, gdzie Jan Kostka był starostą.   
+      page:
       urlName:
       url: 
     - id: 4
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Gdańsk wobec polityki bałtyckiej ostatnich Jagiellonów
       url: https://pl.wikipedia.org/wiki/Gda%C5%84sk_wobec_polityki_ba%C5%82tyckiej_ostatnich_Jagiellon%C3%B3w
     - id: 5
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 66
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 66
       urlName:
       url:

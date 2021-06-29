@@ -25,14 +25,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Georg Giese
       url: https://pl.wikipedia.org/wiki/Georg_Giese
     - id: 2
+      type: internet
       value: Gedanopedia
+      page: 
       urlName: Burgrabiowie
       url: https://www.gedanopedia.pl/gdansk/?title=BURGRABIOWIE
     - id: 3
+      type: internet
       value: DW
+      page: 
       urlName: Hans Holbein - Georg Giese, the rich merchant
       url: https://p.dw.com/p/3KDmA

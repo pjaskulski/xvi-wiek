@@ -121,10 +121,18 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 <span class="sidenote">`
 	post := `</span>`
 
+	var tmpValue string
+
 	for _, item := range sources {
 		idQuote := fmt.Sprintf("%s-%s", id, item.ID)
 		preItem := fmt.Sprintf(pre, idQuote, idQuote)
-		value := prepareTextStyle(item.Value, false)
+
+		if item.Page != "" {
+			tmpValue = item.Value + ", " + item.Page
+		} else {
+			tmpValue = item.Value
+		}
+		value := prepareTextStyle(tmpValue, false)
 		if item.URL != "" {
 			var nameURL string
 			if item.URLName != "" {

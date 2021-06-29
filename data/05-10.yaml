@@ -30,6 +30,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 42-276, 1939-1946, str. 61
+      type: reference
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 42-276, 1939-1946
+      page: str. 61
       urlName: 
       url: 

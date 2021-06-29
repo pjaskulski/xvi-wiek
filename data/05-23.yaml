@@ -33,6 +33,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Agnieszka Januszek-Sieradzka, "Potrzeba Moskiewska" na sejmach koronnych w latach 60. XVI stulecia, Teka Kom. Hist. – OL PAN, 2012, IX, str. 18
+      type: reference
+      value: Agnieszka Januszek-Sieradzka, "Potrzeba Moskiewska" na sejmach koronnych w latach 60. XVI stulecia, Teka Kom. Hist. – OL PAN, 2012, IX
+      page: str. 18
       urlName:
       url: 

@@ -26,6 +26,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Ferdynand I Habsburg
       url: https://pl.wikipedia.org/wiki/Ferdynand_I_Habsburg

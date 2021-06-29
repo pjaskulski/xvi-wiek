@@ -34,18 +34,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Elekcja 1573
       url: https://pl.wikipedia.org/wiki/Elekcja_1573
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 166-171
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 166-171
       urlName:
       url:
     - id: 3
-      value: Ewa Dubas-Urwanowicz, "Koronne zjazdy szlacheckie w dwóch pierwszych bezkrólewiach po śmierci Zygmunta Augusta", Białystok 1998, str. 280
+      type: reference
+      value: Ewa Dubas-Urwanowicz, "Koronne zjazdy szlacheckie w dwóch pierwszych bezkrólewiach po śmierci Zygmunta Augusta", Białystok 1998
+      page: str. 280
       urlName:
       url: 
     - id: 4
+      type: internet
       value: kamionek.warszawa.pl
+      page:
       urlName: 1573 rok – Pierwsza wolna elekcja na polach wsi Kamień...
       url: http://kamionek.warszawa.pl/196-2/1573-rok-pierwsza-elekcja-viritim-na-polach-wsi-kamien/

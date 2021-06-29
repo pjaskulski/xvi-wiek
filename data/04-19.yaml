@@ -22,10 +22,14 @@ image:
 imageInfo:
 sources:
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Katarzyna Weiglowa
       url: https://pl.wikipedia.org/wiki/Katarzyna_Weiglowa
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 115
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 115
       urlName:
       url:

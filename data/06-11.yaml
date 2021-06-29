@@ -28,19 +28,27 @@ image: szymon_marycjus_karta_z_ksiazki.png
 imageInfo: Strony z traktatu 'De scholis seu academiis libri duo' (źródło - polona.pl)
 sources: 
     - id: 1
-      value: Józef Chałasiński, "O szlachcie, mnichach i uczonych oraz habilitacji jako instytucji uniwersyteckiej", Przegląd Socjologiczny / Sociological Review 16/2, 1962, str. 127
+      type: reference
+      value: Józef Chałasiński, "O szlachcie, mnichach i uczonych oraz habilitacji jako instytucji uniwersyteckiej", Przegląd Socjologiczny / Sociological Review 16/2, 1962
+      page: str. 127
       urlName: 
       url: 
     - id: 2
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946, str. 122
+      type: reference
+      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946
+      page: str. 122
       urlName:
       url:
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Szymon Marycjusz
       url: https://pl.wikipedia.org/wiki/Szymon_Marycjusz
     - id: 4
+      type: internet
       value: historia.org.pl
+      page:
       urlName: Szymon Marycjusz (1516-1574) - zapomniany polski bohater renesansu
       url: https://historia.org.pl/2017/09/28/szymon-marycjusz-1516-1574-zapomniany-polski-bohater-renesansu-cz-i/
     

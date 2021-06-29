@@ -27,14 +27,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Sylwia Dwojak, "Wizyty Zygmunta Starego w Toruniu (1519–1521)", Rocznik Toruński, t. 43, str. 17
+      type: reference
+      value: Sylwia Dwojak, "Wizyty Zygmunta Starego w Toruniu (1519–1521)", Rocznik Toruński, t. 43
+      page: str. 17
       urlName:
       url:
     - id: 2
+      type: reference
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      page: 
       urlName:
       url:
     - id: 3
-      value: Roman Rybarski, "Handel i polityka handlowa Polski w XVI stuleciu", tom I, 1928, str. 321
+      type: reference
+      value: Roman Rybarski, "Handel i polityka handlowa Polski w XVI stuleciu", tom I, 1928
+      page: str. 321
       urlName:
       url: 

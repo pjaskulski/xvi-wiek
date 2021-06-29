@@ -23,6 +23,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 88
+      type: reference
+      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015
+      page: str. 88
       urlName: 
       url: 

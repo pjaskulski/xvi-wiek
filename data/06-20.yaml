@@ -26,10 +26,14 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Zygmunt III Waza
       url: https://pl.wikipedia.org/wiki/Zygmunt_III_Waza
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 264 
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 264 
       urlName:
       url:

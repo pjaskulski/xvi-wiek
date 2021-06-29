@@ -22,18 +22,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Dorothea of Denmark, Duchess of Prussia
       url: "https://en.wikipedia.org/wiki/Dorothea_of_Denmark,_Duchess_of_Prussia"
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Albrecht Hohenzollern (1490-1568)
       url: "https://pl.wikipedia.org/wiki/Albrecht_Hohenzollern_(1490%E2%80%931568)" 
-    - id: 3    
+    - id: 3
+      type: reference    
       value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
+      page:
       urlName:
       url: 
     - id: 4
+      type: internet
       value: Dansk biografisk Lexikon
+      page:
       urlName: Dorothea, Hertuginde af Preussen
       url: http://runeberg.org/dbl/4/0310.html

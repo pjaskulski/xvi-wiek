@@ -25,11 +25,15 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Aleksander Jagiellończyk
       url: https://pl.wikipedia.org/wiki/Aleksander_Jagiello%C5%84czyk      
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Helena Moskiewska
       url: https://pl.wikipedia.org/wiki/Helena_Moskiewska
 ---
@@ -64,14 +68,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jadwiga Jagiellonka (1457-1502)
       url: https://pl.wikipedia.org/wiki/Jadwiga_Jagiellonka_(1457%E2%80%931502)
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jerzy Bogaty
       url: https://pl.wikipedia.org/wiki/Jerzy_Bogaty
     - id: 3
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012, str 649-666 
+      type: reference
+      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      page: str. 649-666 
       urlName:
       url: 

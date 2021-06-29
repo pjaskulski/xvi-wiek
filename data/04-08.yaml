@@ -30,14 +30,20 @@ image:
 imageInfo:
 sources:
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Traktat krakowski
       url: https://pl.wikipedia.org/wiki/Traktat_krakowski
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 62
+      type: internet
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 62
       urlName:
       url:
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Albrecht Hohenzollern (1490-1568)
       url: https://pl.wikipedia.org/wiki/Albrecht_Hohenzollern_(1490%E2%80%931568)

@@ -24,10 +24,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Anna Hohenzollern (1487-1539)
       url: https://pl.wikipedia.org/wiki/Anna_Hohenzollern_(1487%E2%80%931539)
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Zofia Jagiellonka (1464-1512)
       url: https://pl.wikipedia.org/wiki/Zofia_Jagiellonka_(1464%E2%80%931512)

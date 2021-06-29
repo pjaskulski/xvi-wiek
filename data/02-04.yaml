@@ -18,11 +18,17 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Muzeum Wojska Polskiego
+      page: 
       urlName: Kalendarium
       url: http://www.muzeumwp.pl/kalendarium/02/ 
     - id: 2
-      value: Żródła podają zwykle, że podczas przeprawy przez Dniestr. Współczesna
+      type: note
+      value: Źródła podają zwykle, że podczas przeprawy przez Dniestr. Współczesna
              miejscowość Tarasivtsi leżąca w pobliżu Chocimia (ok. 30 km) znajduje 
              się jednak nad Prutem, bliżej Chocimia (10 km) leży wioska Tarasivka, 
-             ale nie bezpośrednio nad Dniestrem a 4-5 km od rzeki. 
+             ale nie bezpośrednio nad Dniestrem a 4-5 km od rzeki.
+      page:
+      urlName:
+      url:

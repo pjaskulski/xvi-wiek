@@ -29,14 +29,20 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Mikołaj II niemodliński
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_II_niemodli%C5%84ski
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan II Dobry (książę opolski)
       url: https://pl.wikipedia.org/wiki/Jan_II_Dobry_(ksi%C4%85%C5%BC%C4%99_opolski)
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jerzy Hohenzollern-Ansbach
       url: https://pl.wikipedia.org/wiki/Jerzy_Hohenzollern-Ansbach

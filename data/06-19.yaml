@@ -20,10 +20,14 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Jaakow ben Jehuda ha-Lewi Kopelman
       url: https://pl.wikipedia.org/wiki/Jaakow_ben_Jehuda_ha-Lewi_Kopelman
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Stary cmentarz żydowski w Lublinie
       url: https://pl.wikipedia.org/wiki/Stary_cmentarz_%C5%BCydowski_w_Lublinie

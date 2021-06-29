@@ -31,18 +31,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Otto Chodecki
       url: https://pl.wikipedia.org/wiki/Otto_Chodecki
     - id: 2
-      value:
+      type: internet
+      value: Wikipedia
+      page:
       urlName: Bitwa pod Chocimiem (1509)
       url: https://pl.wikipedia.org/wiki/Bitwa_pod_Chocimiem_(1509)
     - id: 3
-      value: Katarzyna Niemczyk, "Chodeccy a wyprawa mołdawska z 1509 roku", BALCANICA POSNANIENSIA XXIV, Poznań, 2017 str. 31-41
+      type: reference
+      value: Katarzyna Niemczyk, "Chodeccy a wyprawa mołdawska z 1509 roku", BALCANICA POSNANIENSIA XXIV, Poznań, 2017
+      page: str. 31-41
       urlName:
       url: 
     - id: 4
-      value: Wacław Uruszczak, "Sejm koronacyjny w 1507 roku w Krakowie", Studia z Dziejów Państwa i Prawa Polskiego, t. VII, str. 111-121   
+      type: reference
+      value: Wacław Uruszczak, "Sejm koronacyjny w 1507 roku w Krakowie", Studia z Dziejów Państwa i Prawa Polskiego, t. VII
+      page: str. 111-121   
       urlName:
       url: 

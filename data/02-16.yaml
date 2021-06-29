@@ -19,7 +19,9 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Elżbieta Jagiellonka (1482-1517)
       url: https://pl.wikipedia.org/wiki/El%C5%BCbieta_Jagiellonka_(1482%E2%80%931517)
 ---
@@ -45,6 +47,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Stefan Batory
       url: https://pl.wikipedia.org/wiki/Stefan_Batory

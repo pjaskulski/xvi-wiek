@@ -22,10 +22,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Paweł Jasienica, Polska Jagiellonów, str. 416.
+      type: reference
+      value: Paweł Jasienica, Polska Jagiellonów
+      page: str. 416
       urlName: 
       url: 
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Katarzyna Habsburżanka
       url: https://pl.wikipedia.org/wiki/Katarzyna_Habsbur%C5%BCanka

@@ -24,10 +24,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan Łaski
       url: https://pl.wikipedia.org/wiki/Jan_%C5%81aski_(prymas)
     - id: 2
-      value: Wikipedia 
+      type: internet
+      value: Wikipedia
+      page: 
       urlName: Statut Łaskiego
       url: https://pl.wikipedia.org/wiki/Statut_%C5%81askiego

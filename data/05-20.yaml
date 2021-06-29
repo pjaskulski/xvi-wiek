@@ -33,14 +33,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Wojna Hanzy z Danią, Szwecją i Prusami
       url: https://pl.wikipedia.org/wiki/Wojna_Hanzy_z_Dani%C4%85,_Szwecj%C4%85_i_Prusami
     - id: 2
-      value: Janusz Małłek, "Ustawa o rządzie (Regimentsnottel) Prus Książęcych z roku 1542", Roczniki Towarzystwa Naukowego w Toruniu, rocznik 72, zeszyt 2, 1967, str. 111
+      type: reference
+      value: Janusz Małłek, "Ustawa o rządzie (Regimentsnottel) Prus Książęcych z roku 1542", Roczniki Towarzystwa Naukowego w Toruniu, rocznik 72, zeszyt 2, 1967
+      page: str. 111
       urlName: 
       url: 
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Grevens_Fejde
       url: https://da.wikipedia.org/wiki/Grevens_Fejde

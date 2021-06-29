@@ -35,14 +35,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jadwiga Jagiellonka (1513-1573)
       url: https://pl.wikipedia.org/wiki/Jadwiga_Jagiellonka_(1513%E2%80%931573)
     - id: 2
+      type: reference
       value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
+      page:
       urlName: 
       url: 
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Joachim II Hector, Elector of Brandenburg
       url: https://en.wikipedia.org/wiki/Joachim_II_Hector,_Elector_of_Brandenburg

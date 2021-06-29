@@ -21,7 +21,9 @@ import (
 // artykuły z wikipedii, strony internetowe
 type Source struct {
 	ID      string `yaml:"id"`
+	Type    string
 	Value   string `yaml:"value"`
+	Page    string `yaml:"page"`
 	URLName string `yaml:"urlName"`
 	URL     string `yaml:"url"`
 }

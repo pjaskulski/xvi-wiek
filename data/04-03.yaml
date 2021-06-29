@@ -23,6 +23,8 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Jan Konarski (1447-1525)
       url: https://pl.wikipedia.org/wiki/Jan_Konarski_(1447%E2%80%931525)

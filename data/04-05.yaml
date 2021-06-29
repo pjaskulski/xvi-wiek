@@ -23,10 +23,14 @@ image:
 imageInfo:
 sources:
     - id: 1
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 317
+      type: reference
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      page: str. 317
       urlName:
       url:
     - id: 2
-      value: Sylwia Dwojak, "Wizyty Zygmunta Starego w Toruniu (1519–1521)", Rocznik Toruński, t. 43, str. 34-35
+      type: reference
+      value: Sylwia Dwojak, "Wizyty Zygmunta Starego w Toruniu (1519–1521)", Rocznik Toruński, t. 43
+      page: str. 34-35
       urlName:
       url:

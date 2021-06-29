@@ -27,10 +27,14 @@ image:
 imageInfo:
 sources:
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Zgoda sandomierska
       url: https://pl.wikipedia.org/wiki/Zgoda_sandomierska
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 149-150
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 149-150
       urlName:
       url:

@@ -26,10 +26,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Maximilian_II
       url: "https://de.wikipedia.org/wiki/Maximilian_II._(HRR)#Religionspolitik"
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Edict of Torda
       url: https://en.wikipedia.org/wiki/Edict_of_Torda

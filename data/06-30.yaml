@@ -23,15 +23,21 @@ image:
 imageInfo: 
 sources:     
     - id: 1
-      value: Hanna Zaremska, "Żydzi w średniowiecznej Polsce. Gmina Krakowska", Warszawa 2011, str. 501
+      type: reference
+      value: Hanna Zaremska, "Żydzi w średniowiecznej Polsce. Gmina Krakowska", Warszawa 2011
+      page: str. 501
       urlName:
       url: 
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Kalendarium historii Krakowa
       url: https://pl.wikipedia.org/wiki/Kalendarium_historii_Krakowa#Lata_1454%E2%80%931795_%E2%80%93_okres_I_Rzeczypospolitej
     - id: 3
+      type: note
       value: Jan Olbracht ratyfikował niedawno (28 czerwca) w obecności posła tureckiego Chaidara traktat rozejmowy z sułtanem tureckim Bajazydem II.
+      page:
       urlName:
       url: 
     

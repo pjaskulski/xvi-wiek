@@ -26,7 +26,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Hołdy pruskie 1469–1641
       url: https://pl.wikipedia.org/wiki/Ho%C5%82dy_pruskie_1469%E2%80%931641
-    

@@ -25,10 +25,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Bogusław X Wielki
       url: https://pl.wikipedia.org/wiki/Bogus%C5%82aw_X_Wielki
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 307
+      type: internet
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965 
+      page: str. 307
       urlName:
       url: 

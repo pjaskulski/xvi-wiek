@@ -22,14 +22,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan II Dobry (książę opolski)
       url: https://pl.wikipedia.org/wiki/Jan_II_Dobry_(ksi%C4%85%C5%BC%C4%99_opolski)
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 337
+      type: internet
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965 
+      page: str. 337
       urlName:
       url: 
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Ordunek Gorny
       url: https://pl.wikipedia.org/wiki/Ordunek_Gorny

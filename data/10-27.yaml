@@ -24,11 +24,15 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan Dantyszek
       url: https://pl.wikipedia.org/wiki/Jan_Dantyszek
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 291
+      type: reference
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      page: str. 291
       urlName:
       url: 
 ---
@@ -60,10 +64,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Iwan III Srogi
       url: https://pl.wikipedia.org/wiki/Iwan_III_Srogi
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 279
+      type: reference
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      page: str. 279
       urlName:
       url: 

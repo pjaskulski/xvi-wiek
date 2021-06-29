@@ -25,10 +25,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Mikołaj Kopernik
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Kopernik#Studia_w_Padwie
     - id: 2
-      value: Teresa Borawska, "Prawnicy w otoczeniu Mikołaja Kopernika", Komunikaty Mazursko-Warmińskie, Kwartalnik nr 2(280), 2013, str. 300
+      type: reference
+      value: Teresa Borawska, "Prawnicy w otoczeniu Mikołaja Kopernika", Komunikaty Mazursko-Warmińskie, Kwartalnik nr 2(280), 2013
+      page: str. 300
       urlName:
       url: 

@@ -22,10 +22,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Krzysztof Baczkowski, "Polska i jej sądziedzi za Jagiellonów", 2012, str. 391
+      type: reference
+      value: Krzysztof Baczkowski, "Polska i jej sądziedzi za Jagiellonów", 2012
+      page: str. 391
       urlName:
       url:
     - id: 2
+      type: note
       value: Wikipedia podaje późniejszą o 1 dzień datę traktatu
+      page:
       urlName: Wojna polsko-turecka (1485-1503)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-turecka_(1485%E2%80%931503)

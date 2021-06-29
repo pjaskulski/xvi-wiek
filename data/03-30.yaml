@@ -25,14 +25,20 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Nihil novi
       url: https://pl.wikipedia.org/wiki/Nihil_novi
     - id: 2
+      type: internet
       value: dziejesejmu.pl
+      page: 
       urlName: Słynny sejm w Radomiu. 1505 r.
       url: https://www.dziejesejmu.pl/slynny-sejm-w-radomiu-1505-r,p325620432
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Władysław II Jagiellończyk
       url: https://pl.wikipedia.org/wiki/W%C5%82adys%C5%82aw_II_Jagiello%C5%84czyk

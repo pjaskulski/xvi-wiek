@@ -34,6 +34,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Wacław Uruszczak, "Sejm koronacyjny w 1507 roku w Krakowie", Studia z dziejów Państwa i Prawa Polskiego, 7, 2002, str. 116
+      type: reference
+      value: Wacław Uruszczak, "Sejm koronacyjny w 1507 roku w Krakowie", Studia z dziejów Państwa i Prawa Polskiego, 7, 2002
+      page: str. 116
       urlName:
       url: 

@@ -30,18 +30,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Sojusz_moskiewsko-krzyżacki 
       url: https://pl.wikipedia.org/wiki/Wojna_litewsko-moskiewska_(1512%E2%80%931522)#Sojusz_moskiewsko-krzy%C5%BCacki
     - id: 2
+      type: reference
       value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
+      page: 
       urlName: 
       url: 
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Wojna polsko-krzyżacka (1519-1521)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521) 
     - id: 4
-      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 41
+      type: reference
+      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015
+      page: str. 41
       urlName: 
       url: 

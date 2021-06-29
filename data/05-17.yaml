@@ -20,6 +20,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Albrecht Hohenzollern (1490-1568)
       url: "https://pl.wikipedia.org/wiki/Albrecht_Hohenzollern_(1490%E2%80%931568)"

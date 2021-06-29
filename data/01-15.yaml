@@ -24,15 +24,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Rozejm w Jamie Zapolskim
       url: https://pl.wikipedia.org/wiki/Rozejm_w_Jamie_Zapolskim
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Wojna polsko-rosyjska (1577-1582)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-rosyjska_(1577%E2%80%931582)
     - id: 3
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 231-232
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 231-232
       urlName:
       url:
-

@@ -24,10 +24,14 @@ image:
 imageInfo:
 sources:    
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Florian Ungler
       url: https://pl.wikipedia.org/wiki/Florian_Ungler
     - id: 2
+      type: reference
       value: Ludwik Biernacki, "Pierwsza książka polska. Studyum bibliograficzne", 1918
+      page: 
       urlName: Śląska Biblioteka Cyfrowa
       url: https://www.sbc.org.pl/dlibra/publication/15766/edition/17155

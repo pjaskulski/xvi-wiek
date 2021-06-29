@@ -24,6 +24,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: reference
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      page:
       urlName:
       url:

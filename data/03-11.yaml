@@ -27,18 +27,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Władysław II Jagiellończyk
       url: https://pl.wikipedia.org/wiki/W%C5%82adys%C5%82aw_II_Jagiello%C5%84czyk
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Vladislavsche Landesordnung
       url: https://de.wikipedia.org/wiki/Vladislavsche_Landesordnung
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Vladislav Jagellonský
       url: https://cs.wikipedia.org/wiki/Vladislav_Jagellonsk%C3%BD
     - id: 4
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Vladislavské zřízení zemské
       url: https://cs.wikipedia.org/wiki/Vladislavsk%C3%A9_z%C5%99%C3%ADzen%C3%AD_zemsk%C3%A9

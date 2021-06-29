@@ -20,10 +20,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Marcin Bełza
       url: https://pl.wikipedia.org/wiki/Marcin_Be%C5%82za
     - id: 2
+      type: internet
       value: CORE, oai:ruj.uj.edu.pl:item/71098
+      page: 
       urlName: BEŁZA MARCIN z Krakowa
       url: https://core.ac.uk/display/190384088

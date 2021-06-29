@@ -30,10 +30,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Henryk Gołogórski, "Prawo pocztowe dawnej Polski", Przegląd Pocztowy, 1938 r. z. 7, str. 109    
+      type: reference
+      value: Henryk Gołogórski, "Prawo pocztowe dawnej Polski", Przegląd Pocztowy, 1938 r. z. 7
+      page: str. 109
       urlName: 
       url:
     - id: 2
-      value: Marcin Konarski, "Powinności podwodowe w świetle przekazu pierwszych sześciu tomów 'Volumina Legum'", Biuletyn Stowarzyszenia Absolwentów i Przyjaciół Wydziału Prawa Katolickiego Uniwersytetu Lubelskiego t. XIV, 16 (2) 2019, str. 73
+      type: reference
+      value: Marcin Konarski, "Powinności podwodowe w świetle przekazu pierwszych sześciu tomów 'Volumina Legum'", Biuletyn Stowarzyszenia Absolwentów i Przyjaciół Wydziału Prawa Katolickiego Uniwersytetu Lubelskiego t. XIV, 16 (2) 2019
+      page: str. 73
       urlName:
       url:  

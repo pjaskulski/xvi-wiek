@@ -23,10 +23,14 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan Benedykt Solfa
       url: https://pl.wikipedia.org/wiki/Jan_Benedykt_Solfa
     - id: 2
+      type: reference
       value: Waldemar Kożuszek, "Jan Benedykt Solfa, lekarz polskiego odrodzenia", Wrocław, 1966
+      page: 
       urlName:
       url:

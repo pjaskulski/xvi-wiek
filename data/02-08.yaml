@@ -26,14 +26,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Barbara Zapolya
       url: https://pl.wikipedia.org/wiki/Barbara_Z%C3%A1polya
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 30 
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 30 
       urlName:
       url:
     - id: 3
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012, str. 523
+      type: internet
+      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      page: str. 523
       urlName:
       url:

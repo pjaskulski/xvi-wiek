@@ -21,10 +21,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Parafia Ewangelicko-Augsburska w Toruniu
       url: https://pl.wikipedia.org/wiki/Parafia_Ewangelicko-Augsburska_w_Toruniu
     - id: 2
-      value: Janusz Małłek, "Reformacja w Polsce i w Prusach w XVI wieku. (Podobieństwa i różnice)", Czasy Nowożytne, tom 2/1997, str. 11
+      type: reference
+      value: Janusz Małłek, "Reformacja w Polsce i w Prusach w XVI wieku. (Podobieństwa i różnice)", Czasy Nowożytne, tom 2/1997
+      page: str. 11
       urlName:
       url:

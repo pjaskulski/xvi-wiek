@@ -25,10 +25,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan I Olbracht
       url: https://pl.wikipedia.org/wiki/Jan_I_Olbracht
     - id: 2
-      value: R. Grodecki, S. Zachorowski, J. Dąbrowski, "Dzieje Polski średniowiecznej", Kraków 2011, str. 826
+      type: reference
+      value: R. Grodecki, S. Zachorowski, J. Dąbrowski, "Dzieje Polski średniowiecznej", Kraków 2011
+      page: str. 826
       urlName:
       url:

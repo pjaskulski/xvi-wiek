@@ -25,6 +25,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Andrzej Tęczyński (zm. 1536)
       url: https://pl.wikipedia.org/wiki/Andrzej_T%C4%99czy%C5%84ski_(zm._1536)

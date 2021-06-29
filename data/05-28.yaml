@@ -27,10 +27,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Zofia Jagiellonka (1522–1575)
       url: https://pl.wikipedia.org/wiki/Zofia_Jagiellonka_(1522%E2%80%931575)
     - id: 2
-      value: Urszula Borkowska, "Dynastia Jagiellonów w Polsce", Warszawa, 2011 
+      type: reference
+      value: Urszula Borkowska, "Dynastia Jagiellonów w Polsce", Warszawa, 2011
+      page: 
       urlName:
       url: 

@@ -20,7 +20,9 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Barbara Jagiellonka
       url: https://pl.wikipedia.org/wiki/Barbara_Jagiellonka
 ---
@@ -47,18 +49,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Wojna litewsko-moskiewska (1558-1570)
       url: https://pl.wikipedia.org/wiki/Wojna_litewsko-moskiewska_(1558%E2%80%931570)      
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 131
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 131
       urlName:
       url:
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Stanisław Dowojno (wojewoda)
       url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Dowojno_(wojewoda)
     - id: 4
-      value: Paweł Jasienica, Polska Jagiellonów, str. 399.
+      type: reference
+      value: Paweł Jasienica, Polska Jagiellonów
+      page: str. 399
       urlName: 
       url: 

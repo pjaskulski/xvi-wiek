@@ -23,25 +23,35 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Sejm walny 1493
       url: https://pl.wikipedia.org/wiki/Sejm_walny_1493
     - id: 2
+      type: reference
       value: Władysław Konopczyński, "Chronologia sejmów polskich 1493-1793", 1948
+      page:
       urlName: Wielkopolska Biblioteka Cyfrowa
       url: https://www.wbc.poznan.pl/dlibra/publication/1306/edition/2048/content
     - id: 3
+      type: internet
       value: dziejesejmu.pl
+      page:
       urlName: sejm walny piotrkow 1493
       url: https://www.dziejesejmu.pl/sejm-walny-piotrkow-1493-r,p1292595129  
     - id: 4
+      type: reference
       value: >- 
           Wacław Uruszczak, "Najstarszy sejm walny koronny "dwuizbowy" w Piotrkowie w 1468 roku", w:
           "Narodziny Rzeczypospolitej : studia z dziejów średniowiecza i czasów wczesnonowożytnych", Kraków, 2012 
+      page:
       urlName: Najstarszy Sejm Walny Koronny
       url: http://www.khpp.wpia.uj.edu.pl/documents/106750129/0/Najstarszy+Sejm+Walny+Koronny.pdf/b0e82a32-63eb-4b00-b6a1-2d4d6e52ce6c 
     - id: 5
+      type: internet
       value: 550-lecie Parlamentaryzmu Rzeczypospolitej
+      page:
       urlName: Biblioteka sejmowa
       url: https://biblioteka.sejm.gov.pl/wp-content/uploads/2019/04/folder-PL.pdf
 ---
@@ -76,14 +86,20 @@ image: 800px-Polish_soldiers_1507-1548.png
 imageInfo: Żołnierze polscy 1507-1548 (domena publiczna, https://www.bibliotekacyfrowa.pl/dlibra/show-content/publication/edition/6415?id=6415&dirids=1)
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Wojna polsko-krzyżacka (1519-1521)
       url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
     - id: 2
-      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015, str. 64-67
+      type: reference
+      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015
+      page: str. 64-67 
       urlName: 
       url: 
     - id: 3
+      type: reference
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      page: 
       urlName:
       url: 

@@ -23,6 +23,8 @@ image:
 imageInfo:
 sources:    
     - id: 1
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012, str. 545
+      type: reference
+      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      page: str. 545
       urlName:
       url:

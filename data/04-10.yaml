@@ -29,18 +29,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Hołd pruski
       url: "https://pl.wikipedia.org/wiki/Ho%C5%82d_pruski_1525" 
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Hołdy pruskie 1469-1641
       url: "https://pl.wikipedia.org/wiki/Ho%C5%82dy_pruskie_1469%E2%80%931641"
     - id: 3
-      value: Paweł Jasienica, Polska Jagiellonów, str. 318-322.
+      type: reference
+      value: Paweł Jasienica, Polska Jagiellonów
+      page: str. 318-322.
       urlName: 
       url: 
     - id: 4
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 62 
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 62 
       urlName:
       url:

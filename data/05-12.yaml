@@ -29,14 +29,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Jan Ocieski
       url: https://pl.wikipedia.org/wiki/Jan_Ocieski
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 92
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 92
       urlName:
       url:
     - id: 3
+      type: internet
       value: Encyklopedia PWN
+      page:
       urlName: Ocieski Jan
       url: https://encyklopedia.pwn.pl/haslo/Ocieski-Jan;3949695.html

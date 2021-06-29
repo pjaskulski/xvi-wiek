@@ -21,6 +21,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Izabela Jagiellonka
       url: https://pl.wikipedia.org/wiki/Izabela_Jagiellonka

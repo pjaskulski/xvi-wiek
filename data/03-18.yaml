@@ -25,6 +25,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Iwan IV Groźny
       url: https://pl.wikipedia.org/wiki/Iwan_IV_Gro%C5%BAny    

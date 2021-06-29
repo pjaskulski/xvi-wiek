@@ -33,19 +33,26 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 108
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 108
       urlName: 
       url: 
     - id: 2
+      type: internet
       value: www.uj.edu.pl
+      page: 
       urlName: Uniwersytet Jagielloński z innej perspektywy - studenci opuszczają miasto
       url: https://www.uj.edu.pl/wiadomosci/-/journal_content/56_INSTANCE_d82lKZvhit4m/10172/113409905
     - id: 3
+      type: internet
       value: Archiwum Uniwersytetu Jagiellońskiego
+      page: 
       urlName: Secesja studentów z Krakowa
       url: http://www.archiwum.uj.edu.pl/kartki-z-dziejow-uniwersytetu-jagiellonskiego/-/journal_content/56_INSTANCE_25Bq/1445705/136743813
     - id: 4
-      value: Jan Kocznur, "Proces księdza Andrzeja Czarnkowskiego", Palestra 4/9(33), 1960, str. 70-74
+      type: reference
+      value: Jan Kocznur, "Proces księdza Andrzeja Czarnkowskiego", Palestra 4/9(33), 1960
+      page: str. 70-74
       urlName:
       url: 
-

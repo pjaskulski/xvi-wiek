@@ -21,14 +21,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Radomyśl Wielki
       url: https://pl.wikipedia.org/wiki/Radomy%C5%9Bl_Wielki
     - id: 2
+      type: internet
       value: naszemiasto.radomyslwielki.org.pl
+      page: 
       urlName: Historia miasta
       url: http://naszemiasto.radomyslwielki.org.pl/w-prasie-o-nas/
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Mikołaj Firlej (zm. 1601)
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Firlej_(zm._1601)

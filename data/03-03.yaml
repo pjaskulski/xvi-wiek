@@ -27,16 +27,20 @@ image:
 imageInfo: 
 sources:         
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Wolter von Plettenberg
       url: https://pl.wikipedia.org/wiki/Wolter_von_Plettenberg
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Aleksander Jagiellończyk
       url: https://pl.wikipedia.org/wiki/Aleksander_Jagiello%C5%84czyk
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Wojna litewsko-moskiewska (1500-1503)
       url: https://pl.wikipedia.org/wiki/Wojna_litewsko-moskiewska_(1500%E2%80%931503)
-
-

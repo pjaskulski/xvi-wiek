@@ -33,6 +33,8 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Janusz Małłek, "Prusy Książęce a Prusy Królewskie w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie nr 53, PWN, Warszawa, 1976, str. 62
+      type: reference
+      value: Janusz Małłek, "Prusy Książęce a Prusy Królewskie w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie nr 53, PWN, Warszawa, 1976
+      page: str. 62
       urlName:
       url: 

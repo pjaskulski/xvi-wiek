@@ -22,14 +22,20 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Erazm Kretkowski (1508–1558)
       url: https://pl.wikipedia.org/wiki/Erazm_Kretkowski_(1508%E2%80%931558)
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Epitaphium Cretcovii
       url: https://pl.wikipedia.org/wiki/Epitaphium_Cretcovii
     - id: 3
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Przedstawiciele dyplomatyczni Polski w Turcji
       url: https://pl.wikipedia.org/wiki/Przedstawiciele_dyplomatyczni_Polski_w_Turcji#XVI_wiek

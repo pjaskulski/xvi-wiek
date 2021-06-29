@@ -27,19 +27,27 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: reference
       value: Marian Biskup, "Wojny Polski z zakonem krzyżackim 1308-1521", 2017
+      page:
       urlName: 
       url:
     - id: 2
+      type: internet
       value: Wikipedia
+      page:
       urlName: Jakub Secygniowski
       url: https://pl.wikipedia.org/wiki/Jakub_Secygniowski
     - id: 3
+      type: internet
       value: Wikipedia
+      page:
       urlName: Konfederacja warszawska (1573)
       url: https://pl.wikipedia.org/wiki/Konfederacja_warszawska_(1573)
     - id: 4
-      value: Andrzej Gładysz, "Rejestr dworzan konnych Zygmunta I Starego wysłanych do walki z Krzyżakami pustoszącymi Mazowsze na przełomie lipca i sierpnia 1520 roku", Przegląd Historyczno-Wojskowy, 2020, nr 4(274), str. 177 
+      type: reference
+      value: Andrzej Gładysz, "Rejestr dworzan konnych Zygmunta I Starego wysłanych do walki z Krzyżakami pustoszącymi Mazowsze na przełomie lipca i sierpnia 1520 roku", Przegląd Historyczno-Wojskowy, 2020, nr 4(274)
+      page: str. 177 
       urlName: Przegląd Historyczno-Wojskowy
       url: https://wbh.wp.mil.pl/c/pages/atts/2020/12/Andrzej_Gadysz_Rejestr_dworzan_konnych_Zygmunta_I_Starego_wysanych_do_walki_z_Krzyzakami_pustoszacymi_Mazowsze_na_przeomie_lipca_i_sierpnia_1520_roku.pdf
 ---
@@ -69,10 +77,14 @@ image:
 imageInfo: 
 sources:     
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Księstwo Kurlandii i Semigalii
       url: https://pl.wikipedia.org/wiki/Ksi%C4%99stwo_Kurlandii_i_Semigalii
     - id: 2
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 127
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 127
       urlName:
       url: 

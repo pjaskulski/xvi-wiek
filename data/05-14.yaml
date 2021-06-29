@@ -27,7 +27,9 @@ image:
 imageInfo: 
 sources: 
     - id: 1
-      value: Janusz Grabowski, "Anna Odrowążowa, ostatnia księżna mazowiecka", ARCHEION, T. CXIII, Warszawa 2012, str. 266
+      type: reference
+      value: Janusz Grabowski, "Anna Odrowążowa, ostatnia księżna mazowiecka", ARCHEION, T. CXIII, Warszawa 2012
+      page: str. 266
       urlName:
       url: 
     

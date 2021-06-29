@@ -21,10 +21,14 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Konrad III Rudy
       url: https://pl.wikipedia.org/wiki/Konrad_III_Rudy
     - id: 2
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 str. 280
+      type: reference
+      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      page: str. 280
       urlName:
       url: 

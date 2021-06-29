@@ -33,14 +33,20 @@ image:
 imageInfo:
 sources:
     - id: 1
+      type: internet
       value: Wikipedia
+      page:
       urlName: Stanisław Chodecki (zm. 1529)
       url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Chodecki_(zm._1529)
     - id: 2
-      value: Zdzisław Spieralski, "Z dziejów wojen polsko-mołdawskich", Studia i materiały do historii wojskowości, t. XI, cz. II, 1965, str. 84 
+      type: reference
+      value: Zdzisław Spieralski, "Z dziejów wojen polsko-mołdawskich", Studia i materiały do historii wojskowości, t. XI, cz. II, 1965
+      page: str. 84 
       urlName: 
       url:
     - id: 3
-      value: Mirosław Nagielski, "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", 2005,  str. 391
+      type: internet
+      value: Mirosław Nagielski, "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", 2005
+      page: str. 391
       urlName:
       url: 

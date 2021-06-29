@@ -24,14 +24,21 @@ image:
 imageInfo: 
 sources: 
     - id: 1
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Zygmunt I Stary
       url: https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
     - id: 2
+      type: internet
       value: Wikipedia
+      page: 
       urlName: Wojna litewsko-moskiewska (1507-1508)
       url: https://pl.wikipedia.org/wiki/Wojna_litewsko-moskiewska_(1507%E2%80%931508)
     - id: 3
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000, str. 24
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 24
+      page: 
       urlName:
       url:

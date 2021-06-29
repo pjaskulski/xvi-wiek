@@ -25,11 +25,15 @@ image:
 imageInfo: 
 sources:     
     - id: 1
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012, str. 379
+      type: reference
+      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      page: str. 379
       urlName:
       url: 
     - id: 2
+      type: internet
       value: Archiwum Główne Akt Dawnych
+      page:
       urlName: Traktatowe dokumenty tureckie (`ahdname) ze zbiorów AGAD
       url: http://www.agad.gov.pl/AKW_Turcja/AKW_TURECKIE.html
     
