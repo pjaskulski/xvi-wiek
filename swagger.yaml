@@ -25,6 +25,15 @@ paths:
           $ref: '#/responses/factsResponse'
       tags:
       - dzien
+  /healthcheck:
+    get:
+      description: zwraca status serwisu
+      operationId: HealthcheckEvent
+      responses:
+        "200":
+          $ref: '#/responses/healthcheckResponse'
+      tags:
+      - healthcheck
   /short:
     get:
       description: zwraca skrócony opis wydarzenia historyczngo dla bieżąceo dnia
@@ -47,7 +56,7 @@ produces:
 - application/json
 responses:
   factsResponse:
-    description: FactJSON type
+    description: HistoricalEvent type
     headers:
       content:
         type: string
@@ -68,7 +77,7 @@ responses:
       title:
         type: string
   factsShortResponse:
-    description: FactShortJSON type
+    description: type ShortHistoricalEvent
     headers:
       content:
         type: string
