@@ -105,6 +105,9 @@ func toStructJSON(data interface{}) []HistoricalEvent {
 
 		for _, itemSource := range item.Sources {
 			sourceJSON.Name = itemSource.Value
+			if itemSource.Type == "reference" && itemSource.Page != "" {
+				sourceJSON.Name += ", " + itemSource.Page
+			}
 			sourceJSON.URL = itemSource.URL
 			factJSON.Sources = append(factJSON.Sources, sourceJSON)
 			factJSON.Content = strings.Replace(factJSON.Content, "["+itemSource.ID+"]", "", -1)
@@ -165,6 +168,9 @@ func toStructOneJSON(data interface{}) HistoricalEvent {
 
 	for _, itemSource := range factStruct.Sources {
 		sourceJSON.Name = itemSource.Value
+		if itemSource.Type == "reference" && itemSource.Page != "" {
+			sourceJSON.Name += ", " + itemSource.Page
+		}
 		sourceJSON.URL = itemSource.URL
 		factJSON.Sources = append(factJSON.Sources, sourceJSON)
 		factJSON.Content = strings.Replace(factJSON.Content, "["+itemSource.ID+"]", "", -1)
