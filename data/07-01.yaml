@@ -1,0 +1,43 @@
+---
+id: 1
+day: 1
+month: 7
+year: 1569
+title: Zaprzysiężono aktu Unii Lubelskiej
+content: >- 
+    {{{1 lipca 1569}}} roku w Lublinie uroczyście zaprzysiężono uchwalony trzy 
+    dni wcześniej aktu Unii Lubelskiej, który ustanawiał unię realną Polski 
+    i Litwy.[1][2] 4 lipca król ratyfikował unię wydając dyplom potwierdzający związek
+    państw i postanowienia unii. W ten sposób zakończyły się blisko półroczne 
+    obrady sejmowe rozpoczęte 10 stycznia tegoż roku, podczas których
+    prowadzono trudne negocjacje a determinacja wykazana przez Zygmunta II Augusta 
+    pozwoliła zwyciężyć niechęć sporej części szlachty litewskiej do powołania unii. 
+    Po opuszczeniu przez przedstawicieli Litwy obrad na początku marca, król dokonał 
+    bowiem znacznych zmian administracyjnych włączając do Korony część ziem dotychczas 
+    należących do Litwy. Dotyczyło to Podlasia, Wołynia, województw kijowskiego 
+    i bracławskiego. Postawa Zygmunta przekonała przedstawicieli Litwy do powrotu
+    do obrad, które wznowiono na początku czerwca i zakończono sukcesem 28 czerwca 1569 roku.   
+contentTwitter: >-
+    1 lipca 1569 roku w Lublinie uroczyście zaprzysiężono uchwalony trzy 
+    dni wcześniej aktu Unii Lubelskiej, który ustanawiał unię realną Polski 
+    i Litwy.
+location: Lublin
+geo: 51.2396,22.5906
+people: Zygmunt II August
+keywords: unia
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Unia Lubelska
+      url: https://pl.wikipedia.org/wiki/Unia_lubelska
+    - id: 2
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 141-149
+      urlName:
+      url:
+
