@@ -159,7 +159,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/3/24",
+					"raw": "http://localhost:8080/api/day/3/24",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -181,7 +181,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/3/24",
+					"raw": "http://localhost:8080/api/day/3/24",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -209,7 +209,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/3/32",
+					"raw": "http://localhost:8080/api/day/3/32",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -237,7 +237,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/3",
+					"raw": "http://localhost:8080/api/day/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -258,7 +258,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/14/24",
+					"raw": "http://localhost:8080/api/day/14/24",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -280,7 +280,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/0/24",
+					"raw": "http://localhost:8080/api/day/0/24",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -302,7 +302,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/dzien/0/24",
+					"raw": "http://localhost:8080/api/day/0/24",
 					"protocol": "http",
 					"host": [
 						"localhost"

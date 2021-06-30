@@ -16,7 +16,7 @@ info:
   title: Udostępnianie danych wydarzeń historycznych z serwisu XVI-wiek.pl
   version: 1.0.0
 paths:
-  /dzien/{month}/{day}:
+  /day/{month}/{day}:
     get:
       description: zwraca wydarzenia historyczne dla wskazanego dnia
       operationId: listaWydarzen

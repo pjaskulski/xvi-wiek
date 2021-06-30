@@ -134,7 +134,7 @@ func (app *application) routes() http.Handler {
 
 	// api
 	r.Route("/api", func(r chi.Router) {
-		r.Get("/dzien/{month}/{day}", app.apiFactsByDay)
+		r.Get("/day/{month}/{day}", app.apiFactsByDay)
 		r.Get("/today", app.apiFactsToday)
 		r.Get("/short", app.apiFactsShort)        // zwraca skrócony opis dla Twittera
 		r.Get("/healthcheck", app.apiHealthcheck) // testowy endpoint - status api

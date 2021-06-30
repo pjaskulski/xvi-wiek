@@ -302,7 +302,7 @@ func (app *application) getFactsByDay(month, day int) (interface{}, bool) {
 	return nil, false
 }
 
-// swagger:route GET /dzien/{month}/{day} dzien listaWydarzen
+// swagger:route GET /day/{month}/{day} dzien listaWydarzen
 // zwraca wydarzenia historyczne dla wskazanego dnia
 // responses:
 //   200: factsResponse

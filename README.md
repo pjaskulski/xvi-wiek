@@ -44,9 +44,9 @@ coverage: **68.1%** of statements
 
 ## API
 
-    GET /api/dzien/{month}/{day}
+    GET /api/day/{month}/{day}
   
-    Zwraca wydarzenia z określonego dnia np. /api/dzien/4/10 zwróci
+    Zwraca wydarzenia z określonego dnia np. /api/day/4/10 zwróci
     wydarzenia z 10 kwietnia.
 
     GET /api/today
