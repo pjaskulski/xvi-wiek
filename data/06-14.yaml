@@ -5,31 +5,42 @@ month: 6
 year: 1571
 title: Zwodowano kadłub królewskiego galeonu "Smok"
 content: >- 
-     {{{14 czerwca 1571}}} roku w Elblągu zwodowano kadłub okrętu wojennego, galeonu[4]
+     {{{14 czerwca 1571}}} roku w Elblągu zwodowano kadłub okrętu wojennego, galeonu
      dla którego przyjmuje się dziś nazwę "Smok" - od figury smoka na dziobie okrętu - 
      prawdziwej nazwy okrętu nie znamy.[1] Budowę rozpoczęto rok wcześniej, pod 
      kierownictwem sprowadzonych z Wenecji mistrzów: Dominika Zaviazelo i Jakuba 
-     di Salvatore, którzy zarządzali pracą niemieckich, holenderskich oraz 
+     di Salvatore,[9] którzy zarządzali pracą niemieckich, holenderskich oraz 
      kaszubskich cieśli i robotników nad brzegiem rzeki Elblążki. Okręt w zamyśle 
      Zygmunta Augusta miał być początkiem prawdziwej floty królewskiej, dotychczasowe 
      polskie działania na morzu Bałtyckim opierały się bowiem na okrętach kaperskich. 
      Prace finansowane były przez Komisję Morską a koszty wyniosły ponad 7000 złotych 
      oraz wydane osobno przez skarb pruski prawie 650 grzywien na wynagrodzenie 
      mistrzów weneckich. Budowa nie przebiegała bezproblemowo, na początku listopada 
-     1570 r. obaj włoscy mistrzowie prawdopodobnie próbowali zbiec, ścigani przez 
-     podskarbiego Bąkowskiego (nadzorcę budowy) czółnem.[9] Problemy napotykano 
+     1570 r. obaj włoscy mistrzowie prawdopodobnie próbowali zbiec,[8] ścigani przez 
+     nadzorującego budowę podskarbiego Bąkowskiego czółnem. Problemy napotykano 
      także przy zakupie niektórych materiałów w Gdańsku. Oprócz dużego dwumasztowego[6] 
      galeonu budowano także dwa statki pomocnicze: "fregatę" (fragada) - jednomasztową 
      jednostkę z 8 wiosłami oraz mniejszą łódź - "bat" również z jednym masztem. 
      Mniejsze jednostki zbudowano, "fregatę" z 7 osobową załogą wysłano nawet na 
-     Hel a potem do Pucka,[8] natomiast prace nad wyposażeniem galeonu trwały do 
+     Hel a potem do Pucka,[7] natomiast prace nad wyposażeniem galeonu trwały do 
      1572 roku.[3] Zakupiono przewidywane uzbrojenie w postaci 30 dział, lecz prac 
      nad okrętem nigdy nie ukończono, przede wszystkim z powodu śmierci Zygmunta 
-     II Augusta w 1572 roku.[2][7] Galeon pozostawał w okresie bezkrólewia 
-     pod opieką Jana Kostki, który finansował jego konserwację. Wiadomo, że istniał 
-     jeszcze w 1577 roku, kiedy to w czasie pożaru Elbląga wywołanego przez flotę 
-     duńską ścięto maszty okrętu by zapobiec rozprzestrzenianiu się ognia na pobliski 
-     most. O jego dalszych losach nie mamy dziś żadnych pewnych informacji.[5] 
+     II Augusta w 1572 roku.[2] Król zdążył jednak zobaczyć swój okręt, 5 października 
+     1571 roku był w Elblągu i jak pisze Adam Kleczkowski, okręt na jego przybycie 
+     wyczyszczono. Galeon pozostawał w okresie bezkrólewia pod opieką Jana Kostki, 
+     dawnego przewodniczącego Komisji Morskiej, który finansował jego konserwację. 
+     Wiadomo, że istniał jeszcze w 1577 roku, kiedy to w czasie pożaru Elbląga 
+     wywołanego przez flotę duńską ścięto maszty okrętu by zapobiec rozprzestrzenianiu 
+     się ognia na pobliski most. O jego dalszych losach nie mamy dziś żadnych 
+     pewnych informacji.[5] \\
+     Istnieje możliwość, że okręt ten nie był wcale galeonem, lecz galerą - taką 
+     hipotezę omówił niedawno Bohdan Andrzej Kuliński.[4] Zastanawiano się nad 
+     rodzajem okrętu i wcześniej, Adam Kleczkowski, który w 1915 r. opracował i 
+     wydał rejestr kosztów budowy podskarbiego Jana Bąkowskiego, rozważał możliwość 
+     okrętu wiosłowego, lecz skłaniał się zdecydowanie ku wersji żaglowej. M.in. 
+     dlatego, że z rejestru kosztów wynikało iż dla okrętu zamówiono tylko 12 wioseł, 
+     do tego tańszych niż dla dużo mniejszej fragady, więc raczej pomocniczych 
+     a dodatkowo część z nich być może przeznaczono dla "bata". 
 contentTwitter: >-
      14 czerwca 1571 roku w Elblągu zwodowano kadłub okrętu wojennego, galeonu
      dla którego przyjmuje się dziś nazwę "Smok", od figury smoka na dziobie okrętu.
@@ -43,7 +54,7 @@ imageInfo: >-
 sources: 
     - id: 1
       type: reference
-      value: Kazimierz Lepszy, "Zarys dziejów marynarki polskiej", Kraków 1947
+      value: Lepszy Kazimierz, "Zarys dziejów marynarki polskiej", Kraków 1947
       page: str. 19
       urlName: 
       url: 
@@ -55,23 +66,15 @@ sources:
       url: https://pl.wikipedia.org/wiki/Smok_(1571)
     - id: 3
       type: reference
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946
+      value: Bodniak Stanisław, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946
       page: str. 138-139
       urlName: 
       url:
     - id: 4
-      type: note
+      type: reference
       value: >-  
-        Istnieje teoria, że okręt ten nie był wcale galeonem, lecz galerą. Problem 
-        ten omówił Bohdan Andrzej Kuliński w książce "Okręt Jego Królewskiej Mości 
-        Zygmunta II Augusta. Historia galeonu, który nie był galeonem", Warszawska 
-        Firma Wydawnicza, 2012. Zastanawiano się nad rodzajem okrętu i wcześniej, 
-        Adam Kleczkowski, który w 1915 r. wydał rejestr kosztów budowy Jana Bąkowskiego, 
-        rozważał możliwość okrętu wiosłowego, lecz zdecydowanie skłaniał się
-        ku wersji żaglowej. M.in. dlatego, że z rejestru kosztów wynikało iż dla 
-        okrętu zamówiono tylko 12 wioseł, do tego tańszych niż dla dużo mniejszej 
-        fragady, więc raczej pomocniczych a dodatkowo część z nich być może przeznaczono 
-        dla "bata".    
+        Kuliński Bohdan Andrzej, "Okręt Jego Królewskiej Mości Zygmunta II Augusta. 
+        Historia galeonu, który nie był galeonem", Warszawska Firma Wydawnicza, 2012    
       page:
       urlName:
       url:
@@ -89,25 +92,23 @@ sources:
       value: Dwa maszty wynikają wprost z publikacji S. Bodniaka i z rejestru wydatków podskarbiego Jana Bąkowskiego, choć są tam zapisy sugerujące że masztów mogło być więcej, późniejsze rekonstrukcje (Mieczysław Boczar, 1973) sugerują 3 maszty.
       page:
       urlName:
-      url:  
+      url:      
     - id: 7
-      type: note
-      value: >-
-        Król zdążył jednak zobaczyć swój okręt, 5 października 1571 roku był w Elblągu i jak pisze
-        Adam Kleczkowski, okręt na jego przybycie wyczyszczono.
-      page:
-      urlName:
-      url:
-    - id: 8
       type: reference
-      value: Kleczkowski A., "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
+      value: Kleczkowski Adam, "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
       page: str. 66
       urlName:
       url:
-    - id: 9
+    - id: 8
       type: note
-      value: Kleczkowski A., "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
+      value: Kleczkowski Adam, "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
       page: str. 52, 100-101 
+      urlName:
+      url:
+    - id: 9
+      type: reference
+      value: Boczar Mieczysław L., "Nie znana korespondencja Zygmunta Augusta z dożą Wenecji Pietrem Loredanem w sprawie budowy galeony", Kwartalnik Historii Nauki i Techniki, 15/2, 1970 
+      page: str. 343-351 
       urlName:
       url: 
     
