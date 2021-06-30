@@ -91,9 +91,9 @@ func (app *application) routes() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(60 * time.Second))
 	r.Use(enableCORS)
-	r.Use(app.appMetrics)
-	// bez limitów podczas uruchamiania testów
+	// bez limitów i metryk podczas uruchamiania testów
 	if !isTesting {
+		r.Use(app.appMetrics)
 		r.Use(LimitMiddleware)
 	}
 
@@ -125,7 +125,7 @@ func (app *application) routes() http.Handler {
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
 
-	if isRunByRun() {
+	if isRunByRun() && !isTesting {
 		expvar.Publish("goroutines", expvar.Func(func() interface{} {
 			return runtime.NumGoroutine()
 		}))
@@ -174,6 +174,7 @@ func FileServer(r chi.Router, path string, root http.FileSystem) {
 
 // appMetric func - metryki dla aplikacji
 func (app *application) appMetrics(next http.Handler) http.Handler {
+
 	totalRequestIn := expvar.NewInt("total_request_in")
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
