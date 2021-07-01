@@ -1,0 +1,52 @@
+---
+id: 1
+day: 2
+month: 7
+year: 1524
+title: Piotr Kmita zwycięża oddziały tureckie pod Trembowlą
+content: >- 
+    {{{2 lipca 1524}}} roku pod Trembowlą Piotr Kmita, wówczas marszałek
+    nadworny koronny doścignął ze swoim oddziałem jazdy część wycofujących się 
+    z Polski sił tureckich i pokonał je podczas przeprawy przez Seret.[3][1] Napastnicy
+    zdołali jednak uprowadzić liczne łupy i jasyr. Wydarzenia z lata 1524 r. 
+    i o rok wcześniejszy najazd turecko-tatarski, który głęboko wtargnął 
+    w głąb Podola, Wołynia i Rusi Czerwonej spowodował poruszenie tematu reform 
+    skarbowych i wojskowych podczas sejmu piotrkowskiego zwołanego w grudniu 1524 roku.[4]
+    Uchwalono zwiększony podatek, licząc się z możliwością kolejnych najazdów tureckich
+    i tatarskich. Piotr Kmita miał w przyszłości zostać marszałkiem wielkim koronnym i wojewodą 
+    krakowskim,[2] jedynym z najbardziej wpływowych dostojników państwa Zygmunta Starego.        
+contentTwitter: >-
+    2 lipca 1524 roku pod Trembowlą Piotr Kmita, wówczas marszałek
+    nadworny koronny doścignął ze swoim oddziałem jazdy część wycofujących się 
+    z Polski sił tureckich i pokonał je podczas przeprawy przez Seret.
+location: Trembowla
+geo: 49.2958,25.6932
+people: Kmita Piotr
+keywords: Turcja; Tatarzy
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Piotr Kmita
+      url: https://pl.wikipedia.org/wiki/Piotr_Kmita_Sobie%C5%84ski
+    - id: 2
+      type: reference
+      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      page: str. 76-77
+      urlName:
+      url:
+    - id: 3
+      type: internet
+      value: muzeumwp.pl
+      page:
+      urlName: Kalendarium dziejów oręża polskiego
+      url: http://www.muzeumwp.pl/kalendarium/07-02/
+    - id: 4
+      type: internet
+      value: dziejesejmu.pl
+      page: 
+      urlName: Przed hołdem pruskim. Sejm w Piotrkowie. 1524-1525 r.
+      url: https://www.dziejesejmu.pl/przed-holdem-pruskim-sejm-w-piotrkowie-1524-1525-r,p1712683624
