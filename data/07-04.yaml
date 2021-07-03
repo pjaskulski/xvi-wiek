@@ -26,7 +26,7 @@ imageInfo:
 sources:         
     - id: 1
       type: internet
-      value: Maciuszko Janusz T., "Początki reformacji w Gdańsku i na Pomorzu" 
+      value: reformacja-pomorze.pl 
       page:
-      urlName: reformacja-pomorze.pl
+      urlName: Maciuszko Janusz T., "Początki reformacji w Gdańsku i na Pomorzu"
       url: http://www.reformacja-pomorze.pl/historia/opracowania-historyczne/
