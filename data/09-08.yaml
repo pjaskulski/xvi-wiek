@@ -42,7 +42,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 310
       urlName:
       url: 

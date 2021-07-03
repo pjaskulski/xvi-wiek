@@ -24,7 +24,7 @@ imageInfo:
 sources:     
     - id: 1
       type: reference
-      value: Hanna Zaremska, "Żydzi w średniowiecznej Polsce. Gmina Krakowska", Warszawa 2011
+      value: zaremska_2011
       page: str. 501
       urlName:
       url: 

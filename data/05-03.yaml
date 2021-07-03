@@ -28,7 +28,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Piotr_Myszkowski_(hetman_polny_koronny)
     - id: 2
       type: reference
-      value: Mirosław Nagielski (red), "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", Warszawa 2005
+      value: nagielski_2005
       page: str. 391
       urlName: 
       url:

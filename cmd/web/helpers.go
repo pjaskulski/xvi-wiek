@@ -127,6 +127,13 @@ func prepareFactHTML(content string, id string, sources []Source) string {
 		idQuote := fmt.Sprintf("%s-%s", id, item.ID)
 		preItem := fmt.Sprintf(pre, idQuote, idQuote)
 
+		if item.Type == "reference" {
+			newValue, found := ReferenceMap[item.Value]
+			if found {
+				item.Value = newValue
+			}
+		}
+
 		if item.Page != "" {
 			tmpValue = item.Value + ", " + item.Page
 		} else {

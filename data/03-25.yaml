@@ -8,7 +8,7 @@ content: >-
     {{{25 marca 1557}}} roku w Toruniu odprawiono pierwsze publiczne nabożeństwo
     ewangelickie.[1] W tym okresie (1557-1558) miasta pruskie (Toruń, Elbląg i Gdańsk) 
     uzyskały[2] przywilej królewski pozwalający na przyjmowanie komunii pod dwoma 
-    postaciami. Przwywilej, mimo iż tymczasowy - na okres jednego roku lub do następnego
+    postaciami. Przywilej, mimo iż tymczasowy - na okres jednego roku lub do następnego
     sejmu - był znacznym osiągnięciem protestantów. W 1580 r. na terytorium Prus Królewskich
     istniały 162 parafie ewangelickie, czyli liczba zbliżona do parafii katolickich.    
 contentTwitter: >-
@@ -28,7 +28,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Parafia_Ewangelicko-Augsburska_w_Toruniu
     - id: 2
       type: reference
-      value: Janusz Małłek, "Reformacja w Polsce i w Prusach w XVI wieku. (Podobieństwa i różnice)", Czasy Nowożytne, tom 2/1997
+      value: mallek_1997
       page: str. 11
       urlName:
       url:

@@ -39,7 +39,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Komisja_Morska
     - id: 2
       type: reference
-      value: Stanisław Bodniak, "Polska a Bałtyk za ostatniego Jagiellona", 1946
+      value: bodniak_1946
       page: str. 103-105
       urlName:
       url:
@@ -61,7 +61,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Gda%C5%84sk_wobec_polityki_ba%C5%82tyckiej_ostatnich_Jagiellon%C3%B3w
     - id: 5
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 66
       urlName:
       url:

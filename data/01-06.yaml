@@ -38,7 +38,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Sejm_konwokacyjny
     - id: 3
       type: internet
-      value: HistMag
+      value: HistMag - portal historyczny
       page: 
       urlName: Skąd się wzięła konwokacja
       url: https://histmag.org/Skad-sie-wziela-konwokacja-7480

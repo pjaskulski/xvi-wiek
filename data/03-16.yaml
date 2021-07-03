@@ -40,13 +40,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Prusy_Kr%C3%B3lewskie
     - id: 2
       type: reference
-      value: Zbigniew Naworski, "Prusy Królewskie 1569/1573-1598. Rewolucja czy ewolucja?", Prace Naukowe Wydziału Prawa, Administracji i Ekonomii Uniwersytetu Wrocławskiego. E-Monografie, nr 149, 2019
+      value: naworski_2019
       page: str. 45
       urlName:
       url: 
     - id: 3
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 55, 148
       urlName:
       url:

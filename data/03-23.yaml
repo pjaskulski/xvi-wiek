@@ -38,7 +38,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Anna_de_Foix-Candale
     - id: 2
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 268
       urlName:
       url:

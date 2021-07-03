@@ -34,7 +34,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Jan_Zamoyski    
     - id: 2
       type: internet
-      value: Encyklopedia PWN
+      value: Encyklopedia PWN (encyklopedia.pwn.pl)
       page: 
       urlName: Zamoyski Jan
       url: https://encyklopedia.pwn.pl/haslo/Zamoyski-Jan;4000199.html

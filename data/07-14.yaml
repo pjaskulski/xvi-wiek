@@ -23,7 +23,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 268
       urlName:
       url:
@@ -70,7 +70,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 268
       urlName:
       url:
@@ -94,7 +94,7 @@ sources:
       url: https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%B4%D1%80%D0%BE%D1%88%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B8%D1%82%D0%B2%D0%B0
     - id: 5
       type: internet
-      value: Muzeum Wojska Polskiego
+      value: Muzeum Wojska Polskiego (www.muzeumwp.pl)
       page: 
       urlName: Bitwa nad rzeką Wiedroszą
       url: http://www.muzeumwp.pl/kalendarium/07-14/ 

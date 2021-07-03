@@ -17,8 +17,8 @@ contentTwitter: >-
     28 czerwca 1494 roku Jan Olbracht ratyfikował traktat rozejmowy z sułtanem
     tureckim Bajazydem II. Rozejm, który wynegocjował 6 kwietnia poseł królewski w Stambule 
     Mikołaj Strzeżowski miał obowiązywać trzy lata.
-location: 
-geo: 
+location: Kraków 
+geo: 50.0546,19.9352
 people: Jan Olbracht; Bajazyd II
 keywords: Turcja
 image: 
@@ -26,13 +26,13 @@ imageInfo:
 sources:     
     - id: 1
       type: reference
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      value: baczkowski_2012
       page: str. 379
       urlName:
       url: 
     - id: 2
       type: internet
-      value: Archiwum Główne Akt Dawnych
+      value: Archiwum Główne Akt Dawnych (www.agad.gov.pl)
       page:
       urlName: Traktatowe dokumenty tureckie (`ahdname) ze zbiorów AGAD
       url: http://www.agad.gov.pl/AKW_Turcja/AKW_TURECKIE.html

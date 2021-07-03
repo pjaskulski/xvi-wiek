@@ -6,7 +6,7 @@ year: 1571
 title: Zwodowano kadłub królewskiego galeonu "Smok"
 content: >- 
      {{{14 czerwca 1571}}} roku w Elblągu zwodowano kadłub okrętu wojennego, galeonu
-     dla którego przyjmuje się dziś nazwę "Smok" - od figury smoka na dziobie okrętu - 
+     dla którego przyjmuje się dziś nazwę "Smok" - od głowy smoka na dziobie okrętu - 
      prawdziwej nazwy okrętu nie znamy.[1] Budowę rozpoczęto rok wcześniej, pod 
      kierownictwem sprowadzonych z Wenecji mistrzów: Dominika Zaviazelo i Jakuba 
      di Salvatore,[9] którzy zarządzali pracą niemieckich, holenderskich oraz 
@@ -54,7 +54,7 @@ imageInfo: >-
 sources: 
     - id: 1
       type: reference
-      value: Lepszy Kazimierz, "Zarys dziejów marynarki polskiej", Kraków 1947
+      value: lepszy_1947
       page: str. 19
       urlName: 
       url: 
@@ -66,15 +66,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Smok_(1571)
     - id: 3
       type: reference
-      value: Bodniak Stanisław, "Polska a Bałtyk za ostatniego Jagiellona", Pamiętnik Biblioteki Kórnickiej 3, 1946
+      value: bodniak_1946
       page: str. 138-139
       urlName: 
       url:
     - id: 4
       type: reference
-      value: >-  
-        Kuliński Bohdan Andrzej, "Okręt Jego Królewskiej Mości Zygmunta II Augusta. 
-        Historia galeonu, który nie był galeonem", Warszawska Firma Wydawnicza, 2012    
+      value: kulinski_2012    
       page:
       urlName:
       url:
@@ -95,19 +93,19 @@ sources:
       url:      
     - id: 7
       type: reference
-      value: Kleczkowski Adam, "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
+      value: kleczkowski_1915
       page: str. 66
       urlName:
       url:
     - id: 8
       type: note
-      value: Kleczkowski Adam, "Rejestr przyjemu i wydania pieniędzy na budowę galeony w roku 1570", Kraków, 1915
+      value: kleczkowski_1915
       page: str. 52, 100-101 
       urlName:
       url:
     - id: 9
       type: reference
-      value: Boczar Mieczysław L., "Nie znana korespondencja Zygmunta Augusta z dożą Wenecji Pietrem Loredanem w sprawie budowy galeony", Kwartalnik Historii Nauki i Techniki, 15/2, 1970 
+      value: boczar_1970 
       page: str. 343-351 
       urlName:
       url: 

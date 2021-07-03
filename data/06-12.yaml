@@ -30,8 +30,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: >-
-          Henryk Rybus, "Prymas Maciej Drzewiecki: zarys biografii (1467-1535)", Studia Theologica Varsaviensia 2/1-2, 1964
+      value: rybus_1964
       page: str. 274
       urlName: 
       url: 

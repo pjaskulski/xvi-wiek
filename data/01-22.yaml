@@ -40,7 +40,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Tumult_gda%C5%84ski_1525%E2%80%931526
     - id: 2
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 61-63
       urlName:
       url:

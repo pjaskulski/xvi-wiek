@@ -28,7 +28,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Tadeusz Wasilewski, "Tolerancja religijna w Wielkim Księstwie Litewskim w XVI—XVII w.", ODRODZENIE I REFORMACJA W POLSCE, XIX, 1974
+      value: wasilewski_1974
       page: str. 117
       urlName: 
       url: 
@@ -62,7 +62,7 @@ imageInfo:
 sources: 
     - id: 1
       type: internet
-      value: teatrnn.pl
+      value: Ośrodek "Brama Grodzka ‐ Teatr NN" (teatrnn.pl)
       page: 
       urlName: Bracia polscy - dzieje lubelskiego zboru w latach 1560-1570
       url: http://teatrnn.pl/leksykon/artykuly/bracia-polscy-dzieje-lubelskiego-zboru-w-latach-15601570/
@@ -74,7 +74,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Erazm_Otwinowski
     - id: 3
       type: reference
-      value: Janusz Tazbir, "Bluźniercy, którzy uszli karze", Nauka 1/2011
+      value: tazbir_2011
       page: str. 8
       urlName:
       url: 

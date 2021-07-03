@@ -31,7 +31,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Zygmunt_I_Stary
     - id: 2
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 326
       urlName:
       url:
@@ -41,4 +41,3 @@ sources:
       page:
       urlName: Kurza Stopka na Wawelu
       url: https://pl.wikipedia.org/wiki/Kurza_Stopka_na_Wawelu
-

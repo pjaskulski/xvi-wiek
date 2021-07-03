@@ -24,7 +24,7 @@ imageInfo:
 sources:     
     - id: 1
       type: internet
-      value: Muzeum Wojska Polskiego
+      value: Muzeum Wojska Polskiego (www.muzeumwp.pl)
       page: 
       urlName: Kalendarium Dziejów Oręża Polskiego
       url: http://www.muzeumwp.pl/kalendarium/03-09/
@@ -42,7 +42,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Jan_Amor_Tarnowski
     - id: 4
       type: internet
-      value: Śląska Biblioteka Cyfrowa 
+      value: Śląska Biblioteka Cyfrowa (www.sbc.org.pl)
       page:
       urlName: Consilium rationis bellicae Jana Tarnowskiego
       url: https://www.sbc.org.pl/dlibra/show-content/publication/edition/4093?id=4093

@@ -28,7 +28,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Monety_lenne_Ksi%C4%99stwa_Pruskiego_(1529%E2%80%931657)
     - id: 2
       type: reference
-      value: Janusz Małłek, "Prusy Królewskie a Prusy Książęce w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie, nr 53, 1976
+      value: mallek_1976
       page: str. 58 
       urlName: 
       url:

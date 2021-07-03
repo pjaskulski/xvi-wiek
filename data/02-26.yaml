@@ -23,7 +23,7 @@ imageInfo:
 sources: 
     - id: 1
       type: internet
-      value: Lubelskie Archiwum Cyfrowe
+      value: Lubelskie Archiwum Cyfrowe (lac.lublin.pl)
       page: 
       urlName: Skan dokumentu
       url: http://lac.lublin.pl/dokumenty/xvi-wiek/1502-1506/1506-26-lutego-lublin-na-sejmie-walnym/

@@ -34,14 +34,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Grzegorz_ze_Stawiszyna
     - id: 2
       type: reference
-      value: >- 
-        Zdzisław Pietrzyk, "Grzegorz ze Stawiszyna (1481-1540)" w: "Złota księga Wydziału Filozoficznego Uniwersytetu Jagiellońskiego", Kraków 2000
+      value: pietrzyk_2000
       page: str. 75-77
       urlName:
       url: 
     - id: 3
       type: reference
-      value: Maciej Zdanek, "Zapiski biograficzne i historyczne Grzegorza ze Stawiszyna (1481-1540) oraz ich kontynuacja", "Roczniki Historyczne", Rocznik LXXXVI — 2020
+      value: zdanek_2020
       page: str. 187-216
       urlName:
       url: 

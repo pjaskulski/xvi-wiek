@@ -27,7 +27,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Karol Łopatecki, "Disciplina militaris" w wojskach Rzeczypospolitej do połowy XVII wieku, 2012
-      page: str.52-54
+      value: lopatecki_2012
+      page: str. 52-54
       urlName:
       url:

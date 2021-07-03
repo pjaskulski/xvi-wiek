@@ -31,7 +31,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/El%C5%BCbieta_Jagiellonka_(1482%E2%80%931517)
     - id: 2
       type: reference
-      value: Krzysztof Baczkowski, "Polska i jej sąsiedzi za Jagiellonów", 2012
+      value: baczkowski_2012
       page: str. 502
       urlName:
       url:

@@ -28,7 +28,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Konrad_III_Rudy
     - id: 2
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 280
       urlName:
       url: 

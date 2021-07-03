@@ -24,7 +24,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 68-69
       urlName:
       url:

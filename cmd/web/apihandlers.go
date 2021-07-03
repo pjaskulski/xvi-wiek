@@ -104,7 +104,17 @@ func toStructJSON(data interface{}) []HistoricalEvent {
 		factJSON.Keywords = item.Keywords
 
 		for _, itemSource := range item.Sources {
+			// podmiana id źródła na pełną informację o źródle
+			// dla źródeł typu reference
+			if itemSource.Type == "reference" {
+				newValue, found := ReferenceMap[itemSource.Value]
+				if found {
+					itemSource.Value = newValue
+				}
+			}
+
 			sourceJSON.Name = itemSource.Value
+
 			if itemSource.Type == "reference" && itemSource.Page != "" {
 				sourceJSON.Name += ", " + itemSource.Page
 			}
@@ -167,6 +177,14 @@ func toStructOneJSON(data interface{}) HistoricalEvent {
 	factJSON.Keywords = factStruct.Keywords
 
 	for _, itemSource := range factStruct.Sources {
+		// podmiana id źródła na pełną informację o źródle
+		// dla źródeł typu reference
+		if itemSource.Type == "reference" {
+			newValue, found := ReferenceMap[itemSource.Value]
+			if found {
+				itemSource.Value = newValue
+			}
+		}
 		sourceJSON.Name = itemSource.Value
 		if itemSource.Type == "reference" && itemSource.Page != "" {
 			sourceJSON.Name += ", " + itemSource.Page

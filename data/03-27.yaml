@@ -28,8 +28,8 @@ sources:
       urlName: Jan II Dobry (książę opolski)
       url: https://pl.wikipedia.org/wiki/Jan_II_Dobry_(ksi%C4%85%C5%BC%C4%99_opolski)
     - id: 2
-      type: internet
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965 
+      type: reference
+      value: jasienica_1965
       page: str. 337
       urlName:
       url: 

@@ -27,14 +27,13 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Mirosław Nagielski (red), "Poczet hetmanów Rzeczypospolitej. Hetmani koronni", Warszawa 2005
+      value: nagielski_2005
       page: str. 25
       urlName: 
       url:
     - id: 2
       type: reference
-      value: >-
-        Katarzyna Niemczyk, "Kamienieccy herbu Pilawa: z dziejów kariery i awansu szlachty polskiej do 1535/1536 roku", Wydawnictwo Uniwersytetu Śląskiego, Katowice 2016
+      value: niemczyk_2016
       page: str. 177 
       urlName:
       url:

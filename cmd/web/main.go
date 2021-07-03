@@ -55,6 +55,8 @@ type application struct {
 	TodaysQuote      quoteOfTheDay
 	TodaysBook       bookOfTheDay
 	FactsForSearch   []SearchFact
+	References       []string
+	InternetSites    []string
 }
 
 // client type - struktura do zapisywania danych klienta po ip (limit api)
@@ -70,6 +72,7 @@ var (
 	lock          = sync.Mutex{}
 	clients       = make(map[string]*client)
 	isTesting     bool
+	ReferenceMap  map[string]string
 )
 
 func main() {

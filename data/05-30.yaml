@@ -31,7 +31,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Historia_Warszawy#Warszawa_w_XVI_wieku
     - id: 2
       type: reference
-      value: Sobiesław Szybkowski, "Korespondencja książąt mazowieckich z radą miasta Gdańska w latach 1466–1526" w "Zamek Królewski w Warszawie – Muzeum. Studia i materiały", VII, 2017
+      value: szybkowski_2017
       page: str. 295
       urlName:
       url: 

@@ -25,7 +25,7 @@ imageInfo:
 sources:     
     - id: 1
       type: reference
-      value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
+      value: kucharczyk_2020
       page:
       urlName: 
       url:
@@ -37,7 +37,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Jan_Zygmunt_Hohenzollern
     - id: 3
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 399-400
       urlName:
       url:

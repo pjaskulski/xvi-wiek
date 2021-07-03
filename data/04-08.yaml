@@ -36,8 +36,8 @@ sources:
       urlName: Traktat krakowski
       url: https://pl.wikipedia.org/wiki/Traktat_krakowski
     - id: 2
-      type: internet
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      type: reference
+      value: grzybowski_2000
       page: str. 62
       urlName:
       url:

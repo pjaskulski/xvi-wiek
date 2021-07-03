@@ -33,7 +33,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Marcin_Kamieniecki
     - id: 2
       type: reference
-      value: Katarzyna Niemczyk, "Kamienieccy herbu Pilawa. Z dziejów kariery i awansu szlachty polskiej do 1535/1536 roku", Katowice, 2016 
+      value: niemczyk_2016 
       page:
       urlName:
       url: 

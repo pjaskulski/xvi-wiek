@@ -7,7 +7,7 @@ title: Stefan Batory zatwierdził "Excepta mazowieckie"
 content: >- 
      {{{10 czerwca 1577}}} roku w Malborku Stefan Batory zatwierdził ustawę "Zwyczaje 
      województwa mazowieckiego z starego statutu, przystawając do prawa koronnego, 
-     wyjęte i zostawione na sejmie walnym toruńskim anno 1576".[2][3][1]
+     wyjęte i zostawione na sejmie walnym toruńskim anno 1576".[1][2]
      Były to wyjątki od prawa koronnego zgodne z dawnym odrębnym prawem mazowieckim.
      W 1576 roku Mazowsze, będące od pięćdziesięciu lat częścią Korony przyjęło
      wreszcie prawo koronne, jednak zagwarantowało sobie zachowanie niektórych dawnych przepisów,
@@ -22,22 +22,16 @@ people: Stefan Batory
 keywords: Mazowsze
 image:
 imageInfo: 
-sources: 
+sources:      
     - id: 1
       type: reference
-      value: Kwartalnik Naukowy wydawany w połączeniu prac Miłośników Umiejętności, Tom Pierwszy, Zeszyt 1, Kraków 1835
-      page: str. 44
-      urlName: 
-      url: 
-    - id: 2
-      type: reference
-      value: Adam Moniuszko, Prawo sądowe Rzeczpospolitej szlacheckiej (XVI-XVIII w.), Warszawa 2017
+      value: moniuszko_2017
       page: str. 76
       urlName:
       url:
-    - id: 3
+    - id: 2
       type: reference
-      value: Przemysław Sianko, Granica mazowiecko-litewska do 1569 roku. Kształtowanie się, rola społeczna, (Rozprawa doktorska), Białystok 2019
+      value: sianko_2019
       page: str. 220
       urlName:
       url:

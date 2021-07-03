@@ -32,8 +32,8 @@ func LimitMiddleware(next http.Handler) http.Handler {
 
 			// sprawdza czy ip clienta jest już w mapie, jeżeli nie tworzy nowy limiter
 			if _, found := clients[ip]; !found {
-				// 10 tokenów na zapytania, odświeżanych 5 razy na sekundę
-				clients[ip] = &client{limiter: rate.NewLimiter(5, 10)}
+				// 20 tokenów na zapytania, odświeżanych 5 razy na sekundę
+				clients[ip] = &client{limiter: rate.NewLimiter(10, 20)}
 			}
 
 			// data i czas, kiedy ostatnio widziano kienta z danego ip
@@ -122,6 +122,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/pdf", app.showPDF)
 	r.Get("/szukaj", app.searchHandler)
 	r.Get("/wyniki", app.resultHandler)
+	r.Get("/zrodla", app.showSources)
 
 	r.Get("/dzien/{month}/{day}", app.showFactsByDay)
 

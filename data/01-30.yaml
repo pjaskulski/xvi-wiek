@@ -32,7 +32,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Fabian_Luzja%C5%84ski
     - id: 2
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 55
       urlName:
       url:

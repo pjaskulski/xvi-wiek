@@ -129,6 +129,12 @@ type SearchFact struct {
 	Keywords       string
 }
 
+// Reference type
+type Reference struct {
+	ID    string `yaml:"id"`
+	Value string `yaml:"value"`
+}
+
 // DayFactTable map
 var DayFactTable map[string]bool
 
@@ -177,6 +183,23 @@ func (app *application) readFact(filename string) {
 		fact.ImageHTML = template.HTML(prepareImageHTML(fact.Image, fact.ImageInfo))
 		if fact.Geo != "" {
 			fact.GeoHTML = template.HTML(prepareGeoHTML(fact.Geo))
+		}
+
+		for _, sourceItem := range fact.Sources {
+			if sourceItem.Type == "internet" {
+				lock.Lock()
+				if !inSlice(app.InternetSites, sourceItem.Value) {
+					app.InternetSites = append(app.InternetSites, sourceItem.Value)
+				}
+				lock.Unlock()
+			} else if sourceItem.Type == "reference" {
+				// kontrola czy istnieje źródło w bazie references
+				_, found := ReferenceMap[sourceItem.Value]
+				if !found {
+					app.infoLog.Println("nie znaleziono referencji dla źródła: ", sourceItem.Value)
+					app.errorLog.Fatal("nie znaleziono referencji dla źródła: ", sourceItem.Value)
+				}
+			}
 		}
 
 		// uzupełnienie indeksu lat FactsByYear
@@ -348,6 +371,31 @@ func (app *application) readBook() (*[]Book, error) {
 	return &result, nil
 }
 
+// readReference func
+func (app *application) readReference() error {
+	var reference Reference
+
+	filename, _ := filepath.Abs(dirExecutable + "/data/references.yaml")
+
+	fileBuf, err := ioutil.ReadFile(filename)
+	if err != nil {
+		return err
+	}
+
+	r := bytes.NewReader(fileBuf)
+	yamlDec := yaml.NewDecoder(r)
+
+	for yamlDec.Decode(&reference) == nil {
+
+		if !inSlice(app.References, reference.Value) {
+			app.References = append(app.References, reference.Value)
+		}
+		ReferenceMap[reference.ID] = reference.Value
+	}
+
+	return nil
+}
+
 // loadData - wczytuje podczas startu serwera dane do struktur w pamięci operacyjnej
 func (app *application) loadData(path string) error {
 	// wydarzenia
@@ -365,6 +413,15 @@ func (app *application) loadData(path string) error {
 	app.FactsByLocation = make(map[string][]LocationFact)
 	// mapa dla indeksu słów kluczowych
 	app.FactsByKeyword = make(map[string][]KeywordFact)
+
+	// mapa na listę źródeł
+	ReferenceMap = make(map[string]string)
+
+	// wczytanie źródeł (książki i artykuły)
+	err := app.readReference()
+	if err != nil {
+		return err
+	}
 
 	dataFiles, _ := filepath.Glob(filepath.Join(path, "*-*.yaml"))
 	if len(dataFiles) > 0 {
@@ -434,6 +491,16 @@ func (app *application) loadData(path string) error {
 	}
 	sort.SliceStable(app.SFactsByPeople, func(i, j int) bool {
 		return cl.CompareString(app.SFactsByPeople[i].People, app.SFactsByPeople[j].People) == -1
+	})
+
+	// sortowanie źródeł (książek i artykułów)
+	sort.SliceStable(app.References, func(i, j int) bool {
+		return cl.CompareString(app.References[i], app.References[j]) == -1
+	})
+
+	// sortowanie źródeł (strony internetowe)
+	sort.SliceStable(app.InternetSites, func(i, j int) bool {
+		return cl.CompareString(app.InternetSites[i], app.InternetSites[j]) == -1
 	})
 
 	// cytaty

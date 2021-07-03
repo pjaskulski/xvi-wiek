@@ -72,6 +72,11 @@ type templateDataKeyword struct {
 	SFactsByKeyword []SliceFactsByKeyword
 }
 
+type templateDataSources struct {
+	References    []string
+	InternetSites []string
+}
+
 var monthName = map[int]string{
 	1:  "stycznia",
 	2:  "lutego",
@@ -598,6 +603,21 @@ func (app *application) resultHandler(w http.ResponseWriter, r *http.Request) {
 
 	ts := app.templateCache["wyniki.page.gohtml"]
 	err = ts.Execute(w, data)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
+
+// showSources func
+func (app *application) showSources(w http.ResponseWriter, r *http.Request) {
+
+	var data *templateDataSources = &templateDataSources{
+		References:    app.References,
+		InternetSites: app.InternetSites,
+	}
+
+	ts := app.templateCache["zrodla.page.gohtml"]
+	err := ts.Execute(w, data)
 	if err != nil {
 		app.serverError(w, err)
 	}

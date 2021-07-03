@@ -28,13 +28,13 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Janusz Małłek, "Prusy Książęce a Prusy Królewskie w latach 1525-1548", Rozprawy i Materiały Ośrodka Badań Naukowych im. Wojciecha Kętrzyńskiego w Olsztynie nr 53, PWN, Warszawa, 1976
+      value: mallek_1976
       page: str. 139
       urlName: 
       url: 
     - id: 2
       type: internet
-      value: sejm.gov.pl - 550 lecie sejmu
+      value: Dzieje Sejmu (www.dziejesejmu.pl)
       page:
-      urlName: Sejm w Piotrkowie 20 I - 14 II 1533 r.
-      url: http://www.sejm.gov.pl/historia.nsf/event.xsp?id=A9DF42C8C474E206C1258227004E34D8
+      urlName: Defence and budget. Sejm in Piotrków, 1533.
+      url: https://www.dziejesejmu.pl/en/defence-and-budget-sejm-in-piotrkow-1533,p744117332

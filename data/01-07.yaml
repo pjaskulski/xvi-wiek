@@ -32,7 +32,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Przywilej_toru%C5%84ski_1520
     - id: 2
       type: reference
-      value: Baranowski Ignacy Tadeusz, "Zmienne koleje Statutu Toruńskiego", Przegląd Historyczny, 16/2, 1913
+      value: baranowski_1913
       page: str. 200-217
       urlName: bazhum.muzhp.pl 
       url: "http://bazhum.muzhp.pl/media//files/Przeglad_Historyczny/Przeglad_Historyczny-r1913-t16-n2/Przeglad_Historyczny-r1913-t16-n2-s200-217/Przeglad_Historyczny-r1913-t16-n2-s200-217.pdf"

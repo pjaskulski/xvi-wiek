@@ -54,7 +54,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Nowy_Testament_w_przek%C5%82adzie_Stanis%C5%82awa_Murzynowskiego
     - id: 5
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 116
       urlName:
       url:

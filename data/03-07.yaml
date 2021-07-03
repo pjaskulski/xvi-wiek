@@ -30,7 +30,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Unia_lubelska
     - id: 2
       type: internet
-      value: Muzeum Historii Polski
+      value: Muzeum Historii Polski (muzhp.pl)
       page: 
       urlName: Podpisanie aktu Unii Lubelskiej
       url: https://muzhp.pl/pl/e/127/podpisanie-aktu-unii-lubelskiej
@@ -66,13 +66,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Wojna_Rzeczypospolitej_z_Gda%C5%84skiem
     - id: 2
       type: reference
-      value: Kazimierz Piwarski, "Dzieje Gdańska w zarysie", 1946
+      value: piwarski_1946
       page: str. 110 
       urlName: 
       url:
     - id: 3
       type: reference
-      value: Roman Rybarski, "Handel i polityka handlowa Polski w XVI stuleciu", t. 1 - "Rozwój handlu  i polityki handlowej" , 1928
+      value: rybarski_1928
       page: str. 29, 335-336 
       urlName: 
       url: 

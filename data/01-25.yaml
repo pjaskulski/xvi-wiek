@@ -27,7 +27,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Bitwa_pod_Zas%C5%82awiem
     - id: 2
       type: reference
-      value: R. Grodecki, S. Zachorowski, J. Dąbrowski, "Dzieje Polski średniowiecznej", Kraków 2011
+      value: grodecki_2011
       page: str. 824
       urlName:
       url:

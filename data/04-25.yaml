@@ -25,7 +25,7 @@ imageInfo:
 sources:    
     - id: 1
       type: reference
-      value: Sylwia Dwojak, "Wizyty Zygmunta Starego w Toruniu (1519–1521)", Rocznik Toruński, t. 43
+      value: dwojak_2016
       page: str. 39
       urlName:
       url:

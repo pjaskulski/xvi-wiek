@@ -32,13 +32,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Georg_Giese
     - id: 2
       type: internet
-      value: Gedanopedia
+      value: Gedanopedia (www.gedanopedia.pl)
       page: 
       urlName: Burgrabiowie
       url: https://www.gedanopedia.pl/gdansk/?title=BURGRABIOWIE
     - id: 3
       type: internet
-      value: DW
+      value: Deutsche Welle
       page: 
       urlName: Hans Holbein - Georg Giese, the rich merchant
       url: https://p.dw.com/p/3KDmA

@@ -31,7 +31,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Jan_Dantyszek
     - id: 2
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 291
       urlName:
       url: 
@@ -71,7 +71,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Iwan_III_Srogi
     - id: 2
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 279
       urlName:
       url: 

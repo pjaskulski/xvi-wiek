@@ -34,7 +34,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Marian Biskup, "Mikołaj Kopernik na zjeździe stanów Prus Królewskich w Grudziądzu w marcu 1522 roku (do początków działalności dla reformy monetarnej)", Komunikaty Mazursko-Warmińskie nr 4, 1994
+      value: biskup_1994
       page: str. 383-394
       urlName:
       url: 
@@ -46,13 +46,13 @@ sources:
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Kopernik#Ekonomia
     - id: 3
       type: reference
-      value: Jan Dmochowski, "Mikołaja Kopernika rozprawy o monecie i inne pisma ekonomiczne oraz J.L. Decjusza Traktat o biciu monety", Warszawa 1923
+      value: dmochowski_1923
       page:
       urlName:
       url: 
     - id: 4
       type: reference
-      value: Mirosław Bochenek, "Znaczenie traktatu monetarnego Meditata Mikołaja Kopernika dla rozwoju myśli ekonomicznej (w 500 rocznicę jego powstania)", "Ekonomista", 2017, nr 6
+      value: bochenek_2017
       page: str. 701-702
       urlName:
       url: 

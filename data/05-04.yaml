@@ -31,7 +31,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Janusz Małłek, "Ustawa o rządzie (Regimentsnottel) Prus Książęcych z roku 1542", Roczniki Towarzystwa Naukowego w Toruniu, rocznik 72, zeszyt 2, 1967
+      value: mallek_1967
       page: str. 113-117
       urlName: 
       url:

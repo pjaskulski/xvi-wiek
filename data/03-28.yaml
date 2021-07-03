@@ -27,15 +27,13 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: >- 
-        Danuta Bogdan, "W kręgu autonomii uniwersyteckiej. Troski i radości profesorów 
-        Uniwersytetu Królewieckiego w XVI-XVII wieku", ECHA PRZESZŁOŚCI IX, 2008
-      page: str.37
+      value: bogdan_2008
+      page: str. 37
       urlName:
       url: 
     - id: 2
       type: reference
-      value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020
+      value: kucharczyk_2020
       page: 
       urlName:
       url:

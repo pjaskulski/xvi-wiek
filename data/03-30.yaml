@@ -32,7 +32,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Nihil_novi
     - id: 2
       type: internet
-      value: dziejesejmu.pl
+      value: Dzieje Sejmu (www.dziejesejmu.pl)
       page: 
       urlName: Słynny sejm w Radomiu. 1505 r.
       url: https://www.dziejesejmu.pl/slynny-sejm-w-radomiu-1505-r,p325620432

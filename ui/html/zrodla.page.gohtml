@@ -1,0 +1,32 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - źródła (książki i artykuły){{end}}
+{{define "meta_description"}}"Spis źródeł (podstrona serwisu XVI wiek - ciekawe wydarzenia historyczne w Polsce i krajach sąsiednich)"{{end}}
+{{define "meta_title"}}"XVI wiek - źródła"{{end}}
+{{define "canonical"}}<link rel="canonical" href="https://xvi-wiek.pl/indeksy/slowa" />{{end}}
+
+{{define "main"}} 
+
+    <h1 id="tufte-css">Źródła</h1>
+
+    <div class="preface">Lista źródeł wykorzystanych podczas opracowywania notatek na temat 
+    wydarzeń historycznych. Osobno książki i artykuły (naukowe i popularnonaukowe) 
+    oraz strony internetowe.</div>
+
+    <article>
+        <section>            
+            <h2>Książki i artykuły</h2>
+
+            {{range .References}}                         
+                <p style="margin-left: 20px;">{{ . }}</p>
+            {{end}}
+            <hr>
+
+            <h2>Strony internetowe</h2>
+            {{range .InternetSites}}                         
+                <p style="margin-left: 20px;">{{ . }}</p>
+            {{end}}
+            
+        </section>
+    </article>
+{{end}}

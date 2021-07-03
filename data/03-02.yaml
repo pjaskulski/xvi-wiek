@@ -28,22 +28,19 @@ sources:
       url: https://pl.wikipedia.org/wiki/Sejm_walny_1493
     - id: 2
       type: reference
-      value: Władysław Konopczyński, "Chronologia Sejmów Polskich 1493-1793"
+      value: konopczynski_1948
       page: str. 132
       urlName: Wielkopolska Biblioteka Cyfrowa
       url: https://www.wbc.poznan.pl/dlibra/publication/1306/edition/2048/content
     - id: 3
       type: internet
-      value: Sejm walny. Piotrków 1493 r.
+      value: Dzieje Sejmu (www.dziejesejmu.pl)
       page: 
-      urlName: dziejesejmu.pl
+      urlName: Sejm walny. Piotrków 1493 r.
       url: https://www.dziejesejmu.pl/sejm-walny-piotrkow-1493-r,p1292595129
     - id: 4
       type: reference
-      value: >- 
-          Wacław Uruszczak, "Najstarszy sejm walny koronny "dwuizbowy" w Piotrkowie w 1468 roku", w:
-          "Narodziny Rzeczypospolitej : studia z dziejów średniowiecza i czasów wczesnonowożytnych", Kraków, 2012
+      value: uruszczak_2012
       page: 
       urlName: Najstarszy Sejm Walny Koronny
       url: http://www.khpp.wpia.uj.edu.pl/documents/106750129/0/Najstarszy+Sejm+Walny+Koronny.pdf/b0e82a32-63eb-4b00-b6a1-2d4d6e52ce6c 
-

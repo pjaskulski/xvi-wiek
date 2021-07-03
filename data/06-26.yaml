@@ -29,13 +29,13 @@ imageInfo:
 sources:     
     - id: 1
       type: reference
-      value: Patrycja Ewa Herod, "Działalność ustawodawcza książąt mazowieckich na gruncie prawa karnego (1377–1526)", "Dziedzictwo książąt mazowieckich. Stan badań i postulaty badawcze", Zamek Królewski w Warszawie – Muzeum. Studia i materiały t. VII, Warszawa 2017
+      value: herod_2017
       page: str. 242-243
       urlName: 
       url: 
     - id: 2
       type: reference
-      value: Janusz Grabowski, "Anna Odrowążowa, ostatnia księżna mazowiecka", ARCHEION, T. CXIII,  Warszawa 2012
+      value: grabowski_2012
       page: str. 268
       urlName: 
       url: 

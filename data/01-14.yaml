@@ -26,7 +26,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/1557
     - id: 2
       type: internet
-      value: Dzieje sejmu
+      value: Dzieje Sejmu (www.dziejesejmu.pl)
       page: 
       urlName: Sejm przekładany w czasie
       url: https://www.dziejesejmu.pl/sejm-przekladany-w-czasie-sejm-w-warszawie-1556-1557-r,p185850201

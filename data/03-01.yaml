@@ -23,7 +23,7 @@ contentTwitter: >-
     unii obu krajów.
 location: Lublin 
 geo: 51.231,22.5769
-people: Zygmunt II August; Jan Kochanowski
+people: Zygmunt II August; Kochanowski Jan
 keywords: unia
 image: 
 imageInfo: 
@@ -36,7 +36,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Unia_lubelska
     - id: 2
       type: reference
-      value: Stanisław Grzybowski, "Dzieje Polski i Litwy (1506-1648)", Wielka Historia Polski t.4, Kraków 2000
+      value: grzybowski_2000
       page: str. 143
       urlName:
       url:

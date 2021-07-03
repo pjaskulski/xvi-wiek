@@ -37,7 +37,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Dewlet_I_Girej
     - id: 3
       type: reference
-      value: Tadeusz Korzon, "Dzieje wojen i wojskowości w Polsce", t. 2, 1912
+      value: korzon_1912
       page: str. 26-27
       urlName:
       url:

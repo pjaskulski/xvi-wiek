@@ -23,7 +23,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Grzegorz Kucharczyk, "Prusy. Pięć wieków", 2020 
+      value: kucharczyk_2020 
       page: 
       urlName:
       url:

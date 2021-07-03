@@ -23,7 +23,7 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Paweł Jasienica, "Polska Jagiellonów", 1965
+      value: jasienica_1965
       page: str. 272
       urlName:
       url:
@@ -35,7 +35,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Jan_I_Olbracht
     - id: 3
       type: reference
-      value: Urszula Borkowska, "Dynastia Jagiellonów w Polsce", Warszawa, 2011
+      value: borkowska_2011
       page: 
       urlName:
       url: 

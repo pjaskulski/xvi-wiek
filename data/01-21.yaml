@@ -24,13 +24,13 @@ imageInfo:
 sources: 
     - id: 1
       type: reference
-      value: Jan Tyszkiewicz, "Ostatnia wojna z Zakonem Krzyżackim 1519-1521", PWN, Warszawa 2015
+      value: tyszkiewicz_2015
       page: str. 88
       urlName: 
       url: 
     - id: 2
       type: reference
-      value: Marian Biskup, "Wojny Polski z zakonem krzyżackim (1308-1521)", 2017
+      value: biskup_2017
       page:
       urlName:
       url: 
