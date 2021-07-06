@@ -7,16 +7,16 @@ title: Zmarł Zygmunt II August, ostatni władca z dynastii Jagiellonów
 content: >- 
     {{{7 lipca 1572}}} roku w Knyszynie zmarł Zygmunt II August ostatni władca z dynastii
     Jagiellonów na tronie Królestwa Polskiego.[2] W chwili śmierci król miał niespełna
-    52 lata. Przyczyną śmierci Zygmunta była prawdopodobnie gruźlica, już w czerwcu 
-    król nie był w stanie chodzić i w podróż do Knyszyna udał się wozem. Tam doznał 
+    52 lata a jej przyczyną była prawdopodobnie gruźlica. Już w czerwcu król nie 
+    był w stanie chodzić i w podróż do Knyszyna udał się wozem. Tam doznał 
     ataków kaszlu i wysokiej gorączki.[1] Rok wcześniej czując, że podupada na zdrowiu 
     podyktował swój testament w którym zawarł nie tylko swoją ostatnią wolę w 
     kwestiach majątkowych, ale też wzywał do zgody, utrzymania dopiero co uchwalonej 
     unii polsko-litewskiej: {Rzeczpospolita niczym innym w całości i dłużej zachowana 
     być nie może, jedno zgodą, miłością, społecznością, jednością, bo jak mądrze 
     ktoś [...] napisał ’zgodą małe rzeczy rosną, niezgodą wielkie upadają’ i ’moc 
-    zjednoczenia mocniejsza niż rozdwojenia’[...]}. W kraju nastało pierwsze od 
-    ponad sześćdziesięciu pięciu lat bezkrólewie. 
+    zjednoczenia mocniejsza niż rozdwojenia’[...]}.[3] W kraju nastało pierwsze od 
+    sierpnia 1506 roku bezkrólewie.
 contentTwitter: >-
     7 lipca 1572 roku w Knyszynie zmarł Zygmunt II August ostatni władca z dynastii
     Jagiellonów na tronie Królestwa Polskiego. W chwili śmierci król miał niespełna
@@ -40,3 +40,9 @@ sources:
       page:
       urlName: Zygmunt II August
       url: https://pl.wikipedia.org/wiki/Zygmunt_II_August
+    - id: 3
+      type: reference
+      value: borkowska_2011
+      page:
+      urlName: 
+      url: 
