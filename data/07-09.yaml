@@ -1,0 +1,52 @@
+---
+id: 1
+day: 9
+month: 7
+year: 1569
+title: Duńsko-polskie starcie na redzie Rewla 
+content: >- 
+    {{{9 lipca 1569}}} roku podczas wojny północnej 1563-70 duńska flotylla 36 
+    okrętów, którą dowodził Peder Munk,[3] dotarła na redę Rewla (dziś Tallin). 
+    Duńczycy ostrzelali miasto i zagarnęli liczne statki handlowe oraz kilka okrętów 
+    gdańskich i polskich korsarzy.[1] Jak wyjaśniał później król Fryderyk II Zygmuntowi 
+    Augustowi, polscy strażnicy morza atakowali wcześniej statki handlowe Danii 
+    a przy próbie rozmowy ze strony duńskiego admirała odpowiedzieli ogniem.[2][4] 
+    Ujętych wówczas kapitanów okrętów kaperskich zatrzymano w kopenhaskim więzieniu, 
+    skąd po staraniach strony polskiej, zwolniono ich w roku 1570 i następnym.    
+contentTwitter: >-
+    9 lipca 1569 roku w okolicy Rewla (dziś Tallin) duńska flotylla, którą dowodził 
+    Peder Munk, zagarnęła kilka gdańskich i polskich okrętów kaperskich.
+location: Rewel
+geo: 59.4356,24.7467
+people: Munck Per
+keywords: morze
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: bodniak_1946
+      page: str. 162
+      urlName:
+      url:    
+    - id: 2
+      type: reference
+      value: anderson_1910
+      page: str. 16
+      urlName: 
+      url:
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Peder Munk
+      url: https://da.wikipedia.org/wiki/Peder_Munk
+    - id: 4
+      type: note
+      value: >- 
+        W źródłach brytyjskich było to przedstawione bardziej bezpośrednio: 
+        "he captured [...] four Polish corsairs, which were foolish enough 
+        to open fire on his flet."
+      page: 
+      urlName:
+      url:
