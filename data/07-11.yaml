@@ -1,0 +1,44 @@
+---
+id: 1
+day: 11
+month: 7
+year: 1570
+title: Zakończył obrady sejm 1570 roku, przedostatni za panowania Zygmunta Augusta
+content: >- 
+    {{{11 lipca 1570}}} roku w Warszawie zakończył obrady sejm zwołany w lutym tegoż roku,
+    był to przedostatni sejm za panowania Zygmunta II Augusta.[1][2] Obrady dotyczyły
+    głównie kwestii religijnych, protestanci świeżo po ugodzie sandomierskiej
+    oczekiwali uchwalenia pokoju religijnego. Udało im się jednak uzyskać tylko
+    pismo królewskie, że nikt nie będzie pozywany przed sąd za herezję.[3]
+    Omawiano też sprawę małżeństwa króla, Zygmunt August pragnął rozwieść się z Katarzyną 
+    Habsburg, licząc na doczekanie następcy z ewentualną nową małżonką, nie uzyskał 
+    jednak zgody sejmu na rozwód. Uchwalono za to podatki na cele wojskowe: łanowe 
+    i czopowe z dóbr królewskich i duchownych.
+contentTwitter: >-
+    {{{11 lipca 1570}}} roku w Warszawie zakończył obrady sejm zwołany w lutym tegoż roku,
+    był to przedostatni sejm za panowania Zygmunta II Augusta.
+location: Warszawa
+geo: 52.2476,21.0138
+people: Zygmunt II August
+keywords: sejm
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: dziejesejmu.pl
+      page: 
+      urlName: Przedostatni sejm za panowania króla Zygmunta Augusta. Sejm w Warszawie. 1570.
+      url: https://www.dziejesejmu.pl/przedostatni-sejm-za-panowania-krola-zygmunta-augusta-sejm-w-warszawie-1570,p310196145   
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Sejm 1570
+      url: https://pl.wikipedia.org/wiki/Sejm_1570
+    - id: 3
+      type: reference
+      value: uruszczak_2010
+      page: str. 129
+      urlName:
+      url: 
