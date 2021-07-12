@@ -22,11 +22,12 @@ content: >-
      galeonu budowano także dwa statki pomocnicze: "fregatę" (fragada) - jednomasztową 
      jednostkę z 8 wiosłami oraz mniejszą łódź - "bat" również z jednym masztem. 
      Mniejsze jednostki zbudowano, "fregatę" z 7 osobową załogą wysłano nawet na 
-     Hel a potem do Pucka,[7] natomiast prace nad wyposażeniem galeonu trwały do 
+     Hel a potem do Pucka.[7] Prace nad wyposażeniem galeonu trwały natomiast do 
      1572 roku[3] lecz nigdy ich w pełni nie ukończono, przede wszystkim z powodu 
-     śmierci Zygmunta II Augusta w 1572 roku.[2] Król zdążył jednak zobaczyć swój 
-     okręt, 5 października 1571 roku był w Elblągu i jak pisze Adam Kleczkowski, 
-     okręt na jego przybycie wyczyszczono. Galeon pozostawał w okresie bezkrólewia 
+     śmierci Zygmunta II Augusta w 1572 roku.[2] Według Adama Kleczkowskiego król 
+     zdążył jednak zobaczyć swój okręt - 3 października 1571 roku okręt na jego przybycie 
+     wyczyszczono.[10] Ustalenia późniejsze[11] wskazują jednak, że Zygmunt August był w tym 
+     czasie w Warszawie i do Elbląga nie przyjechał. Galeon pozostawał w okresie bezkrólewia 
      pod opieką Jana Kostki, dawnego przewodniczącego Komisji Morskiej, który finansował 
      jego konserwację. Wiadomo, że istniał jeszcze w 1577 roku, kiedy to w czasie 
      pożaru Elbląga wywołanego przez flotę duńską ścięto maszty okrętu by zapobiec 
@@ -78,9 +79,9 @@ sources:
     - id: 5
       type: note
       value: >- 
-        Odnaleziono zapiski dotyczące rozebrania w 1587 okrętu w Elblągu "dla starości spróchniałego" 
-        i przyjmuje się, że chodzi o galeon Zygmunta. Jednak skoro był on w czasie bezkrólewia 
-        konserwowany to czy mógłby w ciągu 10 lat panowania Batorego spróchnieć? (zob. Wikipedia wyżej) 
+        Odnaleziono zapiski dotyczące rozebrania w 1587 okrętu w Elblągu "dla starości spróchniałego", 
+        przyjmuje się dziś, że chodzi o galeon Zygmunta. Skoro był on w czasie bezkrólewia 
+        konserwowany to czy mógłby w ciągu 10 lat panowania Batorego spróchnieć do stanu wymagającego rozbiórki? (zob. Wikipedia wyżej) 
       page:
       urlName: 
       url:
@@ -107,5 +108,19 @@ sources:
       value: boczar_1970 
       page: str. 343-351 
       urlName:
+      url:
+    - id: 10
+      type: note
+      value: >- 
+        W rejestrze wydatków jest wpis: "{3 Octobris 2 chlopom ktorzy okreth wyczisczali 
+        Gdj.JEomcz mial prziechacz dalem g. 4}".  
+      page:
+      urlName:
       url: 
+    - id: 11
+      type: reference
+      value: kulinski_2012    
+      page: str. 121
+      urlName:
+      url:
     
