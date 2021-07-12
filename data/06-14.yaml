@@ -89,7 +89,7 @@ sources:
       type: note
       value: >- 
         Odnaleziono zapiski dotyczące rozebrania w 1587 okrętu w Elblągu "dla starości spróchniałego", 
-        przyjmuje się dziś, że chodzi o galeon Zygmunta. Skoro był on w czasie bezkrólewia 
+        przyjmuje się dziś, że chodzi o galeon Zygmunta. Skoro jednak był on w czasie bezkrólewia 
         konserwowany to czy mógłby w ciągu 10 lat panowania Batorego spróchnieć do stanu wymagającego rozbiórki? (zob. Wikipedia wyżej) 
       page:
       urlName: 
@@ -132,16 +132,3 @@ sources:
       page: str. 121
       urlName:
       url:
-    - id: 12
-      type: note
-      value: >- 
-        14 czerwca odbyła się zapewne oficjalna część wodowania, podskarbi Bąkowski
-        zapisał iż 14 czerwca mistrz Dominico nie chciał spuszczać na wodę okrętu 
-        bez uroczystej oprawy jak to się odbywa w Wenecji, opłacono więc trębacza. 
-        Sam okręt prawdopodobnie spuszczono na wodę dzień później, z rejestru wydatków: 
-        {15 Juny Gdy spusczano okrenth na wode wedlug tego yako ssię Inssi sprawuyą 
-        thedim ym kupilwasse piwa za ktoram dal fl. 4}
-      page:
-      urlName:
-      url:
-    
