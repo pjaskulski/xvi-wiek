@@ -6,8 +6,8 @@ year: 1571
 title: Flotylla duńska napadła na port w Pucku 
 content: >- 
     {{{29 lipca 1571}}} roku flotylla 8 okrętów duńskich po dowództwem admirała
-    Jerzego Daa (duń. Jørgen Daa) napadła na port w Pucku, będący wówczas siedzibą polskiej floty 
-    kaperskiej.[1] Duńczycy zdobyli i uprowadzili do Kopenhagi 4 okręty kaperskie 
+    Jerzego Daa (duń. Jørgen Erikssen? Daa) napadła na port w Pucku, będący wówczas siedzibą polskiej floty 
+    kaperskiej.[1][2] Duńczycy zdobyli i uprowadzili do Kopenhagi 4 okręty kaperskie 
     oraz 5 zdobycznych statków handlowych, duńskich i lubeckich. Wcześniej w okolicach 
     Helu flotylla duńska zniszczyła 2 inne okręty kaperskie, w efekcie tych działań trzecia 
     część floty strażników morza przestała istnieć. Uprowadzone statki i okręty oraz
@@ -15,7 +15,7 @@ content: >-
     następnie kaprów uznanych za piratów ścięto w Helsingör i pochowano na plaży. 
     Straty polskie, choć dotkliwe, nie spowodowały zaprzestania działalności kaprów,
     dlatego Duńczycy już w sierpniu wyprawili kolejną flotę dowodzoną przez admirała 
-    Sylwestra Franka (duń. Sylvester Francke), która dotarła w pobliże Gdańska. Tym razem jednak
+    Sylwestra Franka (duń. Sylvester Francke[3]), która dotarła w pobliże Gdańska. Tym razem jednak
     nie odniosła większych sukcesów, gdyż okręty straży schroniły się zawczasu w porcie
     gdańskim wpuszczone tam na wyraźny rozkaz Zygmunta Augusta. 
 contentTwitter: >-
@@ -35,4 +35,19 @@ sources:
       page: str. 169
       urlName:
       url: 
-
+    - id: 2
+      type: note
+      value: >- 
+        Inne źródła podają najczęściej, że dowódcą lipcowej wyprawy floty duńskiej
+        na Puck był Sylwester Frank np. praca "Marynarka w Polsce" Aleksandra Czołowskiego
+        z 1922 roku i publikacje z niej korzystające. Tą informację podważył S. Bodniak w 1946 r. 
+      page:
+      urlName:
+      url:
+    - id: 3
+      type: internet
+      value: Dansk Biografisk Leksikon
+      page:
+      urlName: Sylwester Francke
+      url: https://biografiskleksikon.lex.dk/Sylvester_Francke
+  
