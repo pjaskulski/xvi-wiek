@@ -14,12 +14,14 @@ content: >-
       szczególnie w miastach, wywołując poczucie zagrożenia wśród duchowieństwa 
       katolickiego. Obecność w Toruniu legata papieskiego Zachariasza Ferreri i 
       presja polskich biskupów skłoniły Zygmunta Starego do wystąpienia w obronie wiary 
-      katolickiej i zakazania propagowania idei reformacji. W kwietniu 1521 roku,
-      pod koniec swojego pobytu w Polsce, legat Ferreri zorganizował spalenie na stosie 
-      przejętych w Prusach pism Lutra. Nakazy i obostrzenia nie były jednak całkiem 
-      skuteczne, gdyż w trzy lata później wykryto pisma protestanckie w Krakowie 
-      co spowodowało wydanie 7 marca 1523 roku kolejnego edyktu królewskiego nakazującego 
-      palenie pism luterańskich i również grożącego konfiskatą mienia.
+      katolickiej i zakazania propagowania idei reformacji. Król zakazywał przywożenia,
+      sprzedawania, posiadania i używania książek "niejakiego Marcina Lutra".[3] 
+      W kwietniu 1521 roku, pod koniec swojego pobytu w Polsce, legat Ferreri zorganizował 
+      spalenie na stosie przejętych w Prusach pism luterańskich. Nakazy i obostrzenia 
+      nie były jednak całkiem skuteczne, gdyż w trzy lata później wykryto zakazane 
+      pisma w Krakowie co spowodowało wydanie 7 marca 1523 roku kolejnego edyktu 
+      królewskiego nakazującego palenie pism luterańskich i również grożącego 
+      konfiskatą mienia.
 contentTwitter: >-
       24 lipca 1520 roku w Toruniu Zygmunt I Stary wydał edykt zabraniający 
       rozpowszechniania i czytania pism Marcina Lutra i jego zwolenników pod karą 
@@ -43,3 +45,9 @@ sources:
       page:
       urlName: Edykt toruński
       url: https://pl.wikipedia.org/wiki/Edykt_toru%C5%84ski
+    - id: 3
+      type: reference
+      value: buchwald_1997
+      page: str. 25
+      urlName:
+      url:
