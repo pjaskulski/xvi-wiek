@@ -1,0 +1,55 @@
+---
+id: 1
+day: 30
+month: 7
+year: 1514
+title: Kapitulacja oblężonego przez wojska moskiewskie Smoleńska
+content: >- 
+    {{{30 lipca 1514}}} roku oblężony od czerwca Smoleńsk kapituluje przed wojskami
+    Wasyla III, wielkiego księcia moskiewskiego.[1][2][3] Wojskami wielkiego księcia dowodził
+    litewski kniaź Michał Gliński, który kilka lat wcześniej przeszedł na stronę rosyjską. 
+    Oblegający zgromadzili liczącą kilkadziesiąt tysięcy żołnierzy armię i liczną artylerię. 
+    To właśnie silne ostrzały artyleryjskie i brak odsieczy skłoniły dowodzącego obroną 
+    wojewodę smoleńskiego Jerzego Sołłohoba do kapitulacji.[4] Przejęcie miasta było ogromnym 
+    sukcesem Wasyla III, nie całkiem zrównoważonym przez późniejsze zwycięstwo wojsk 
+    polsko-litewskich pod Orszą. Sytuacja Polski i Litwy stawała się trudna wobec 
+    zawartego w lutym 1514 roku sojuszu Moskwy z cesarzem Maksymilianem I i prób 
+    montowania większej koalicji z udziałem Zakonu Krzyżackiego, państw niemieckich, 
+    Mołdawii czy Danii. Groźbę zażegnał dopiero zjazd wiedeński w 1515 roku, w wyniku 
+    którego cesarz wycofał się z porozumienia z Wasylem III. Smoleńsk wrócił pod władanie
+    Rzeczypospolitej dopiero w roku 1611, nie na długo jednak - po czterdziestu latach wrócił
+    pod panowanie rosyjskie.     
+contentTwitter: >-
+    30 lipca 1514 roku oblężony od czerwca Smoleńsk kapituluje przed wojskami
+    Wasyla III, wielkiego księcia moskiewskiego.
+location: Smoleńsk
+geo: 54.7951,32.0471
+people: Wasyl III; Zygmunt I Stary
+keywords: Rosja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: baczkowski_2012
+      page: str. 633
+      urlName:
+      url:
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Bitwa pod Orszą (1514)
+      url: https://pl.wikipedia.org/wiki/Bitwa_pod_Orsz%C4%85_(1514)
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Oblężenie Smoleńska (1514)
+      url: https://pl.wikipedia.org/wiki/Obl%C4%99%C5%BCenie_Smole%C5%84ska_(1514)
+    - id: 4
+      type: note
+      value: Część źródeł podaje 31 lipca lub 1 sierpnia jako datę kapitulacji. 
+      page: 
+      urlName: 
+      url: 
