@@ -1,0 +1,48 @@
+---
+id: 1
+day: 1
+month: 8
+year: 1553
+title: Odnowiono traktat pokojowy między Koroną a Turcją
+content: >- 
+    {{{1 sierpnia 1553}}} roku odnowiono w Stambule traktat pokojowy między Sulejmanem 
+    I Wspaniałym a Zygmuntem II Augustem.[1] Traktat w imieniu korony negocjował wojewoda
+    lwowski Stanisław Tęczyński. O odnowienie wygasłego w 1548 roku traktatu z Turcją 
+    zabiegał Zygmunt August. Starając się o przychylność sułtana król odwołał z twierdzy
+    Bar rotmistrza obrony potocznej Bernarda Pretwicza, znanego ze zwalczania tatarskich
+    napadów na ziemie Korony jak i z odwetowych najazdów na pogranicze tureckie.
+    Zygmunt August odżegnał się także od interwencji wojsk hetmana Mikołaja Sieniawskiego
+    w Mołdawii, która jesienią 1552 roku doprowadziła do osadzenia na tronie hospodarskim Aleksandra
+    Lapuszneanu, hołdu nowego hospodara złożonego przed hetmanem nie przyjął.[2]
+    Stworzyło to korzystny klimat do odnowienia traktatu pokojowego, który uregulował 
+    także sprawę odszkodowań za szkody wynikające z pogranicznych starć - wzajemne
+    odszkodowania umorzono. W Archiwum Głównym Akt Dawnych[3] zachowała się do dziś
+    kopia traktatu, wystawiona w 1554 roku przez sułtana na prośbę Zygmunta Augusta.         
+contentTwitter: >-
+    1 sierpnia 1553 roku odnowiono w Stambule traktat pokojowy między Sulejmanem 
+    I Wspaniałym a Zygmuntem Augustem.
+location: Stambuł
+geo: 41.0111,28.9708
+people: Zygmunt II August; Tęczyński Stanisław 
+keywords: Mołdawia
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: szutkiewicz_2009
+      page: str. 14
+      urlName:
+      url:
+    - id: 2
+      type: reference
+      value: dziubinski_1996
+      page: str. 64-65
+      urlName:
+      url: 
+    - id: 3
+      type: internet
+      value: Archiwum Główne Akt Dawnych
+      page:
+      urlName: Traktatowe dokumenty tureckie (`ahdname) ze zbiorów AGAD
+      url: http://agad.gov.pl/AKW_Turcja/AKW_TURECKIE.html 
