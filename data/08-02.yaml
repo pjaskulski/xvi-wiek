@@ -1,0 +1,59 @@
+---
+id: 1
+day: 2
+month: 8
+year: 1519
+title: Bitwa z Tatarami pod Sokalem
+content: >- 
+    {{{2 sierpnia 1519}}} roku pod Sokalem wojska polsko-litewskie doznały poważnej klęski w 
+    starciu z najazdem tatarskim, który podążając tzw. Czarnym Szlakiem dotarł 
+    daleko w głąb Królestwa Polskiego, łupiąc ziemie województw ruskiego, bełskiego
+    i lubelskiego.[3][2] Przeciwko wracającym z wyprawy Tatarom wyruszyły wówczas pospiesznie zebrane
+    oddziały zaciężne i pospolite ruszenie, bitwę rozpoczęto mimo znacznej przewagi 
+    przeciwnika i w niesprzyjającym dla sił polsko-litewskich terenie. Doszło też 
+    do sporów między dowodzącymi hetmanami Konstantym Ostrogskim, Stanisławem Chodeckim
+    i Marcinem Kamienieckim. Klęska i znaczna liczba poległych wywarła duże wrażenie 
+    na współczesnych, zapamiętano bohaterską postawę rotmistrza Fryderyka Herburta
+    czy syna hetmana Mikołaja Fileja, również Mikołaja. Znamienitszym poległym urządzono
+    wówczas uroczysty pogrzeb we Lwowie[4] a kilkadziesiąt lat później ofiarom klęski 
+    epigram {Na sokalskie mogiły} poświęcił Jan Kochanowski. Pod wpływem klęski sokalskiej wydano
+    też w 1520 roku tzw. ordynację lwowską, w której zaplanowano sposób obrony
+    przed najazdami południowo-wschodnich kresów państwa.[1] Miały powstać trzy linie
+    obrony: straż przednia, linia druga w sile 600 jezdnych oraz linia trzecia z 
+    dowódcą obrony potocznej i warownym obozem gdzie miano utrzymywać artylerię 
+    i piechotę.
+contentTwitter: >-
+    2 sierpnia 1519 roku wojska polsko-litewskie doznały poważnej klęski pod Sokalem 
+    w  starciu z najazdem tatarskim, który podążając dotarł wówczas daleko w głąb 
+    Królestwa Polskiego.
+location: Sokal
+geo: 50.4789,24.2758
+people: Ostrogski Konstanty; Chodecki Stanisław; Kamieniecki Marcin
+keywords: Tatarzy
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: boldyrew_2011
+      page: str. 24
+      urlName:
+      url:
+    - id: 2
+      type: internet
+      value: Muzeum Wojska Polskiego (www.muzeumwp.pl) 
+      page: 
+      urlName: Kalendarium Dziejów Oręża Polskiego
+      url: http://www.muzeumwp.pl/kalendarium/08-02/
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Bitwa pod Sokalem (1519)
+      url: https://pl.wikipedia.org/wiki/Bitwa_pod_Sokalem_(1519)
+    - id: 4
+      type: reference
+      value: janicki_2001
+      page: str. 62
+      urlName:
+      url:
