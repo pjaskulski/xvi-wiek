@@ -8,9 +8,13 @@ content: >-
     {{{31 lipca 1541}}} roku podczas obrad sejmu Rzeszy w Ratyzbonie posłowie Polski
     i Prus: Stanisław Maciejewski i Krzysztof Kreytzen uzyskali roczne zawieszenie 
     banicji księcia Albrechta Hohenzollerna.[2] Książę został został ogłoszony 
-    banitą Rzeszy w 1532 roku, kiedy to nie stawił się przed Sąd Kameralny Rzeszy
+    banitą Rzeszy w 1532 roku, kiedy to nie stawił się przed sąd Rzeszy
     w sprawie legalności swojej władzy w Prusach. Cesarz Karol V uznawał wówczas 
-    za księcia Prus niemieckiego mistrza zakonu krzyżackiego Waltera von Cronberga. 
+    za księcia Prus niemieckiego mistrza zakonu krzyżackiego Waltera von Cronberga
+    i oczekiwał od Albrechta zrzeczenia się Prus na jego korzyść lub stawienia się
+    przed sąd ({(Reichskammergericht)}). Tego ostatniego Albrechtowi zabronił z kolei
+    Zygmunt I Stary w 1531 roku, wydając (na prośbę samego Albrechta) opinię, że jako
+    poddany króla polskiego nie może uznawać obcej jurysdykcji nad sobą.[3]  
     Banicja miała przede wszystkim znaczenie prestiżowe, niemniej Albrecht przez 
     wiele lat usilnie zabiegał o jej zniesienie, korzystając z poparcia Zygmunta 
     I Starego a później Zygmunta II Augusta.[1] Pełnego zniesienia banicji Albrecht 
@@ -38,3 +42,9 @@ sources:
       page: str. 117
       urlName:
       url: 
+    - id: 3
+      type: reference
+      value: wojtkowski_1968
+      page: str. 9
+      urlName:
+      url:
