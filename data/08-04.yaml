@@ -7,7 +7,7 @@ title: List cesarza Maksymiliana przeciw bulli papieskiej
 content: >- 
     {{{4 sierpnia 1505}}} roku cesarz Maksymilian I wystosował list do kolegium 
     kardynalskiego, w którym wspierał Zakon i wielkiego mistrza Fryderyka Saskiego
-    w sporze z Polską.[2] Cesarz żądał wycofania papieskiego nakazu złożenia przysięgi
+    w sporze z Polską.[2][3] Cesarz żądał wycofania papieskiego nakazu złożenia przysięgi
     wierności królowi polskiemu przez wielkiego mistrza, wydanego przez Juliusza 
     II staraniem posłów królewskich w maju 1505 roku.[1] Wśród licznych argumentów,
     którymi cesarz uzasadniał swoje stanowisko było niemieckie pochodzenie zakonu, 
@@ -25,8 +25,8 @@ content: >-
 contentTwitter: >-
     4 sierpnia 1505 roku cesarz Maksymilian I zażądał wycofania bulli papieskiej 
     nakazującej wielkiemu mistrzowi złożenie hołdu królowi polskiemu. 
-location: 
-geo: 
+location: Kolonia 
+geo: 50.9394,6.9633
 people: Juliusz II; Fryderyk Saski
 keywords: zakon krzyżacki
 image: 
@@ -42,5 +42,11 @@ sources:
       type: reference
       value: wojtkowski_1968
       page: str. 4
+      urlName:
+      url:
+    - id: 3
+      type: reference
+      value: rogalski_1846 
+      page: str. 418
       urlName:
       url: 
