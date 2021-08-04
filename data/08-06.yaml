@@ -1,0 +1,47 @@
+---
+id: 1
+day: 6
+month: 8
+year: 1548
+title: Bracia czescy przybywają do Poznania
+content: >- 
+    {{{6 sierpnia 1548}}} roku do Poznania przybyła trzecia fala uchodźców religijnych 
+    z Czech tzw. braci czeskich wypędzonych stamtąd edyktem króla Ferdynanda I Habsburga.[1]
+    Grupy braci czeskich zaczęły docierać na teren Wielkopolski w czerwcu tego roku, 
+    w Królestwie Polskim rozwijały się wówczas ruchy reformacyjne, szczególnie
+    wśród szlachty i w miastach a następcą zwalczającego reformację Zygmunta Starego został
+    właśnie Zygmunt II August, mawiający iż "nie chcę być królem sumień waszych". Uchodźcy 
+    mogli więc liczyć na opiekę możnych przedstawicieli polskich protestantów oraz 
+    tolerancję i pokój między {dissidentes in religione}. 
+    Ruch braci czeskich wywodził się z husytyzmu, powstał w drugiej połowie XV wieku.[2] 
+    Po wystąpieniu Marcina Lutra i rozwoju reformacji bracia czescy pozostawali pod wpływem
+    kościołów protestanckich, szczególnie kalwinizmu. Edykt Ferdynanda Habsburga z 1548 roku
+    zmuszał ich do przyjęcia wiary katolickiej lub emigracji co ostatecznie uczyniła
+    znaczna część braci czeskich. W Polsce ich protektorem został zwolennik reformacji
+    Andrzej Górka, starosta generalny Wielkopolski a po jego śmierci - Jakub Ostroróg, który
+    przekazał braciom działkę na przedmieściach Poznania gdzie pobudowali dwa kościoły.
+    Rodowa posiadłość Jakuba - Ostroróg stała się centrum wyznawców kościoła braci czeskich,
+    działało tam nawet ich seminarium duchowne. W 1570 roku istniały już na obszarze 
+    Wielkopolski 64 parafie  braci czeskich.
+contentTwitter: >-
+    6 sierpnia 1548 roku do Poznania przybyła trzecia fala uchodźców religijnych 
+    z Czech tzw. braci czeskich wypędzonych stamtąd edyktem króla Ferdynanda I Habsburga.
+location: Poznań
+geo: 52.4112,16.9265
+people: Górka Andrzej; Ostroróg Jakub
+keywords: reformacja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: mallek_2016
+      page: str. 25-26
+      urlName:
+      url:
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Bracia czescy
+      url: https://pl.wikipedia.org/wiki/Bracia_czescy
