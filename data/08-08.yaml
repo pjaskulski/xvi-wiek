@@ -1,0 +1,47 @@
+---
+id: 1
+day: 8
+month: 8
+year: 1524
+title: Zmarł Stanisław, książę mazowiecki   
+content: >- 
+    {{{8 sierpnia 1524}}} roku w Warszawie o piątej po południu zmarł Stanisław, książę mazowiecki, 
+    syn Konrada III, który współrządził Mazowszem wraz z młodszym bratem Januszem III.[2][3] Trzy tygodnie później
+    księcia pochowano w kolegiacie warszawskiej.[1] Jego śmierć w młodym wieku (miał 24 lata) spowodowała 
+    podejrzenia o nienaturalne przyczyny zgonu. Pogłoski tego rodzaju zaczęły się wzmagać dwa lata później
+    po nagłej śmierci Janusza III. Podejrzewano wojewodziankę płocką Katarzynę Radziejowską a nawet królową
+    Bonę. Zygmunt Stary powołał wówczas komisję, której śledztwo miało wyjaśnić sprawę i zakończyć szerzenie
+    się plotek. 9 lutego 1528 roku edykte królewskim ogłoszono wynik pracy komisji, iż "nie sztuką ani sprawą ludzką
+    lecz z woli Pana Wszechmogącego z tego świata zeszli". Mazowsze pozbawione władców - książęta nie mieli męskich
+    potomków, a próby przejęcia władzy przez ich siostrę Annę się nie powiodły - zostało włączone do Królestwa 
+    Polskiego. 13 września 1526 roku w Warszawie przedstawiciele szlachty mazowieckiej złożyli Zygmuntowi Staremu
+    przysięgę hołdowniczą.         
+contentTwitter: >-
+    8 sierpnia 1524 roku w Warszawie o piątej po południu zmarł Stanisław, książę mazowiecki, 
+    syn Konrada III, który współrządził Mazowszem wraz z młodszym bratem Januszem III.
+location: Warszawa
+geo: 52.2476,21.0138
+people: Stanisław mazowiecki; Janusz III; Zygmunt I Stary; Anna Konradówna; Radziejowska Katarzyna
+keywords: Mazowsze
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: grabowski_2012
+      page: str. 268
+      urlName:
+      url:
+    - id: 2
+      type: reference
+      value: grabowski_2016 
+      page: str. 111
+      urlName:
+      url:
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Stanisław mazowiecki
+      url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_mazowiecki
+    
