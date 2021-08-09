@@ -7,7 +7,10 @@ title: Śmierć Albrechta Hohenzollerna
 content: >- 
     {{{20 marca 1568}}} roku [1], w Tapiawie (niem. Tapiau, ros. Gwardiejsk) zmarł książę 
     Albrecht Hohenzollern, władca Prus Książęcych, wcześniej wielki mistrz 
-    zakonu krzyżackiego. Żył 77 lat. Został pochowany w Królewcu.
+    zakonu krzyżackiego. Albrecht we wrześniu 1563 roku, mając 73 lata wybrał się osobiście 
+    konno na czele pruskiego pospolitego ruszenia i oddziałów nadwornych przeciw Erykowi 
+    Brunszwickiemu.[3] Trudy wyprawy wojennej przypłacił udarem mózgu,[2] który spowodował częściowy paraliż 
+    z którym zmagał się już do końca życia. Został pochowany w Królewcu.
 contentTwitter: >-
     20 marca 1568 roku, w Tapiawie (dziś Gwardiejsk) zmarł książę Albrecht
     Hohenzollern, władca Prus Książęcych, dawniej wielki mistrz zakonu krzyżackiego.
@@ -24,3 +27,15 @@ sources:
       page:
       urlName: Albrecht Hohenzollern (1490-1568)
       url: "https://pl.wikipedia.org/wiki/Albrecht_Hohenzollern_(1490%E2%80%931568)"
+    - id: 2
+      type: reference
+      value: lopatecki_2015
+      page: str. 180-181
+      urlName:
+      url:
+    - id: 3
+      type: reference
+      value: plewczynski_1998
+      page: str. 44
+      urlName:
+      url: 
