@@ -1,0 +1,46 @@
+---
+id: 1
+day: 11
+month: 8
+year: 1579
+title: Wojska Stefana Batorego rozpoczęły oblężenie Połocka   
+content: >- 
+    {{{11 sierpnia 1579}}} roku wojska Stefana Batorego rozpoczęły oblężenie Połocka,
+    bronionego przez oddziały moskiewskie dowodzone przez kniazia Wasyla Iwanowicza 
+    Tielatiewskiego.[1] Tego dnia król dokonał rekonesansu objeżdzając miasto a 
+    następnie odbył naradę wojenną z kanclerzem Janem Zamoyskim, Kasprem Bekieszem, 
+    i hetmanem Mikołajem Mieleckim, którą przerwało samowolne rozpoczęcie oblężenia 
+    przez zaciężne oddziały piechoty niemieckiej. Następnego dnia do ataku na miasto
+    przystąpiła piechota węgierska Bekiesza. Połock poddał się 30 sierpnia, obrońcom 
+    pozwolono odejść wraz z rodzinami i dobytkiem,[3] w ręce zwycięzców wpadło 38 dział, 
+    300 hakownic i 600 rusznic.[2] Miasto pozostawało częścią Rzeczypospolitej aż 
+    do I rozbioru w 1772 roku.      
+contentTwitter: >-
+    11 sierpnia 1579 roku wojska Stefana Batorego rozpoczęły oblężenie Połocka,
+    bronionego przez oddziały moskiewskie dowodzone przez kniazia Wasyla Iwanowicza 
+    Tielatiewskiego.
+location: Połock
+geo: 55.4862,28.7701
+people: Stefan Batory
+keywords: Rosja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: lopatecki_2017
+      page: str. 708-724
+      urlName:
+      url:
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Wojna polsko-rosyjska (1577–1582)
+      url: https://pl.wikipedia.org/wiki/Wojna_polsko-rosyjska_(1577%E2%80%931582)
+    - id: 3
+      type: reference
+      value: grzybowski_2000
+      page: str. 217-218
+      urlName:
+      url:
