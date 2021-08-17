@@ -1,0 +1,45 @@
+---
+id: 1
+day: 22
+month: 8
+year: 1531
+title: Bitwa pod Obertynem
+content: >- 
+    {{{22 sierpnia 1531}}} roku pod Obertynem wojska polskie hetmana Jana Tarnowskiego 
+    pokonały oddziały hospodara mołdawskiego Piotra Raresza.[1] Bitwa była efektem kolejnej
+    odsłony wieloletniego sporu o Pokucie, między Królestwem Polskim a Mołdawią. Raresz 
+    już w 1530 roku zaczął domagać się zwrotu tych ziem, licząc na ochronę ze strony Turcji,
+    próbował też organizować sojusz z Habsburgami i Wielkim Księstwem Moskiewskim.
+    Oddziały mołdawskie wkroczyły na sporne terytorium pod koniec 1530 roku początkowo
+    odnosząc nawet sukcesy, jednak wkrótce dyplomatom Zygmunta Starego udało się uzyskać
+    w Stambule zapewnienie ze strony sułtana o braku poparcia dla hospodara mołdawskiego.
+    Przygotowano wyprawę, którą dowodził hetman wielki koronny Jan Tarnowski. Do spotkania 
+    z głównymi siłami mołdawskimi doszło koło wsi Obertyn, gdzie mimo ponad trzykrotnej 
+    przewagi przeciwnika sprawnie dowodzone wojska polskie odniosły zwycięstwo zadając
+    mu ciężkie straty.[2] W 1532 roku zawarto rozejm, Pokucie pozostało w rękach polskich.
+    Samo zwycięstwo Tarnowskiego przeszło do legendy, podkreślano kunszt militarny wojska 
+    jak i samego hetmana, który dwadzieścia lat później wydał ceniony podręcznik sztuki
+    wojennej "Consilium rationis bellicae".      
+contentTwitter: >-
+    22 sierpnia 1531 roku pod Obertynem wojska polskie hetmana Jana Tarnowskiego 
+    pokonały oddziały hospodara mołdawskiego Piotra Raresza.
+location: Obertyn
+geo: 48.6937,25.1706
+people: Tarnowski Jan; Raresz Piotr
+keywords: Mołdawia
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: grzybowski_2000
+      page: str. 71-72
+      urlName:
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Bitwa pod Obertynem
+      url: https://pl.wikipedia.org/wiki/Bitwa_pod_Obertynem
+   
