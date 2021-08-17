@@ -1,0 +1,45 @@
+---
+id: 1
+day: 23
+month: 8
+year: 1494
+title: Klęska pod Wiśniowcem
+content: >- 
+    {{{23 sierpnia 1494}}} roku ścigające Tatarów wojska litewskie i polskie poniosły 
+    klęskę w bitwie pod Wiśniowcem.[2][1] Najazd Tatarów chana Mengli Gireja niespodziewanie 
+    podążył tzw. czarnym szlakiem, którego tatarscy najeźdcy nie używali już od kilknastu 
+    lat. Król Jan Olbracht wysłał pospiesznie chorągwie nadworne i wojska zaciężne, 
+    które połączyły się z oddziałami litewskimi i dogoniły wiodące jasyr i łupy czmbuły 
+    tatarskie. Starcie z przeważającym liczebnie przeciwnikiem zakończyło się niestety 
+    krwawą klęską wojsk polsko-litewskich, rozbito doborowe roty nadworne i zaciężne, 
+    zginął m. in. starosta bełski Henryk Kamieniecki,[3] brat przyszłego hetmana wielkiego 
+    koronnego Mikołaja.               
+contentTwitter: >-
+    23 sierpnia 1494 roku ścigające Tatarów wojska litewskie i polskie poniosły 
+    klęskę w bitwie pod Wiśniowcem.
+location: Wiśniowiec
+geo: 49.9016,25.7512
+people: Kamieniecki Henryk; Jan Olbracht
+keywords: Tatarzy
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: kolankowski_1936
+      page:
+      urlName:
+      url: 
+    - id: 2
+      type: reference
+      value: niemczyk_2016
+      page: str. 142
+      urlName: 
+      url: 
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Henryk Kamieniecki (syn Henryka Andreasa)
+      url: https://pl.wikipedia.org/wiki/Henryk_Kamieniecki_(syn_Henryka_Andreasa)
+   
