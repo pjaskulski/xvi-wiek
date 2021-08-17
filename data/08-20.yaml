@@ -1,0 +1,45 @@
+---
+id: 1
+day: 20
+month: 8
+year: 1560
+title: Upadek inflanckiej twierdzy Felin
+content: >- 
+    {{{20 sierpnia 1560}}} roku padła twierdza Felin należąca do inflanckiej gałęzi
+    zakonu krzyżackiego a oblegana przez wojska moskiewskie Iwana Groźnego.[2] Twierdzy 
+    bronił poprzedni mistrz krajowy zakonu Johann von Fürstenberg, który niedawno 
+    zrezygnował ze współprzewodzenia zakonowi na rzecz Gottharda Kettlera. Wobec zagrożenia
+    ze strony rosyjskiej Fürstenberg zawarł w 1557 roku porozumienie z Zygmuntem II Augustem, 
+    szukał też wsparcia przeciw Moskwie w Szwecji i Danii. Sytuacja zakonu była jednak coraz 
+    trudniejsza. Twierdza Felin broniła się dwa tygodnie, zanim zdrada i bunt zołnierzy 
+    zaciężnych wymusiły kapitulację.[1] Johann von Fürstenberg dostał się do niewoli. 
+    Nie zgodził się na propozycje Iwana Groźnego by walczyć po stronie moskiewskiej 
+    a na zdobytej kosztem Polski dawnej ziemi zakonnej zostać świeckim księciem, zależnym 
+    od Rosji. Zakon podejmował wysiłki dyplomatyczne by uwolnić dawnego mistrza, 
+    jednak bezskutecznie. Fürstenberg zmarł prawdopodobnie w 1568 roku. Tereny zakonu 
+    dostały się pod władzanie Szwecji, Danii Rosji i Polski, ostatni mistrz - Gotthard 
+    Kettler, wzorem Albrechta Hohenzollerna został świeckim księciem Kurlandii i złożył 
+    hołd lenny Zygmuntowi Augustowi.      
+contentTwitter: >-
+    20 sierpnia 1560 roku padła twierdza Felin należąca do inflanckiej gałęzi
+    zakonu krzyżackiego a oblegana przez wojska moskiewskie Iwana Groźnego.
+location: Felin (est. Viljandi)
+geo: 58.3681,25.6012
+people: Fürstenberg von,  Johann Wilhelm; Kettler Gotthard; Zygmunt II August; Iwan IV Groźny
+keywords: Inflanty
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Johann Wilhelm von Fürstenberg
+      url: https://de.wikipedia.org/wiki/Johann_Wilhelm_von_F%C3%BCrstenberg
+    - id: 2
+      type: reference
+      value: plewczynski_1998
+      page: str. 43
+      urlName:
+      url: 
+   

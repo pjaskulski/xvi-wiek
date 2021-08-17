@@ -8,7 +8,7 @@ content: >-
     {{{19 sierpnia 1506}}} roku w Wilnie zmarł Aleksander Jagiellończyk, syn Kazimierza
     Jagiellończyka, król Polski od 1501 r. a wcześniej wielki książę litewski.[1][2]
     Król nie miał potomków, jego następcą na tronie litewskim i niedługo później 
-    na tronie polskim został jego brat Zygmunt zwany później Starym. Wdowa po Aleksandrze, 
+    na tronie polskim został jego brat Zygmunt zwany później Starym.[3] Wdowa po Aleksandrze, 
     Helena Moskiewska, kilka lat po śmierci męża próbowała wrócić do Moskwy, 
     jednak Zygmunt I Stary nie wydał na to zgody. Zmarła w 1513 r. w Wilnie. 
     Panowanie Aleksandra zbiegło się w czasie ze wzrostem siły Wielkiego Księstwa 
@@ -34,5 +34,11 @@ sources:
       type: reference
       value: jasienica_1965
       page: str. 284
+      urlName:
+      url: 
+    - id: 3
+      type: reference
+      value: grzybowski_2000
+      page: str. 9
       urlName:
       url: 
