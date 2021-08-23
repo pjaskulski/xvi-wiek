@@ -1,0 +1,44 @@
+---
+id: 1
+day: 24
+month: 8
+year: 1574
+title: Zwołano sejm w Warszawie po ucieczce Henryka Walezego
+content: >- 
+    {{{24 sierpnia 1574}}} roku był datą wyznaczoną przez prymasa Jakuba Uchańskiego
+    jako początek sejmu zwołanego po ucieczce króla Henryka Walezego.[1][2] Konieczność zwołania
+    sejmu była jasna już parę dni po tym wydarzeniu (król uciekł w nocy z 18 na 19 czerwca), 
+    senatorowie krakowscy proponowali Kraków, Lublin lub Warszawę, na zjazdach szlacheckich 
+    w Poznaniu i Krakowie wybrano Warszawę, jako bliższą Litwie i sierpień by dać szlachcie 
+    czas na podróż z odleglejszych zakątków Rzeczypospolitej. Ze względu na problemy 
+    z frekwencją obrady rozpoczęto dopiero 30 sierpnia, jednak mimo tego przesunięcia 
+    posłowie z Litwy i Prus Królewskich nie dotarli do Warszawy. Głównym problemem 
+    do rostrzygnięcia był stan formalny państwa - czy wobec wyjazdu Henryka z kraju 
+    należy ogłosić bezkrólewie. Izba poselska opowiadała się za tym rozwiązaniem,
+    senatorowie uważali iż należy najpierw wysłać poselstwo do Francji i podjąć rozmowy 
+    z królem. Przeważyło zdanie senatu, wystosowano ultimatum dla króla: jeżeli nie 
+    powróci do 12 maja 1575 roku do kraju, będzie to jednoznaczne z rezygnacją z korony
+    i nową elekcją. Henryk Walezy nigdy do Polski nie wrócił, konieczność nowej elekcji 
+    stała się faktem.             
+contentTwitter: >-
+    24 sierpnia 1574 roku był datą wyznaczoną przez prymasa Jakuba Uchańskiego
+    na początek sejmu zwołanego po ucieczce króla Henryka Walezego. 
+location: Warszawa
+geo: 52.2476,21.0138
+people: Uchański Jakub
+keywords: elekcja
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: grzybowski_2000
+      page: str. 184
+      urlName:
+      url: 
+    - id: 2
+      type: reference
+      value: dubas-urwanowicz_1998
+      page: str. 248
+      urlName: 
+      url: 
