@@ -1,0 +1,49 @@
+---
+id: 1
+day: 26
+month: 8
+year: 1529
+title: Podpisano traktat w Grzmiącej 
+content: >- 
+    {{{26 sierpnia 1529}}} roku w Grzmiącej (niem. Grimnitz) podpisano traktat między 
+    Pomorzem a Brandegburgią. Marchia Branderburska zrzekła się w nim pretensji do 
+    pomorskiego lenna, zaś władcy Pomorza: Jerzy I i Barnim IX zgodzili się na sukcesję 
+    Branderburgii po ewentualnym wygaśnieciu dynastii Gryfitów.[2] Traktat został zatwierdzony 
+    przez stany pomorskie 25 października 1529 roku, w tym samym roku zawarto również 
+    pomorsko-branderburskie przymierze zaczepno-obronne. Stablilizacja między Marchią 
+    a Gryfitami przyczyniła się też do wzrostu handlu polskiego przebiegającego szlakiem 
+    przez teren Pomorza, przymierze bowiem zapewniało też bezpieczeństwo kupcom i wspólne 
+    tępienie rozbojów.[1] Handel bezpośrednio przez terytorium Branderburgii był w Polsce 
+    zakazany od 1520 roku, w związku z wrogimi stosunkami między obu krajami. Szlak pomorski 
+    stał się wówczas główną lądową drogą handlową dla towarów polskich wywożonych do Europy 
+    Zachodniej. Dynastia Gryfitów wygasła dopiero ponad 100 lat później, w 1637 roku,[3] 
+    część terytorium Pomorza przypadła wówczas Hohenzollernom, część jednak dostała 
+    się pod okupację szwedzką.   
+contentTwitter: >-
+    26 sierpnia 1529 roku zawarto traktat w Grzmiącej między władcami pomorskimi 
+    z dynastii Gryfitów Jerzym I i Barnimem IX a Brandegburgią.
+location: Grzmiąca
+geo: 53.834167,16.433611
+people: Jerzy I Pomorski; Barnim IX Pobożny
+keywords: Pomorze; Gryfici
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: chojnacka_1952
+      page: str. 655
+      urlName:
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Grzmiąca (województwo zachodniopomorskie)
+      url: https://pl.wikipedia.org/wiki/Grzmi%C4%85ca_(wojew%C3%B3dztwo_zachodniopomorskie)
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Gryfici
+      url: https://pl.wikipedia.org/wiki/Gryfici
