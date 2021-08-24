@@ -13,6 +13,7 @@ func createTemplateCache(path string) (map[string]*template.Template, error) {
 	var functions = template.FuncMap{
 		"dayFact":     dayFact,
 		"firstLetter": firstLetter,
+		"addOne":      addOne,
 	}
 
 	templateFiles, err := filepath.Glob(filepath.Join(path, "*.page.gohtml"))
@@ -49,4 +50,10 @@ func firstLetter(word string) string {
 	}
 
 	return result
+}
+
+// addOne - helper func, return value incr by one
+func addOne(value int) int {
+	value += 1
+	return value
 }

@@ -17,14 +17,14 @@
         <section>            
             <h2>Książki i artykuły</h2>
 
-            {{range .References}}                         
-                <p style="margin-left: 20px;">{{ . }}</p>
+            {{range $index, $value := .References}}                         
+                <p style="margin-left: 40px; text-indent: -20px;">{{ addOne $index }}. {{ $value }}</p>
             {{end}}
             <hr>
 
             <h2>Strony internetowe</h2>
-            {{range .InternetSites}}                         
-                <p style="margin-left: 20px;">{{ . }}</p>
+            {{range $index, $value := .InternetSites}}                         
+                <p style="margin-left: 40px; text-indent: -20px;">{{ addOne $index }}. {{ $value }}</p>
             {{end}}
             
         </section>
