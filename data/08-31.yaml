@@ -1,0 +1,54 @@
+---
+id: 1
+day: 31
+month: 8
+year: 1559
+title: Zawarto pierwszy pakt wileński 
+content: >- 
+    {{{31 sierpnia 1559}}} roku w Wilnie zawarto pierwszy pakt między Zygmuntem II 
+    Augustem a inflancką gałęzią zakonu krzyżackiego.[4][2] Mistrz Gotthard Kettler oddał 
+    ziemie zakonu pod opiekę Wielkiego Księstwa Litewskiego. Sytuacja zakonu była 
+    wówczas krytyczna, w 1558 roku Inflanty zostały najechane przez wojska moskiewskie
+    Iwana IV Groźnego, ze słabości zakonu skorzystały też Szwecja i Dania, Rewel (obecnie Tallin)
+    oddał się pod opiekę szwedzką, północno zachodnią część Estonii opanowała Dania.
+    W ramach traktatu szóstą część terytorium zakonu oddano w zastaw (z prawem wykupu)
+    wielkiemu księstwu litewskiemu.[3] Kettler liczył na istotne wsparcie militarne zakonu 
+    przez Litwę, jednak tak nie była wystarczająca, w 1560 roku pod Ermes[1] Moskwa 
+    odniosła zwycięstwo nad armią inflancką. Rok później zawarto kolejny pakt w Wilnie, 
+    tym razem opiekę nad ziemiami upadającego zakonu objęło także Królestwo Polskie.
+    Doszło do sekularyzacji zakonu a Gotthard Kettler został świeckim księciem Kurlandii.      
+contentTwitter: >-
+    31 sierpnia 1559 roku w Wilnie zawarto pierwszy pakt między Zygmuntem Augustem 
+    a inflancką gałęzią zakonu krzyżackiego. Mistrz Gotthard Kettler oddał ziemie 
+    zakonu pod opiekę Wielkiego Księstwa Litewskiego.
+location: Wilno
+geo: 54.6889,25.2795
+people: Zygmunt August; Kettler Gotthard
+keywords: Inflanty
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: bodniak_1946 
+      page: str. 47
+      urlName:
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Pakt wileński
+      url: https://pl.wikipedia.org/wiki/Pakt_wile%C5%84ski
+    - id: 3
+      type: reference
+      value: lopatecki_2012 
+      page: str. 312
+      urlName:
+      url:
+    - id: 4
+      type: reference
+      value: grzybowski_2000
+      page: str. 127
+      urlName:
+      url:
