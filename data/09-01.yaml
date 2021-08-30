@@ -1,0 +1,45 @@
+---
+id: 1
+day: 1
+month: 9
+year: 1552
+title: Zamordowano hospodara mołdawskiego Stefana Raresza
+content: >- 
+    {{{1 września 1552}}} roku w okolicy wsi Ţuţora (pol. Cecora) zamordowany został
+    hospodar mołdawski Stefan Rareş, sprawcami mordu byli mołdawscy bojarzy spiskujący przeciw 
+    władcy po jego nieudanej wyprawie do Siedmiogrodu.[2] Następcą Stefana został Jan Joldea,
+    który panował zaledwie trzy dni, obalony przez wojska polskie wysłane przez hetmana 
+    Sieniawskiego. Polacy dowodzeni przez starostę kamienieckiego Macieja Włodka wspierali
+    kandydaturę Piotra, nieślubnego syna hospodara Bogdana III Jednookiego. Po przekroczeniu 
+    Dniestru Piotr przybrał imię Aleksandra IV i uznał się za lennika Królestwa Polskiego,
+    hołd w imieniu Zygmunta Augusta odebrał hetman Sieniawski. Działania te zostały jednak
+    podjęte bez wiedzy króla, który hołd odrzucił obawiając się reakcji Turcji, nakazał też 
+    wojskom polskim natychmiastowy odwrót z Mołdawii.[1] Sytuację udało się rozwiązać na drodze
+    dyplomatycznej, Polska i Turcja przedłużyły w 1553 roku traktat pokojowy, Sułtan 
+    uznał władzę Aleksandra IV, który dodatkowo ponowił hołd wobec Korony. Mołdawia 
+    pod panowaniem nowego hospodara wsparła w 1556 roku powrót Izabeli Jagiellonki 
+    i jej syna Jana Zygmunta do Siedmiogrodu. 
+contentTwitter: >-
+    1 września 1552 roku w okolicy wsi Cecora zamordowany został hospodar mołdawski 
+    Stefan Rareş, sprawcami mordu byli mołdawscy bojarzy spiskujący przeciw władcy 
+    po jego nieudanej wyprawie do Siedmiogrodu.
+location: Cecora
+geo: 47.134,27.7947
+people: Zygmunt II August; Aleksander IV (hospodar mołdawski)
+keywords: Mołdawia
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: szutkiewicz_2009
+      page: str. 13
+      urlName:
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Stefan Rareş
+      url: https://ro.wikipedia.org/wiki/%C8%98tefan_Rare%C8%99
+    
