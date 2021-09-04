@@ -1,0 +1,44 @@
+---
+id: 1
+day: 5
+month: 9
+year: 1535
+title: Zygmunt I Stary potwierdził przywilej lokacyjny Kielc 
+content: >- 
+    {{{5 września 1535}}} roku Zygmunt I Stary wydał dokument z przywilejem lokacyjnym
+    dla miasta Kielce, w którym potwierdzał posiadanie przez miasto prawa magdeburskiego,
+    przyznawał prawo do odbywania trzech jarmarków rocznie, oraz cotygodniowych targów 
+    w soboty.[2] Przyznał także dla Kielc ulgi celne, podatkowe i immunitet sądowy.
+    Nie jest to jednak najstarszy zachowany przywilej lokacyjny dla Kielc, które prawa
+    magdeburskie otrzymały w 1364 roku[3], gdyż w Archiwum Kapitulnym w Krakowie znajduje się 
+    dokument z przywilejem lokacyjnym dla miasta wydany przez Kazimierza Jagiellończyka
+    12 grudnia 1459 roku.[1]  
+contentTwitter: >-
+    5 września 1535 roku Zygmunt I Stary wydał dokument z przywilejem lokacyjnym
+    dla miasta Kielce, w którym potwierdzał posiadanie przez miasto prawa magdeburskiego.    
+location: Kielce
+geo: 50.8712,20.6316
+people: Zygmunt I Stary
+keywords: miasta
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: guldon_1975
+      page: str. 309
+      urlName:
+      url: 
+    - id: 2
+      type: internet
+      value: UM Kielce
+      page: 
+      urlName: Z kart historii
+      url: http://www.um.kielce.pl/z_kart_historii/9/
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Historia Kielc
+      url: https://pl.wikipedia.org/wiki/Historia_Kielc
+   
