@@ -1,0 +1,55 @@
+---
+id: 1
+day: 6
+month: 9
+year: 1553
+title: Kniaź Wasyl Konstanty Ostrogski zdobył zamek w Ostrogu 
+content: >- 
+    {{{6 września 1553}}} roku kniaź Wasyl Konstanty Ostrogski zdobył zamek w Ostrogu,
+    następnie porwał i zmusił swoją bratanicę Halszkę (Elżbietę) do ślubu z Dymitrem Sanguszko.[2]
+    Halszka, córka księżnej Beaty Ostrogskiej z Kościeleckich[3], dziedziczka wielkiego
+    majątku, została wcześniej obiecana Sanguszce jednak księżna Ostrogska nie zamierzała 
+    tej obietnicy spełniać. Zygmunt II August uznał winnym Sanguszkę, skazał go na 
+    banicję i infamię. Ten zbiegł z żoną na Morawy, został tam jednak doścignięty i zamordowany
+    przez Marcina Zborowskiego.[1] Dalsze losy Halszki Ostrogskiej, również nie były 
+    szczęśliwe, w 1559 roku król będący jej prawnym opiekunem, zmusił ją do ślubu 
+    z wojewodą brzesko-kujawskim Łukaszem Górką. Mimo prób ucieczki i zawarcia kolejnego 
+    małżeństwa (nieuznanego przez Zygmunta Augusta), Halszka zmuszona była mieszkać w 
+    dobrach swojego męża, na zamku w Szamotułach, aż do jego śmierci w 1573 roku.[4] 
+    Później przeniosła się na Ruś, gdzie zmarła. Jej ogromny majątek (ziemie o powierzchni 
+    zbliżonej do całego województwa wielkopolskiego) odziedziczył stryj Wasyl Ostrogski.   
+contentTwitter: >-
+    6 września 1553 roku kniaź Wasyl Konstanty Ostrogski zdobył zamek w Ostrogu,
+    następnie porwał i zmusił swoją bratanicę Halszkę (Elżbietę) do ślubu z Dymitrem Sanguszko.   
+location: Ostróg
+geo: 50.3342,26.5174 
+people: Zygmunt II August; Ostrogski Wasyl Konstanty
+keywords: szlachta
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: grzybowski_2000
+      page: str. 117-118
+      urlName:
+      url: 
+    - id: 2
+      type: reference
+      value: mironowicz_2020
+      page: str. 187
+      urlName: 
+      url: 
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Beata Łaska z Kościeleckich
+      url: https://pl.wikipedia.org/wiki/Beata_%C5%81aska_z_Ko%C5%9Bcieleckich 
+    - id: 4
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Elżbieta Ostrogska
+      url: https://pl.wikipedia.org/wiki/El%C5%BCbieta_Ostrogska  
+    
