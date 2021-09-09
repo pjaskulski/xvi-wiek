@@ -1,0 +1,38 @@
+---
+id: 1
+day: 10
+month: 9
+year: 1526
+title: Sejm mazowiecki złożył przysięgę wierności Zygmuntowi Staremu
+content: >- 
+    {{{10 września 1526}}} roku w Warszawie sejm mazowiecki złożył przysięgę wierności
+    królowi Zygmuntowi I Staremu.[1] Tym samym szlachta mazowiecka potwierdziła inkorporację
+    księstwa do Królestwa Polskiego. Ostatni książę mazowiecki z dynastii Piastów, Janusz III, 
+    zmarł wiosną 1526 roku nie zostawiając potomstwa. Mimo różnych pomysłów na dalsze losy
+    księstwa, królowa Bona myślała np. o ustanowieniu Mazowsza księstwem dziedzicznym 
+    Zygmunta Augusta, zwyciężyło jednak zdanie króla, który dążył do pełnej inkorporacji.[2] 
+    Tę w 1529 roku potwierdził sejm koronny w Piotrkowie, na którym po raz pierwszy 
+    pojawili się przedstawiciele szlachty mazowieckiej.
+contentTwitter: >-
+    10 września 1526 roku w Warszawie sejm mazowiecki złożył przysięgę wierności
+    królowi Zygmuntowi I Staremu.
+location: Warszawa 
+geo: 52.2476,21.0138
+people: Zygmunt I Stary; Zygmunt II August; Janusz III mazowiecki
+keywords: Mazowsze
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Powrót do Królestwa Polskiego
+      url: https://pl.wikipedia.org/wiki/Mazowsze#Powr%C3%B3t_do_Kr%C3%B3lestwa_Polskiego 
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 66-67 
+      urlName:
+      url: 
+    
