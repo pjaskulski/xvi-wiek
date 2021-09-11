@@ -1,0 +1,50 @@
+---
+id: 1
+day: 12
+month: 9
+year: 1585
+title: Drukarz Aleksy Rodecki stanął przed sądem królewskim
+content: >- 
+    {{{12 września 1585}}} roku odbyła się rozprawa przed królem Stefanem Batorym,
+    podczas której sądzono drukarza Aleksego Rodeckiego.[2] Rodecki w 1574 roku założył
+    w Krakowie drukarnię, w której wydawał głównie dzieła ariańskie. Jedno z tych dzieł, 
+    książka {Praedpuarum enumeratio causarum} antytrynitarza i byłego jezuity Christiana 
+    Franckena[1], sprowadziło na jego głowę kłopoty. Przeciw wydaniu książki interweniował 
+    u króla prowincjał jezuitów, Jan Paweł Campano. Stefan Batory nakazał zamknięcie drukarni,
+    Rodeckiego aresztowano i zabroniono wykonywania zawodu. Sam autor dzieła zbiegł
+    do Siedmiogrodu. Oskarżonego drukarza bronił skutecznie Stanisław Taszycki, unitarianin
+    i poseł na sejm, w kilka tygodni później Aleksy Rodecki wyszedł na wolność, zwrócono
+    mu też warsztat drukarski.[3] Drukarz spotkał się jednak także z krytyką ze strony
+    zboru ariańskiego, za druk książek sprzecznych z doktryną i bez jego zgody,
+    na krótki czas został nawet wykluczony ze zboru. W 1588 roku wrócił do drukowania 
+    książek dla braci polskich, później przeniósł się do Rakowa, gdzie w 1600 roku 
+    jego drukarnię przejął zięć Sebastian Sternacki.    
+contentTwitter: >-
+    12 września 1585 roku odbyła się rozprawa przed królem Stefanem Batorym,
+    podczas której sądzono drukarza Aleksego Rodeckiego.
+location: 
+geo: 
+people: Stefan Batory; Rodecki Aleksy; Taszycki Stanisław
+keywords: kultura; kontrreformacja  
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Christian Francken
+      url: https://en.wikipedia.org/wiki/Christian_Francken
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:  
+      urlName: Aleksy Rodecki
+      url: https://pl.wikipedia.org/wiki/Aleksy_Rodecki
+    - id: 3
+      type: reference
+      value: buchwald_1997
+      page: str.189-190
+      urlName: 
+      url: 
+  
