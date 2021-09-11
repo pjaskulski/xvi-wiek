@@ -6,21 +6,21 @@ year: 1583
 title: Wizyta Mikołaja Radziwiłła pod piramidami
 content: >- 
     {{{11 września 1583}}} roku Mikołaj Radziwiłł "Sierotka" odbył swoją drugą wyprawę
-    do egipskich piramid, podczas której nabył dwie mumie.[1] Podczas wcześniejszej wyprawy
-    w sierpniu tego roku książę Radziwiłł wspiął się na szczyt piramidy Cheopsa. 
-    Mumie zabrał ze sobą wracając do domu, jednak w trakcie rejsu z Egiptu uległ 
-    popularnemu wówczas przesądowi i wyrzucił obie mumie do morza, jako przynoszące 
-    pecha w trakcie żeglugi. Wyprawy do piramid były elementem dwuletniej pielgrzymki
-    do Ziemi Świętej[3], w trakcie której Mikołaj Radziwiłł odwiedził też właśnie Egipt 
-    i Syrię. Kilka lat później spisał pamiętniki znane pod tytułem "Pamiętniki z pielgrzymki 
-    do Ziemi Św."[2]       
+    do egipskich piramid, podczas której nabył dwie mumie ze szczątkami mężczyzny 
+    i kobiety.[1] W czasie wcześniejszej wyprawy w sierpniu tegoż roku książę Radziwiłł 
+    wspiął się na szczyt piramidy Cheopsa. Mumie zabrał ze sobą wracając do domu, 
+    jednak w trakcie rejsu z Egiptu uległ popularnemu wówczas przesądowi i wyrzucił 
+    obie mumie do morza, jako przynoszące pecha w trakcie żeglugi. Wyprawy do piramid 
+    były częścią dwuletniej pielgrzymki do Ziemi Świętej[3], w trakcie której Mikołaj 
+    Radziwiłł odwiedził także Egipt i Syrię. Kilka lat później spisał pamiętniki (ok. 1595) 
+    wydane w 1601 roku pod tytułem "Peregrynacja do Ziemi Świętej".[2][4]       
 contentTwitter: >-
     11 września 1583 roku Mikołaj Krzysztof Radziwiłł odbył swoją drugą wyprawę
     do egipskich piramid, podczas której nabył dwie mumie.
-location:  
-geo: 
+location: Egipt 
+geo: 29.978949,31.134005
 people: Radziwiłł Mikołaj Krzysztof
-keywords:   
+keywords: kultura  
 image: 
 imageInfo: 
 sources:     
@@ -42,4 +42,11 @@ sources:
       page: 
       urlName: Mikołaj Krzysztof Radziwiłł
       url: https://pl.wikipedia.org/wiki/Miko%C5%82aj_Krzysztof_Radziwi%C5%82%C5%82
+    - id: 4
+      type: reference
+      value: osuch_2021
+      page:
+      urlName:
+      url:
+
     
