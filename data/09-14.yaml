@@ -1,0 +1,40 @@
+---
+id: 1
+day: 14
+month: 9
+year: 1557
+title: Zawarto traktat pozwolski
+content: >- 
+    {{{14 września 1557}}} roku w Pozwolu (lit. Pasvalys) zawarto traktat zaczepno-obronny 
+    między Zygmuntem II Augustem a mistrzem krajowym inflanckiej gałęzi zakonu krzyżackiego
+    Wilhelmem Fürstenbergiem.[1][2] Słaby militarnie w tym okresie zakon zagrożony był przez 
+    agresywne działania Iwana Groźnego, dramatycznie poszukiwał więc sojusznika przeciw Moskwie 
+    w Polsce, Danii i Szwecji, sam Zygmunt August zainteresowany był rozciągnięciem 
+    swoich wpływów na Inflanty i ograniczaniem dostępu handlu rosyjskiego do Bałtyku. 
+    Trakat nie powstrzymał jednak ataków wojsk moskiewskich, w 1560 roku zdobyły one twierdzę
+    Fellin, były już wówczas mistrz krajowy Fürstenberg dostał się do niewoli, z której już
+    nie powrócił.     
+contentTwitter: >-
+    14 września 1557 roku w Pozwolu zawarto traktat zaczepno-obronny między Zygmuntem 
+    II Augustem a mistrzem krajowym inflanckiej gałęzi zakonu krzyżackiego Wilhelmem 
+    Fürstenbergiem.
+location: Pozwol
+geo: 56.0619,24.3979
+people: Zygmunt II August; Fürstenberg Wilhelm
+keywords: Inflanty  
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Traktat pozwolski 
+      url: https://pl.wikipedia.org/wiki/Traktat_pozwolski
+    - id: 2
+      type: reference
+      value: jankiewicz_2013
+      page: str. 21
+      urlName: 
+      url: 
+  
