@@ -1,0 +1,44 @@
+---
+id: 1
+day: 23
+month: 9
+year: 1492
+title: 
+content: >- 
+    {{{23 września 1492}}} roku w Krakowie, w katedrze na Wawelu Jan Olbracht został
+    koronowany na króla Polski.[1][2] Koronacji dokonał arcybiskup gnieźnieński prymas Zbigniew 
+    Oleśnicki[3]. Objęcie tronu polskiego przez Jana Olbrachta było najbardziej prawdopodobne,
+    gdyż Kazimierz Jagielończyk tego właśnie syna polecił szlachcie Królestwa. Nie było
+    to jednak całkiem pewne, gdyż kandydatów do tronu wysunięto kilku, m.in. braci Jana:
+    Aleksandra - wielkiego księcia litewskiego, Władysława króla Czech i Węgier oraz Zygmunta. 
+    Istniało też stronnictwo piastowskie, popierające księcia mazowieckiego Janusza II, 
+    któremu przewodził prymas Oleśnicki. Ostatecznie uszanowano wolę zmarłego króla, podczas
+    sejmu elekcyjnego w Piotrkowie 27 sierpnia 1492 roku jednogłośnie wybrano królem Jana Olbrachta.    
+contentTwitter: >-
+    {{{23 września 1492}}} roku w Krakowie, w katedrze na Wawelu Jan Olbracht został
+    koronowany na króla Polski. 
+location: Kraków
+geo: 50.0546,19.9352
+people: Jan Olbracht; Oleśnicki Zbigniew
+keywords: Jagiellonowie
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: godlewski_2016
+      page: str. 16
+      urlName: 
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Jan I Olbracht
+      url: https://pl.wikipedia.org/wiki/Jan_I_Olbracht
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Zbigniew Oleśnicki (prymas)
+      url: https://pl.wikipedia.org/wiki/Zbigniew_Ole%C5%9Bnicki_(prymas)
