@@ -1,0 +1,37 @@
+---
+id: 1
+day: 4
+month: 10
+year: 1582
+title: Zmiana kalendarza z juliańskiego na gregoriański
+content: >- 
+    {{{4 października 1582}}} roku był ostatnim dniem obowiązywania w Polsce kalendarza
+    juliańskiego, kolejnym dniem był nie 5-ty lecz 15 października według wprowadzonego
+    właśnie kalendarza gregoriańskiego.[1] Zmianę kalendarza wprowadził papież Grzegorz XIII 
+    wydając 24 lutego 1582 roku bullę {Inter gravissimas}[2], oficjalnie ogłoszoną 1 marca 
+    tegoż roku. Oprócz Polski zastosowały się do niej Włochy, Hiszpania i Portugalia, 
+    w grudniu 1582 roku nowy kalendarz wprowadziła Francja, dwa lata później Austria, 
+    Czechy i Śląsk.   
+contentTwitter: >-
+    4 października 1582 roku był ostatnim dniem obowiązywania w Polsce kalendarza
+    juliańskiego, kolejnym dniem był nie 5-ty lecz 15 października według wprowadzonego
+    właśnie kalendarza gregoriańskiego.
+location: 
+geo:  
+people: Grzegorz XIII
+keywords: nauka
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Inter gravissimas
+      url: https://pl.wikipedia.org/wiki/Inter_gravissimas
+    - id: 2
+      type: reference
+      value: wejnert_1865
+      page: str. 505-506
+      urlName:
+      url:
