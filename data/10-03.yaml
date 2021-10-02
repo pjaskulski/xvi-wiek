@@ -1,0 +1,35 @@
+---
+id: 1
+day: 3
+month: 10
+year: 1493
+title: Aleksander Jagiellończyk został wybrany na króla Polski
+content: >- 
+    {{{3 października 1501}}} roku podczas sejmu walnego w Piotrkowie wielki książę
+    Aleksander Jagiellończyk został wybrany na króla Polski.[1] Konkurentami księcia byli 
+    jego bracia: Władysław, król Czech i Węgier oraz książę Zygmunt Jagiellończyk, najmłodszy
+    z braci zaś - kardynał Ferdnynad wspierał Aleksandra.[2] Koronacja nowego władcy odbyła się 
+    w grudniu 1501 roku, jednak dotyczyło to tylko króla, jego małżonka Helena Moskiewska,
+    ze względu na prawosławne wyznanie i sprzeciw polskich biskupów nie została koronowana.  
+contentTwitter: >-
+    3 października 1501 roku podczas sejmu walnego w Piotrkowie wielki książę
+    Aleksander Jagiellończyk został wybrany na króla Polski.
+location: Piotrków
+geo: 51.4088,19.6868 
+people: Aleksander Jagiellończyk; Helena Moskiewska
+keywords: Jagiellonowie
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Aleksander Jagiellończyk
+      url: https://pl.wikipedia.org/wiki/Aleksander_Jagiello%C5%84czyk
+    - id: 2
+      type: reference
+      value: borkowska_2011
+      page: 
+      urlName:
+      url:
