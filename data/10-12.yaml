@@ -1,0 +1,42 @@
+---
+id: 1
+day: 12
+month: 10
+year: 1520
+title: Zaciężna armia krzyżacka zdobyła Międzyrzecz
+content: >- 
+    {{{12 października 1520}}} roku wojska zaciężne zakonu dowodzone przez Wolfa von Schönburga
+    zdobyły miasto Międzyrzecz.[2] Przedstawiciele zakonu od lata 1520 roku organizowali pomoc 
+    zbrojną dla wielkiego mistrza w trakcie trwającej wojny polsko-krzyżackiej.[3] Zebrana w okolicy 
+    Frankfurtu nad Odrą (dzięki pomocy finansowej niemieckiej części zakonu) armia najemników 
+    wkroczyła w październiku na teren Wielkopolski. Po zdobyciu miasta przystąpiono do oblężenia
+    międzyrzeckiego zamku, który padł pod dwóch dniach, większą cześć załogi wymordowano.[1] Armia 
+    krzyżacka wyruszyła na północ, próbując bezskutecznie oblegać Gdańsk.     
+contentTwitter: >-
+    12 października 1520 roku wojska zaciężne zakonu dowodzone przez Wolfa von Schönburga
+    zdobyły miasto Międzyrzecz.
+location: Międzyrzecz
+geo: 52.4449,15.5805
+people: Schönburg, von Wolf
+keywords: zakon krzyżacki
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Bitwa o Międzyrzecz (1520)
+      url: https://pl.wikipedia.org/wiki/Bitwa_o_Mi%C4%99dzyrzecz_(1520)
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Wojna polsko-krzyżacka (1519–1521)
+      url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
+    - id: 3
+      type: reference
+      value: biskup_2017
+      page:
+      urlName:
+      url: 
