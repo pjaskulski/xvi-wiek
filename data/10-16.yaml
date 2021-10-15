@@ -1,0 +1,29 @@
+---
+id: 1
+day: 16
+month: 10
+year: 1562
+title: Pierwszy zbór braci polskich
+content: >- 
+    {{{16 października 1562}}} roku na skutek rozłamu w zborze kalwińskim w Krakowie 
+    powstał pierwszy zbór braci polskich, zwanych też arianami.[1] W 1563 roku podczas 
+    synodu w Pińczowie powołano Polski Mniejszy Kościół Reformowany. Sto lat później
+    poprzez ustawy sejmowe 1658 roku Arianie zostali wypędzeni z Polski (o ile nie zdecydowali
+    się przejść na katolicyzm). Większość z nich emigrowała, głównie do Holandii, Prus Książęcych
+    i Siedmiogrodu.    
+contentTwitter: >-
+    16 października 1562 roku na skutek rozłamu w zborze kalwińskim w Krakowie 
+    powstał pierwszy zbór braci polskich, zwanych też arianami.
+location: Kraków
+geo: 50.0546,19.9352
+people: 
+keywords: reformacja
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Bracia polscy
+      url: https://pl.wikipedia.org/wiki/Bracia_polscy
