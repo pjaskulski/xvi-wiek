@@ -7,7 +7,7 @@ title: Król Zygmunt II August powołał pierwszą stałą pocztę królewską
 content: >- 
     {{{18 października 1558}}} roku Zygmunt II August wydał przywilej {Ordinatio 
     postae Cracovia Venetias praeficitur}, w którym okreslał zasady działania 
-    poczty królewskiej kursującej między Krakowem a Wenecją. Potrzeba stworzenia
+    poczty królewskiej kursującej między Krakowem a Wenecją.[4][5] Potrzeba stworzenia
     usług pocztowych na wzór tych, które funkcjonowały już w Europie, wynikała
     ze wzmożonej korespondencji związanej ze sprawami spadkowymi po śmierci matki 
     króla Bony Sforzy. Pierwszym zarządcą poczty został Prospero Provana[1], który 
@@ -46,3 +46,15 @@ sources:
       page:
       urlName: Thurn und Taxis
       url: https://pl.wikipedia.org/wiki/Thurn_und_Taxis
+    - id: 4
+      type: internet
+      value: www.poczta-polska.pl
+      page:
+      urlName: Historia
+      url: https://www.poczta-polska.pl/o-firmie/historia/ 
+    - id: 5
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Poczta Polska. Usługi pocztowe w Polsce przedrozbiorowej
+      url: https://pl.wikipedia.org/wiki/Poczta_Polska#Us%C5%82ugi_pocztowe_w_Polsce_przedrozbiorowej 

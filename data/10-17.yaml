@@ -1,0 +1,37 @@
+---
+id: 1
+day: 17
+month: 10
+year: 1556
+title: Ordynacja Zygmunta Augusta dla mieszczan krakowskich
+content: >- 
+    {{{17 października 1556}}} roku Zygmunt II August wydał ordynację dla mieszczan 
+    krakowskich dotyczącą sądownictwa i wnoszenia apelacji.[1] Król pozwolił mieszczanom 
+    odwoływać się do Sądu Szaściu Miast, ale też bezpośrednio do niego, choć jedynie 
+    w wyjątkowych przypadkach. Sąd Sześciu Miast był instytucją powołaną jeszcze w 
+    czasach Kazimierza Wielkiego, pełnił rolę najwyższej instancji w strukturze sądowniczej 
+    miast lokowanych na prawie magdeburskim.[2] W składzie sądu znajdował się przedstawiciel 
+    króla, oraz komisarze sześciu (stąd nazwa) miast z obszaru Małopolski: Krakowa, 
+    Kazimierza, Bochni, Wieliczki, Sącza i Olkusza.    
+contentTwitter: >-
+    17 października 1556 roku Zygmunt II August wydał ordynację dla mieszczan 
+    krakowskich dotyczącą sądownictwa i wnoszenia apelacji.
+location: Kraków
+geo: 50.0546,19.9352
+people: Zygmunt II August
+keywords: miasta
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: mikula_2014
+      page: str. 273
+      urlName: 
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Sąd Sześciu Miast
+      url: https://pl.wikipedia.org/wiki/S%C4%85d_Sze%C5%9Bciu_Miast
