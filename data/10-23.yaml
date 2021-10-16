@@ -1,0 +1,38 @@
+---
+id: 1
+day: 23
+month: 10
+year: 1580
+title: Oblężenie Zawołocza 
+content: >- 
+    {{{23 października 1580}}} roku zakończyło się oblężenie Zawołocza - twierdzy 
+    znajdującej się w okolicy Wielkich Łuk i Pskowa.[1] Trwała wówczas wojna polsko-rosyjska
+    1577-1582. Wojska Stefana Batorego zdobyły niedawno Wielkie Łuki, a król wysłał kanclerza 
+    Jana Zamoyskiego by ten zdobył pobliską twierdzę Zawołocz. Początkowe próby zdobycia 
+    umocnień rosyjskich położonych na wyspie jeziora Podsosz zakończyły się niepowodzeniem, 
+    poniesiono też duże straty, kiedy drewniany most załamał się pod piechotą węgierską i polską. Niezrażony 
+    tym Zamoyski kazał przygotowanie dwóch nowych pomostów, licznych łodzi i tratw, 
+    zamierzał przeprowadzić atak z wielu stron.[2] Szturm jednak okazał się zbędny, załoga
+    rosyjska widząc polskie przygotowania skapitulowała.                  
+contentTwitter: >-
+    {{{23 października 1580}}} roku zakończyło się oblężenie Zawołocza - twierdzy 
+    znajdującej się w okolicy Wielkich Łuk i Pskowa. 
+location: Zawołocze
+geo: 56.40896,29.45088
+people: Zamoyski Jan; Stefan Batory
+keywords: Rosja
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Oblężenie Zawołocza
+      url: https://pl.wikipedia.org/wiki/Obl%C4%99%C5%BCenie_Zawo%C5%82ocza
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 225
+      urlName:
+      url: 
