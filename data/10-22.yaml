@@ -1,0 +1,41 @@
+---
+id: 1
+day: 22
+month: 10
+year: 1556
+title: Powrót Izabeli Jagiellonki z synem Janem Zygmuntem do Siedmiogrodu 
+content: >- 
+    {{{22 października 1556}}} roku Izabela Jagiellonka wraz z synem Janem Zygmuntem powróciła
+    do Siedmiogrodu witana na granicy przez Stefana Batorego.[1][2] Izabela, żona zmarłego 
+    w 1540 roku Jana Zapolya, królowa Węgier a później regentka w imieniu syna, władała
+    przez kilka lat Siedmiogrodem korzystając z poparcia sułtana. Została jednak
+    w 1551 roku zmuszona do rezygnacji z praw do korony węgierskiej i emigracji do Polski.
+    Podobno wyjeżdżając wyryła na pniu granicznego drzewa napis {Sic fata volent} (Tak chce los)
+    a świadkiem tej sceny również był młody magnat węgierski Stefan Batory. Zawarcie w 1554 roku pokoju polsko-tureckiego umożliwiło jej powrót na teren Siedmiogrodu
+    w 1556 roku. Izabela zmarła trzy lata późnej, jej syn jako Jan II Zygmunt został pierwszym
+    księciem siedmiogrodzkim. Z uwagi na bliskie pokrewieństwo z Jagiellonami był rozważany
+    jako potencjalny następca Zygmunta Augusta, zmarł jednak młodo i bezpotomnie. 
+    Władzę nad Siedmiogrodem przejął Stefan Batory, który w przyszłości miał zostać 
+    elekcyjnym królem Rzeczypospolitej.                
+contentTwitter: >-
+    22 października 1556 roku Izabela Jagiellonka wraz Janem Zygmuntem powróciła
+    do Siedmiogrodu witana na granicy przez Stefana Batorego. 
+location:
+geo: 
+people: Izabela Jagiellonka; Jan II Zygmunt Zapolya; Stefan Batory
+keywords: Jagiellonowie
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Jagiellonowie
+      url: https://pl.wikipedia.org/wiki/Jagiellonowie
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 100-105
+      urlName:
+      url: 
