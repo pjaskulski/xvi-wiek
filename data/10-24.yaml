@@ -1,0 +1,33 @@
+---
+id: 1
+day: 24
+month: 10
+year: 1558
+title: Urodził się Szymon Szymonowic, poeta 
+content: >- 
+    {{{24 października 1558}}} roku we Lwowie urodził się Szymon Szymonowic, poeta 
+    i humanista pochodzenia mieszczańskiego, nobilitowany w 1590 roku.[1] Jego mecenasem był
+    kanclerz Jan Zamoyski, z którym współpracował przy tworzeniu Akademii Zamojskiej. 
+    Najbardziej znanym dziełem Szymonowica są wydane w 1614 roku {Sielanki}.[2]                  
+contentTwitter: >-
+    24 października 1558 roku we Lwowie urodził się Szymon Szymonowic, poeta 
+    i humanista pochodzenia mieszczańskiego, nobilitowany w 1590 roku.
+location: Lwów
+geo: 49.8409,24.0302
+people: Szymonowic Szymon; Zamoyski Jan
+keywords: kultura
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Szymon Szymonowic
+      url: https://pl.wikipedia.org/wiki/Szymon_Szymonowic
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 328
+      urlName:
+      url:
