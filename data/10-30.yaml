@@ -1,0 +1,42 @@
+---
+id: 1
+day: 30
+month: 10
+year: 1579
+title: Papież Grzegorz XIII wydał bullę potwierdzającą akt erekcyjny Uniwersytetu Wileńskiego
+content: >- 
+    {{{30 października 1579}}} roku papież Grzegorz XIII wydał bullę, w której potwierdził 
+    akt erekcyjny Uniwesytetu Wileńskiego przygotowany przez Stefana Batorego.[1] Uniwersytet 
+    powstał na bazie istniejącego od kilku lat kolegium jezuitów i był trzecim (uwzględniając 
+    uczelnię w Królewcu w lennym księstwie pruskim), uniwersytetem w Rzeczypospolitej.[2][3] 
+    Pełna łacińska nazwa nowej uczelni brzmiała {Academia et Universitas Vilnensis Societatis Jesu}.
+    Po kasacie zakonu jezuitów w XVIII wieku uniwersytet stał się uczelnią świecką podlegającą 
+    Komisji Edukacji Narodowej.
+contentTwitter: >-
+    30 października 1579 roku papież Grzegorz XIII wydał bullę, w której potwierdził 
+    akt erekcyjny Uniwesytetu Wileńskiego przygotowany przez Stefana Batorego. 
+location: 
+geo: 
+people: Grzegorz XIII; Stefan Batory
+keywords: uniwersytety
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: reference
+      value: gawronska_2009
+      page: str. 71
+      urlName:
+      url:
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Kolegium jezuitów w Wilnie
+      url: https://pl.wikipedia.org/wiki/Kolegium_jezuit%C3%B3w_w_Wilnie
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Akademia i Uniwersytet Wileński Towarzystwa Jezusowego
+      url: https://pl.wikipedia.org/wiki/Akademia_i_Uniwersytet_Wile%C5%84ski_Towarzystwa_Jezusowego
