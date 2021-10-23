@@ -1,0 +1,39 @@
+---
+id: 1
+day: 25
+month: 10
+year: 1501
+title: Przywilej mielnicki
+content: >- 
+    {{{25 października 1501}}} roku w Mielniku Aleksander Jagiellończyk wydał przywilej
+    dla senatu, który znacząco wpływał na ustrój kraju.[1] Rola władcy została zredukowana
+    do przewodniczącego senatu, wzmocniono też pozycję członków senatu, których akt mielnicki
+    uwalniał od odpowiedzialności przed panującym.[2] Porozumienie króla z senatem zostało zawarte
+    wcześniej na sejmie w Piotrkowie, gdzie Aleksander został wybrany na króla Polski. Wielkie 
+    Księstwo przeżywało wówczas trudny okres pod naporem ataków moskiewskich, związek z Polską
+    był kluczowy dla przetrwania Litwy a ustępstwa wobec senatu ceną, którą Aleksander musiał 
+    zapłacić. Postanowienia aktu mielnickiego nie przetrwały długo, szlachta której przewodził
+    kanclerz Jan Łaski doprowadziła w 1505 roku do uchwalenia konstytucji {Nihil Novi}, 
+    wzmacniając pozycję króla i szlachty wobec senatu.                      
+contentTwitter: >-
+    25 października 1501 roku w Mielniku Aleksander Jagiellończyk wydał przywilej
+    dla senatu, który znacząco wpływał na ustrój kraju.
+location: Mielnik
+geo: 52.3299,23.0486
+people: Aleksander Jagiellończyk
+keywords: prawo; przywileje; Jagiellonowie
+image: 
+imageInfo: 
+sources:     
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Przywilej mielnicki
+      url: https://pl.wikipedia.org/wiki/Przywilej_mielnicki
+    - id: 2
+      type: reference
+      value: baczkowski_2012
+      page: str. 156
+      urlName:
+      url:
