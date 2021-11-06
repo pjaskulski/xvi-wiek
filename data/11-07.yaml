@@ -1,0 +1,38 @@
+---
+id: 1
+day: 7
+month: 11
+year: 1579
+title: Zmarł Kasper Bekiesz, szlachcic wegierski, jeden z doradców i oficerów Stefana Batorego
+content: >- 
+    {{{7 listopada 1579}}} roku w Grodnie zmarł Kasper Bekiesz, jeden z dowódców węgierskich
+    i doradca Stefana Batorego.[1] Po śmierci księcia siedmiogrodzkiego Jana Zygmunta
+    Bekiesz, stronnik Habsburgów, był jednym z kandydatów na jego następcę, przegrał 
+    jednak ze Stefanem Batorym popieranym przez sułtana tureckiego. Kiedy Batory został
+    królem Rzeczypospolitej, Bekiesz pogodził się z nim i służył mu podczas wojen 
+    z Gdańskiem, gdzie dowodził odsieczą dla Elbląga, i Rosją podczas oblężenia Połocka.
+    Kasper Bekiesz był arianinen, kiedy zmarł nagle w Grodnie nie chciano go pochować
+    na żadnym z cmentarzy[2], na polecenie Stefana Batorego zbudowano mu więc grobowiec 
+    na jednym ze wzgórzy koło Wilna, zwanym od tej pory Górą Bekieszową.    
+contentTwitter: >-
+    7 listopada 1579 roku w Grodnie zmarł Kasper Bekiesz, jeden z dowódców węgierskich
+    i doradca Stefana Batorego. 
+location: Grodno 
+geo: 53.6829,23.8369
+people: Bekiesz Kasper; Stefan Batory
+keywords: Inflanty; Rosja; reformacja
+image: 
+imageInfo: 
+sources:
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Kasper Bekiesz
+      url: https://pl.wikipedia.org/wiki/Kasper_Bekiesz
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 219
+      urlName: 
+      url:
