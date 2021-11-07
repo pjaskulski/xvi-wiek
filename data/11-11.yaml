@@ -1,0 +1,39 @@
+---
+id: 1
+day: 9
+month: 11
+year: 1512
+title: Urodził się Marcin Kromer, biskup warmiński, historyk i dyplomata  
+content: >- 
+    {{{11 listopada 1512}}} roku w Bieczu urodził się Marcin Kromer, biskup warmiński,
+    sekretarz królewski, historyk i dyplomata.[1] Pochodził z rodziny mieszczańskiej, ale 
+    w 1552 roku został nobilitowany przez Zygmunta Augusta w uznaniu jego dzieł historycznych.
+    W 1570 roku został koadiutorem (pomocnikiem biskupa z prawem następstwa) biskupstwa 
+    warmińskiego którym zarządzał wobec nieobecności Stanisława Hozjusza przebywającego
+    w latach 1569-79 w Rzymie. Dziewięć lat później, po śmierci kardynała Kromer został 
+    biskupem warmińskim. Jednym z bardziej znanych dzieł Marcina Kromera było {De origine 
+    et rebus gestis Polonorum libri XXX}[2] - historia Polski do 1506 roku. Biskup był też 
+    zleceniodawcą wykonania pierwszych map Warmii.
+contentTwitter: >-
+    11 listopada 1512 roku w Bieczu urodził się Marcin Kromer, biskup warmiński,
+    sekretarz królewski, historyk i dyplomata.
+location: Biecz
+geo: 49.7302,21.2501
+people: Kromer Marcin
+keywords: duchowieństwo
+image: 
+imageInfo: 
+sources:
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Marcin Kromer
+      url: https://pl.wikipedia.org/wiki/Marcin_Kromer
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: De origine et rebus gestis Polonorum libri XXX
+      url: https://pl.wikipedia.org/wiki/De_origine_et_rebus_gestis_Polonorum_libri_XXX
+
