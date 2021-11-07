@@ -1,0 +1,38 @@
+---
+id: 1
+day: 9
+month: 11
+year: 1571
+title: Zmarł Stanisław Barzi, wojewoda krakowski i marszałek nadworny 
+content: >- 
+    {{{9 listopada 1571}}} roku w Krakowie zmarł Stanisław Barzi, dworzanin Zygmunta 
+    Augusta, marszałek nadworny a od 1571 roku wojewoda krakowski.[1] Urodził się w 1529 roku,
+    mając 22 lata został dworzaninem a kilka lat później sekretarzem królewskim. 
+    Jego protektorem był kardynał Stanisław Hozjusz, Barzi bowiem był gorliwym katolikiem.
+    Dzięki poparciu kardynała został wojewodą krakowskim, liczono że przyczyni
+    się do zwalczania reformacji szerzącej się w Małopolsce. Nowy wojewoda faktycznie 
+    zaczął działania w tym kierunku, wezwał magistrat Krakowa do obrony wiary katolickiej,
+    mianował też dwóch nowych rajców katolików.[2] Dalszym krokom przeszkodziła rychła 
+    śmierć Stanisława, w wieku 42 lat.
+contentTwitter: >-
+    {{{9 listopada 1571}}} roku w Krakowie zmarł Stanisław Barzi, dworzanin Zygmunta 
+    Augusta, marszałek nadworny a od 1571 roku wojewoda krakowski.
+location: Kraków
+geo: 50.0546,19.9352
+people: Barzi Stanisław; Hozjusz Stanisław
+keywords: kontrreformacja
+image: 
+imageInfo: 
+sources:
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Stanisław Barzi
+      url: https://pl.wikipedia.org/wiki/Stanis%C5%82aw_Barzi
+    - id: 2
+      type: reference
+      value: bodniak_1935
+      page: str. 345
+      urlName:
+      url: 
