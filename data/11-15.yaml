@@ -1,0 +1,37 @@
+---
+id: 1
+day: 15
+month: 11
+year: 1520
+title: Wojska krzyżackie zdobyły Dobre Miasto    
+content: >- 
+    {{{15 listopada 1520}}} roku wieczorem wojska krzyżackie zdobyły Dobre Miasto, 
+    zaciekle bronione przez polską załogę.[1][2] Wysłane 14 listopada przez wielkiego mistrza 
+    trzy chorągwie piesze, grupa konnych i artyleria poniosły poważne straty, jednak 
+    udało im się dostać do miasta dzięki wodociągom dostarczającym wodę spoza murów miejskich.
+    Doszło do rzezi polskiej zaciężnej załogi i okolicznych chłopów, którzy schronili 
+    się w mieście, większość z przebywających w miejscowej kolegiacie kanoników warmińskich
+    zdołała ujśc do Olsztyna. W trakcie walk został ciężko ranny i zmarł dowódca krzyżacki
+    rotmistrz Zygmunt von Sichau. 
+contentTwitter: >-
+    15 listopada 1520 roku wojska krzyżackie zdobyły Dobre Miasto, zaciekle bronione 
+    przez polską załogę, zwycięzcy dokonali rzezi obrońców i ludności cywilnej. 
+location: Dobre Miasto
+geo: 
+people: Sichau von, Zygmunt  
+keywords: Prusy
+image: 
+imageInfo: 
+sources:
+    - id: 1
+      type: reference
+      value: biskup_2017
+      page: 
+      urlName: 
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Wojna polsko-krzyżacka (1519–1521) 
+      url: https://pl.wikipedia.org/wiki/Wojna_polsko-krzy%C5%BCacka_(1519%E2%80%931521)
