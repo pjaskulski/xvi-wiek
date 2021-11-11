@@ -1,0 +1,38 @@
+---
+id: 1
+day: 17
+month: 11
+year: 1577
+title: Zmarł Jan Herburt, kasztelan sanocki    
+content: >- 
+    {{{16 lub 17 listopada 1577}}} roku w Felsztynie zmarł Jan Herburt, kasztelan sanocki, prawnik,
+    historyk i dyplomata.[1] Od 1568 roku był kasztelanem sanockim, w 1569 roku podpisał akt Unii 
+    Lubelskiej. Wydał w 1571 roku w Bazylei historię Polski po łacinie {Chronica sive 
+    Historiae Polonicae compendiosa... descriptio}. Podpisał akt konfederacji warszawskiej. 
+    Posłował do Francji w czasie bezkrólewia po śmierci Zygmunta Augusta, to Herburt czytał 
+    tekst {Pacta conventa}, które przyszły król Henryk Walezy zaprzysięgał w kościele Notre-Dame.[2] 
+    Po objęciu tronu przez Batorego posłował do Szwecji w celu omówienia warunków przymierza 
+    przeciw Rosji. Opracowane przez Herburta zbiory praw polskich były wykorzystywane aż do 
+    początku XVIII wieku.
+contentTwitter: >-
+    16 lub 17 listopada 1577 roku w Felsztynie zmarł Jan Herburt, kasztelan sanocki, prawnik,
+    historyk i dyplomata. 
+location: Felsztyn 
+geo: 49.535278,22.9625
+people: Herburt Jan  
+keywords: Mołdawia; hetman
+image: 
+imageInfo: 
+sources:
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Jan Herburt (zm. 1577)
+      url: https://pl.wikipedia.org/wiki/Jan_Herburt_(zm._1577)
+    - id: 2
+      type: reference
+      value: dzieduszycki_1879 
+      page: str. 43
+      urlName:
+      url: 
