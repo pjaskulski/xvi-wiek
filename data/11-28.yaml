@@ -1,0 +1,54 @@
+---
+id: 1
+day: 28
+month: 11
+year: 1561
+title: Drugi układ wileński 
+content: >- 
+    {{{28 listopada 1561}}} roku w Wilnie podpisano akt poddania Inflant pod opiekę 
+    i władzę Zygmunta Augusta, układ z królem zaprzysiągł ostatni mistrz krajowy 
+    Zakonu w Inflantach Gotthard Kettler, stany inflanckie oraz arcybiskup Rygi Wilhelm.[1][2]
+    Hołdu nie złożyła delegacja miejska Rygi, formalnie z powodu braku pełnomocnictw, 
+    uznając jednak zwierzchność króla nad miastem.[3] Dokument inkorporacyjny nosił tytuł 
+    {Pacta Subjectionis Livoniae - Provisio Ducalis (Pacta Subjectionis Inter Divum 
+    olim Regem Sigismundum Augustum et Magistrum Ordinis Livoniae}. Pakt przewidywał 
+    sekularyzację zakonu i utworzenie z części Inflant księstwa Kurlandii i Semigalii, 
+    którego władcą został Kettler. Zawarta unia była sukcesem Zygmunta Augusta, choć 
+    nie rostrzygnęła przyszłości Inflant. W dwa lata później doszło do wojny zwanej 
+    później siedmioletnią lub pierwsza wojną północną[4], o podział terytorium 
+    Inflant zmagały się Polska i Litwa, Szwecja, Dania i Rosja.     
+contentTwitter: >-
+    28 listopada 1561 roku w Wilnie podpisano akt poddania Inflant pod opiekę 
+    i władzę Zygmunta Augusta, układ z królem zaprzysiągł ostatni mistrz krajowy 
+    Zakonu w Inflantach Gotthard Kettler, stany inflanckie oraz arcybiskup Rygi Wilhelm.
+location: Wilno
+geo: 54.6889,25.2795
+people: Zygmunt II August; Gotthard Kettler
+keywords: Inflanty
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Pakt wileński
+      url: https://pl.wikipedia.org/wiki/Pakt_wile%C5%84ski
+    - id: 2 
+      type: reference
+      value: jankiewicz_2013
+      page: str. 23 
+      urlName: 
+      url: 
+    - id: 3 
+      type: reference
+      value: ziemlewska_2013
+      page: str. 11
+      urlName: 
+      url:
+    - id: 4
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: I wojna północna
+      url: https://pl.wikipedia.org/wiki/I_wojna_p%C3%B3%C5%82nocna
