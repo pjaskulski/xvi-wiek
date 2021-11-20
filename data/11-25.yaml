@@ -1,0 +1,51 @@
+---
+id: 1
+day: 25
+month: 11
+year: 1550
+title: Jakub Sylwiusz odprawił w Pińczowie pierwsze w Polsce nabożeństwo protestanckie     
+content: >- 
+    {{{25 listopada 1550}}} roku w Pińczowie Jakub Sylwiusz odprawił pierwsze w Polsce 
+    nabożeństwo protestanckie.[2][1] Miasto należało wówczas do Mikołaja Oleśnickiego (starszego),
+    zwolennika reformacji, który zezwolił na zorganizowanie w Pińczowie pierwszego 
+    w kraju synodu ewangelickiego w październiku 1550 roku. Wkrótce po jego zakończeniu
+    Mikołaj Oleśnicki wypędził miejscowy zakon paulinów[3], a Jan Sylwiusz, dawny ksiądz katolicki,
+    w kościele klasztornym odprawił nabożeństwo w obrządku protestanckim. Pińczów stał się 
+    wówczas znanym ośrodkiem reformacji, w dawnych zabudowaniach klasztornych urządzono 
+    nie tylko zbór kalwiński ale także słynne pińczowskie gimnazjum - protestnacką szkołę 
+    średnią.[4]    
+contentTwitter: >-
+    24 listopada 1562 roku zmarł Wojciech Kryski, dworzanin i sekretarz króla 
+    Zygmunta Augusta, jeden z bohaterów Dworzanina Polskiego. 
+location: 
+geo: 
+people: Sylwiusz Jakub; Oleśnicki Mikołaj
+keywords: reformacja
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Jakub Sylwiusz
+      url: https://pl.wikipedia.org/wiki/Jakub_Sylwiusz
+    - id: 2
+      type: reference
+      value: wijaczka_2016 
+      page: str. 387
+      urlName:
+      url:
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Pińczów
+      url: https://pl.wikipedia.org/wiki/Pi%C5%84cz%C3%B3w
+    - id: 4
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Gimnazjum pińczowskie
+      url: https://pl.wikipedia.org/wiki/Gimnazjum_pi%C5%84czowskie    
+    

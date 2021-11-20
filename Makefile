@@ -24,7 +24,7 @@ unparam:
 	unparam ./cmd/web
 
 run: 
-	go run ./cmd/web
+	go run ./cmd/web -port 8082
 
 build: 
 	go build -o xvi-wiek ./cmd/web
