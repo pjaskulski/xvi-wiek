@@ -8,9 +8,11 @@ content: >-
     {{{26 listopada 1496}}} roku w Parczewie rozpoczął się zjazd władców i książąt dynastii
     jagielońskiej z udziałem króla Polski Jana Olbrachta, wielkiego księcia Litwy Aleksandra
     oraz Zygmunta Jagiellończyka.[1][2] Dziś nie znamy szczegółów dotyczących rozmów między braćmi,
-    naradzano się bez obecności dostojników polskich i litewskich, z pewnością jednak podczas 
-    trwającego dwa tygodnie zjazdu omawiano planowaną na kolejny rok wyprawę wojenną 
-    przeciw Turcji. 
+    naradzano się bez obecności dostojników polskich i litewskich. Jak pisał Paweł Jasienica: 
+    "wyniki osłaniali najściślejszą tajemnicą: 'Gdyby moja koszula wiedziała to bym ją spalił'  
+    powtarzali po rusku, przysłowie włoskie, którego nauczyli się od Kallimacha".[3] Z pewnością 
+    jednak podczas trwającego dwa tygodnie zjazdu omawiano planowaną na kolejny rok wyprawę wojenną 
+    przeciw Turcji, być może też przesiedlenie na południe zakonu krzyżackiego. 
 contentTwitter: >-
     26 listopada 1496 w Parczewie rozpoczął się zjazd Jana Olbrachta i Aleksandra Jagiellończyka,
     władcy Polski i Litwy omawiali przyszłoroczną wyprawę przeciw Turcji.
@@ -33,6 +35,13 @@ sources:
       page: str. 16 
       urlName:
       url:
+    - id: 3
+      type: reference
+      value: jasienica_1965
+      page: str. 263 
+      urlName:
+      url:
+
 
 
     
