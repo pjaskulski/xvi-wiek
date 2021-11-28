@@ -1,0 +1,45 @@
+---
+id: 1
+day: 5
+month: 12
+year: 1558
+title: Rozpoczęły się obrady sejmu 1558 roku w Piotrkowie
+content: >- 
+    {{{5 grudnia 1558}}} roku w Piotrkowie rozpoczął obrady sejm, który zwołano 
+    początkowo na 20 listopada, lecz ze względu na chorobę króla obrady przesunięto.[2]
+    Podstawowym tematem dyskusji był program egzukcji praw i dóbr wysuwany przez szlachtę
+    wbrew woli senatu i Zygmunta Augusta. Marszałkiem sejmu został Mikołaj Sienicki,
+    znakomity mówca, jeden z przywódców obozu egzekucyjnego, który już w mowie powitalnej 
+    zaznaczył, że tylko egzezucja praw zapobiegnie niepokojom społecznym. Próbując 
+    złamać opór króla posłowie złożyli swoje nadania królewszczyzn, zmuszając tym 
+    samym senatorów do podobnego kroku. Gest ten jednak nie miał konsekwencji wobec
+    sabotowania przez senat egzekucji praw w praktyce. Sejm zakończył się 8 lutego
+    1559 roku bez żadnych doniosłych decyzji, nie preprowadzono nie tylko egezkucji 
+    praw, ale też nie doszedł do skuktu projekt metody dokonywania elekcji, unia z 
+    Prusami Królewskimi czy też inkorporacja księstw zatorskiego i oświęcimskiego.[1]
+    Po zakończeniu obrad Zygmunt August wyjechał na Litwę. Sytuacja zmieniła się 
+    diametralnie try lata później, kiedy to a kolejnym sejmie w Piotrkowie król stał 
+    się gorącym zwolennikiem szlachty i egzekucji praw i dóbr.
+contentTwitter: >-
+    5 grudnia 1558 roku w Piotrkowie rozpoczął obrady sejm, który zwołano 
+    początkowo na 20 listopada, lecz ze względu na chorobę króla obrady przesunięto.
+location: Piotrków
+geo: 51.4088,19.6868
+people: Zygmunt II August
+keywords: sejm
+image: 
+imageInfo: 
+sources: 
+    - id: 1 
+      type: reference
+      value: grzybowski_2000
+      page: str. 123
+      urlName: 
+      url: 
+    - id: 2
+      type: internet
+      value: Dzieje Sejmu (www.dziejesejmu.pl) 
+      page: 
+      urlName: W tle egzekucja praw i dóbr. Sejm w Piotrkowie. 1558-1559 r.
+      url: https://www.dziejesejmu.pl/w-tle-egzekucja-praw-i-dobr-sejm-w-piotrkowie-1558-1559-r,p1453823384
+    
