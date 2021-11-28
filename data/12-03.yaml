@@ -1,0 +1,39 @@
+---
+id: 1
+day: 3
+month: 12
+year: 1553
+title: Zmarł Andrzej Górka, starosta generalny Wielkopolski
+content: >- 
+    {{{3 grudnia 1551}}} roku zmarł w Poznaniu Andrzej Górka, starosta generalny Wielkopolski[1],
+    które to stanowisko objął po swoim ojcu Łukaszu, który został najpierw wojewodą
+    poznańskim a potem biskupem kujawskim (Łukasz II Górka przyjął w 1538 roku święcenia
+    kapłańskie). Andrzej Górka uczstniczył w wojnie z Wielkim Księstwem Moskiewskim 
+    w 1534-1535 roku. Popierał reformację, ale nigdy nie przestał być członkiem kościoła 
+    katolickiego. Był zdecydowanym przeciwnikiem drugiej żony Zygmunta Augusta  - Barbary 
+    Radziwiłówny i perspektywy jej koronacji. Ostatecznie ukorzył się przed królem, ale 
+    nie wziął udziału (tak jak Jan Tęczyński) w ceremonii.[2] Zmarł rok później 
+    w wieku 51 lat.   
+contentTwitter: >-
+    3 grudnia 1551 roku zmarł w Poznaniu Andrzej Górka, starosta generlny Wielkopolski,
+    uczestnik wojny z Moskwą w latach 1534-1535.
+location: Poznań
+geo: 52.4112,16.9265
+people: Górka Andrzej
+keywords: szlachta
+image: 
+imageInfo: 
+sources: 
+    - id: 1 
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Andrzej Górka (1500–1551)
+      url: https://pl.wikipedia.org/wiki/Andrzej_G%C3%B3rka_(1500%E2%80%931551)
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: str. 98
+      urlName:
+      url:
+    
