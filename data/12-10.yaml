@@ -1,0 +1,51 @@
+---
+id: 1
+day: 10
+month: 12
+year: 1540
+title: Jan Ocieski wyruszł z poselstwem do Rzymu
+content: >- 
+    {{{10 grudnia 1540}}} roku Jan Ocieski, dyplomata w służbie królewskiej, wyruszył 
+    z Krakowa do Rzymu z poselstwem do papieża Pawła III.[1] Celem Ocieskiego były negcjacje
+    dotyczące trzech problemów: możliwości przekazania annat[3] na cele obronne 
+    - wobec zagrożenia południowych i południowo-wschodnich rubieży Polski i Litwy,
+    uzyskanie inwestytury[4] dla królowej Bony na biskupstwa w Bari i Rossano, oraz
+    pozwolenie dla biskupa Piotra Gamrata na zatrzymanie biskupstwa krakowskiego, mimo
+    iż otrzymał niedawo diecezję gnieźnieńską.[2] Misja Jana Ocieskiego zakończyła się 
+    niewielkim sukcesem, papież zgodził się jedynie na zatrzymanie przez biskupa Gamrata
+    dwóch diecezji, lecz tylko na rok.
+contentTwitter: >-
+    10 grudnia 1540 roku Jan Ocieski, dyplomata w służbie królewskiej, wyruszył 
+    z Krakowa do Rzymu z poselstwem do papieża Pawła III.
+location: Kraków
+geo: 50.0546,19.9352
+people: Ocieski Jan
+keywords: dyplomacja
+image: 
+imageInfo: 
+sources: 
+    - id: 1 
+      type: reference
+      value: wrzesniak_2003
+      page: str. 178
+      urlName: 
+      url: 
+    - id: 2
+      type: reference
+      value: sucheni-grabowska_2009
+      page: str. 208
+      urlName: 
+      url: 
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Annaty
+      url: https://pl.wikipedia.org/wiki/Annaty
+    - id: 4
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Inwestytura
+      url: https://pl.wikipedia.org/wiki/Inwestytura
+    
