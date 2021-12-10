@@ -1,0 +1,38 @@
+---
+id: 1
+day: 12
+month: 12
+year: 1586
+title: Zmarł Stefan Batory
+content: >- 
+    {{{12 grudnia 1586}}} roku w Grodnie zmarł Stefan Batory, książę siedmiogrodzki, 
+    elekcyjny król Rzeczypospolitej Obojga Narodów.[1][2] Batory miał poważne problemy 
+    zdrowotne, znane jednak tylko najbliższym mu osobom na dworze, dla ogółu społeczeństwa 
+    wieść o śmierci 53 letniego władcy była niespodziewana, powtarzano więc plotki o 
+    otruciu króla. Rzeczywistą przyczyną była prawdopodobnie choroba nerek. Stefana 
+    Batorego pochowano w katedrze na Wawelu. Jego ambitne plany kolejnej wojny z Moskwą
+    a następnie z Turcją, dla urzeczywistnienia których toczył negocjacje z papieżem Sykstusem V,
+    pozostały niezrealizowane.     
+contentTwitter: >-
+    12 grudnia 1586 roku w Grodnie zmarł Stefan Batory, książę siedmiogrodzki i elekcyjny 
+    król Rzeczypospolitej Obojga Narodów.
+location: Grodno
+geo: 53.6829,23.8369
+people: Stefan Batory
+keywords: elekcje
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Stefan Batory
+      url: https://pl.wikipedia.org/wiki/Stefan_Batory
+    - id: 2
+      type: reference
+      value: grzybowski_2000
+      page: stre. 250
+      urlName: 
+      url: 
+    
