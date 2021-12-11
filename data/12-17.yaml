@@ -1,0 +1,43 @@
+---
+id: 1
+day: 17
+month: 12
+year: 1529
+title: Senat koronny dokonał elekcji Zygmunta Augusta na króla Polski
+content: >- 
+    {{{17 grudnia 1529}}} roku podczas sejmu w Piotrkowie senat dokonał elekcji Zygmunta
+    Augusta na króla Polski.[2] Była to tzw. elekcja {viviente rege}, albowiem dokonano jej 
+    za życia Zygmunta Starego, a miała na celu zapewnienie bezproblemowej sukcesji. 
+    W lutym 1530 roku odbyła się koronacja młodego króla, który miał wówczas niespełna 10 lat
+    i na faktyczne objęcie tronu przyszło mu czekać jeszcze lat osiemnaście.[1] Elekcja 
+    {viviente rege} była sukcesem pary królewskiej: Zygmunta Starego i Bony Sforzy, była 
+    bowiem sprzeczna z tradycją powstałą po śmierci Władysława III Warneńczyka, kiedy uznano
+    że elekcji dokonuje zjazd szlachty dopiero po śmierci poprzedniego władcy.[3]  
+contentTwitter: >-
+    17 grudnia 1529 roku podczas sejmu w Piotrkowie senat dokonał elekcji Zygmunta
+    Augusta na króla Polski. Niespełna 10 letniego Zygmunta koronowano w lutym następnego roku.
+location: Piotrków
+geo: 51.4088,19.6868 
+people: Zygmunt I Stary; Zygmunt II August; Bona Sforza
+keywords: Jagiellonowie
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: grzybowski_2000
+      page: str. 68-69
+      urlName: 
+      url: 
+    - id: 2
+      type: reference
+      value: baczkowski_2012
+      page: str. 39
+      urlName: 
+      url:
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page:
+      urlName: Vivente rege
+      url: https://pl.wikipedia.org/wiki/Vivente_rege
