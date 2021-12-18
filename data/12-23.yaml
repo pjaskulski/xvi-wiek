@@ -13,7 +13,7 @@ content: >-
     i zaciężne wojska czeskie. 29 grudnia 1519 roku dowódcy królewscy wysłali wielkiemu 
     mistrzowi listy wypowiednie, a już cztery dni wcześniej hetman Firlej z 4 tys. 
     żołnierzy wkroczył na tereny zakonu. Albrecht Hohenzollern nie czekał biernie 
-    na rozwój wydarzeń, 1 stycznia 1520 roku zajął z zaskoczenia Braniewo i również 
+    na rozwój wydarzeń, 1 stycznia 1520 roku zajął z zaskoczenia Braniewo[2] i również 
     oficjalnie wypowiedział wojnę Zygmuntowi Staremu. Rozpoczęły się działania wojenne, 
     których konsekwencją był koniec zakonu krzyżackiego w Prusach, słynny hołd Albrechta 
     w Krakowie i powstanie świeckiego księstwa pruskiego.
@@ -33,4 +33,9 @@ sources:
       page: str. 14
       urlName: 
       url:  
-    
+    - id: 2
+      type: internet
+      value: Historia Braniewa
+      page: 
+      urlName: 1519-1521. Braniewo podczas wojny pruskiej
+      url: http://www.historiabraniewa.hekko.pl/index.php/zakladka3/103-1519-1521-braniewo-podczas-wojny-pruskiej

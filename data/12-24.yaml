@@ -1,0 +1,41 @@
+---
+id: 1
+day: 24
+month: 12
+year: 1529
+title: Inkorporacja Mazowsza do Polski
+content: >- 
+    {{{24 grudnia 1529}}} roku podczas sejmu walnego w Piotrkowie ogłoszono inkorporację
+    Mazowsza do Królewstwa Polskiego.[1] Trzy lata wcześniej zmarł Janusz III ostatni książę
+    mazowiecki z dynastii Piastów[2], a sejm mazowiecki złożył przysięgę na wierność Zygmuntowi 
+    Staremu. Mazowsze do czasów Batorego zachowało odrębne prawa, zaś do 1540 roku zwoływano 
+    sejm. W 1537 roku siostra Janusza III - Anna mazowiecka[3], ostatnia z linii Piastów mazowieckich 
+    złożyła przysięgę przed królem oraz zrzekła się swoich praw dziedzicznych do Mazowsza. 
+contentTwitter: >-
+    24 grudnia 1529 roku podczas sejmu walnego w Piotrkowie ogłoszono inkorporację
+    Mazowsza do Królewstwa Polskiego.
+location: Piotrków 
+geo: 51.4078,19.6981
+people: Zygmunt I Stary; Janusz III; Anna mazowiecka
+keywords: Mazowsze
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Mazowsze
+      url: https://pl.wikipedia.org/wiki/Mazowsze#Powr%C3%B3t_do_Kr%C3%B3lestwa_Polskiego
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Janusz III
+      url: https://pl.wikipedia.org/wiki/Janusz_III 
+    - id: 3
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Anna mazowiecka
+      url: https://pl.wikipedia.org/wiki/Anna_mazowiecka  
