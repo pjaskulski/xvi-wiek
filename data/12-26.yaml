@@ -1,0 +1,37 @@
+---
+id: 1
+day: 26
+month: 12
+year: 1524
+title: Rozpoczął obrady sejm w Piotrkowie 
+content: >- 
+    {{{26 grudnia 1524}}} roku rozpoczął obrady sejm koronny w Piotrkowie, zwołany w związku
+    z zagrożeniem ziem południowo-wschodnich przez napady tatarskie i tureckie.[1] Dokonany 
+    w lecie tegoż roku najazd uprowadził z kraju liczny jasyr i uświadomił szlachcie i królowi
+    słabość ochrony południowych granic, jedynie oddział jazdy nadwornej Piotra Kmity
+    zdołał pokonać część tylnej straży wojsk tureckich nad rzeką Seret.[2] Podczas obrad
+    omówiono też problem wojny z zakonem krzyżackim, wobec kończącego się rozejmu. Efektem
+    sejmu były przede wszystkim zwiększone podatki przeznaczone na cele obronne państwa.  
+contentTwitter: >-
+    26 grudnia 1524 roku rozpoczął obrady sejm koronny w Piotrkowie, zwołany w związku
+    z zagrożeniem ziem południowo-wschodnich przez napady tatarskie i tureckie.
+location: Piotrków 
+geo: 51.4088,19.6868 
+people: Kmita Piotr
+keywords: sejm
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Przed hołdem pruskim. Sejm w Piotrkowie. 1524-1525 r.
+      url: https://www.dziejesejmu.pl/przed-holdem-pruskim-sejm-w-piotrkowie-1524-1525-r,p1712683624
+    - id: 2
+      type: internet
+      value: Muzeum Wojska Polskiego
+      page:
+      urlName: Potyczka pod Trembowlą
+      url: http://www.muzeumwp.pl/kalendarium/02/
+    
