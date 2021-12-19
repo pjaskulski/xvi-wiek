@@ -22,7 +22,7 @@ imageInfo:
 sources:     
     - id: 1
       type: internet
-      value: Internetowy Polski Słownik Biograficzny 
+      value: Internetowy Polski Słownik Biograficzny (Narodowy Instytut Audiowizualny)
       page: 
       urlName: Mikołaj Sokolnicki h. Nowina
       url: https://www.ipsb.nina.gov.pl/a/biografia/mikolaj-sokolnicki-h-nowina

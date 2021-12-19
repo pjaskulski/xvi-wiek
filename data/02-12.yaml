@@ -41,7 +41,7 @@ sources:
       url: 
     - id: 4
       type: internet
-      value: Dansk Biografisk Lexikon (runeberg.org/dbl)
+      value: Dansk Biografisk Lexikon (runeberg.org)
       page:
       urlName: Dorothea, Hertuginde af Preussen
       url: http://runeberg.org/dbl/4/0310.html

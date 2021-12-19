@@ -23,9 +23,9 @@ imageInfo:
 sources:     
     - id: 1
       type: internet
-      value: wilanow-palac.pl
+      value: Pasaż Wiedzy Muzeum Pałacu Króla Jana III w Wilanowie
       page: 
-      urlName: Jan Tarnowski (1488-1561) – praktyk i teoretyk
+      urlName: Jan Tarnowski (1488-1561) - praktyk i teoretyk
       url: https://www.wilanow-palac.pl/jan_tarnowski_1488_1561_praktyk_i_teoretyk.html
     - id: 2
       type: internet

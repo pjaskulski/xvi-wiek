@@ -36,7 +36,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Prospero_Provana
     - id: 2
       type: internet
-      value: wilanow-palac.pl
+      value: Pasaż Wiedzy Muzeum Pałacu Króla Jana III w Wilanowie
       page: 
       urlName: Zgorzelski Rafał, "Polska, czyli włoska. Geneza i rozwój regularnej komunikacji pocztowej w Polsce"
       url: https://www.wilanow-palac.pl/polska_czyli_wloska_geneza_i_rozwoj_regularnej_komunikacji_pocztowej_w_polsce.html

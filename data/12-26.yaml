@@ -24,13 +24,13 @@ imageInfo:
 sources: 
     - id: 1
       type: internet
-      value: Wikipedia
+      value: Dzieje Sejmu (www.dziejesejmu.pl)
       page: 
       urlName: Przed hołdem pruskim. Sejm w Piotrkowie. 1524-1525 r.
       url: https://www.dziejesejmu.pl/przed-holdem-pruskim-sejm-w-piotrkowie-1524-1525-r,p1712683624
     - id: 2
       type: internet
-      value: Muzeum Wojska Polskiego
+      value: Muzeum Wojska Polskiego (www.muzeumwp.pl)
       page:
       urlName: Potyczka pod Trembowlą
       url: http://www.muzeumwp.pl/kalendarium/02/

@@ -23,7 +23,7 @@ imageInfo:
 sources:     
     - id: 1
       type: internet
-      value: Encyklopedia PWN
+      value: Encyklopedia PWN (encyklopedia.pwn.pl)
       page: 
       urlName: Konrad X Biały Młodszy
       url: https://encyklopedia.pwn.pl/haslo/Konrad-X-Bialy-Mlodszy;3925165.html

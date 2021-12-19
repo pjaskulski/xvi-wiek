@@ -36,7 +36,7 @@ sources:
       url: https://pl.wikipedia.org/wiki/Bitwa_pod_Olszanic%C4%85_(1527)
     - id: 3
       type: internet
-      value: wilanow-palac.pl
+      value: Pasaż Wiedzy Muzeum Pałacu Króla Jana III w Wilanowie 
       page: 
       urlName: Andrzej Niemirowicz (Niemirycz)
       url: https://www.wilanow-palac.pl/andrzej_niemirowicz_niemirycz_ok_1462_1541_zwyciezca_spod_olszanicy.html

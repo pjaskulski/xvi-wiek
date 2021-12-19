@@ -27,7 +27,7 @@ imageInfo:
 sources:     
     - id: 1
       type: internet
-      value: Muzeum Wojska Polskiego
+      value: Muzeum Wojska Polskiego (www.muzeumwp.pl)
       page:
       urlName: Kalendarium dziejów wojska polskiego
       url: http://www.muzeumwp.pl/kalendarium/10-26/

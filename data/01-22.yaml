@@ -52,7 +52,7 @@ sources:
       url: https://de.wikipedia.org/wiki/Danziger_Aufruhr_1525
     - id: 4
       type: internet
-      value: gedanopedia.pl
+      value: Gedanopedia (www.gedanopedia.pl)
       page:
       urlName: Trzeci Ordynek
       url: https://www.gedanopedia.pl/gdansk/?title=TRZECI_ORDYNEK

@@ -32,7 +32,7 @@ sources:
       url: 
     - id: 2
       type: internet
-      value: Archiwum Główne Akt Dawnych (www.agad.gov.pl)
+      value: Archiwum Główne Akt Dawnych
       page:
       urlName: Traktatowe dokumenty tureckie (`ahdname) ze zbiorów AGAD
       url: http://www.agad.gov.pl/AKW_Turcja/AKW_TURECKIE.html
