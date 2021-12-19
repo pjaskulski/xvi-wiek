@@ -1,0 +1,35 @@
+---
+id: 1
+day: 30
+month: 12
+year: 1532
+title: Zmarł Krzysztof Szydłowiecki, kanclerz wielki i wojewoda krakowski 
+content: >- 
+    {{{30 grudnia 1532}}} roku zmarł w Krakowie Krzysztof Szydłowiecki, kanclerz wielki
+    koronny, wojewoda krakowski, hrabia na Szydłowcu.[2] Był synem ochmistrza królewskiego
+    Stanisława i towarzyszem dziecięcych lat Zygmunta Starego.[1] Po wstąpieniu na tron Zygmunta 
+    stał się jednym z jego najbliższych współpracowników. Zwolennik Habsburgów, otrzymał od cesarza 
+    Maksymiliana I tytuł hrabiego, był też stronnikiem Albrechta Hohenzollerna. 
+contentTwitter: >-
+    30 grudnia 1532 roku zmarł w Krakowie Krzysztof Szydłowiecki, kanclerz wielki
+    koronny, wojewoda krakowski, hrabia Cesarstwa Rzymskiego.
+location: Kraków
+geo: 50.0546,19.9352
+people: Szydłowiecki Krzysztof; Zygmunt I Stary
+keywords: szlachta
+image: 
+imageInfo: 
+sources: 
+    - id: 1
+      type: reference
+      value: grzybowski_2000
+      page: str. 10
+      urlName:  
+      url: 
+    - id: 2
+      type: internet
+      value: Wikipedia
+      page: 
+      urlName: Krzysztof Szydłowiecki
+      url: https://pl.wikipedia.org/wiki/Krzysztof_Szyd%C5%82owiecki 
+    
