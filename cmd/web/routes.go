@@ -114,6 +114,7 @@ func (app *application) routes() http.Handler {
 	r.Get("/kalendarz", app.showCalendar)
 	r.Get("/ksiazki", app.showBooks)
 	r.Get("/informacje", app.showInformation)
+	r.Get("/zapiski", app.showZapiski)
 	r.Get("/indeksy", app.showIndexes)
 	r.Get("/indeksy/chronologia", app.showChronology)
 	r.Get("/indeksy/ludzie", app.showPeople)

@@ -1,0 +1,148 @@
+{{template "base" .}}
+
+{{define "title"}}XVI wiek - zapiski{{end}}
+{{define "meta_description"}}"Zapiski (podstrona serwisu XVI wiek - ciekawe wydarzenia historyczne w Polsce i krajach sąsiednich)"{{end}}
+{{define "meta_title"}}"XVI wiek - zapiski"{{end}}
+{{define "canonical"}}<link rel="canonical" href="https://xvi-wiek.pl/zapiski" />{{end}}
+
+{{define "main"}}
+
+    <h1 id="tufte-css">Zapiski</h1>
+
+    <small>Spis treści:<br><br>
+    <strong>2022-09-25</strong> <a href="#2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania</a><br>
+    </small>
+
+    <article>
+        <hr>
+        <h2 id="2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania (<strong>25.09.2022</strong>)</h2>
+
+        <section>
+            <p>
+                <a href="https://openrefine.org/" target="_blank" rel="noopener">OpenRefine</a>
+                jest popularnym narzędziem do oczyszczania i przeksztłcania danych.
+
+                <label for="%s" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="%s" class="margin-toggle"/>
+                <span class="sidenote">Polecam artykuły na temat OpenRefine:
+                <a href="https://www.pilsudski.org/pl/instytut-cyfrowy/pracownia-digitalizacji/blog/869-oczyszczanie-danych-z-uzyciem-openrefine" target="_blank" rel="noopener">
+                Oczyszczanie danych z użyciem OpenRefine
+                </a>
+                oraz
+                <a href="http://programminghistorian.org/en/lessons/cleaning-data-with-openrefine" target="_blank" rel="noopener">
+                Cleaning Data with OpenRefine
+                </a>
+                </span>
+
+                Jedną z jego ciekawszych funkcji jest możliwość rekoncyliacji danych
+                przy wykorzystaniu zewnętrznych serwisów udostępniających dane do uspójniania. Często zdarzają 
+                się w danych historycznych różnorakie sposoby zapisu imion i nazwisk postaci, lub nazw geograficznych.
+                Nazwy miejscowości mogą występować w brzmieniu współczesnym, w formie używanej w XVI wieku,
+                lub po prostu w formie błędnie zapisanej w źródle. Mechanizm uspójniania w OpenRefine pozwala
+                uzgodnić nazwę występującą w naszych danych z nazwą pochodzącą z pewnego źródła. Np. powiązać
+                "Zbigniewa Oleśnickiego" z identyfikatorem z bazy VIAF, lub powiązać miejscowość Brzozowa (występująca
+                w źródłach także jako Brosoua) z identyfikatorem z Atlasu Historycznego Polski (Brzozowa_sdc_krk).
+            </p>
+            <p> Problemem może być znalezienie odpowiedniego serwisu rekoncycliacji. O ile popularne źródła
+                w rodzaju VIAF czy wikidata.org są dostępne
+
+                <label for="%s" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="%s" class="margin-toggle"/>
+                <span class="sidenote"><a href="https://github.com/OpenRefine/OpenRefine/wiki/Reconcilable-Data-Sources" target="_blank" rel="noopener">Lista</a>
+                dostępnych serwerów rekoncyliacji
+                </span>
+
+                , o tyle uspójnianie z bazą miejscowości AHP lub naszą lokalną
+                bazą osób może wymagać uruchomienia własnego serwisu. Nie jest to jednak takie trudne, istnieją
+                bowiem gotowe narzędzia, które można wykorzystać do tego celu. Jednym z nich jest
+                <strong>Reconcile-csv</strong> udostępniony (na otwartej licencji BSD-2) na stronie
+                <a href="http://okfnlabs.org/reconcile-csv/" target="_blank" rel="noopener">Open Knowledge Lab</a>.
+                Program ten pozwala na dopasowanie szukanej przez nas nazwy do nazw w swojej bazie poprzez mechanizm przybliżonego
+                porównywania (fuzzy matching), nazwy nie muszą być identyczne, mogą być podobne, program będzie wówczas
+                proponował listę podobnych do podanej nazw wraz ze współczynnikiem podobieństwa. Bazą dla Reconcile-csv
+                jest plik tekstowy w formacie CSV.  
+            </p>
+
+            <p>
+            Program jest plikiem *.jar,
+            (warto pobrać z <a href="https://github.com/okfn/reconcile-csv" target="_blank" rel="noopener">githuba</a>
+            też plik index.html.tpl, który jest szablonem
+            wyświetlanym jako główna strona serwisu) do uruchomienia potrzebuje więc zainstalowanej Javy (JRE),
+            potrzebny jest oczywiście plik CSV z danymi (plik w którym każdy wiersz jest rekordem
+            danych, pola rozdzielone są przecinkami a pierwszy wiersz zawiera nazwy kolumn).
+            </p>
+
+            <p>
+            Polecenie uruchamiające serwer:<br>
+            <code>
+                java -Xmx2g -jar reconcile-csv-0.1.2.jar plik.csv search_column id_column
+            </code>
+            </p>
+
+            <p>
+            gdzie <code>plik.csv</code> to nazwa naszego pliku z danymi, <code>search_columm</code>
+            to nazwa pola w pliku z danymi, które będzie służyło do rekoncyliacji w OpenRefine,
+            <code>id_column</code> to nazwa pola w pliku z danymi, które zawiera jednoznaczny identyfikator danych.
+            </p>
+
+            <p>Po uruchomieniu serwis dostępny jest pod adresem <em>http://localhost:8000/reconcile</em>,
+            i taki adres należy wprowadzić w OpenRefine (zwraca on zawartość w formacie json, czytelną dla
+            programu - odbiorcy danych z serwisu). Adres główny serwisu (<em>http://localhost:8000</em>)
+            wyświetli o nim podstawowe informacje w formie czytelnej dla człowieka.
+            </p>
+            <img src="/static/img_zapiski/reconcile_csv_01.png" width="500" alt="serwis reconcile-csv"/>
+
+            <p>
+            Lokalny serwis rekoncycliacji podłącza się do OpenRefine podobnie jak serwisy zewnętrzne,
+            po uruchomieniu rekoncyliacji na wybranej kolumnie danych przycisk Add Standard Service wyświetli
+            okienko w którym można podać adres serwisu, zaakceptowany serwis pojawi się na liście.
+            <label for="%s" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <span class="sidenote">Standardowa nazwa serwisu będzie różnić się od pokazanej na
+            ilustracji i wygląda tak: 'CSV Reconciliation service'. Jest niestety zaszyta w kodzie źródłowym
+            Reconcile-csv i jej zmiana wymaga rekompilacji programu (zob. dalszą część artykułu).
+            </span>
+            </p>
+            <img src="/static/img_zapiski/reconcile_csv_04.png" width="500" alt="add standard service"/>
+
+            <p>
+            Można wówczas rozpocząć proces uspójniania. Dane które według mechanizmu zostały pewnie dopasowane
+            (współczynnik > 0.85) zostaną od razu przypisane do komórek kolumny dla której przeprowadzamy
+            rekoncyliację, w innych przypadkach wyświetlona zostanie lista wraz z wartościami dopasowania.
+            Dla każdej z pozycji można wyświetlić informacje z pliku csv będącego źródłem danych serwisu, na
+            przykładzie poniżej są to dane miejscowości z Atlasu Historycznego Polski.
+            <label for="%s" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <span class="sidenote">Dostępne publicznie na licencji CC BY-ND 4.0:
+            <a href="https://data.atlasfontium.pl/documents/202?_ga=2.122616834.865899583.1640103019-2000553280.1624037407" target="_blank" rel="noopener">
+            AHP 2.0</a> (IH PAN).
+            </span>
+            </p>
+            <img src="/static/img_zapiski/reconcile_csv_11.png" width="500" alt="reconcile_view"/>
+
+            <p><strong>Jak zmodyfikować program reconcile-csv</strong>:
+            zarówno zmiana nazwy serwisu (nazwy wyświetlanej w OpenRefine), jak i dostosowanie programu
+            Reconcile-csv do pracy na serwerze, wymaga zmian w jego kodzie źródłowym
+            <label for="%s" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <span class="sidenote">Repozytorium aplikacji w serwisie
+            <a href="https://github.com/okfn/reconcile-csv">github</a>.
+            </span>
+            a w związku z tym pewnych umiejętności 'programistycznych'.
+            Sama zmiana nazwy serwisu wymaga jednak tylko modyfikacji 50 wiersza pliku
+            /src/reconcile_csv/core.clj: <code> {:name "CSV Reconciliation service"</code>,
+            zmiany tekstu <em>"CSV Reconciliation service"</em> na nowy i rekompilacji programu.
+            Aplikacja została stworzona w języku clojure. Najłatwiejszym sposobem zarządzania i kompilacji projektu
+            w języku clojure jest użycie systemu
+            <a href="https://leiningen.org/" target="_blank" rel="noopener">Leiningen</a>, który w systemie
+            Ubuntu można zainstalować poleceniem: <code>sudo apt install leiningen</code>.
+            Rekompilacja projektu Reconcile-csv i budowa nowego pliku *.jar sprowadza się do
+            uruchomienia polecenia: <code>lein uberjar</code> w katalogu z plikiem project.cli,
+            skompilowany plik *.jar powinien znajdować się w podkatalogu <code>/target</code>.
+            </p>
+
+
+        </section>
+
+    </article>
+{{end}}

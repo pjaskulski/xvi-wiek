@@ -3,7 +3,7 @@
 <html lang="pl">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="XVI wiek, złoty wiek, wydarzenia historyczne, Jagiellonowie, historia, ciekawostki, renesans, odrodzenie, Królestwo Polskie, Prusy Książęce, Prusy Królewskie, Zygmunt August, Zygmunt Stary, Albrecht Hohenzollern, Stefan Batory, Jan Zamoyski, Jan Tarnowski, Jan Olbracht, Aleksander Jagiellończyk">    
+    <meta name="keywords" content="XVI wiek, złoty wiek, wydarzenia historyczne, Jagiellonowie, historia, ciekawostki, renesans, odrodzenie, Królestwo Polskie, Prusy Książęce, Prusy Królewskie, Zygmunt August, Zygmunt Stary, Albrecht Hohenzollern, Stefan Batory, Jan Zamoyski, Jan Tarnowski, Jan Olbracht, Aleksander Jagiellończyk">
     <meta name="description" content={{ template "meta_description" . }}>
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/tufte.css">
@@ -21,14 +21,14 @@
     <meta name="twitter:description" content={{ template "meta_description" .}}>
   </head>
 
-  <body>    
+  <body>
     <header>
         <span>XVI wiek </span><span class="beta">(beta)</span>
         <span class="header-icons">
         <a href="https://github.com/pjaskulski/xvi-wiek#api" target="_blank" rel="noopener" class="no-tufte-underline">
         <img src="/static/img/noun_api_3069773.png" width="28" alt="API"/></a>
         </span>
-        
+
         <span class="header-icons">
         <a href="https://github.com/pjaskulski/xvi-wiek" target="_blank" rel="noopener" class="no-tufte-underline">
         <img src="/static/img/GitHub-Mark-32px.png" width="28" alt="Github"/></a>
@@ -40,41 +40,42 @@
     </header>
     <nav>
         <ul id="menu">
-           <li><a href="/" class="menu-link" id="menu-home">Wydarzenia dnia</a></li>     
-           <li><a href="/kalendarz" class="menu-link" id="menu-calendar">Kalendarz</a></li>                 
-           <li><a href="/indeksy" class="menu-link" id="menu-quotes">Indeksy</a></li>           
-           <li><a href="/pdf" class="menu-link" id="menu-quotes">Ebook</a></li>            
+           <li><a href="/" class="menu-link" id="menu-home">Wydarzenia dnia</a></li>
+           <li><a href="/kalendarz" class="menu-link" id="menu-calendar">Kalendarz</a></li>
+           <li><a href="/indeksy" class="menu-link" id="menu-quotes">Indeksy</a></li>
+           <li><a href="/pdf" class="menu-link" id="menu-quotes">Ebook</a></li>
            <li><a href="/cytaty" class="menu-link" id="menu-quotes">Cytaty</a></li>
            <li><a href="/ksiazki" class="menu-link" id="menu-books">Książki</a></li>
-           <li><a href="/zrodla" class="menu-link" id="menu-info">Źródła</a></li>           
+           <li><a href="/zrodla" class="menu-link" id="menu-info">Źródła</a></li>
+           <li><a href="/zapiski" class="menu-link" id="menu-info">Zapiski</a></li>
            <li><a href="/informacje" class="menu-link" id="menu-info">Informacje</a></li>
            <li><a href="/szukaj" class="menu-link" id="menu-info">Szukaj</a></li>
-        </ul> 
-        
+        </ul>
+
     </nav>
-    <main>    
+    <main>
 
     {{template "main" .}}
-    
+
     </main>
     <div class="footer">
-        <p class="footer-title">XVI-wiek.pl</p> 
+        <p class="footer-title">XVI-wiek.pl</p>
         <p class="footer-info">
-        Serwis historyczny poświęcony wydarzeniom z lat 1490-1586 na terenie 
+        Serwis historyczny poświęcony wydarzeniom z lat 1490-1586 na terenie
         Królestwa Polskiego i krain sąsiednich</p>
         <hr class="footer-hr">
-        
-        <p class="footer-small">Ta strona <a href="/informacje#cookie" class="simple-underline">praktycznie</a> 
-        nie korzysta z 'ciasteczek', nie zbiera danych osobowych, nie nadużywa Twojej 
+
+        <p class="footer-small">Ta strona <a href="/informacje#cookie" class="simple-underline">praktycznie</a>
+        nie korzysta z 'ciasteczek', nie zbiera danych osobowych, nie nadużywa Twojej
         <a href="/informacje#prywatnosc" class="simple-underline">prywatności</a>.
         </p>
 
         <p class="footer-icons">
-            <a href="https://twitter.com/xvi_wiek" target="_blank" rel="noopener">Twitter</a>            
+            <a href="https://twitter.com/xvi_wiek" target="_blank" rel="noopener">Twitter</a>
             <a href="https://github.com/pjaskulski/xvi-wiek" target="_blank" rel="noopener">Github</a>
             <a href="https://github.com/pjaskulski/xvi-wiek#api" target="_blank" rel="noopener">API</a>
         </p>
-    </div>    
+    </div>
   </body>
 </html>
 {{end}}

@@ -622,3 +622,13 @@ func (app *application) showSources(w http.ResponseWriter, r *http.Request) {
 		app.serverError(w, err)
 	}
 }
+
+// showBlog func
+func (app *application) showZapiski(w http.ResponseWriter, r *http.Request) {
+
+	ts := app.templateCache["zapiski.page.gohtml"]
+	err := ts.Execute(w, nil)
+	if err != nil {
+		app.serverError(w, err)
+	}
+}
