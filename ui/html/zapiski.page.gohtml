@@ -142,6 +142,26 @@
             skompilowany plik *.jar powinien znajdować się w podkatalogu <code>/target</code>.
             </p>
 
+            <p>
+            Modyfikacja kodu i rekompilacja za każdym razem kiedy chcemy zmienić np. nazwę serwisu
+            rekoncyliacji wyświetlaną w OpenRefine może być jednak dość niewygodna. Dlatego przygotowałem małą
+            modyfikację programu reconcile-cvs która obsługuje cztery dodatkowe parametry uruchamiania z linii komend:
+            <code>adres_serwera</code>, <code>port</code>, <code>nazwa_serwisu_rekoncyliacji</code> i <code>nazwa_typu</code>.
+            Dodatkowo serwis wyświetla trochę bardziej czytelny podgląd danych z pliku csv, podczas
+            uspójniania (widoczne ramki tabeli).
+            <img src="/static/img_zapiski/reconcile_csv_table.jpg" width="500" alt="reconcile_view"/>
+            </p>
+
+            <p>Przykładowe wywołanie:<br>
+            <code>
+             java -Xmx2g -jar reconcile-csv-0.1.2.jar plik.csv search_column id_column "http://moj_serwer.org" "80" "Miasta-Osoby Serwis Rekoncyliacji" "miasta_osoby"
+            </code>
+            <p>
+
+            <p>Kod źródłowy modyfikacji można pobrać z <a href="https://github.com/pjaskulski/reconcile-csv" target="_blank" rel="noopener">github</a>,
+            skompilowany plik jar również: <a href="https://github.com/pjaskulski/reconcile-csv/releases" target="_blank" rel="noopener">releases</a>.
+            </p>
+
 
         </section>
 
