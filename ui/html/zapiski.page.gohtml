@@ -13,10 +13,13 @@
     humanistyki cyfrowej...
     </div>
     <p></p>
+
     <div>
-    <small>Spis treści:<br><br>
+    <p>
+    Spis treści:<br><br>
     <strong>2022-09-25</strong> <a href="#2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania</a><br>
-    </small>
+    <strong>2022-10-01</strong> <a href="#2022-10-01">spaCy, NER i półautomatyczne tworzenie indeksu postaci</a><br>
+    </p>
     </div>
 
     <article>
@@ -173,9 +176,190 @@
             <p>Kod źródłowy modyfikacji można pobrać z <a href="https://github.com/pjaskulski/reconcile-csv" target="_blank" rel="noopener">github</a>,
             skompilowany plik jar również: <a href="https://github.com/pjaskulski/reconcile-csv/releases" target="_blank" rel="noopener">releases</a>.
             </p>
+        </section>
+    </article>
 
+    <article>
+        <hr>
+        <h2 id="2022-10-01">spaCy, NER i półautomatyczne tworzenie indeksu postaci (<strong>01.10.2022</strong>)</h2>
+
+        <section>
+
+        <p>Postęp rozwoju metod przetwarzania języka naturalnego (NLP) w ciągu ostatnich kilku lat pozwala
+        na coraz szersze ich użycie, także w odniesieniu do tekstów w języku polskim. Jedną z technik NLP
+        jest rozpoznawanie jednostek nazwanych (NER - named entity recogition), w czystym, pozbawionym struktury
+        tekście poddanym analizie NER można oznaczyć np. osoby, miejsca czy daty. Do czego może się to przydać w przypadku
+        publikacji historycznych? Jednym z naprostszych przypadków użycia jaki przychodzi do głowy jest stworzenie
+        indeksu osób dla publikacji gdzie takiego indeksu brakuje.</p>
+
+        <p>Do testu posłuży artykuł (właściwie książka, sądząc po objętości) Stanisława Bodniaka, "Polska a Bałtyk za ostatniego z Jagiellona"
+        wydana w 1946 roku (<em>Pamiętnik Biblioteki Kórnickiej</em> 3, 42-276, 1939-46).
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">
+        Dzieło to ma zresztą ciekawą historię gdyż pierwszy druk w 1939 roku spłonął w drukarni
+        w wyniku działań wojennych tuż przed wydaniem, autor z zachowanych korekt i notatek
+        odtworzył i wydał je po wojnie.
+        </span>
+        Publikacja została zdigitalizowana przez Muzeum Historii Polski i udostępniona w bazie
+        bazhum.muzhp.pl w formie pdf.
+        </p>
+        <p>
+        Sytuacja jednak nie jest idealna - pdf nie ma indeksu (nie wiem czy jest w papierowym
+        wydaniu), ma warstwę OCR więc jest przeszukiwalny, jednak jakość OCR nie jest perfekcyjna,
+        w tekście pojawiają się np. przypadkowe spacje wewnątrz słów. Aby to poprawić można
+        proces ocr przeprowadzić powtórnie.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Ponieważ na codzień pracuję w systemie Linux, narzędzia których używam związane są z
+        tym systemem, jednak wiele z nich pracuje także pod Windows/Mac lub istnieją odpowiedniki
+        dla tych środowisk.
+        </span>
+        </p>
+        <img src="/static/img_zapiski/tekst_z_warstwy_ocr_pdfa.png" width="500" alt="reconcile_view"/>
+
+        <p>Ciekawym narzędziem do wprowadzania warstwy tekstowej ocr do plików pdf jest
+        <a href="https://ocrmypdf.readthedocs.io/en/latest/introduction.html">ocrmypdf</a>, może
+        on rówież nadpisać istniejącą warstwę tekstową czy zapisać rozpoznany przez ocr na nowo
+        tekst w osobnym pliku tekstowym (warstwa tekstowa zapisana przez ten program w pdf
+        również nie była rewelacyjna, ale sam plik z tekstem okazał się niezły i nadawał się
+        do dalszej obróbki). Silnikiem OCR używanym przez omawianą apliację jest Tesseract,
+        uważany za najlepszy mechanizm OCR open source.
+        </p>
+        <p>
+        Polecenie uruchamiające przetwarzanie pdf-a wygląda tak:<br>
+        <code>
+        ocrmypdf -l pol --force-ocr --sidecar output.txt Bodniak_input.pdf Bodniak_output.pdf
+        </code>
+        </p>
+
+        <p>
+        gdzie opcja: <code>-l pol</code> odpowiada za obsługę języka polskiego,
+        <code>--force-ocr</code> wymusza nadpisanie istniejącej warstwy ocr w pdf,
+        zaś opcja <code>--sidecar output.txt</code> powoduje zapisanie tekstu z pdf
+        w pliku tekstowym. Nazwy plików pdf na końcu to odpowiednio oryginalny plik
+        oraz wyjściowy zmodyfikowany plik pdf.
+        </p>
+
+        <p>
+        Oryginalny plik pdf pobrany z repozytorium bazhum.muzhp.pl może wymagać wstępnego
+        przetworzenia (programo ocrmypdf zgłasza błąd "EncryptedPdfError: Input PDF is encrypted.
+        The encryption must be removed to perform OCR"), służy do tego program qpdf uruchamiany
+        z linii komend: <code>qpdf --decrypt plik_wejściowy.pdf plik wyjściowy.pdf</code>.
+        </p>
+
+        <p>
+        Innym narzędziem, które może posłużyć do wydobycia tekstu z pliku pdf jest program
+        gImageReader będący graficzną nakładką na silnik OCR Tesseract, oprócz samego procesu
+        OCR ma on dodatkowe funkcje pozwalające usunąć znaki końca wiersza ze środka akapitów
+        oraz połączyć wyrazy podzielone między wiersze (komercyjne programy OCR mają z pewnością
+        dużo większe możliwości w zakresie oczyszczania i poprawiania tekstu po procesie OCR).
+        </p>
+        <img src="/static/img_zapiski/tekst_po_ocr_gImageReader_Tesseract.png" width="500" alt="tekst_gimage_reader"/>
+
+        <p>Mając plik z tekstem (z zachowanymi numerami stron, które zamieniłem na tagi w postaci
+        <code>[PAGE: 45]</code> na początku każdej strony) możemy poddać go próbnej analizie NER.
+        Istnieje bardzo wiele narzędzi i modeli, które można wykorzystać do tego celu, dostępna
+        jest np. kolekcja narzędzi projektu CLARIN-PL (analiza NER do przetestowania także:
+        <a href="https://ws.clarin-pl.eu/ner">on-line</a>). W tym teście skorzystam jednak z
+        popularnej biblioteki NLP: <a href="https://spacy.io/">spaCy</a> i skryptów w języku Python.
+        </p>
+
+        <p>Najwygodniejszym sposobem testowania różnych rozwiązań w Pythonie jest środowisko
+        <a href="https://jupyter.org/">Jupyter Notebook</a>
+        Sama instalacja i konfiguracja Pythona, Jupytera i spaCy to temat na osobną zapiskę, ale
+        procudury ich instalacji są przystępnie opisane na podanych wyżej stronach.
+        </p>
+
+        <p>
+        Po uruchomieniu środowiska Jupyter i utworzeniu nowego notatnika należy zaimportować
+        bibliotekę spacy oraz dodatkowo mechanizm wizualizacji displacy. Kolejnym krokiem będzie
+        załadowanie tekstu do analizy oraz modelu dla języka polskiego. Standardowo spaCy oferuje
+        3 modele (zob. <a href="https://spacy.io/models/pl">https://spacy.io/models/pl</a>), mały,
+        średni i duży, różniące się wielkością (od 20 do 500 MB) i dokładnością. Do celów tego testu
+        wystarczy model średni 'pl_core_news_md' (<em>Polish pipeline optimized for CPU. Components:
+        tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.</em>).
+        </p>
+
+        <p>
+        <code>
+        import spacy<br>
+        from spacy import displacy<br><br>
+
+        nlp = spacy.load('pl_core_news_md')<br>
+        with open('../data/bodniak_baltyk_small.txt', 'r', encoding='utf-8') as f:<br>
+            text = f.read()<br><br>
+
+        doc = nlp(text)<br>
+        displacy.render(doc, style='ent')<br>
+        </code>
+        </p>
+
+        <p>
+        Kod podany powyżej przeprowadza analizę NER wczytanego tekstu (jest to fragment
+        artykułu S. Bodniaka, str. 43) oraz wyświetla wynik w bardzo przystępnej formie,
+        gdzie znalezione jednostki nazwane (osoby, daty i miejsca) oznaczone są kolorami
+        i etykietą. Jak widać mechanizm radzi sobie całkiem nieźle z typowymi przypadkami
+        osób, znajduje określenia temporalne i miejscowości.
+        </p>
+        <img src="/static/img_zapiski/jupyter_spacy.png" width="685" alt="jupyter_spacy"/>
+
+        <p>Niektóre z postaci, np. Barnim XI (książę pomorski, w dalszej niewidocznej na zrzucie
+        ekranu części tekstu) pozostają jednak nierozpoznane, jako osoby rozpoznawane są natomiast
+        błędnie wyrażenia typu: 'Odstraszała' czy 'Podniosłyby', model użyty do testu był
+        przygotowany na podstawie bardziej współczesnych tekstów stąd imion i innych określeń
+        używanych historyczne po prostu nie zna. Analizowany tekst dotyczy XVI wieku, ale gdyby
+        występowały w nim postacie średniowieczne typu 'Jan z Goźlic' jako osoba zostałoby
+        uznane prawdopodobnie tylko imię Jan a nie całe wyrażenie. Zdarzają się też błędne
+        rozpoznania miejsc jako osób itp. Czy można model 'przekonać' do poprawnego rozpoznawania
+        takich określeń? Oczywiście, istnieją także zapewne lepsze modele, ale jest to temat na
+        inny wpis.</p>
+
+        <p>
+        Mając tekst z informacjami o numerach stronach, możliwość rozpoznania postaci analizą NER,
+        możemy przygotować ich indeks, posłuży do tego skrypt pythonowy create_index.py
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Do pobrania z serwisu <a href="https://github.com/pjaskulski/zapiski">github</a>.
+        </span>
+        w którym najpierw wczytywana jest treść każdej strony,
+        wykonywana analiza NER, wyniki dopisywanie do słownika wyników, na koniec wyświetlana
+        jest posortowana lista znalezionych postaci (266 osób, z tym że niektóre występują czasem
+        podwójnie lub potrójnie z powodu np. literówek czy błędnie ustalonej formy podstawowej
+        imienia i nazwiska) wraz z numerami stron. Lista nie jest z pewnością dokładna, wymaga
+        oczyszczenia przez człowieka (występują wspomniane już wyżej błędne rozpoznania, problemy
+        z odmianą imion i nazwisk, jakość ocr też wpływa na błędy wynikające z literówek) jednak
+        z pewnością jest dużym ułatwieniem przy tworzeniu indeksu, no i jej przygotowaniem zajął
+        się komputer, dając człowiekowi czas na zadania, których komputer na dziś nie jest w stanie
+        się podjąć. Poniżej fragment przygotowanego indeksu po wstępnym oczyszczeniu.
+        </p>
+
+        <p>
+        <code>
+        Achacy Czema [262]<br>
+        Adam Konarski [190, 273]<br>
+        Adolf (holsztyński) [157]<br>
+        Albrecht Giese [88, 120, 171]<br>
+        Albrecht Wilkowski [116]<br>
+        Albrecht (Hohenzollern) [43, 44, 51, 52, 56, 57, 58, 70, 134]<br>
+        Aleksander Połubieński [216]<br>
+        Andrzej Swarożyński [74, 81, 84, 104, 274]<br>
+        Antoni Angela [44]<br>
+        Bajerski [93, 94]<br>
+        Barnim XI [126, 187]<br>
+        Bąkowski [138]<br>
+        Birsen [46]<br>
+        Bogusław XIII [187]<br>
+        Boleman [177, 178]<br>
+        Chodkiewicz [101, 191, 207, 228, 263, 270, 271]<br>
+        [...]<br>
+        Łukasz Górnicki [43]<br>
+        Łukasz Podoski [190, 222, 273]<br>
+        Maciej Scharping [58, 60, 67, 74, 83]<br>
+        Maciej Strubicz [77, 271]<br>
+        </code>
+        </p>
 
         </section>
-
     </article>
 {{end}}
