@@ -9,9 +9,15 @@
 
     <h1 id="tufte-css">Zapiski</h1>
 
+    <div class="preface">Zapiski, notatki, artykuły i ciekawostki dotyczące programowania, historii, archeologii,
+    humanistyki cyfrowej...
+    </div>
+    <p></p>
+    <div>
     <small>Spis treści:<br><br>
     <strong>2022-09-25</strong> <a href="#2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania</a><br>
     </small>
+    </div>
 
     <article>
         <hr>
@@ -157,6 +163,12 @@
              java -Xmx2g -jar reconcile-csv-0.1.2.jar plik.csv search_column id_column "http://moj_serwer.org" "80" "Miasta-Osoby Serwis Rekoncyliacji" "miasta_osoby"
             </code>
             <p>
+            <p>
+            lub (obecnie port inny niż 80 trzeba podać także w adresie serwera):<br>
+            <code>
+             java -Xmx2g -jar reconcile-csv-0.1.2.jar plik.csv search_column id_column "http://localhost:8000" "8000" "Miasta-Osoby Serwis Rekoncyliacji" "miasta_osoby"
+            </code>
+            </p>
 
             <p>Kod źródłowy modyfikacji można pobrać z <a href="https://github.com/pjaskulski/reconcile-csv" target="_blank" rel="noopener">github</a>,
             skompilowany plik jar również: <a href="https://github.com/pjaskulski/reconcile-csv/releases" target="_blank" rel="noopener">releases</a>.
