@@ -19,6 +19,7 @@
     Spis treści:<br><br>
     <strong>2022-09-25</strong> <a href="#2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania</a><br>
     <strong>2022-10-01</strong> <a href="#2022-10-01">spaCy, NER i półautomatyczne tworzenie indeksu postaci</a><br>
+    <strong>2022-10-03</strong> <a href="#2022-10-03">spaCy, POS i Matcher - czyli do czego przydają się rzeczowniki</a><br>
     </p>
     </div>
 
@@ -358,6 +359,116 @@
         Maciej Scharping [58, 60, 67, 74, 83]<br>
         Maciej Strubicz [77, 271]<br>
         </code>
+        </p>
+
+        </section>
+    </article>
+
+    <article>
+        <hr>
+        <h2 id="2022-10-03">spaCy, POS i Matcher - czyli do czego przydają się rzeczowniki
+        (<strong>03.10.2022</strong>)</h2>
+
+        <section>
+        <p>Mając indeks postaci występujących w publikacji
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Zob. poprzednią <a href="#2022-10-01">zapiskę</a>.
+        </span>
+        wiemy kto występuje w tekście, ale
+        czy wiemy kim był? W przypadku osób powszechnie znanych kojarzymy, że Zygmunt August
+        był królem, Albrecht Hohenzollern władcą Prus, ale jakie funkcje pełnili, jakich zawodów
+        byli przedstawicielami ci pozostali, mniej znani? Czy analizy NLP mogą  nam pomóc w
+        odpowiedzi na te pytania? Tak i to nawet najbardziej podstawowe metody, jak określenia
+        części mowy (POS - part of speech) oraz Matcher - silnik dopasowywania wzorców.
+        </p>
+
+        <p>
+        Podczas przetwarzania tekstu spaCy dzieli go na zdania oraz tokeny, każdy token jest
+        zwykle słowem lub znakiem interpunkcyjnym. Dla każdego z tokenów spacy określa jaką
+        jest częścią mowy, można więc dzięki temu odseparować same rzeczowniki
+        występujące w tekście i posortować je w kolejności występowania. Taką pracę wykonuje
+        skrypt popular_noun.py
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Do pobrania z serwisu <a href="https://github.com/pjaskulski/zapiski">github</a>.
+        </span>
+        .
+        </p>
+
+        <p>
+        Najpopularniejszy rzeczownik w publikacji Stanisława Bodniaka (<em>Polska a Bałtyk
+        za ostatniego Jagiellona</em>) to słowo 'król' występujące w różnych formach ('królów,
+        królach, króla, królu, królowi, królem, Króla, Król, król') 435 razy, kolejne
+        zaś to 'rok', 'statek', 'straż', 'kapitan', 'komisja', 'okręt', 'żegluga', 'miasto',
+        'morze' - co nie jest zaskakujące biorąc pod uwagę tematykę artykułu. Wśród nich
+        mamy dwa reprezentujące funkcję: król i kapitan. Przykład fragmentu wyników działania
+        skryptu w tabelce poniżej:<br>
+
+        <table>
+        <tr><th>Funkcja</th><th>Liczba wystąpień</th><th>Typowe formy</th></tr>
+        <tr>
+        <td>król</td>
+        <td>435</td>
+        <td>królów, królach, króla, królu, królowi, królem, Króla, Król, król</td>
+        </tr>
+        <tr>
+        <td>kapitan</td>
+        <td>192</td>
+        <td>kapitanowie, kapitan, kapitanów, kapitanach, Kapitan, kapitanami, kapitana, kapitanowi, kapitanem, kapitanom</td>
+        </tr>
+        <tr>
+        <td>komisarz</td>
+        <td>130</td>
+        <td>komisarzom, komisarze, komisarzem, Komisarze, komisarza, komisarzy, komisarz</td>
+        </tr>
+        </table>
+        </p>
+
+        <p>
+        Kolejna część pracy należy do człowieka, z otrzymanej listy należy wybrać inne funkcje
+        i zawody, znajdziemy tam między innymi funkcje: komisarz, strażnik, kapr, poseł, car, kupiec, żołnierz,
+        cesarz, senator, członek, kasztelan, urzędnik, admirał, delegat, mistrz, żeglarz, prezes,
+        sekretarz, armator, władca, kanclerz, marynarz, właściciel, dowódca, podkanclerzy,
+        namiestnik, książę, ks., starosta, sługa, wojownik, mocodawca, burmistrz. Mając listę
+        funkcji można wykorzystująć mechanizm Matcher - silnik dopasowywania wzorców biblioteki
+        spaCy - wyszukać powiązania funkcji i osób
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote"><a href="https://spacy.io/usage/rule-based-matching">Rule-based matching</a>.
+        </span>.
+        </p>
+
+        <p>
+        Wzorzec według którego spaCy dopasowywuje tekst może wyglądać na przykład tak:<br>
+        <code>[{"LEMMA": {"IN": lista}}, {"POS":"ADJ", "OP":"?"},{"POS":"PROPN", "OP":"+"}],</code><br>
+        gdzie <code>lista</code> jest wyżej wypisaną listą funkcji, <code>LEMMA</code> - oznacza formę podstawową wyrazu,
+        <code>"POS":"ADJ"</code> oznacza wyraz będący przymiotnikiem,
+        <code>"POS":"PROPN"</code> - oznacza wyraz będący jednostką nazwaną (np. osobą wymienioną z imienia
+        i nazwiska), <code>"OP":"?"</code> to operator wskazujący, że poprzedni wzorzec może wystąpić 0 lub 1 raz,
+        <code>"OP":"+"</code> zaś jest operatorem oczekującym wystąpienia wzorca co najmniej raz (lub więcej razy).
+        </p>
+
+        <p>
+        Efektem przetworzenia tekstu badanej publikacji S. Bodniaka przez zestaw podobnych
+        reguł (skrypt <code>funkcje_zawody.py</code> - pod tym samym adresem co poprzedni skrypt)
+        jest lista wyrażeń zawierających osoby
+        i ich funkcje/zawody np.
+        <ul>
+        <li>"kasztelana chełmińskiego Jerzego Oleskiego"</li>
+        <li>"kanclerz Nils Gyllenstierna"</li>
+        <li>"admirałem szwedzkim Klausem Flemmingiem"</li>
+        <li>"namiestnik Inflant Jan Chodkiewicz"</li>
+        <li>"sekretarz królewski Kasper Geschkau"</li>
+        <li>"Michała Brunowa kanclerza Gotarda Kettlera"</li>
+        </ul>
+        </p>
+
+        <p>
+        Unikalnych znalezisk jest niespełna 90 czyli tylko dla 1/3 osób z indeksu postaci
+        stworzonego w poprzedniej zapisce znaleziono ich funkcje lub zawód, ale jest to bardzo
+        prosta metoda, algortym można zapewne udoskonalić, poza tym te informacje dostajemy
+        bez potrzeby ręcznego przeglądania 230 stron publikacji...
         </p>
 
         </section>
