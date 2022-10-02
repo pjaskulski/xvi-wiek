@@ -189,7 +189,7 @@
         na coraz szersze ich użycie, także w odniesieniu do tekstów w języku polskim. Jedną z technik NLP
         jest rozpoznawanie jednostek nazwanych (NER - named entity recogition), w czystym, pozbawionym struktury
         tekście poddanym analizie NER można oznaczyć np. osoby, miejsca czy daty. Do czego może się to przydać w przypadku
-        publikacji historycznych? Jednym z naprostszych przypadków użycia jaki przychodzi do głowy jest stworzenie
+        publikacji historycznych? Jednym z najprostszych przypadków użycia jaki przychodzi do głowy jest stworzenie
         indeksu osób dla publikacji gdzie takiego indeksu brakuje.</p>
 
         <p>Do testu posłuży artykuł (właściwie książka, sądząc po objętości) Stanisława Bodniaka, "Polska a Bałtyk za ostatniego z Jagiellona"
@@ -223,7 +223,7 @@
         on rówież nadpisać istniejącą warstwę tekstową czy zapisać rozpoznany przez ocr na nowo
         tekst w osobnym pliku tekstowym (warstwa tekstowa zapisana przez ten program w pdf
         również nie była rewelacyjna, ale sam plik z tekstem okazał się niezły i nadawał się
-        do dalszej obróbki). Silnikiem OCR używanym przez omawianą apliację jest Tesseract,
+        do dalszej obróbki). Silnikiem OCR używanym przez omawianą aplikację jest Tesseract,
         uważany za najlepszy mechanizm OCR open source.
         </p>
         <p>
@@ -243,7 +243,7 @@
 
         <p>
         Oryginalny plik pdf pobrany z repozytorium bazhum.muzhp.pl może wymagać wstępnego
-        przetworzenia (programo ocrmypdf zgłasza błąd "EncryptedPdfError: Input PDF is encrypted.
+        przetworzenia (program ocrmypdf zgłasza błąd "EncryptedPdfError: Input PDF is encrypted.
         The encryption must be removed to perform OCR"), służy do tego program qpdf uruchamiany
         z linii komend: <code>qpdf --decrypt plik_wejściowy.pdf plik wyjściowy.pdf</code>.
         </p>
@@ -259,21 +259,21 @@
 
         <p>Mając plik z tekstem (z zachowanymi numerami stron, które zamieniłem na tagi w postaci
         <code>[PAGE: 45]</code> na początku każdej strony) możemy poddać go próbnej analizie NER.
-        Istnieje bardzo wiele narzędzi i modeli, które można wykorzystać do tego celu, dostępna
+        Istnieje wiele narzędzi i modeli, które można wykorzystać do tego celu, dostępna
         jest np. kolekcja narzędzi projektu CLARIN-PL (analiza NER do przetestowania także:
-        <a href="https://ws.clarin-pl.eu/ner">on-line</a>). W tym teście skorzystam jednak z
+        <a href="https://ws.clarin-pl.eu/ner">on-line</a> z wykorzystaniem narzędzia Liner2). W tym teście skorzystam jednak z
         popularnej biblioteki NLP: <a href="https://spacy.io/">spaCy</a> i skryptów w języku Python.
         </p>
 
         <p>Najwygodniejszym sposobem testowania różnych rozwiązań w Pythonie jest środowisko
         <a href="https://jupyter.org/">Jupyter Notebook</a>
-        Sama instalacja i konfiguracja Pythona, Jupytera i spaCy to temat na osobną zapiskę, ale
+        Sama instalacja i konfiguracja Pythona, Jupytera i spaCy mogłaby być tematem osobnej zapiski, ale
         procudury ich instalacji są przystępnie opisane na podanych wyżej stronach.
         </p>
 
         <p>
         Po uruchomieniu środowiska Jupyter i utworzeniu nowego notatnika należy zaimportować
-        bibliotekę spacy oraz dodatkowo mechanizm wizualizacji displacy. Kolejnym krokiem będzie
+        bibliotekę spaCy oraz dodatkowo mechanizm wizualizacji displacy. Kolejnym krokiem będzie
         załadowanie tekstu do analizy oraz modelu dla języka polskiego. Standardowo spaCy oferuje
         3 modele (zob. <a href="https://spacy.io/models/pl">https://spacy.io/models/pl</a>), mały,
         średni i duży, różniące się wielkością (od 20 do 500 MB) i dokładnością. Do celów tego testu
@@ -297,9 +297,9 @@
 
         <p>
         Kod podany powyżej przeprowadza analizę NER wczytanego tekstu (jest to fragment
-        artykułu S. Bodniaka, str. 43) oraz wyświetla wynik w bardzo przystępnej formie,
+        artykułu S. Bodniaka, str. 43) oraz wyświetla wynik w bardzo przystępnej wizualnie formie,
         gdzie znalezione jednostki nazwane (osoby, daty i miejsca) oznaczone są kolorami
-        i etykietą. Jak widać mechanizm radzi sobie całkiem nieźle z typowymi przypadkami
+        i etykietą ('persName', 'date', 'placeName'). Jak widać mechanizm radzi sobie całkiem nieźle z typowymi przypadkami
         osób, znajduje określenia temporalne i miejscowości.
         </p>
         <img src="/static/img_zapiski/jupyter_spacy.png" width="685" alt="jupyter_spacy"/>
@@ -308,10 +308,10 @@
         ekranu części tekstu) pozostają jednak nierozpoznane, jako osoby rozpoznawane są natomiast
         błędnie wyrażenia typu: 'Odstraszała' czy 'Podniosłyby', model użyty do testu był
         przygotowany na podstawie bardziej współczesnych tekstów stąd imion i innych określeń
-        używanych historyczne po prostu nie zna. Analizowany tekst dotyczy XVI wieku, ale gdyby
+        używanych historyczne po prostu może nie znać. Analizowany tekst dotyczy XVI wieku, ale gdyby
         występowały w nim postacie średniowieczne typu 'Jan z Goźlic' jako osoba zostałoby
         uznane prawdopodobnie tylko imię Jan a nie całe wyrażenie. Zdarzają się też błędne
-        rozpoznania miejsc jako osób itp. Czy można model 'przekonać' do poprawnego rozpoznawania
+        rozpoznania miejsc jako osób itp. Czy można model 'przekonać' do bardziej poprawnego rozpoznawania
         takich określeń? Oczywiście, istnieją także zapewne lepsze modele, ale jest to temat na
         inny wpis.</p>
 
