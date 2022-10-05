@@ -20,6 +20,7 @@
     <strong>2022-09-25</strong> <a href="#2022-09-25">OpenRefine - własny serwis rekoncyliacji/uspójniania</a><br>
     <strong>2022-10-01</strong> <a href="#2022-10-01">spaCy, NER i półautomatyczne tworzenie indeksu postaci</a><br>
     <strong>2022-10-03</strong> <a href="#2022-10-03">spaCy, POS i Matcher - czyli do czego przydają się rzeczowniki</a><br>
+    <strong>2022-10-05</strong> <a href="#2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to też osoba...</a><br>
     </p>
     </div>
 
@@ -431,7 +432,7 @@
         cesarz, senator, członek, kasztelan, urzędnik, admirał, delegat, mistrz, żeglarz, prezes,
         sekretarz, armator, władca, kanclerz, marynarz, właściciel, dowódca, podkanclerzy,
         namiestnik, książę, ks., starosta, sługa, wojownik, mocodawca, burmistrz. Mając listę
-        funkcji można wykorzystująć mechanizm Matcher - silnik dopasowywania wzorców biblioteki
+        funkcji można wykorzystując mechanizm Matcher - silnik dopasowywania wzorców biblioteki
         spaCy - wyszukać powiązania funkcji i osób
         <label for="%s" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="%s" class="margin-toggle"/>
@@ -464,13 +465,62 @@
         </ul>
         </p>
 
+        <p>Możemy stąd uzyskać np. listę występujących w tekście kapitanów i kaprów: Figenow, Gendtrichsen,
+        Michał Starosta, Paweł Glasow, Jan Munckenbeck, Kersten Rode, Marcin Śchele, Mateusz Scharping,
+        Marek Wilde.
+        </p>
+
         <p>
         Unikalnych znalezisk jest niespełna 90 czyli tylko dla 1/3 osób z indeksu postaci
         stworzonego w poprzedniej zapisce znaleziono ich funkcje lub zawód, ale jest to bardzo
-        prosta metoda, algortym można zapewne udoskonalić, poza tym te informacje dostajemy
+        prosta metoda (pominąłem np. zawody/funkcje występujące mniej niż 10 razy), algortym można zapewne udoskonalić, poza tym te informacje dostajemy
         bez potrzeby ręcznego przeglądania 230 stron publikacji...
         </p>
 
         </section>
     </article>
+
+    <article>
+        <hr>
+        <h2 id="2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to też osoba...
+        (<strong>05.10.2022</strong>)</h2>
+
+        <section>
+        <p>Rozpoznawanie jednostek nazwanych przeprowadzone na fragmencie publikacji S. Bodniaka
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">
+        zob. zapiskę z
+        <a href="#2022-10-01">1.10.2022</a>.
+        </span>
+        dało całkiem niezłe rezultaty w zakresie rozpoznawania osób, zdarzały się jednak takie
+        nazwy, które mechanizm pominął. Na przykład 'Barnim XI' - książę pomorski. Czy
+        można nauczyć spaCy rozpoznawania takich nietypowych imion? Tak, i nie musi się to
+        wiązać z trenowaniem własnego modelu. <strong>EntityRuler</strong> jest komponentem potoku
+        przetwarzania spaCy służącym do rozpoznawania jednostek nazwanych poprzez reguły
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Dokumentacja komponentu
+        <a href="https://spacy.io/usage/rule-based-matching#entityruler">EntityRuler</a>.
+        </span>
+        i może zostać użyty do polepszenia wyników modelu statystycznego NER.
+        </p>
+        <img src="/static/img_zapiski/ner_barnim_1.png" width="625" alt="tekst bez rozpoznania imienia Barnim"/>
+
+        <p>
+        Aby użyć komponentu należy dodać go metodą:<br> <code>nlp.add_pipe("entity_ruler")</code> oraz
+        zdefiniować wzorce dla encji, które chcemy
+        rozpoznawać w badanym tekście, mogą to być proste wzorce, np. pasujący do naszego przypadku:<br><br>
+        <code>pattern = [{"label":"persName", "pattern": "Barnim XI"}]</code><br><br>
+        Mogą to także być bardziej zaawansowane wzorce oparte na tokenach:<br><br>
+        <code>[{"label": "persName", "pattern": [{"LOWER": "barnim"}, {"LOWER": "wielki"}]}]</code>
+        </p>
+
+        <p>Powtórne przetworzenie analizowanego fragmentu tekstu powoduje już poprawne
+        rozpoznanie wyrażenia 'Barnim XI' jako osoby (label = <em>persName</em>)
+        </p>
+        <img src="/static/img_zapiski/ner_barnim_2.png" width="625" alt="tekst z rozpoznanym imieniem Barnim"/>
+        </section>
+    </article>
+
 {{end}}
