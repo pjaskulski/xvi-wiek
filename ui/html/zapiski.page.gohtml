@@ -21,6 +21,7 @@
     <strong>2022-10-01</strong> <a href="#2022-10-01">spaCy, NER i półautomatyczne tworzenie indeksu postaci</a><br>
     <strong>2022-10-03</strong> <a href="#2022-10-03">spaCy, POS i Matcher - czyli do czego przydają się rzeczowniki</a><br>
     <strong>2022-10-05</strong> <a href="#2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to też osoba...</a><br>
+    <strong>2022-10-06</strong> <a href="#2022-10-06">Artykuły, kursy, filmy - o NLP w badaniach historycznych<a/><br>
     </p>
     </div>
 
@@ -482,7 +483,7 @@
 
     <article>
         <hr>
-        <h2 id="2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to też osoba...
+        <h2 id="2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to<br> też osoba...
         (<strong>05.10.2022</strong>)</h2>
 
         <section>
@@ -527,7 +528,7 @@
         o rozpoznawanie nowej kategorii obiektów np. funkcji pełnionych przez osoby występujące w tekście.
         Zakładając, że interesują nas funkcje: król, hetman, senator oraz chcemy odnaleźć nie
         tylko dokładnie takie wystąpienia słów (np. 'senator') ale i wersję w liczbie mnogiej ('senatorowie') lub w formie
-        dopełniacza ('senatorowi') należy użyć bardziej zaawansowanego sposobu definiowana wzorca:<br>
+        odmienionej ('senatorowi') należy użyć bardziej zaawansowanego sposobu definiowana wzorca:<br>
         <code>[{"label":"OCCUPATION", "pattern": [{"LEMMA": {"IN":["hetman","senator","marszałek", "król"]}}]}]</code><br><br>
         Nowa etykieta to <code>'OCCUPATION'</code>, <code>'LEMMA'</code> oznacza formę podstawową słowa, np. dla wyrazów 'senator' i 'senatorowie'
         forma podstawowa będzie równa 'senator', zamiast jednej funkcji np. <code>"LEMMA":"hetman"</code> można we wzorcu wskazać
@@ -545,6 +546,85 @@
         ale już lemma od słowa <em>podkanclerzego</em> to 'podkanclerzy'.
         </p>
         <img src="/static/img_zapiski/entity_ruler_funkcje.png" width="625" alt="EntityRuler - funkcje i zawody"/>
+
+        </section>
+    </article>
+
+    <article>
+        <hr>
+        <h2 id="2022-10-06">Artukuły, kursy, filmy - o NLP w badaniach historycznych (<strong>06.10.2022</strong>)</h2>
+
+        <section>
+        <p>
+        Internet jest pełen świetnych materiałów na temat NLP, uczenia maszynowego,
+        programowania w pythonie czy konkretnych narzędzi i bibliotek,
+        w tym miejscu chciałbym gromadzić linki przede wszystkim do tych z nich,
+        które dotyczą humanistyki cyfrowej, wykorzystania NLP w badaniach historycznych
+        lub były przygotowane z myślą o początkujących humanistach cyfrowych.
+        </p>
+
+        <p>
+        Kurs <em>Natural Language Processing with spaCy & Python - Course for Beginners</em>
+        by Dr. William Mattingly na kanale freeCodeCamp.org:
+        <a href="https://www.youtube.com/watch?v=dIUTsFT2MeQ">LINK</a>
+        oraz kurs <em>Introduction to spaCy 3</em> w formie podręcznika online:
+        <a href="http://spacy.pythonhumanities.com/">LINK</a>
+        </p>
+
+        <p>Więcej świetnych filmów i kusrów tego samego autora dostępnych jest na jego
+        własnym kanale YT: "Python Tutorials for Digital Humanities"
+        <a href="https://www.youtube.com/pythontutorialsfordigitalhumanities">LINK</a>
+        oraz na jego stronie np.:
+        "Introduction To Named Entity Recognition With a Case Study of Holocaust NER"
+        <a href="http://ner.pythonhumanities.com/intro.html">LINK</a>
+        </p>
+
+        <p>
+        Yvonne Gwerder <em>Named Entity Recognition in Digitized Historical Texts</em>
+        (praca magisterska, Universitat Zurich) <a href="https://www.cl.uzh.ch/dam/jcr:cda50f3f-88a3-4e88-a6d9-73deef9df12c/Masterarbeit_YGwerder_FS17.pdf">PDF</a>
+        </p>
+
+        <p>
+        Felipe Álvarez de Toledo López-Herrera <em>Automated Tagging of Historical, Non-English
+        Sources with Named Entity Recognition (NER): A Resource</em>
+        <a href="https://blogs.library.duke.edu/data/2020/08/31/automated-tagging-of-historical-non-english-sources-with-named-entity-recognition-ner-a-resource/">LINK</a>
+        </p>
+
+        <p>
+        Vatsala Nundloll, Robert Smail, Carly Stevens, Gordon Blair
+        <em>Automating the extraction of information from a historical text and
+        building a linked data model for the domain of ecology and conservation
+        science</em>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2405844022019983?dgcid=rss_sd_all">LINK</a>
+        </p>
+
+        <p>
+        Claire Grover, Sharon Givon, Richard Tobin, Julian Ball <em>Named Entity Recognition
+        for Digitised Historical Texts</em>
+        <a href="https://www.ltg.ed.ac.uk/np/publications/ltg/papers/bopcris-lrec.pdf">PDF</a>
+        </p>
+
+        <p>
+        Helena Hubková, <em>Named-entity recognition in Czech historical texts</em>
+        <a href="http://www.diva-portal.org/smash/get/diva2:1325355/FULLTEXT01.pdf">PDF</a>
+        </p>
+
+        <p>
+        Blog <em>NLP for Historical Texts</em> <a href="https://nlphist.hypotheses.org/">https://nlphist.hypotheses.org/</a>
+        prowadzony przez Michaela Piotrowskiego, autora książki <em>Natural Language
+        Processing for Historical Texts</em> (2012) <a href="https://link.springer.com/book/10.1007/978-3-031-02146-6">LINK</a>
+        </p>
+
+        <p>
+        Asarsa Kunal <em>Analysis of named entity recognition & entity linking
+        in historical text</em> (Masters theses, Northeastern University) <a href="https://repository.library.northeastern.edu/files/neu:cj82nh21q/fulltext.pdf">PDF</a>
+        </p>
+
+        <p>Kimmo Kettunen, Eetu Mäkelä, Teemu Ruokolainen, Juha Kuokkala, Laura Löfberg
+        <em>Old Content and Modern Tools – Searching Named Entities in a Finnish OCRed
+        Historical Newspaper Collection 1771–1910</em>
+        <a href="http://www.digitalhumanities.org/dhq/vol/11/3/000333/000333.html">LINK</a>
+        </p>
 
         </section>
     </article>
