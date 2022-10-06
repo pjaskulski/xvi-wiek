@@ -513,13 +513,39 @@
         rozpoznawać w badanym tekście, mogą to być proste wzorce, np. pasujący do naszego przypadku:<br><br>
         <code>pattern = [{"label":"persName", "pattern": "Barnim XI"}]</code><br><br>
         Mogą to także być bardziej zaawansowane wzorce oparte na tokenach:<br><br>
-        <code>[{"label": "persName", "pattern": [{"LOWER": "barnim"}, {"LOWER": "wielki"}]}]</code>
+        <code>[{"label": "persName", "pattern": [{"LOWER": "barnim"}, {"LOWER": "wielki"}]}]</code><br><br>
+        Korzystamy w tym przypadku z istniejącej w modelu <strong>pl_core_news_md</strong> etykiety <em>persName</em> oznaczającej
+        imiona i nazwiska osób.
         </p>
 
         <p>Powtórne przetworzenie analizowanego fragmentu tekstu powoduje już poprawne
         rozpoznanie wyrażenia 'Barnim XI' jako osoby (label = <em>persName</em>)
         </p>
         <img src="/static/img_zapiski/ner_barnim_2.png" width="625" alt="tekst z rozpoznanym imieniem Barnim"/>
+
+        <p>Komponent EntityRuler potrafi jednak znacznie więcej, możemy z jego pomocą poprosić spaCy
+        o rozpoznawanie nowej kategorii obiektów np. funkcji pełnionych przez osoby występujące w tekście.
+        Zakładając, że interesują nas funkcje: król, hetman, senator oraz chcemy odnaleźć nie
+        tylko dokładnie takie wystąpienia słów (np. 'senator') ale i wersję w liczbie mnogiej ('senatorowie') lub w formie
+        dopełniacza ('senatorowi') należy użyć bardziej zaawansowanego sposobu definiowana wzorca:<br>
+        <code>[{"label":"OCCUPATION", "pattern": [{"LEMMA": {"IN":["hetman","senator","marszałek", "król"]}}]}]</code><br><br>
+        Nowa etykieta to <code>'OCCUPATION'</code>, <code>'LEMMA'</code> oznacza formę podstawową słowa, np. dla wyrazów 'senator' i 'senatorowie'
+        forma podstawowa będzie równa 'senator', zamiast jednej funkcji np. <code>"LEMMA":"hetman"</code> można we wzorcu wskazać
+        od razu całą listę funkcji korzystając z zapisu: <code>{"LEMMA": {"IN":["hetman","senator","marszałek", "król"]}</code>.
+        Efekt działania tak zdefiowanego wzorca wraz z całym fragmentem kodu widoczny jest dla zrzucie ekranu poniżej,
+        a wszystko to bez trenowania własnego modelu.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Notatnik jupytera z kodem ze zrzutu ekranu jest na
+        <a href="https://github.com/pjaskulski/zapiski/blob/main/src/entity_ruler_test.ipynb">githubie</a>.
+        </span>
+
+        Należy oczywiście zdawać sobie sprawę z ograniczeń, dla języka
+        polskiego będą występować problemy z lematyzacją, lemma od słowa <em>podkanclerzy</em> to wg spacy 'podkancler',
+        ale już lemma od słowa <em>podkanclerzego</em> to 'podkanclerzy'.
+        </p>
+        <img src="/static/img_zapiski/entity_ruler_funkcje.png" width="625" alt="EntityRuler - funkcje i zawody"/>
+
         </section>
     </article>
 
