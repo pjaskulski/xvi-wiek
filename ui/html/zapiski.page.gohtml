@@ -637,45 +637,51 @@
         <section>
         <p>
         Wykorzystanie reguł do wyszukiwania encji nazwanych poprzez komponent EntityRuler
-        jest całkiem skutecznym sposobem poprawienia wyników NER, jeżeli w wykorzystywanym
-        modelu brakuje np. jednej etykiety i możemy łatwo uzupełnić ten brak mając zestaw
-        słów kluczowych i tworząc odpowienie reguły. W trakcie prac nad tekstami spotkamy się
+        biblioteki spaCy jest całkiem skutecznym sposobem poprawienia wyników NER. Możemy zastosować ten mechanizm
+        jeżeli w używanym modelu brakuje np. jednej etykiety i łatwo jest uzupełnić ten brak
+        za pomocą zestawu słów kluczowych, tworząc odpowiednie reguły. W trakcie prac nad tekstami spotkamy się
         jednak na pewno z bardziej skomplikowanymi przypadkami, a wówczas niezbędne stanie
-        się wytrenowanie własnego modelu dopasowanego do specyfiki naszych problemów. Przed
-        procesem trenowania niezbędne są jednak trzy wstępne etapy: należy zgromadzić zestaw
-        danych (tekstów) do uczenia, przygotować anotacje tych tekstów oraz zdecydować czy
-        będziemy trenować własny model od zera, czy też dotrenowywać istniejący model. Krok
-        drugi wiąże się też z wyborem oprogramowania do antoacji oraz przygotowaniem jej
+        się wytrenowanie własnego modelu, dopasowanego do specyfiki naszych problemów. Przed
+        procesem trenowania niezbędne jest jednak przejście przez trzy wstępne etapy: 1) należy zgromadzić zestaw
+        danych (tekstów) do uczenia, 2) przygotować anotacje tych tekstów, 3) zdecydować, czy
+        będziemy trenować własny model od zera, czy też dotrenowywać już istniejący. Krok
+        drugi wiąże się też z wyborem oprogramowania do anotacji oraz przygotowaniem jej
         wyników do formy akceptowalnej przez spaCy.
         </p>
 
         <p>
-        Celem testu będzie przygotowanie danych a następnie wytrenowanie modelu rozpoznającego
+        Celem testu będzie przygotowanie danych, a następnie wytrenowanie modelu rozpoznającego
         zawody/funkcje (dla uproszczenia będzie to mały model trenowany 'od zera'). Próbką tekstów
-        do anotacji w naszym teście będzie zbiór fragmentów artykułu S. Bodniaka,
+        do anotacji w naszym teście będzie zbiór fragmentów artykułu S. Bodniaka
         <label for="%s" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="%s" class="margin-toggle"/>
         <span class="sidenote">Zob. zapiskę z
         <a href="#2022-10-01">1.10.2022</a>.
-        </span>
+        </span>,
         pochodzących z różnych części tej publikacji, lecz zawsze zawierających określenia
-        zawierające nazwy zawodów lub funkcji. Zbiór liczy w sumie 105 zdań, czyli parę procent
-        całego tekstu, zapewne dla osiągnięcia naprawdę dobrych wyników powinien być 
-        wyraźnie większy (wspomina się o minimum 100 przykładach dla każdej uczonej encji).
-        Najlepszą aplikacją do anotacji współpracującą z spaCy jest z pewnoścą Prodigy,
+        nazw zawodów lub funkcji. Zbiór liczy w sumie 105 zdań, czyli parę procent
+        całego tekstu, zapewne dla osiągnięcia naprawdę dobrych wyników powinien
+        być wyraźnie większy (wspomina się o minimum 100 przykładach dla każdej uczonej encji).
+        Najlepszą aplikacją do anotacji współpracującą z spaCy jest z pewnoścą Prodigy
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">
+        <a href="https://prodi.gy/">Strona</a> aplikacji prodigy.
+        </span>
+        ,
         narzędzie przygotowane przez autorów spaCy - firmę Explosion. Jest to jednak
-        oprogramowanie komercyjne i choć w realnej sytuacji z pewnością warto w nie
-        zainwestować (ceny zaczynają się od 390 USD za licencję) to w naszym teście
-        użyjemy narzędzia dostępnego bezpłatnie. Istnieje ich co najmniej kilka np.
+        oprogramowanie komercyjne i, choć w realnej sytuacji z pewnością warto w nie
+        zainwestować (ceny zaczynają się od 390 USD za licencję), to w naszym teście
+        użyjemy narzędzia dostępnego bezpłatnie. Istnieje ich co najmniej kilka, np.
         <a href="https://tecoholic.github.io/ner-annotator/">ner-annotator</a>,
         <a href="(https://github.com/d5555/TagEditor">TagEditor</a> (aplikacja desktopowa
         dla systemu Windows),
         <a href="https://brat.nlplab.org/">brat</a>,
         <a href="https://inception-project.github.io/">INCEpTION</a> czy
         <a href="https://github.com/doccano/doccano">doccano</a>. Każde z nich na pewno
-        dobrze się sprawdzi do wprowadzenia etykiet, jednak najlepsze wrażenie zrobiło
-        na mnie doccano, aplikacja webowa, którą można w prosty sposób zainstalować
-        lokalnie korzystając z dockera. Opis instalacji jest na stronie projektu,
+        dobrze się sprawdzi przy wprowadzaniu etykiet, jednak najlepsze wrażenie zrobiło
+        na mnie <strong>doccano</strong>, aplikacja webowa, którą można w prosty sposób zainstalować
+        lokalnie korzystając z dockera. Opis instalacji znajduje się na stronie projektu,
         polecam ścieżkę z wykorzystaniem docker-compose.
         <label for="%s" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="%s" class="margin-toggle"/>
@@ -686,44 +692,45 @@
 
         <p>
         Praca w aplikacji doccano zaczyna się od zalogowania na nasze konto (podczas
-        instalacji zakładany jest użytkownik będący administratorem, wraz z hasłem,
-        później można utworzyć dodatkowych użytkowników nadając im role np. anotatora,
+        instalacji zakładane jest konto użytkownika będącego administratorem, wraz z hasłem,
+        później można utworzyć dodatkowe konta nadając im role np. anotatora,
         czy osoby akceptującej anotacje) i utworzenia projektu. Zakładając nowy projekt
         należy wskazać typ projektu (rodzaj zadania), w naszym przypadku chcemy 
-        rozpoznawać jednostki nazwane (NER) należy więc wybrać <em>sequence labeling</em>.
+        rozpoznawać jednostki nazwane (NER), należy więc wybrać <em>sequence labeling</em>.
         </p>
         <img src="/static/img_zapiski/doccano_lista_projektow.png" width="600" alt="doccano lista projektów"/>
 
         <p>
-        Do utworzonego projektu można zaimportować dane do anotacji (menu Dataset), doccano
+        Do utworzonego projektu można zaimportować dane do anotacji (menu Dataset),
+        <strong>doccano</strong>
         akceptuje różne pliki tekstowe (lub zestawy plików), zaimportowane dane będą widoczne
-        w formie tabelki.
+        w formie tabeli.
         </p>
         <img src="/static/img_zapiski/doccano_lista.png" width="600" alt="doccano lista dokumentów"/>
 
         <p>
         Przed rozpoczęciem anotowania niezbędne jest jeszcze utworzenie etykiet, którymi
-        będzie oznaczany tekst, biorąc pod uwagę cel testu jedyną używaną etykietą
+        będzie oznaczany tekst. Biorąc pod uwagę cel testu jedyną używaną etykietą
         będzie <em>occupation</em> na oznaczenie zawodu lub funkcji pełnionej przez
-        postacie występujące w tekście.
+        postaci występujące w tekście.
         </p>
         <img src="/static/img_zapiski/doccano_tworzenie_etykiet.png" width="600" alt="doccano tworzenie etykiet"/>
 
-        <p>Sam proces anotacji w doccano jest bardzo zbliżony do pracy w innych apliakacjach
-        tego typu, zaznaczamy słowo lub wyrażenie, program wyświetla wówczas podręczne menu
-        z którego można wybrać właściwą etykietę, każda z etykiet ma swój kolor (definiowany
-        przez użytkownka na etapie tworzenia etykiet) i takim kolorem doccano podreśla oznaczony
-        fragment tekstu (wyświetla też nazwę etykiety).
+        <p>Sam proces anotacji w doccano jest bardzo zbliżony do pracy w innych aplikacjach
+        tego typu. Zaznaczamy słowo lub wyrażenie, program wyświetla wówczas podręczne menu,
+        z którego można wybrać właściwą etykietę. Każda z etykiet ma swój kolor (definiowany
+        przez użytkownika na etapie tworzenia etykiet) i takim kolorem <strong>doccano</strong>
+        podkreśla oznaczony fragment tekstu (wyświetla również nazwę etykiety).
         </p>
         <img src="/static/img_zapiski/doccano_w_trakcie_anotacji.png" width="600" alt="doccano w trakcie anotacji"/>
 
         <p>
         Po zakończonym procesie anotacji można otagowany zbiór danych wyeksportować do
         formatu JSONL, w którym znajduje się anotowany tekst oraz etykiety i ich pozycje
-        w tekście. Niestety nie jest to gotowy plik, który możemy użyć do trenowania modelu
+        w tekście. Niestety, nie jest to gotowy plik, który możemy użyć do trenowania modelu
         z użyciem spaCy. W obecnej wersji (3.4 w momencie pisania zapiski) spaCy oczekuje
         pliku binarnego z przyjętym zwyczajowo rozszerzeniem *.spacy (format DocBin). Na
-        szczęście kowersja pliku *.jsonl na *.spacy nie jest skomplikowana, można do tego
+        szczęście konwersja pliku *.jsonl na *.spacy nie jest skomplikowana, można do tego
         celu użyć przykładowego skryptu <code>doccano2spacy.py</code>, który wywoływany
         jest z nazwą pliku jsonl jako jedynym parametrem.
         <label for="%s" class="margin-toggle sidenote-number"></label>
@@ -735,19 +742,20 @@
         <img src="/static/img_zapiski/doccano_fragment_pliku_jsonl.png" width="600" alt="doccano fragment pliku jsonl"/>
 
         <p>
-        Mając zbiór uczący można przystąpić do trenowania nowego modelu. Proces trenowania
-        wywoływany jest z linii komend poleceniem spacy train, należy też podać nazwę pliku
-        konfiguracyjnego (np. config.cfg) z parametrami uczenia, spacy ułatwi jego
-        utworzenie z domyślnymi parametrami, procedura opisana jest na stronie
+        Mając zbiór uczący, można przystąpić do trenowania nowego modelu. Proces trenowania
+        wywoływany jest z linii komend poleceniem <code>spacy train</code>, należy również 
+        podać nazwę pliku
+        konfiguracyjnego (np. config.cfg) z parametrami uczenia, spaCy ułatwi jego
+        utworzenie z domyślnymi parametrami. Procedura opisana jest na stronie
         <a href="https://spacy.io/usage/training#quickstart">spacy.io</a> (tak, opis jest
         długi - to jest skomplikowane!). Należy też podać ścieżkę do zbioru uczącego
         i walidacyjnego (aby zachować reguły gry należałoby także przygotować zbiór walidujący,
         tu dla uproszczenia skorzystam z kopii zbioru uczącego). Parametr <code>--output</code>
-        polecenia wskazuje gdzie będą zapisane wytrenowane modele (spacy zapisuje ostatni
+        polecenia wskazuje, gdzie będą zapisane wytrenowane modele (spacy zapisuje ostatni
         i najlepszy z modeli).<br>
         <code>python -m spacy train config.cfg --output ./output --paths.train ./bodniak.spacy --paths.dev ./bodniak.spacy</code><br>
-        Podczas działania (dla większych zbiorów czas obliczeń może być spory, w tym przypadku
-        będzie to kilkadziesiąt sekund) wyświetlany jest stan kolejnch iteracji uczenia
+        Podczas działania (dla większych zbiorów czas wykonywania obliczeń może być spory, w tym przypadku
+        będzie to kilkadziesiąt sekund) wyświetlany jest stan kolejnych iteracji uczenia
         (zob. zrzut ekranu poniżej).
         </p>
         <img src="/static/img_zapiski/proces_trenowania_modelu.png" width="600" alt="proces trenowania modelu"/>
@@ -756,10 +764,16 @@
         Po zakończeniu trenowania można przystąpić do weryfikacji działania modelu.
         Wykorzystamy do tego środowisko <strong>jupyter</strong> i mechanizm wizualizacji
         <strong>displacy</strong>. Wczytanie nowego modelu w spaCy odbywa się podobnie
-        jak modelu standardowego, z tym że zamiast nazwy należy podać ścieżkę do katalogu
-        z zapisanym modelem: <code>nlp = spacy.load('../output/model-best/')</code>. Wynik
+        jak w przypadku modelu standardowego z tym, że zamiast nazwy należy, podać ścieżkę do katalogu
+        z zapisanym modelem: <code>nlp = spacy.load('../output/model-best/')</code>.<br> Wynik
         działania na spreparowanym zdaniu, w którym występują nazwy funkcji/zawodów widać
         na załączonym niżej zrzucie ekranu z fragmentem notebooka aplikacji jupyter.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Notebook test_ner_model.ipynb do pobrania z
+        <a href="https://github.com/pjaskulski/zapiski/tree/main/src">repozytorium</a>.
+        </span>
+
         Można zauważyć poprawne rozpoznanie słów 'król', 'kapitan', 'kanclerzem', jednak
         wyrażenie 'podstarościm' pozostało niezauważone, najwyraźniej model nie zdołał się
         go nauczyć, w materiale uczącym występowało ono faktycznie niezbyt często.
@@ -767,9 +781,9 @@
         <img src="/static/img_zapiski/test_modelu_ner.png" width="650" alt="test modelu ner"/>
 
         <p>
-        I jeszcze dwa przydatne linki, do dokumentacji aplikacji doccano:
-        <a href="https://doccano.github.io/doccano/">LINK</a>
-        oraz do artykułu, który dużo obszerniej opisuje tą aplikację:
+        I jeszcze dwa przydatne linki: do dokumentacji aplikacji doccano
+        <a href="https://doccano.github.io/doccano/">LINK</a>,
+        oraz do artykułu, który dużo obszerniej opisuje tę aplikację
         <a href="https://towardsdatascience.com/doccano-a-tool-to-annotate-text-data-to-train-custom-nlp-models-f4e34ad139c3">LINK</a>.
         </p>
         </section>
