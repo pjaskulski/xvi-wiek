@@ -23,6 +23,7 @@
     <strong>2022-10-05</strong> <a href="#2022-10-05">spaCy - jak poprawić wyniki NER czyli Barnim XI to też osoba...</a><br>
     <strong>2022-10-06</strong> <a href="#2022-10-06">Artykuły, kursy, filmy - o NLP w badaniach historycznych<a/><br>
     <strong>2022-10-07</strong> <a href="#2022-10-07">Anotacja tekstów w Doccano i trenowanie własnego modelu<a/><br>
+    <strong>2022-10-10</strong> <a href="#2022-10-10">Skrypty w poszukiwaniu wydarzeń</a><br>
     </p>
     </div>
 
@@ -789,5 +790,69 @@
         </section>
 
     </article>
+
+    <article>
+        <hr>
+        <h2 id="2022-10-10">Skrypty w poszukiwaniu wydarzeń (<strong>10.10.2022</strong>) </h2>
+
+        <section>
+        <p>
+        Strona xvi-wiek.pl jest przede wszystkim kalendarium ciekawych wydarzeń z XVI wieku,
+        niektórych bardziej znanych, innych zaś zupełnie egzotycznych. Skąd jednak te informacje
+        pochodzą? Spora część (także) z wikipedii, ale większość z drukowanych książek i artykułów
+        a sposób ich wyszukiwania nie polegał najczęściej na spędzaniu wieczorów z herbatą i książką
+        (choć to przyjemne zajęcie), ale miał coś wspólnego z cyfrową humanistyką. Wiele współcześnie
+        wydawanych publikacji jest już dostępnych od razu w formie elektronicznej, coraz więcej
+        starszych jest digitalizowanych i udostępnianych w formie plików pdf (już rzadziej jako DjVu).
+        Jeżeli zaś publikacja ma postać cyfrowego pliku (z tekstem), to pozwala na przetwarzanie
+        jej przez narzędzia informatyczne.
+        </p>
+
+        <p>
+        Wpisy w kalendarium są faktami i wydarzeniami związanymi z konkretną datą dzienną. W przypadku
+        xvi-wieku.pl przyjęte też zostały określone ramy czasowe: od 1490 do 1586 roku włącznie. Daty
+        dzienne mogą być zapisane w różnej formie, bardziej nowoczesnej np. <strong>12.08.1560</strong>,
+        trochę bardziej tradycyjnej np. <strong>12 VIII 1560</strong>, lub z wprost podaną nazwą miesiąca:
+        <strong>12 sierpnia 1560 r.</strong> Mogą to też być fragmenty dat typu "12 stycznia" gdyż z
+        kontekstu wynika o jaki rok chodzi.
+        </p>
+
+        <p>
+        Posiadając zgromadzoną kolekcję plików pdf (pochodzących główne z repozytoriów
+        cyfrowych RCIN, bazhum.muzhp.pl  i innych źródeł o otwartym dostępie) można wyszukać
+        w nich daty dzienne z wymaganego okresu, nie chodzi oczywiście o ręczne przeszukiwanie
+        w przegladarce PDF-ów każdego oczekiwanego wariantu daty, można skorzystać z tzw. wyrażeń regularnych
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Definicja wyrażeń
+        <a href="https://pl.wikipedia.org/wiki/Wyra%C5%BCenie_regularne">regularnych</a> w Wikipedii oraz ładne wprowadzenie do <a href="https://miroslawmamczur.pl/wyrazenia-regularne-czym-sa-i-jak-pisac-wlasne-regexy/">tematu</a>.
+        </span>
+        i jednego z narzędzi, które na przeszukiwanie plików pdf w taki sposób pozwalają. Dla osób 
+        pracujących w środowisku linuksowym pierwszym wyborem będzie zwykle narzędzie konsolowe np.
+        <a href="https://pdfgrep.org/">pdfgrep</a> (w systemie Windows na pewno istnieją równie
+        dobre i wygodniejsze odpowiedniki np. <a href="http://dngrep.github.io/">dnGrep</a>).
+        Program pozwala na przetworzenie bieżącego katalogu, lub całego drzewa katalogów zawierającego
+        pliki pdf i przeszukanie tekstowej zawartości pdf-ów wg zadanego wzorca.
+        </p>
+
+        <p>
+        Zakładając, że wzorzec powinien uwzględniać dzień - 1 lub 2 cyfry, miesiąc w formie liczby
+        rzymskiej lub nazwy oraz rok czerocyfrowy, parametry wywołania programu pdfgrep mogłyby
+        wygladać np. tak:<br><br>
+        <code>pdfgrep -rnPH "\s+\d{1,2}\s+([a-z]{3,}|[XVI]+)\s+(15|149)" *.pdf</code><br>
+        </p>
+
+        <p>
+        Uruchomienie powyższego polecenia w katalogu z publikacją S. Bodniaka zwraca 24 wyniki
+        (zob. zrzut ekranu poniżej). Program wypisuje nazwę pliku pdf w którym znaleziono wzorzec, numer strony (zielona liczba), oraz krótki
+        fragment tekstu ze znalezionym wzorcem, gdzie wzorzec jest wyróżniony czerwonym kolorem. Pozostaje
+        zweryfikować datę na podanej stronie w pliku pdf, być może jest to data wydarzenia, które
+        może trafić do kalendarium.
+        </p>
+        <img src="/static/img_zapiski/pdfgrep_bodniak.png" width="650" alt="pdfgrep wyniki przeszukiwania.png"/>
+
+        </section>
+    </article>
+
 
 {{end}}
