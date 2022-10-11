@@ -840,7 +840,15 @@
         Zakładając, że wzorzec powinien uwzględniać dzień - 1 lub 2 cyfry, miesiąc w formie liczby
         rzymskiej lub nazwy oraz rok czerocyfrowy, parametry wywołania programu pdfgrep mogłyby
         wygladać np. tak:<br><br>
-        <code>pdfgrep -rnPH "\s+\d{1,2}\s+([a-z]{3,}|[XVI]+)\s+(15|149)" *.pdf</code><br>
+        <code>pdfgrep -rnPH "\s+\d{1,2}\s+([a-z]{3,}|[XVI]+)\s+(15|149)" *.pdf</code><br><br>
+        gdzie <code>-rnPH</code> to parametry programu decydujące o wyszukiwaniu rekurencyjnym plików
+        (czyli program będzie szukał w podkatalogach i podkatalogach katalogów), o wypisywnaiu w wynikach
+        numerów stron, o użyciu wyrażeń regularnych i podawaniu w wyniku nazw plików pdf, pozostała część
+        polecenia to wyrażenie zwracające daty oraz ścieżka do plików (z maską). Wyrażenie regularne ma trzy
+        części <code>\d{1,2}</code> poszukuje liczby o długości od jednej do 2 cyfr, fragment
+        <code>([a-z]{3,}|[XVI]+)</code> szuka rzymskiego numeru miesiąca lub nazwy miesiąca, ostatnia część
+        <code>(15|149)</code> odpowiada za rok, poszukiwana jest liczba 15 lub 149 będąca początkiem roku
+        (co jest drobnym problemem bowiem oznacza, że wpadną w wynikach także lata 1587-99).
         </p>
 
         <p>
@@ -851,6 +859,11 @@
         może trafić do kalendarium.
         </p>
         <img src="/static/img_zapiski/pdfgrep_bodniak.png" width="650" alt="pdfgrep wyniki przeszukiwania.png"/>
+
+        <p>
+        Co jednak, gdyby wyszukiwanie miało bardziej ambitny cel, na przykład znalezienie dat, ale występujących
+        w tym samym zdaniu co postać historyczna i może jeszcze z jakąś nazwą geograficzną?
+        </p>
 
         </section>
     </article>
