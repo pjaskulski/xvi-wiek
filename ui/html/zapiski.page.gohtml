@@ -861,9 +861,34 @@
         <img src="/static/img_zapiski/pdfgrep_bodniak.png" width="650" alt="pdfgrep wyniki przeszukiwania.png"/>
 
         <p>
-        Co jednak, gdyby wyszukiwanie miało bardziej ambitny cel, na przykład znalezienie dat, ale występujących
-        w tym samym zdaniu co postać historyczna i może jeszcze z jakąś nazwą geograficzną?
+        Co jednak, gdyby wyszukiwanie miało bardziej ambitny cel, na przykład znalezienie dat dziennych,
+        ale występujących w tym samym zdaniu co postać historyczna i może jednocześnie z jakąś nazwą geograficzną?
+        Takie zadanie może być trudne do wykonania za pomocą samych wyrażeń regularnych, ale będzie
+        świetnym ćwiczeniem z wykorzystaniem biblioteki spaCy. Dla uproszczenia testowi poddany
+        zostanie fragment tekstu, w którym tylko jedno ze zdań pasuje do określonych założeń.
         </p>
+        <img src="/static/img_zapiski/date_text_example.png" width="650" alt="przykładowy fragment tekstu"/>
+
+        <p>
+        Przetworzenie tekstu przy pomocy biblioteki pozwoli rozpoznać nazwy własne  i wyrażenia temporalne.
+        </p>
+        <img src="/static/img_zapiski/date_analiza_ner.png" width="650" alt="daty analiza ner"/>
+
+        <p>
+        spaCy zadba także o podział tekstu na zdania. Aby wyszukać te z nich, które spełniają
+        określone wyżej kryteria wystarczy zbadać dla każdego zdania, czy występuje w nim osoba,
+        nazwa geogfraficzna i data. Każda rozpoznana encja posiada przypisaną etykietę, te mogą
+        się różnić zależnie od użytego modelu (w tym przykładzie wczytany został największy
+        standardowy model dostępny dla języka polskiego - <strong>pl_core_news_lg</strong>).
+        Encje osób oznaczane są etykietą 'persName', encje miejsc geograficznych jako 'placeName',
+        a wyrażenia temporalne jako 'date'. Prosty kod filtrujący wraz z wynikiem widoczny jest
+        na zrzucie ekranu poniżej. Program dodatkowo sprawdza czy znaleziona data jest datą dzienna
+        z lat 1490-1599, oraz czy encja 'placeName' jest nazwą zaczynającą się z dużej litery.
+        </p>
+        <img src="/static/img_zapiski/date_filter_code.png" width="650" alt="kod filtrujący i wynik działania"/>
+
+        <p>Wydrukowane zdanie jest jedynym zawierającym i osobę (lub osoby), i miejscowość lub inną nazwę
+        geograficzną, i datę - z dokładnością do konkretnego dnia.</p>
 
         </section>
     </article>
