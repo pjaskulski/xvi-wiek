@@ -887,8 +887,30 @@
         </p>
         <img src="/static/img_zapiski/date_filter_code.png" width="650" alt="kod filtrujący i wynik działania"/>
 
-        <p>Wydrukowane zdanie jest jedynym zawierającym i osobę (lub osoby), i miejscowość lub inną nazwę
-        geograficzną, i datę - z dokładnością do konkretnego dnia.</p>
+        <p>Wydrukowane zdanie jest jedynym z przetwarzanego fragmentu tekstu zawierającym
+        i osobę (lub osoby), i miejscowość lub inną nazwę
+        geograficzną, i datę - z dokładnością do konkretnego dnia. Można teraz tą samą metodą zastosować
+        do całej treści publikacji Stansława Bodniaka, przy czym ponieważ spaCy pracuje na tekstach
+        użyty zostanie nie plik pdf, ale plik tekstowy z zawartością pdf-a, przygotowany w jednej
+        z poprzednich zapisek.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">
+        zob. zapiskę z
+        <a href="#2022-10-01">1.10.2022</a>.
+        </span>
+        Kod przygotowany w notebooku można zapisać w formie funkcji, która będzie wywoływana
+        dla każdej strony przetwarzanego tekstu, wynik w postaci numeru strony i znalezionego zdania
+        spełniającego przyjęte warunki będzie wypisywany na ekran konsoli.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Notebook wyszukiwanie_dat.ipynb i skrypt events_finder.py do pobrania z
+        <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">repozytorium</a>.
+        </span>
+        Efekt działania skryptu to około 20 znalezisk, które mogą być potencjalnymi wydarzeniami, wartymi opisania w kalendarium (fragment wyniku
+        na zrzucie ekranu zamieszczonym poniżej).
+        </p>
+        <img src="/static/img_zapiski/event_finder_results.png" width="650" alt="wynik działania skryptu event_finder.py"/>
 
         </section>
     </article>
