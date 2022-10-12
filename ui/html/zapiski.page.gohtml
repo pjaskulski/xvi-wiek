@@ -801,7 +801,7 @@
         niektórych bardziej znanych, innych zaś zupełnie egzotycznych. Skąd jednak te informacje
         pochodzą? Spora część (także) z wikipedii, ale większość z drukowanych książek i artykułów
         a sposób ich wyszukiwania nie polegał najczęściej na spędzaniu wieczorów z herbatą i książką
-        (choć to przyjemne zajęcie), ale miał coś wspólnego z cyfrową humanistyką. Wiele współcześnie
+        (choć to przyjemne zajęcie), lecz miał coś wspólnego z cyfrową humanistyką. Wiele współcześnie
         wydawanych publikacji jest już dostępnych od razu w formie elektronicznej, coraz więcej
         starszych jest digitalizowanych i udostępnianych w formie plików pdf (już rzadziej jako DjVu).
         Jeżeli zaś publikacja ma postać cyfrowego pliku (z tekstem), to pozwala na przetwarzanie
@@ -877,19 +877,20 @@
         <p>
         spaCy zadba także o podział tekstu na zdania. Aby wyszukać te z nich, które spełniają
         określone wyżej kryteria wystarczy zbadać dla każdego zdania, czy występuje w nim osoba,
-        nazwa geogfraficzna i data. Każda rozpoznana encja posiada przypisaną etykietę, te mogą
+        nazwa geograficzna i data. Każda rozpoznana encja posiada przypisaną etykietę, te mogą
         się różnić zależnie od użytego modelu (w tym przykładzie wczytany został największy
         standardowy model dostępny dla języka polskiego - <strong>pl_core_news_lg</strong>).
-        Encje osób oznaczane są etykietą 'persName', encje miejsc geograficznych jako 'placeName',
+        Encje osób oznaczane są etykietą 'persName', encje miejsc jako 'placeName',
         a wyrażenia temporalne jako 'date'. Prosty kod filtrujący wraz z wynikiem widoczny jest
         na zrzucie ekranu poniżej. Program dodatkowo sprawdza czy znaleziona data jest datą dzienna
-        z lat 1490-1599, oraz czy encja 'placeName' jest nazwą zaczynającą się z dużej litery.
+        z lat 1490-1599, oraz czy encja 'placeName' jest nazwą zaczynającą się z dużej litery (aby
+        pominąć znaleziska typu 'król <em>szwedzki</em>').
         </p>
         <img src="/static/img_zapiski/date_filter_code.png" width="650" alt="kod filtrujący i wynik działania"/>
 
         <p>Wydrukowane zdanie jest jedynym z przetwarzanego fragmentu tekstu zawierającym
-        i osobę (lub osoby), i miejscowość lub inną nazwę
-        geograficzną, i datę - z dokładnością do konkretnego dnia. Można teraz tę samą metodę zastosować
+        osobę (lub osoby), miejscowość lub inną nazwę geograficzną oraz datę - z dokładnością 
+        do konkretnego dnia. Można teraz tę samą metodę zastosować
         do całej treści publikacji Stansława Bodniaka, przy czym ponieważ spaCy pracuje raczej na tekstach
         (a nie plikach binarnych) użyty zostanie nie plik pdf, ale plik tekstowy z zawartością pdf-a, przygotowany w jednej
         z poprzednich zapisek.
