@@ -24,14 +24,8 @@
     <strong>2022-10-06</strong> <a href="#2022-10-06">Artykuły, kursy, filmy - o NLP w badaniach historycznych<a/><br>
     <strong>2022-10-07</strong> <a href="#2022-10-07">Anotacja tekstów w Doccano i trenowanie własnego modelu<a/><br>
     <strong>2022-10-10</strong> <a href="#2022-10-10">Skrypty w poszukiwaniu wydarzeń</a><br>
+    <strong>2022-10-17</strong> <a href="#2022-10-17">spaCy, NEL - łączenie rozpoznanych encji z wikidata.org</a><br>
     </p>
-    <!-->
-    <p style="color:gray">W przygotowaniu:<br>
-    ????-??-?? spaCy, NEL - łączenie rozpoznanych encji z wikidata.org<br>
-    ????-??-?? TEI i NER - automatyczne uzupełnianie tagowania plików TEI<br>
-    ????-??-?? spaCy i tagowanie w TEI Publisherze<br>
-    </p>
-    -->
     </div>
 
     <article>
@@ -923,5 +917,35 @@
         </section>
     </article>
 
+    <article>
+        <hr>
+        <h2 id="2022-10-17">spaCy, NEL - łączenie rozpoznanych encji z wikidata.org (<strong>17.10.2022</strong>) </h2>
+
+        <section>
+        <p>
+        Rozpoznanie w tekście nazw własnych może być wstępem do następnego kroku - połączenia
+        znalezionych encji np. osób z bazą wiedzy, uzyskujemy wówczas identyfikację danej osoby,
+        pojawiający się w analizowanej publikacji Fryderyk II staje się tożsamy z duńskim królem
+        żyjącym w XVI wieku, który w bazie wiedzy np. wikidata.org posiada jednoznaczny identyfikator
+        <code>Q154041</code>. Proces łączenia encji z identyfikatorami z baz wiedzy określany jest często jako
+        <em>named-entity linking</em> (czyli NEL)
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">
+        <a href="https://en.wikipedia.org/wiki/Entity_linking" target="_blank" rel="noopener">Entity linking</a>.
+        </span>
+        lub <em>named-entity disambiguation</em> i nie
+        jest tak prostym zadaniem jak się pozornie wydaje. Fryderyków II czy miejscowości o nazwie
+        'Warszawa' może w bazie wiedzy istnieć wiele, nazwa miejscowości w publikacji może być 
+        zniekształcona (może być jednym z używanych wariantów nazwy), może być nazwą używaną w XVI
+        wieku, lub nazwą polską używaną przed 1939 rokiem dla miejscowości dziś leżącej poza Polską.
+        Trudność polega właśnie na automatycznym dopasowaniu właściwego elementu z bazy wiedzy
+        do encji z publikacji, z uwzględnieniem drobnych różnic w pisowni oraz kontekstu.
+        </p>
+        <p>
+        <em>c.d.n.</em>
+        </p>
+        </section>
+    </article>
 
 {{end}}
