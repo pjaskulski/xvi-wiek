@@ -942,9 +942,80 @@
         Trudność polega właśnie na automatycznym dopasowaniu właściwego elementu z bazy wiedzy
         do encji z publikacji, z uwzględnieniem drobnych różnic w pisowni oraz kontekstu.
         </p>
+
         <p>
-        <em>c.d.n.</em>
+        Jednym z możliwych rozwiązań problemu łączenia encji z tekstu z bazami wiedzy jest obecny
+        w bibliotece spaCy komponent EntityLinker
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Dokumentacja na stronie
+        <a href="https://spacy.io/api/entitylinker" target="_blank" rel="noopener">spaCy</a>.
+        </span>
+        . Pozwala on na wytrenowanie własnego modelu, który na podstawie przygotowanej bazy
+        wiedzy, rozpoznanej encji nazwanej i kontekstu w której wystąpiła będzie potrafił
+        wskazywać właściwy dla niej identyfikator.
         </p>
+
+        <p>
+        W ramach testu
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Test przygotowany na bazie tutoriala z
+        <a href="https://github.com/explosion/projects/tree/v3/tutorials/nel_emerson" target="_blank" rel="noopener">repozytorium przykładów spaCy</a>
+        </span>
+        opartego jak zwykle na tekście publikacji S. Bodniaka rozpoznawane i łączone z bazą 
+        wiedzy będą dwie postacie: króla Zygmunta II Augusta i cara Ivana IV Groźnego, źródłem
+        bazy wiedzy będzie zaś wikidata.org. Identyfikatory z Wikidata (QID) dla obu postaci
+        to odpowiednio Q54058 i Q7996. W przypadku analizowanej publikacji nie ma właściwie
+        jakiejś wieloznaczności w encjach osób, Zygmunt August będzie zawsze tym Zygmuntem,
+        królem Polski, Iwan będzie carem Rosji. Większym wyzwaniem byłoby gdyby w tekście
+        występował np. Mateusz Scharping jako kaper i inna postać np. Ernest Scharping będącą
+        np. niemieckim dyplomatą, wówczas dla encji będących samym nazwiskiem łączenie
+        z identyfikatorami z wikidata.org musiałoby następować na podstawie kontekstu. Tu
+        jednak nie ma takiej sytuacji, do bazy można natomiast dodać dodatkowe aliasy
+        naszych postaci, również pewnie identyfikowalne z elementami wikidata np. 'Zygmunt August',
+        'Iwan IV', 'Iwan Groźny'.
+        </p>
+        <img src="/static/img_zapiski/knowledge_base_nel.png" width="650" alt="tworzenie bazy wiedzy"/>
+
+        <p>
+        Oprócz obiektu KnowledgeBase (naszej bazy wiedzy) potrzebne są również próbki tekstów do
+        trenowania modelu - przygotowane dane treningowe na podstawie zdań z artykułu
+        Stanisława Bodniaka zawierających wzmianki na temat analizowanych postaci. Dane
+        treningowe zawierają w przypadku tego testu około 30 zdań (zapewne powinno być
+        trochę więcej). Tak jak w przypadku anotacji dla trenowania modelu NER tu również
+        anotacja została przeprowadzona w programie <strong>doccano</strong>, a dane wyjściowe z doccano
+        wymagały przetworzenia na format oczekiwany przez spaCy (tu z pliku *.jsonl dane
+        importowane są bezpośrednio do skryptu w pythonie). Ponieważ jednak doccano nie
+        wspiera bezpośrednio anotacji pod kątem NEL, a przynajmniej nie widzę takiej opcji,
+        zastosowane zostało małe obejście problemu - ze względu na małą liczbę anotowanych
+        postaci w roli etykiet użyto identyfiktorów QID z wikidata.
+        </p>
+        <img src="/static/img_zapiski/doccano_nel.png" width="650" alt="anotacja doccano nel"/>
+
+        <p>
+        Mając przygotowany do trenowania dataset należy go podzielić na cześć treingową i
+        część walidującą, zwykle 20% zbioru wystarcza do walidacji. Proces trenowania dla
+        tak małego zestawu danych nie powinien trwać dłużej niż 30 sekund.
+        </p>
+        <img src="/static/img_zapiski/proces_trenowania_nel.png" width="650" alt="proces trenowania nel"/>
+
+        <p>
+        Wynik zaś można zweryfikować na testowym fragmencie artykułu, który nie był częścią
+        zbioru uczącego. Jak widać na zrzucie poniżej, zarówno Zygmunt August jak i Iwan Groźny
+        zostali rozpoznani i zidentyfikowani poprawnie, jednak po przetworzeniu całej publikacji
+        można zauważyć, że wyniki dla cara są jednak słabsze, model nie zawsze przypisuje
+        identyfikator z wikidata do rozpoznanej encji tej postaci.
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Notebook NEL_test.ipynb do pobrania z
+        <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">repozytorium</a>.
+        </span>
+        <img src="/static/img_zapiski/spacy_nel_wyniki.png" width="650" alt="wyniki analizy nel"/>
+        </p>
+
+        <p>Sposób łączenia i identyfikacji z bazami wiedzy dostępny w spaCy jest jednak tylko
+        jedną z wielu możliwości.<br> <em>C.D.N</em></p>
         </section>
     </article>
 
