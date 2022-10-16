@@ -1035,7 +1035,7 @@
 
         <p>
         Rozpoznawaniu i łączeniu będą poddawane
-        tylko postacie (encje z etykietą <em>persName</em>), tylko w polskiej wersji językowej
+        tylko postacie (encje z etykietą <em>persName</em> ropoznanne przez spaCy), tylko w polskiej wersji językowej
         wikidata, a otrzymane wyniki będą dodatkowo weryfikowane poprzez sprawdzenie czy znaleziony
         element posiada właściwość <em>instance of</em> = 'human' oraz czy właściwość
         <em>date of death (P570)</em> z wikidata wskazuje na okres historyczny tożsamy z chronologią 
@@ -1065,7 +1065,15 @@
         <a href="https://www.wikidata.org/wiki/Q9352684" target="_blank" rel="noopener">w wikidata</a>.
         </span>
         , ale różnica między encją NER w tekście a etykietą w
-        wikidata.org jest zbyt duża by identyfikator mógł zostać znaleziony.
+        wikidata.org jest zbyt duża by identyfikator mógł zostać znaleziony. Można tej podejrzewać,
+        że nawet gdyby etykieta lub alias tego elementu w wikidata miały formę taką jak występuje w tekście,
+        to ze względu na fleksję wyszukiwanie również by się nie powiodło.
+        </p>
+
+        <p>
+        Oczywiście proste funkcje tego typu nie zastąpią prawdziwych mechanizmów NEL, jednak gdy możemy
+        z góry sprecyzować zakres łączenia (tylko osoby, tylko polska wikidata, tylko określony zakres
+        chronologiczny) rezulat bywa całkiem znośny.
         </p>
         </section>
     </article>
