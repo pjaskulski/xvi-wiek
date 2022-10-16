@@ -1005,7 +1005,9 @@
         zbioru uczącego. Jak widać na zrzucie poniżej, zarówno Zygmunt August jak i Iwan Groźny
         zostali rozpoznani i zidentyfikowani poprawnie, jednak po przetworzeniu całej publikacji
         można zauważyć, że wyniki dla cara są jednak słabsze, model nie zawsze przypisuje
-        identyfikator z wikidata do rozpoznanej encji tej postaci.
+        identyfikator z wikidata do rozpoznanej encji tej postaci. Problemem oprócz może zbyt małej próbki
+        treningowej może być język polski, trudniejszy w przetwarzaniu od angielskiego choćby
+        ze względu na fleksję.
         <label for="%s" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="%s" class="margin-toggle"/>
         <span class="sidenote">Notebook NEL_test.ipynb do pobrania z
@@ -1015,7 +1017,56 @@
         </p>
 
         <p>Sposób łączenia i identyfikacji z bazami wiedzy dostępny w spaCy jest jednak tylko
-        jedną z wielu możliwości.<br> <em>C.D.N</em></p>
+        jedną z wielu możliwości. Przed dołączeniem komponentu EntityLinker powstawały rozwiązania
+        przygotowane przez użytkowników spaCy np. pakiet spacy-entity-linker
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Zobacz
+        <a href="https://pypi.org/project/spacy-entity-linker/" target="_blank" rel="noopener">opis</a>.
+        </span>.
+        Pomysł zakładał przygotowanie lokalnej bazy wiedzy (w formacie sqlite) opartej
+        na wikidata i dopasowywanie pojęć w przetwarzanym tekście do etykiet i aliasów elementów
+        w wikidata. Takie podejście nie wymagało trenowania modelu, nie uwzględniało jednak
+        kontekstu w którym występowało badane wyrażenie. Przygotowana baza wiedzy oparta jest
+        na angielskiej instancji wikidata a jej zmiana na inną, jak opisano w dokumentacji
+        pakietu, nie jest niestety prosta. Można za to przetestować zbliżone, ale mniej wydajne rozwiązanie
+        w postaci bezpośredniego odpytywania przez API serwisu wikidata.org.
+        </p>
+
+        <p>
+        Rozpoznawaniu i łączeniu będą poddawane
+        tylko postacie (encje z etykietą <em>persName</em>), tylko w polskiej wersji językowej
+        wikidata, a otrzymane wyniki będą dodatkowo weryfikowane poprzez sprawdzenie czy znaleziony
+        element posiada właściwość <em>instance of</em> = 'human' oraz czy właściwość
+        <em>date of death (P570)</em> z wikidata wskazuje na okres historyczny tożsamy z chronologią 
+        tematyki artykułu. Funkcja <code>wikilinker</code>, której kod jest dostępny w
+        <a href="https://github.com/pjaskulski/zapiski/blob/main/src/NEL_test.ipynb">notebooku</a>
+        wspomianym wyżej, ma trzy obowiązkowe argumenty: string z nazwą szukanej postaci,
+        najwcześniejsza data śmierci postaci, najpóźniejsza data śmierci postaci (oraz opcjonalny
+        czwarty argument z liczbą rozważanych elementów wyszukanych w wikidata - zwykle
+        wyszukiwanie zwraca więcej niż 1 pozycję, szczególnie dla mniej precyzyjnych tekstów
+        np. 'Albrecht' ta liczba może być spora, domyślnie przyjęto 10). Znając tematykę
+        artykułu i okres historyczny jakiego dotyczy możemy w wyszukiwaniu uwzlgędnić zakres
+        lat 1550-1625, co znacznie poprawi precyzję wyszukiwania. Fragment kodu i efekt
+        wyszukiwania widoczny jest na zrzucie poniżej.
+        </p>
+        <img src="/static/img_zapiski/wikilinker_example.png" width="650" alt="wikilinker wyszukiwanie"/>
+
+        <p>
+        W 9 przypadkach na 10, funkcja <code>wikilinker</code> znalazła prawidłowy identyfikator postaci w
+        wikidata.org, udało się to nawet dla imienia 'Albrechta', zapewne trochę przypadkiem dla
+        podanego zakresu lat (zakresu dla daty śmierci postaci) i imienia pierwszy znaleziony
+        element to właśnie Albrecht Hohenzollern. Jedyna nieznaleziona postać to Szymon
+        Maricjus-Czystochlebski - prawdopodobnie jest to Q9352684 (Szymon Marycjusz, alias:
+        Szymon Maricjusz z Pilzna)
+        <label for="%s" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <span class="sidenote">Zobacz
+        <a href="https://www.wikidata.org/wiki/Q9352684" target="_blank" rel="noopener">w wikidata</a>.
+        </span>
+        , ale różnica między encją NER w tekście a etykietą w
+        wikidata.org jest zbyt duża by identyfikator mógł zostać znaleziony.
+        </p>
         </section>
     </article>
 
