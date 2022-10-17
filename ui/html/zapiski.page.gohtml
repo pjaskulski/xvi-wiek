@@ -25,6 +25,7 @@
     <strong>2022-10-07</strong> <a href="#2022-10-07">Anotacja tekstów w Doccano i trenowanie własnego modelu<a/><br>
     <strong>2022-10-10</strong> <a href="#2022-10-10">Skrypty w poszukiwaniu wydarzeń</a><br>
     <strong>2022-10-17</strong> <a href="#2022-10-17">spaCy, NEL - łączenie rozpoznanych encji z wikidata.org</a><br>
+    <strong>2022-00-00</strong> <a href="#2022-00-00">spaCy i automatyczne tagowanie encji w TEI Publisherze</a><br>
     </p>
     </div>
 
@@ -1100,6 +1101,41 @@
         Oczywiście proste funkcje tego typu nie zastąpią prawdziwych mechanizmów NEL, jednak gdy możemy
         z góry sprecyzować zakres łączenia (tylko osoby, tylko polska wikidata, tylko określony zakres
         chronologiczny) rezulat bywa całkiem znośny.
+        </p>
+        </section>
+    </article>
+
+    <article>
+        <hr>
+        <h2 id="2022-00-00">spaCy i automatyczne tagowanie encji w TEI Publisherze (<strong>00.00.2022</strong>) </h2>
+
+        <section>
+        <p>
+        Czy trzeba programować by zajmować się przetwarzaniem języka naturalnego? Prosta odpowiedź
+        brzmi: nie, można przecież wynająć programistę lub specjalistę data science. Ale ponieważ
+        czas programistów kosztuje, a komunikacja między humanistami a specjalistami technicznymi
+        bywa skądinąd wyzwaniem i często rzutuje na jakość wyników, można skorzystać z innej ścieżki
+        - istnieją narzędzia nie wymagające umiejętności programowania. Choć nadal należy rozumieć
+        co się robi, co jest możliwe a co niekoniecznie, NLP ciągle rozwiającą się technologią,
+        a stopień jej rozwoju jest inny dla każdego języka naturalnego (to co dziś jest możliwe dla
+        tekstu angielskiego, niekoniecznie będzie możliwe dla tekstu polskiego). Jednym z popularnych
+        narzędzi wśród humanistów cyfrowych jest TEI Publisher
+        <label for="9-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-1" class="margin-toggle"/>
+        <span class="sidenote">
+        <a href="https://teipublisher.com/index.html" target="_blank" rel="noopener">TEI Publisher</a>.
+        </span>
+        , aplikacja znacznie ułatwiająca
+        przygotowanie edycji cyfrowych na bazie dokumentów xml w standardzie TEI. Program ten od
+        jakiegoś czasu posiadał możliwość ręcznej anotacji tekstu podstaowwymi eykietami typu osoba
+        i miejsce. Od wersji 8.00 (jeszcze nie opublikowanej) będzie miał także możliwość anotacji
+        automatycznej przy użyciu metod NLP (NER), a wykorzystuje w tym celu bibliotekę spaCy
+        <label for="9-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-1" class="margin-toggle"/>
+        <span class="sidenote">Artykuł na blogu
+        <a href="https://e-editiones.org/names-sell-named-entity-recognition-in-tei-publisher/" target="_blank" rel="noopener">e-editiones</a>.
+        </span>
+        .
         </p>
         </section>
     </article>
