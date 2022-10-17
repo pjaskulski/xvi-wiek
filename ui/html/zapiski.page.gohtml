@@ -37,8 +37,8 @@
                 <a href="https://openrefine.org/" target="_blank" rel="noopener">OpenRefine</a>
                 jest popularnym narzędziem do oczyszczania i przekształcania danych.
 
-                <label for="%s" class="margin-toggle sidenote-number"></label>
-                <input type="checkbox" id="%s" class="margin-toggle"/>
+                <label for="1-1" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="1-1" class="margin-toggle"/>
                 <span class="sidenote">Polecam artykuły na temat OpenRefine:
                 <a href="https://www.pilsudski.org/pl/instytut-cyfrowy/pracownia-digitalizacji/blog/869-oczyszczanie-danych-z-uzyciem-openrefine" target="_blank" rel="noopener">
                 Oczyszczanie danych z użyciem OpenRefine
@@ -61,10 +61,11 @@
             <p> Problemem może być znalezienie odpowiedniego serwisu rekoncyliacji. O ile popularne źródła
                 w rodzaju VIAF czy wikidata.org są dostępne
 
-                <label for="%s" class="margin-toggle sidenote-number"></label>
-                <input type="checkbox" id="%s" class="margin-toggle"/>
-                <span class="sidenote"><a href="https://github.com/OpenRefine/OpenRefine/wiki/Reconcilable-Data-Sources" target="_blank" rel="noopener">Lista</a>
-                dostępnych serwerów rekoncyliacji
+                <label for="1-2" class="margin-toggle sidenote-number"></label>
+                <input type="checkbox" id="1-2" class="margin-toggle"/>
+                <span class="sidenote">Lista
+                <a href="https://github.com/OpenRefine/OpenRefine/wiki/Reconcilable-Data-Sources" target="_blank" rel="noopener">dostępnych</a>
+                serwerów rekoncyliacji.
                 </span>
 
                 , o tyle uspójnianie z bazą miejscowości AHP lub naszą lokalną
@@ -112,8 +113,8 @@
             Lokalny serwis rekoncyliacji podłącza się do OpenRefine podobnie jak serwisy zewnętrzne,
             po uruchomieniu rekoncyliacji na wybranej kolumnie danych przycisk Add Standard Service wyświetli
             okienko w którym można podać adres serwisu, zaakceptowany serwis pojawi się na liście.
-            <label for="%s" class="margin-toggle sidenote-number"></label>
-            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <label for="1-3" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="1-3" class="margin-toggle"/>
             <span class="sidenote">Standardowa nazwa serwisu będzie różnić się od pokazanej na
             ilustracji i wygląda tak: 'CSV Reconciliation service'. Jest niestety zaszyta w kodzie źródłowym
             Reconcile-csv i jej zmiana wymaga rekompilacji programu (zob. dalszą część artykułu).
@@ -127,8 +128,8 @@
             rekoncyliację, w innych przypadkach wyświetlona zostanie lista wraz z wartościami dopasowania.
             Dla każdej z pozycji można wyświetlić informacje z pliku csv będącego źródłem danych serwisu, na
             przykładzie poniżej są to dane miejscowości z Atlasu Historycznego Polski.
-            <label for="%s" class="margin-toggle sidenote-number"></label>
-            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <label for="1-4" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="1-4" class="margin-toggle"/>
             <span class="sidenote">Dostępne publicznie na licencji CC BY-ND 4.0:
             <a href="https://data.atlasfontium.pl/documents/202?_ga=2.122616834.865899583.1640103019-2000553280.1624037407" target="_blank" rel="noopener">
             AHP 2.0</a> (IH PAN).
@@ -139,8 +140,8 @@
             <p><strong>Jak zmodyfikować program reconcile-csv</strong>:
             zarówno zmiana nazwy serwisu (nazwy wyświetlanej w OpenRefine), jak i dostosowanie programu
             Reconcile-csv do pracy na serwerze, wymaga zmian w jego kodzie źródłowym
-            <label for="%s" class="margin-toggle sidenote-number"></label>
-            <input type="checkbox" id="%s" class="margin-toggle"/>
+            <label for="1-5" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="1-5" class="margin-toggle"/>
             <span class="sidenote">Repozytorium aplikacji w serwisie
             <a href="https://github.com/okfn/reconcile-csv">github</a>.
             </span>
@@ -200,8 +201,8 @@
 
         <p>Do testu posłuży artykuł (właściwie książka, sądząc po objętości) Stanisława Bodniaka, "Polska a Bałtyk za ostatniego z Jagiellona"
         wydana w 1946 roku (<em>Pamiętnik Biblioteki Kórnickiej</em> 3, 42-276, 1939-46).
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="2-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="2-1" class="margin-toggle"/>
         <span class="sidenote">
         Dzieło to ma zresztą ciekawą historię gdyż pierwszy druk i rękopis zostały utracone
         w wyniku działań wojennych, autor z zachowanych korekt i notatek
@@ -215,8 +216,8 @@
         wydaniu), ma warstwę OCR więc jest przeszukiwalny, jednak jakość OCR nie jest perfekcyjna,
         w tekście pojawiają się np. przypadkowe spacje wewnątrz słów. Aby to poprawić można
         proces ocr przeprowadzić powtórnie.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="2-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="2-2" class="margin-toggle"/>
         <span class="sidenote">Ponieważ na codzień pracuję w systemie Linux, narzędzia których używam związane są z
         tym systemem, jednak wiele z nich pracuje także pod Windows/Mac lub istnieją odpowiedniki
         dla tych środowisk.
@@ -324,8 +325,8 @@
         <p>
         Mając tekst z informacjami o numerach stronach, możliwość rozpoznania postaci analizą NER,
         możemy przygotować ich indeks, posłuży do tego skrypt pythonowy create_index.py
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="2-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="2-3" class="margin-toggle"/>
         <span class="sidenote">Do pobrania z serwisu <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">github</a>.
         </span>
         w którym najpierw wczytywana jest treść każdej strony,
@@ -376,8 +377,8 @@
 
         <section>
         <p>Mając indeks postaci występujących w publikacji
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="3-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="3-1" class="margin-toggle"/>
         <span class="sidenote">Zob. poprzednią <a href="#2022-10-01">zapiskę</a>.
         </span>
         wiemy kto występuje w tekście, ale
@@ -394,8 +395,8 @@
         jest częścią mowy, można więc dzięki temu odseparować same rzeczowniki
         występujące w tekście i posortować je w kolejności występowania. Taką pracę wykonuje
         skrypt popular_noun.py
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="3-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="3-2" class="margin-toggle"/>
         <span class="sidenote">Do pobrania z serwisu <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">github</a>.
         </span>
         .
@@ -438,8 +439,8 @@
         namiestnik, książę, ks., starosta, sługa, wojownik, mocodawca, burmistrz. Mając listę
         funkcji można wykorzystując mechanizm Matcher - silnik dopasowywania wzorców biblioteki
         spaCy - wyszukać powiązania funkcji i osób
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="3-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="3-3" class="margin-toggle"/>
         <span class="sidenote"><a href="https://spacy.io/usage/rule-based-matching" target="_blank" rel="noopener">Rule-based matching</a>.
         </span>.
         </p>
@@ -491,8 +492,8 @@
 
         <section>
         <p>Rozpoznawanie jednostek nazwanych przeprowadzone na fragmencie publikacji S. Bodniaka
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="4-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="4-1" class="margin-toggle"/>
         <span class="sidenote">
         zob. zapiskę z
         <a href="#2022-10-01">1.10.2022</a>.
@@ -502,8 +503,8 @@
         można nauczyć spaCy rozpoznawania takich nietypowych imion? Tak, i nie musi się to
         wiązać z trenowaniem własnego modelu. <strong>EntityRuler</strong> jest komponentem potoku
         przetwarzania spaCy służącym do rozpoznawania jednostek nazwanych poprzez reguły
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="4-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="4-2" class="margin-toggle"/>
         <span class="sidenote">Dokumentacja komponentu
         <a href="https://spacy.io/usage/rule-based-matching#entityruler" target="_blank" rel="noopener">EntityRuler</a>.
         </span>
@@ -538,8 +539,8 @@
         od razu całą listę funkcji korzystając z zapisu: <code>{"LEMMA": {"IN":["hetman","senator","marszałek", "król"]}</code>.
         Efekt działania tak zdefiowanego wzorca wraz z całym fragmentem kodu widoczny jest dla zrzucie ekranu poniżej,
         a wszystko to bez trenowania własnego modelu.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="4-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="4-3" class="margin-toggle"/>
         <span class="sidenote">Notatnik jupytera z kodem ze zrzutu ekranu jest na
         <a href="https://github.com/pjaskulski/zapiski/blob/main/src/entity_ruler_test.ipynb" target="_blank" rel="noopener">githubie</a>.
         </span>
@@ -659,8 +660,8 @@
         Celem testu będzie przygotowanie danych, a następnie wytrenowanie modelu rozpoznającego
         zawody/funkcje (dla uproszczenia będzie to mały model trenowany 'od zera'). Próbką tekstów
         do anotacji w naszym teście będzie zbiór fragmentów artykułu S. Bodniaka
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="6-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="6-1" class="margin-toggle"/>
         <span class="sidenote">Zob. zapiskę z
         <a href="#2022-10-01">1.10.2022</a>.
         </span>,
@@ -669,8 +670,8 @@
         całego tekstu, zapewne dla osiągnięcia naprawdę dobrych wyników powinien
         być wyraźnie większy (wspomina się o minimum 100 przykładach dla każdej uczonej encji).
         Najlepszą aplikacją do anotacji współpracującą z spaCy jest z pewnoścą Prodigy
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="6-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="6-2" class="margin-toggle"/>
         <span class="sidenote">
         <a href="https://prodi.gy/" target="_blank" rel="noopener">Strona</a> aplikacji prodigy.
         </span>
@@ -689,8 +690,8 @@
         na mnie <strong>doccano</strong>, aplikacja webowa, którą można w prosty sposób zainstalować
         lokalnie korzystając z dockera. Opis instalacji znajduje się na stronie projektu,
         polecam ścieżkę z wykorzystaniem docker-compose.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="6-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="6-3" class="margin-toggle"/>
         <span class="sidenote">doccano - instalacja poprzez
         <a href="https://github.com/doccano/doccano#docker-compose" target="_blank" rel="noopener">docker-compose</a>.
         </span>
@@ -739,8 +740,8 @@
         szczęście konwersja pliku *.jsonl na *.spacy nie jest skomplikowana, można do tego
         celu użyć przykładowego skryptu <code>doccano2spacy.py</code>, który wywoływany
         jest z nazwą pliku jsonl jako jedynym parametrem.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="6-4" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="6-4" class="margin-toggle"/>
         <span class="sidenote">Skrypt można pobrać z repozytorium
         <a href="https://github.com/pjaskulski/zapiski/blob/main/src/doccano2spacy.py" target="_blank" rel="noopener">github</a>.
         </span>
@@ -774,8 +775,8 @@
         z zapisanym modelem: <code>nlp = spacy.load('../output/model-best/')</code>.<br> Wynik
         działania na spreparowanym zdaniu, w którym występują nazwy funkcji/zawodów widać
         na załączonym niżej zrzucie ekranu z fragmentem notebooka aplikacji jupyter.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="6-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="6-5" class="margin-toggle"/>
         <span class="sidenote">Notebook test_ner_model.ipynb do pobrania z
         <a href="https://github.com/pjaskulski/zapiski/tree/main/src" target="_blank" rel="noopener">repozytorium</a>.
         </span>
@@ -827,8 +828,8 @@
         cyfrowych RCIN, bazhum.muzhp.pl  i innych źródeł o otwartym dostępie) można wyszukać
         w nich daty dzienne z wymaganego okresu, nie chodzi oczywiście o ręczne przeszukiwanie
         w przegladarce PDF-ów każdego oczekiwanego wariantu daty, można skorzystać z tzw. wyrażeń regularnych
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="7-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="7-1" class="margin-toggle"/>
         <span class="sidenote">Definicja wyrażeń
         <a href="https://pl.wikipedia.org/wiki/Wyra%C5%BCenie_regularne" target="_blank" rel="noopener">regularnych</a>
         w Wikipedii oraz ładne wprowadzenie do <a href="https://miroslawmamczur.pl/wyrazenia-regularne-czym-sa-i-jak-pisac-wlasne-regexy/" target="_blank" rel="noopener">tematu</a>.
@@ -899,8 +900,8 @@
         do całej treści publikacji Stansława Bodniaka, przy czym ponieważ spaCy pracuje raczej na tekstach
         (a nie plikach binarnych) użyty zostanie nie plik pdf, ale plik tekstowy z zawartością pdf-a, przygotowany w jednej
         z poprzednich zapisek.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="7-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="7-2" class="margin-toggle"/>
         <span class="sidenote">
         zob. zapiskę z
         <a href="#2022-10-01">1.10.2022</a>.
@@ -908,8 +909,8 @@
         Kod przygotowany w notebooku można zapisać w formie funkcji, która będzie wywoływana
         dla każdej strony przetwarzanego tekstu, wynik w postaci numeru strony i znalezionego zdania
         spełniającego przyjęte warunki będzie wypisywany na ekran konsoli.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="7-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="7-3" class="margin-toggle"/>
         <span class="sidenote">Notebook wyszukiwanie_dat.ipynb i skrypt events_finder.py do pobrania z
         <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">repozytorium</a>.
         </span>
@@ -933,8 +934,8 @@
         żyjącym w XVI wieku, który w bazie wiedzy np. wikidata.org posiada jednoznaczny identyfikator
         <code>Q154041</code>. Proces łączenia encji z identyfikatorami z baz wiedzy określany jest często jako
         <em>named-entity linking</em> (czyli NEL)
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-1" class="margin-toggle"/>
         <span class="sidenote">
         <a href="https://en.wikipedia.org/wiki/Entity_linking" target="_blank" rel="noopener">Entity linking</a>.
         </span>
@@ -950,8 +951,8 @@
         <p>
         Jednym z możliwych rozwiązań problemu łączenia encji z tekstu z bazami wiedzy jest obecny
         w bibliotece spaCy komponent EntityLinker
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-2" class="margin-toggle"/>
         <span class="sidenote">Dokumentacja na stronie
         <a href="https://spacy.io/api/entitylinker" target="_blank" rel="noopener">spaCy</a>.
         </span>
@@ -962,8 +963,8 @@
 
         <p>
         W ramach testu
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-3" class="margin-toggle"/>
         <span class="sidenote">Test przygotowany na bazie tutorialu z
         <a href="https://github.com/explosion/projects/tree/v3/tutorials/nel_emerson" target="_blank" rel="noopener">repozytorium przykładów spaCy</a>
         </span>
@@ -1012,8 +1013,8 @@
         identyfikator z wikidata do rozpoznanej encji tej postaci. Problemem oprócz może zbyt małej próbki
         treningowej może być język polski, trudniejszy w przetwarzaniu od angielskiego choćby
         ze względu na fleksję.
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-4" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-4" class="margin-toggle"/>
         <span class="sidenote">Notebook NEL_test.ipynb do pobrania z
         <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">repozytorium</a>.
         </span>
@@ -1022,16 +1023,16 @@
 
         <p>Sposób łączenia i identyfikacji z bazami wiedzy dostępny w spaCy jest jednak tylko
         jedną z wielu możliwości
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-5" class="margin-toggle"/>
         <span class="sidenote">Zob. także narzędzie
         <a href="https://wiki.clarin-pl.eu/pl/nlpws/services/Elinker" target="_blank" rel="noopener">elinker</a>
          przygotowane przez konsorcjum Clarin-PL.
         </span>
         . Przed dołączeniem do biblioteki komponentu EntityLinker powstawały rozwiązania
         przygotowane przez użytkowników spaCy np. pakiet spacy-entity-linker
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-6" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-6" class="margin-toggle"/>
         <span class="sidenote">Zobacz
         <a href="https://pypi.org/project/spacy-entity-linker/" target="_blank" rel="noopener">opis</a>.
         </span>.
@@ -1047,7 +1048,7 @@
         Można za to przetestować zbliżone, ale mniej wydajne rozwiązanie
         w postaci bezpośredniego odpytywania przez API serwisu wikidata.org.
         Rozpoznawaniu i łączeniu będą poddawane
-        tylko postacie (encje z etykietą <em>persName</em> ropoznanne przez spaCy), tylko w polskiej wersji językowej
+        tylko postacie (encje z etykietą <em>persName</em> ropoznane przez spaCy), tylko w polskiej wersji językowej
         wikidata, a otrzymane wyniki będą dodatkowo weryfikowane poprzez sprawdzenie czy znaleziony
         element posiada właściwość <em>instance of</em> = 'human' oraz czy właściwość
         <em>date of death (P570)</em> z wikidata wskazuje na okres historyczny tożsamy z chronologią 
@@ -1071,15 +1072,22 @@
         element to właśnie Albrecht Hohenzollern. Jedyna nieznaleziona postać to Szymon
         Maricjus-Czystochlebski - prawdopodobnie jest to Q9352684 (Szymon Marycjusz, alias:
         Szymon Maricjusz z Pilzna)
-        <label for="%s" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="%s" class="margin-toggle"/>
+        <label for="8-7" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-7" class="margin-toggle"/>
         <span class="sidenote">Zobacz
         <a href="https://www.wikidata.org/wiki/Q9352684" target="_blank" rel="noopener">w wikidata</a>.
         </span>
         , ale różnica między encją NER w tekście a etykietą w
         wikidata.org jest zbyt duża by identyfikator mógł zostać znaleziony. Można też podejrzewać,
         że nawet gdyby etykieta lub alias tego elementu w wikidata miały formę taką jak występuje w tekście,
-        to ze względu na fleksję wyszukiwanie również by się nie powiodło.
+        to ze względu na fleksję wyszukiwanie również by się nie powiodło
+        <label for="8-8" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="8-8" class="margin-toggle"/>
+        <span class="sidenote">Przed wyszukiwaniem w wikidata.org skrypt dokonuje lematyzacji
+        encji (przekształca imię i nazwisko postaci do formy podstawowej) jednak ta funkcjonalność
+        w używanym modelu spaCy nie jest doskonała, dla rzadszych imion, nazwisk będzie raczej niepoprawna.
+        </span>
+        .
         </p>
 
         <p>
