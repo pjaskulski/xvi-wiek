@@ -164,6 +164,13 @@
             rekoncyliacji wyświetlaną w OpenRefine może być jednak dość niewygodna. Dlatego przygotowałem małą
             modyfikację programu reconcile-cvs która obsługuje cztery dodatkowe parametry uruchamiania z linii komend:
             <code>adres_serwera</code>, <code>port</code>, <code>nazwa_serwisu_rekoncyliacji</code> i <code>nazwa_typu</code>.
+            <label for="1-6" class="margin-toggle sidenote-number"></label>
+            <input type="checkbox" id="1-6" class="margin-toggle"/>
+            <span class="sidenote">W razie potrzeby wystawiania naszego serwisu na serwerze dostępnym w internecie
+            można to zrobić za pośrednictwem serwera nginx, który będzie służył jako proxy dla wbudowanego w reconlice-csv
+            jetty, wówczas reconcile-csv będzie pracował pod adresem np. localhost:8080, a o obsługę żądań zewnętrznych
+            zadba nginx.
+            </span>
             Dodatkowo serwis wyświetla trochę bardziej czytelny podgląd danych z pliku csv, podczas
             uspójniania (widoczne ramki tabeli).
             <img src="/static/img_zapiski/reconcile_csv_table.jpg" width="500" alt="reconcile_view"/>
