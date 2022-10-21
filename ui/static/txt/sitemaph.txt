@@ -8,6 +8,7 @@ http://xvi-wiek.pl/indeksy/chronologia
 http://xvi-wiek.pl/indeksy/ludzie
 http://xvi-wiek.pl/indeksy/miejsca
 http://xvi-wiek.pl/indeksy/slowa
+http://xvi-wiek.pl/zapiski
 http://xvi-wiek.pl/dzien/1/1
 http://xvi-wiek.pl/dzien/1/3
 http://xvi-wiek.pl/dzien/1/4
