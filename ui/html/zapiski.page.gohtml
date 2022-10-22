@@ -25,7 +25,7 @@
     <strong>2022-10-07</strong> <a href="#2022-10-07">Anotacja tekstów w Doccano i trenowanie własnego modelu<a/><br>
     <strong>2022-10-10</strong> <a href="#2022-10-10">Skrypty w poszukiwaniu wydarzeń</a><br>
     <strong>2022-10-17</strong> <a href="#2022-10-17">spaCy, NEL - łączenie rozpoznanych encji z wikidata.org</a><br>
-    <strong>2022-00-00</strong> <a href="#2022-00-00">spaCy i automatyczne tagowanie encji w TEI Publisherze</a><br>
+    <strong>2022-10-22</strong> <a href="#2022-10-22">spaCy i automatyczne tagowanie encji w TEI Publisherze</a><br>
     </p>
     </div>
 
@@ -1102,8 +1102,7 @@
         <span class="sidenote">Przed wyszukiwaniem w wikidata.org skrypt dokonuje lematyzacji
         encji (przekształca imię i nazwisko postaci do formy podstawowej) jednak ta funkcjonalność
         w używanym modelu spaCy nie jest doskonała, dla rzadszych imion, nazwisk będzie raczej niepoprawna.
-        </span>
-        .
+        </span>.
         </p>
 
         <p>
@@ -1116,7 +1115,7 @@
 
     <article>
         <hr>
-        <h2 id="2022-00-00">spaCy i automatyczne tagowanie encji w TEI Publisherze (<strong>00.00.2022</strong>) </h2>
+        <h2 id="2022-10-22">spaCy i automatyczne tagowanie encji w TEI Publisherze (<strong>22.10.2022</strong>) </h2>
 
         <section>
         <p>
@@ -1140,14 +1139,166 @@
         jakiegoś czasu posiadał możliwość ręcznej anotacji tekstu podstawowymi eykietami typu <em>osoba</em>
         i <em>miejsce</em>. Od wersji 8.00 (jeszcze nie opublikowanej) TEI Publisher będzie miał także możliwość anotacji
         automatycznej przy użyciu metod NLP (NER), a wykorzystuje w tym celu bibliotekę spaCy
-        <label for="9-1" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="9-1" class="margin-toggle"/>
+        <label for="9-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-2" class="margin-toggle"/>
         <span class="sidenote">Artykuł na blogu
         <a href="https://e-editiones.org/names-sell-named-entity-recognition-in-tei-publisher/" target="_blank" rel="noopener">e-editiones</a>.
-        </span>
-        .<br>
-        <em>c.d.n.</em>
+        </span>.
         </p>
+
+        <p>
+        Obecnie jedyną metodą przetestowania rozwojowej wersji TEI Publishera jest jego instalacja we
+        własnym zakresie. Autorzy aplikacji udostępniają jednak repozytorium
+        <label for="9-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-3" class="margin-toggle"/>
+        <span class="sidenote">Zobacz repozytorium
+        <a href="https://github.com/eeditiones/teipublisher-docker-compose" target="_blank" rel="noopener">eeditiones</a>.
+        </span>
+        z przygotowanymi plikami konfiguracyjnymi do utworzenia i
+        uruchomienia własnej instancji opartej na kontenerach dockera. Ten sposób
+        instalacji uwalnia nas od potrzeby
+        ręcznego konfigurowania wszystkich komponentów: javy, pythona, eXist-db, spaCy itd.
+
+        Po pobraniu (sklonowaniu) repozytorium należy uruchomić budowę obrazów dockera ze źródeł
+        poleceniem:<br>
+        <code>docker-compose build --build-arg ADMIN_PASS=my_pass</code><br>
+        gdzie 'my_pass' oznacza hasło admina serwera eXist-db.
+        </p>
+
+        <p>
+        Budowanie może potrwać kilka minut, po jego zakończeniu można uruchomić rozwojową wersję
+        aplikacji poleceniem: <code>docker-compose up -d</code>, co znów znajmie kilka-kilkanaście
+        sekund, po czym aplikacja będzie widoczna w przeglądarce pod adresem
+        <code>http://localhost</code>.
+        Co prawda w stopce strony będzie ciągle widoczna wersja 7.10, ale jest to wersja rozwojowa
+        z gałęzi <em>master</em> repozytorium. Aby się o tym przekonać wystarczy wejść w kolekcję
+        dokumentów 'Annotation Samples' dostarczoną z aplikacją, następnie w dowolny dokument,
+        np. <em>Letter #20 from Robert Graves to William Graves (at Oundle School) November 8,
+        1957</em>, w pasku narzędzi po lewej stronie ekranu wśród ikon widoczna jest czarna ikonka
+        z symbolem osób i plusem. To znak, że w systemie dostępna jest usługa NER. Po jej
+        uruchomieniu aplikacja wyświetla okno dialogowe pozwalające wybrać model do przetwarzania
+        tekstu. Standardowo dostępne są dwa: <strong>de_core_news_sm</strong> dla języka niemieckiego
+        i <strong>en_code_web_sm</strong> dla języka angielskiego.
+        </p>
+        <img src="/static/img_zapiski/tei_publisher_ner_01.png" width="650" alt="modele spaCy w TEI Publisherze"/>
+
+        <p>
+        Przykładowy dokument jest po angielsku należy więc wybrać ten drugi model i przycisk Run.
+        Po przetworzeniu można będzie zobaczyć nowe anotacje typu <em>person</em> lub <em>organization</em>.
+        </p>
+        <img src="/static/img_zapiski/tei_publisher_ner_02.png" width="650" alt="wynik NER w TEI Publisherze"/>
+
+        <p>
+        Przełączenie się na widok źródeł TEI dokumentu pokaże, że postacie np. Juanito
+        zostały poprawnie otagowane znacznikiem <code><persName></code>.
+        </p>
+        <img src="/static/img_zapiski/tei_publisher_ner_03.png" width="500" alt="kod XML-TEI"/>
+
+        <p>
+        Tekst, który jest analizowany w tym cyklu zapisek jest jednak tekstem w języku polskim.
+        Czy da się w podobny sposób jak przykładowy dokument przetworzyć publikację Stanisława
+        Bodniaka? W nieoficjalnej wersji rozwojowej wymaga to pewnych zabiegów. W przypadku
+        uruchomionej już instancji aplikacji niezbędna jest ingerencja w zawartość jednego
+        z kontenerów obsługujących system TEI Publisher, ten w którym działa serwis NER oparty
+        na bibliotece spaCy. Domyślnie po uruchomieniu nazywa się on
+        <strong>teipublisher-docker-compose-ner-1</strong>
+        co można zobaczyć na liście kontenerów wywołując polecenie:<br>
+        <code>docker container ps</code><br>
+        Do działającego kontenera można dostać się poleceniem <em>exec</em> programu dockera np.:<br>
+        <code>docker exec -it teipublisher-docker-compose-ner-1 bash</code>,<br>
+        po którego wywołaniu
+        znajdziemy się w linuksowym środowisku kontenera (w tym przypadku opartym na debianie).
+        To co jest niezbędne do obsługi języka polskiego to polski model spaCy, który można
+        zainstalować poleceniem: <code>python -m spacy download pl_core_news_md</code>. Sama
+        instalacja modelu nie spowoduje jeszcze jego dostępności na liście modeli w TEI
+        Publisherze, konieczny jest jeszcze restart kontenera a najpierw wyśjcie z kontenera
+        poleceniem <code>exit</code>. Do zatrzymania zestawu kontenerów obsługujących TEI
+        Publishera wystarczy w linni komend wpisać: <code>docker-compose stop</code>, a po chwili
+        ponownie uruchomić system poleceniem <code>docker-compose start</code>. Można by uniknąć
+        konieczności modyfikowania zawartości kontera, gdyby polski model instalowany był
+        domyślnie, odpowiada za to plik konfiguracyjny Dockerfile w repozytorium serwisu NER TEI
+        Publishera.
+        <label for="9-4" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-4" class="margin-toggle"/>
+        <span class="sidenote">Zobacz
+        <a href="https://github.com/eeditiones/tei-publisher-ner/blob/master/Dockerfile" target="_blank" rel="noopener">repozytorium</a>.
+        </span>
+
+        dodanie do polecenia RUN w tym pliku dodatkowego kodu:<br>
+        <code>&& python3 -m spacy download en_core_web_sm</code><br>
+        rozwiązałoby sprawę.
+        </p>
+
+        <p>
+        Jednak dostępność polskiego modelu na liście dostępnych modeli w interfejsie użytkownika
+        TEI Publishera nie oznacza niestety, że potrafi on z tego modelu skorzystać. Problemem
+        są odmienne etykiety którymi model oznacza znalezione encje nazwane (<em>named entity</em>),
+        autorzy TEI Publishera przewidzieli mapowanie z etykiet używanych w modelach angielskich
+        i niemieckich np. <code>"person": ("PER", "PERSON")</code> jednak w standardowych modelach
+        spaCy dla języka polskiego etykiety są nieco inne: np. 'persName' dla osób czy 'orgName'
+        dla organizacji.
+        <label for="9-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-5" class="margin-toggle"/>
+        <span class="sidenote">zob. na stronie
+        <a href="https://spacy.io/models/pl" target="_blank" rel="noopener">spaCy</a>
+        , dla modelu pl_core_news_md należy rozwinąć sekcję
+        <em>Label Scheme</em> i przewinąć do punktu NER, gdzie znajduje się lista etykiet
+        NER używanych w tym modelu.
+        </span>
+        </p>
+
+        <p>
+        Aby to zmienić konieczna jest modyfikacja kodu źródłowego serwisu NER TEI Publishera,
+        konkretnie pliku <code>main.py</code> w podkatalogu  <code>workspace/tei-publisher-ner/scripts</code>,
+        znów w działającym kontenerze (być może w oficjalnej wersji aplikacji będzie to już
+        uwzględnione?). W pliku należy zmienić zawartość słownika MAPPINGS z:
+        <pre>
+            MAPPINGS = {
+                "person": ("PER", "PERSON"),
+                "place": ("LOC", "GPE"),
+                "organization": ("ORG"),
+                "author": ("AUT")
+            }
+        </pre>
+        </p>
+
+        <p>
+        na:
+        <pre>
+            MAPPINGS = {
+                "person": ("PER", "PERSON", "persName"),
+                "place": ("LOC", "GPE", "placeName", "geogName"),
+                "organization": ("ORG", "orgName),
+                "author": ("AUT")
+            }
+        </pre>
+
+        </p>
+
+        <p>Tym razem restart kontenerów nie będzie potrzebny, wywołanie narzędzia NER
+        w TEI Publisherze wyświetla już znalezione w polskim tekście
+        encje, na poniższym zrzucie ekranu widać też przygotowany przez TEI Publishera
+        kod pliku XML w standardzie TEI
+        <label for="9-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-5" class="margin-toggle"/>
+        <span class="sidenote">Uwaga: zmiany wprowadzane bezpośrednio w kontenerach nie znikną
+        po zatrzymaniu i ponownych uruchomieniu kontenera, jednak przy ponownym utworzeniu kontenerów
+        z obrazów dockera oczywiście znikną.
+        </span>.
+        </p>
+        <img src="/static/img_zapiski/tei_publisher_ner_04.png" width="650" alt="wynik NER w TEI Publisherze, tekst w języku polskim"/>
+
+        <p>
+        Można spodziewać się, że pewne niedogodności wersji rozwojowej zostaną w przyszłości
+        dopracowane, a sama instalacja może być przecież przeprowadzona na serwerze przez
+        specjalistę. TEI Publisher, który już dziś jest cenym narzędziem w arsenale
+        cyfrowego humanisty, po ukazaniu się oficjalnej wersji 8.00 stanie się też
+        systemem ułatwiającym korzystanie z metod przetwarzania języka naturalnego
+        bez potrzeby programowania i z pożytkiem w postaci łatwiejszego tworzenia
+        edycji cyfrowych.
+        </p>
+
+
         </section>
     </article>
 
