@@ -1015,7 +1015,7 @@
         <img src="/static/img_zapiski/doccano_nel.png" width="650" alt="anotacja doccano nel"/>
 
         <p>
-        Mając przygotowany do trenowania dataset należy go podzielić na cześć treingową i
+        Mając przygotowany do trenowania dataset należy go podzielić na cześć treningową i
         część walidującą, zwykle 20% zbioru wystarcza do walidacji. Proces trenowania dla
         tak małego zestawu danych nie powinien trwać dłużej niż 30 sekund.
         </p>
@@ -1127,11 +1127,15 @@
         co się robi, co jest możliwe a co niekoniecznie. NLP jest bardzo dynamicznie
         rozwiającą się technologią, ale stopień jej rozwoju jest inny dla każdego języka
         naturalnego (to co dziś jest możliwe dla
-        tekstu angielskiego, niekoniecznie będzie możliwe dla tekstu polskiego). Jednym z popularnych
+        tekstu angielskiego, niekoniecznie będzie możliwe dla tekstu polskiego).
+        </p>
+
+        <p>
+        Jednym z popularnych
         narzędzi wśród humanistów cyfrowych jest TEI Publisher
         <label for="9-1" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="9-1" class="margin-toggle"/>
-        <span class="sidenote">
+        <span class="sidenote">Oficjalna strona aplikacji
         <a href="https://teipublisher.com/index.html" target="_blank" rel="noopener">TEI Publisher</a>.
         </span>
         , aplikacja znacznie ułatwiająca
@@ -1167,11 +1171,11 @@
 
         <p>
         Budowanie może potrwać kilka minut, po jego zakończeniu można uruchomić rozwojową wersję
-        aplikacji poleceniem: <code>docker-compose up -d</code>, co znów znajmie kilka-kilkanaście
+        aplikacji poleceniem: <code>docker-compose up -d</code>, co znów zajmie kilka-kilkanaście
         sekund, po czym aplikacja będzie widoczna w przeglądarce pod adresem
         <code>http://localhost</code>.
-        Co prawda w stopce strony będzie ciągle widoczna wersja 7.10, ale jest to wersja rozwojowa
-        z gałęzi <em>master</em> repozytorium. Aby się o tym przekonać wystarczy wejść w kolekcję
+        Co prawda w stopce strony będzie ciągle widoczna wersja 7.10, ale w rzeczywistości działa
+        wersja rozwojowa z gałęzi <em>master</em> repozytorium. Aby się o tym przekonać wystarczy wejść w kolekcję
         dokumentów 'Annotation Samples' dostarczoną z aplikacją, następnie w dowolny dokument,
         np. <em>Letter #20 from Robert Graves to William Graves (at Oundle School) November 8,
         1957</em>, w pasku narzędzi po lewej stronie ekranu wśród ikon widoczna jest czarna ikonka
@@ -1202,22 +1206,22 @@
         z kontenerów obsługujących system TEI Publisher, ten w którym działa serwis NER oparty
         na bibliotece spaCy. Domyślnie po uruchomieniu nazywa się on
         <strong>teipublisher-docker-compose-ner-1</strong>
-        co można zobaczyć na liście kontenerów wywołując polecenie:<br>
+        co można zobaczyć na liście kontenerów uruchamiając w konsoli komendę:<br>
         <code>docker container ps</code><br>
-        Do działającego kontenera można dostać się poleceniem <em>exec</em> programu dockera np.:<br>
+        Do działającego kontenera można dostać się poleceniem <em>exec</em> dockera np.:<br>
         <code>docker exec -it teipublisher-docker-compose-ner-1 bash</code>,<br>
         po którego wywołaniu
         znajdziemy się w linuksowym środowisku kontenera (w tym przypadku opartym na debianie).
         To co jest niezbędne do obsługi języka polskiego to polski model spaCy, który można
         zainstalować poleceniem: <code>python -m spacy download pl_core_news_md</code>. Sama
         instalacja modelu nie spowoduje jeszcze jego dostępności na liście modeli w TEI
-        Publisherze, konieczny jest jeszcze restart kontenera a najpierw wyśjcie z kontenera
+        Publisherze, konieczny jest jeszcze restart kontenera a najpierw wyjście z niego
         poleceniem <code>exit</code>. Do zatrzymania zestawu kontenerów obsługujących TEI
         Publishera wystarczy w linii komend wpisać: <code>docker-compose stop</code>, a po chwili
         ponownie uruchomić system poleceniem <code>docker-compose start</code>. Można by uniknąć
-        konieczności modyfikowania zawartości kontera, gdyby polski model instalowany był
-        domyślnie, odpowiada za to plik konfiguracyjny Dockerfile w repozytorium serwisu NER TEI
-        Publishera.
+        konieczności modyfikowania zawartości kontenera, gdyby polski model instalowany był
+        domyślnie, odpowiada za to plik konfiguracyjny <code>Dockerfile</code> w repozytorium
+        serwisu NER TEI Publishera.
         <label for="9-4" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="9-4" class="margin-toggle"/>
         <span class="sidenote">Zobacz
@@ -1230,10 +1234,10 @@
         </p>
 
         <p>
-        Jednak dostępność polskiego modelu na liście dostępnych modeli w interfejsie użytkownika
+        Jednak dostępność polskiego modelu na liście modeli w interfejsie użytkownika
         TEI Publishera nie oznacza niestety, że potrafi on z tego modelu skorzystać. Problemem
-        są odmienne etykiety którymi model oznacza znalezione encje nazwane (<em>named entity</em>),
-        autorzy TEI Publishera przewidzieli mapowanie z etykiet używanych w modelach angielskich
+        są odmienne etykiety, którymi model oznacza znalezione encje nazwane (<em>named entity</em>).
+        Autorzy TEI Publishera przewidzieli mapowanie z etykiet używanych w modelach angielskich
         i niemieckich np. <code>"person": ("PER", "PERSON")</code> jednak w standardowych modelach
         spaCy dla języka polskiego etykiety są nieco inne: np. 'persName' dla osób czy 'orgName'
         dla organizacji.
@@ -1297,7 +1301,7 @@
         <p>
         Można spodziewać się, że pewne niedogodności wersji rozwojowej zostaną w przyszłości
         dopracowane, a sama instalacja może być przecież przeprowadzona na serwerze przez
-        specjalistę. TEI Publisher, który już dziś jest cenym narzędziem w arsenale
+        specjalistę. TEI Publisher, który już dziś jest cennym narzędziem w arsenale
         cyfrowego humanisty, po ukazaniu się oficjalnej wersji 8.00 stanie się też
         systemem ułatwiającym korzystanie z metod przetwarzania języka naturalnego
         bez potrzeby programowania i z pożytkiem w postaci łatwiejszego tworzenia
