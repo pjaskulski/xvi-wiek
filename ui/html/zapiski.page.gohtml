@@ -1251,7 +1251,13 @@
         Aby to zmienić konieczna jest modyfikacja kodu źródłowego serwisu NER TEI Publishera,
         konkretnie pliku <code>main.py</code> w podkatalogu  <code>workspace/tei-publisher-ner/scripts</code>,
         znów w działającym kontenerze (być może w oficjalnej wersji aplikacji będzie to już
-        uwzględnione?). W pliku należy zmienić zawartość słownika MAPPINGS z:
+        uwzględnione?)
+        <label for="9-6" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-6" class="margin-toggle"/>
+        <span class="sidenote">Tymczasowy fork z modyfikacją jest w
+        <a href="https://github.com/pjaskulski/tei-publisher-ner">repozytorium</a>.
+        </span>
+        . W pliku należy zmienić zawartość słownika MAPPINGS z:
         <pre>
             MAPPINGS = {
                 "person": ("PER", "PERSON"),
@@ -1279,8 +1285,8 @@
         w TEI Publisherze wyświetla już znalezione w polskim tekście
         encje, na poniższym zrzucie ekranu widać też przygotowany przez TEI Publishera
         kod pliku XML w standardzie TEI
-        <label for="9-5" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="9-5" class="margin-toggle"/>
+        <label for="9-7" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="9-7" class="margin-toggle"/>
         <span class="sidenote">Uwaga: zmiany wprowadzane bezpośrednio w kontenerach nie znikną
         po zatrzymaniu i ponownych uruchomieniu kontenera, jednak przy ponownym utworzeniu kontenerów
         z obrazów dockera oczywiście znikną.
