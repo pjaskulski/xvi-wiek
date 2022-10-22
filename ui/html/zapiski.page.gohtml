@@ -1213,7 +1213,7 @@
         instalacja modelu nie spowoduje jeszcze jego dostępności na liście modeli w TEI
         Publisherze, konieczny jest jeszcze restart kontenera a najpierw wyśjcie z kontenera
         poleceniem <code>exit</code>. Do zatrzymania zestawu kontenerów obsługujących TEI
-        Publishera wystarczy w linni komend wpisać: <code>docker-compose stop</code>, a po chwili
+        Publishera wystarczy w linii komend wpisać: <code>docker-compose stop</code>, a po chwili
         ponownie uruchomić system poleceniem <code>docker-compose start</code>. Można by uniknąć
         konieczności modyfikowania zawartości kontera, gdyby polski model instalowany był
         domyślnie, odpowiada za to plik konfiguracyjny Dockerfile w repozytorium serwisu NER TEI
@@ -1225,7 +1225,7 @@
         </span>
 
         dodanie do polecenia RUN w tym pliku dodatkowego kodu:<br>
-        <code>&& python3 -m spacy download en_core_web_sm</code><br>
+        <code>&& python3 -m spacy download pl_core_news_md</code><br>
         rozwiązałoby sprawę.
         </p>
 
