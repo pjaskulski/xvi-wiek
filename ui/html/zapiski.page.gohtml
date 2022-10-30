@@ -27,6 +27,7 @@
     <strong>2022-10-10</strong> <a href="#2022-10-10">Skrypty w poszukiwaniu wydarzeń</a><br>
     <strong>2022-10-17</strong> <a href="#2022-10-17">spaCy, NEL - łączenie rozpoznanych encji z wikidata.org</a><br>
     <strong>2022-10-22</strong> <a href="#2022-10-22">spaCy i automatyczne tagowanie encji w TEI Publisherze</a><br>
+    <strong>2022-10-30</strong> <a href="#2022-10-30">spaCy i koreferencje, czyli Jerzy bawił we Włoszech a jego włości popadały w ruinę</a><br>
     </p>
     </div>
 
@@ -1383,8 +1384,73 @@
         tworzenia edycji cyfrowych.
         </p>
 
-
         </section>
     </article>
 
+    <article>
+        <hr>
+        <h2 id="2022-10-30">spaCy i koreferencje, czyli Jerzy bawił we Włoszech<br> a jego włości popadały w ruinę (<strong>30.10.2022</strong>) </h2>
+
+        <section>
+        <p>
+        Jednym z problemów podczas przetwarzania tekstów pisanych z myślą o ludzkim
+        czytelniku a nie algorytmie wykonywanym przez komputer są informacje odnoszące się 
+        do tej samej postaci, ale wyrażone nie wprost, lecz choćby poprzez zaimki osobowe lub
+        dzierżawcze, czyli koreferencje. Czytając na przykład tekst:
+
+        <p>
+        <em>"Jan Tarnowski, syn Jana Amora Iuniora i Barbary z Rożnowa, wnuczki Zawiszy Czarnego,
+        pochodził z wpływowej szlacheckiej rodziny Leliwitów Tarnowskich...<br>
+        Wychowywał się na dworach kardynała Fryderyka Jagiellończyka...<br>
+        Odtąd też trwały: jego spór z siostrzeńcem Piotrem Kmitą i żale względem dworu."</em>
+        <label for="10-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="10-1" class="margin-toggle"/>
+        <span class="sidenote">Fragmenty biogramu Jana Tarnowskiego z polskiej wersji Wikipedii.
+        </span>
+        </p>
+
+        <p>
+        Można obawiać się, czy fakty podane w taki sposób będą czytelne dla skryptu
+        przetwarzającego tekst.
+        <em>Wychowywał się</em> - ale kto? <em>Jego</em> czyli kogo?
+        </p>
+
+        <p>
+        Wiedza na temat tego, kto kryje się pod wyrażeniem "jego", czy kogo dotyczy czasownik
+        "wychowywał się" jest szczególnie przydatna przy próbach rozpoznawania relacji między
+        encjami (np. osobami) w tekście, wiedząc że chodzi o Jana Tarnowskiego, możemy uzyskać
+        informację iż ważną postacią dla niego byli Piotr Kmita i Ferdynad Jagiellończyk. Czy
+        spaCy jest w stanie w tym pomóc i przede wszystkim czy to będzie działać dla języka
+        polskiego? Okazuje się, że tak. W repozytorium należącym do Explosion AI, firmy
+        rozwijającej spaCy znajduje się dodatkowa biblioteka <strong>Coreferee</strong>,
+        przeznaczona do rozwiązywania koreferencji w języku angielskim, francuskim, niemieckim
+        i polskim. Instalacja opisana jest na stronie repozytorium
+        <label for="10-2" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="10-2" class="margin-toggle"/>
+        <span class="sidenote">Zob. repozytorium <a href="https://github.com/explosion/coreferee">
+        github</a>.
+        </span>
+        dokumentacja zawiera też opis działania biblioteki, wyjaśnienie decyzji podjętych
+        podczas jej tworzenia, także tabelę dokładności modeli dla poszczególnych języków.
+        </p>
+
+        <p>
+        Jak użyć Coreferee? Poniżej prosty program przewtarzający wspomniany fragment
+        biogramu hetmana Jana Amora Tarnowskiego.
+        </p>
+        <img src="/static/img_zapiski/coreferee.png" width="600" alt="biblioteka coreferee"/>
+
+        <p>Jak wydać na powyższym zrzucie ekranu sformułowania <em>Wychowywał</em>,
+        <em>Otrzymał</em>, <em>zajmował</em>, <em>jego</em> zostały prawidłowo powiązane
+        z encją 'Jan'
+        <label for="10-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="10-3" class="margin-toggle"/>
+        <span class="sidenote">Notebook koreferencje.ipynb do pobrania z
+        <a href="https://github.com/pjaskulski/zapiski" target="_blank" rel="noopener">repozytorium</a>.
+        </span>
+        .
+        </p>
+
+        </section>
+    </article>
 {{end}}
