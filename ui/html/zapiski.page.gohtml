@@ -1460,7 +1460,7 @@
         </p>
 
         <p>
-        Jak użyć Coreferee? Poniżej prosty program przewtarzający wspomniany fragment
+        Jak użyć Coreferee? Poniżej prosty program przetwarzający wspomniany fragment
         biogramu hetmana Jana Amora Tarnowskiego.
         </p>
         <img src="/static/img_zapiski/coreferee.png" width="600" alt="biblioteka coreferee"/>
@@ -1476,7 +1476,26 @@
         .
         </p>
         <p>
-        <em>c.d.n.</em>
+        <strong>Coreferee</strong> wychwytuje klastry (przykład powyżej zawiera akurat
+        tylko jeden) tokenów odwołujących się do tej samej postaci, słowo
+        <em>jego</em> mogłoby zostać zastąpione przez <em>Jana Tarnowskiego</em>, <em>otrzymał</em>
+        przez <em>Jan Tarnowski otrzymał</em>, ale takie liczne powtórzenia byłyby męczące dla
+        ludzkiego czytelnika, który świetnie sobie radzi z odczytywaniem informacji z kontekstu.
+        Sprecyzowanie o kogo chodzi jest jednak niezbędne przy maszynowym przetwarzaniu treści,
+        dlatego powstają narzędzia w rodzaju Coreferee.
+        </p>
+
+        <p>Parę tygodni temu forma Explosion AI opublikowała nowy komponent biblioteki spaCy
+        <strong>Coreference Resolution</strong>, szczegółowy opis tego mechanizmu jest dostępy
+        na <a href="https://explosion.ai/blog/coref">blogu</a> Explosion, niestety obsługuje
+        na razie tylko język angielski
+        <label for="10-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="10-5" class="margin-toggle"/>
+        <span class="sidenote">Dostępny jest też krótki film
+        <a href="https://www.youtube.com/watch?v=fio3BejnRsM" target="_blank" rel="noopener">
+        Coreference Resolution in spaCy</a>.
+        </span>
+        .
         </p>
 
         </section>
