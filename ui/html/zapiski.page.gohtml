@@ -1509,13 +1509,66 @@
 
         <section>
         <p>O ile rozpoznawanie druku nie jest dziś wielkim problemem i radzą sobie z nim liczne
-        programy komercyjne, jak i open source, to rozpoznawanie pisma ręcznego, szczególnie pochodzącego
+        programy komercyjne, jak i open source
+        <label for="11-1" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="11-1" class="margin-toggle"/>
+        <span class="sidenote">Istnieją także systemy przygotowane specjalnie do odczytywania starodruków
+        np. OCR4all <a href="https://www.ocr4all.org/about/ocr4all" target="_blank" rel="noopener">
+        ocr4all.org</a>.
+        </span>
+        , to rozpoznawanie pisma ręcznego, szczególnie pochodzącego
         sprzed paru lub kilku stuleci jest ciągle sporym wyzwaniem. Duży postęp w tej dziedzinie zawdzięczamy
         rozwojowi uczenia maszynowego, szczególnie zaś uczenia głębokiego. Jedną z aplikacji przeznaczonych
-        do odczytywania pisma (choć druku także) dzięki konwolucyjnym i rekurencyjnym sieciom neuronowym jest
+        do odczytywania pisma ręcznego (choć druku także) dzięki konwolucyjnym i rekurencyjnym sieciom neuronowym jest
         Kraken. Program oparty na wcześniejszym systemie OCRopus, dostępny bezpłatnie wraz z kodem źródłowym
         na otwartej licencji (Apache 2.0).
         </p>
+
+        <p>
+        Aplikację można zainstalować w systemie Linux Lub Mac OSX, procedura instalacji jest typowa
+        dla pakietów języka Python i została opisana na <a href="https://kraken.re/master/index.html">stronie</a> Krakena.
+        Nie jest to aplikacja z interfejsem użytkownika - obsługuje się ją z linii komend.
+        Obliczenia wykonywane podczas tzw. treningu modeli - sieci neuronowych ropoznających pismo,
+        są dosyć czasochłonne. Kraken potrafi skorzystać z mocy obliczeniowej karty graficznej komputera,
+        o ile taka jest dostępna (chodzi o dedykowaną kartę GPU np. NVIDIA GeForce). Brak takiej
+        karty nie uniemożliwia skorzystania z aplikacji, wydłuża jednak czas trenowania własnych modeli.
+        </p>
+
+        <p>Kraken jest wykorzystywany do rozpoznawania wielu rodzajów pisma w wielu językach,
+        skryptów pisanych od lewej do prawej - jak w piśmie europejskim, od prawej do lewej
+        (jak w hebrajskim czy arabskim), czy od góry do dołu. W przypadku braku gotowego modelu
+        do rozpoznawania jakiegoś pisma, użytkownik może przygotować własny, operając się na materiałach
+        treningowych - skanach rękopisów i manualnie przygotowanej transkrypcji.
+        Czym w ogóle są modele? Wiedza na temat rozpoznawanego pisma nie jest zaszyta w aplikacji, lecz
+        zapisana w binarnch pilkach w formacie *.mlmodel. Plik taki, zwykle o objętości 15-25 MB zawira
+        szczegółową definicję warstw sieci neuronowej wytrenowanej wcześniej do rozpoznawania danego
+        pisma. Kraken wczytując dane takiego modelu jest w stanie przetworzyć skan rękopisu i zwrócić
+        rozpoznany tekst. Istnieje katalog gotowych modeli udostępnionych na otwartej licencji
+        przez ich autorów (zob. <a href="https://zenodo.org/communities/ocr_models?page=1&size=20">zenodo</a>).
+        Są tam m.in. modele rozpoznające pismo średniowieczne z XII-XV wieku: 'HTR Model - Medieval Latin and
+        French 12th-15th c. expanded (no abbr.)' czy model rozpoznający fransuskie pismo ręczne z XVIII-XX wieku
+        'LECTAUREP Contemporary French Model (Administration)' trenowany na dokumentach notarialnych.
+        Jeżeli posiadamy rękopisy zbliżone materiałów na których trenowano jeden z dostępnych publicznie
+        modeli możemy go wykorzystać do rozpoznawania prawdopodobnie z niezłym rezultatem.
+        </p>
+
+        <p>Kraken posiada wbudowaną obsługę pobierania modeli z katalogu na stronie zenodo.org.
+        Polecenie <code>kraken list</code> wyświetla listę modeli dostępnych do pobrania, wśród wyświetlanych
+        informacji jest identyfikator pliku np. '10.5281/zenodo.6542744' (to wspomniany wcześniej model
+        oparty na pismach notarialnych). Kolejne polecenie <code>kraken get</code> w którym należy wskazać
+        taki identyfikator pobiera model na dysk użytkownika (np. do katalogu ~/.config/kraken w systemie Ubuntu).
+        </p>
+
+        <p>Pobrany model może być od razu użyty do rozpoznawania pisma. W przykładowym poleceniu:
+        <code>kraken -i image.png image_text.txt segment -bl ocr -m HTR-United-Manu_McFrench.mlmodel</code>
+        parametr <code>-i image.png image_text.txt</code> oznacza nazwę wejściowego pliku ze skanem rękopisu,
+        oraz nazwę wyjściowego pliku tekstowego, <code>segment -bl</code> oznacza przygotowanie segmentacji,
+        podziału skanu na regiony i rozpoznaniu wierszy, zaś <code>ocr -m HTR-United-Manu_McFrench.mlmodel</code>
+        jest poleceniem użycia do rozpoznawania pisma jednego z wcześniej pobranych modeli.
+        </p>
+
+
+
         <p><em>c.d.n.</em></p>
         </section>
 {{end}}
