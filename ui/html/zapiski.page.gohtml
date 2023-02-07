@@ -1592,23 +1592,58 @@
         jest trudna do odparcia. Jakie jednak praktyczne znaczenie może mieć ChatGPT
         czy duże modele językowe (LLM) dla cyfrowego historyka?</p>
 
-        <p>ChatGPT dostepny jest (obecnie) jedynie w formie interaktywnej. Można z nim porozmawiać
-        o historii, sprawdzić poziom wiedzy, a często też niewiedzy (czy Jan Amor Tarnowski
-        był konfederatą barskim? Chyba jednak nie...). Ale modele stojące za działaniem ChatGPT są
-        od pewnego czasu dostępne w formie serwisów API
+        <p>ChatGPT dostępny jest (obecnie) jedynie w formie interaktywnej. Można z nim porozmawiać
+        o historii, sprawdzić poziom wiedzy, a równie często też niewiedzy (czy Jan Amor Tarnowski
+        był konfederatą barskim? Chyba jednak nie...). Ale z modeli stojących za działaniem ChatGPT
+        można również korzystać poprzez sprzedawane przez OpenAI usługi API
         <label for="12-2" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-2" class="margin-toggle"/>
         <span class="sidenote"><a href="https://beta.openai.com/overview" target="_blank" rel="noopener">OpenAI API</a>.
-        </span>
-        umożliwiając tworzenie skryptów, które
-        przetwarzają teksty z wykorzystaniem różnych modeli z różnymi parametrami. Jak model GPT radzi sobie z wyszukiwaniem
-        słów kluczowych, osób, miejsc? Czy portrafi wyszukiwać informacje o relacjach rodzinnych
+        </span>,
+        co umożliwia tworzenie prostych skryptów, które
+        przetwarzają teksty z wykorzystaniem modeli o różnej mocy, a także eksperymentowanie
+        z różnymi parametrami zmieniającymi charakterystykę modeli. Jak GPT radzi sobie
+        z wyszukiwaniem słów kluczowych, osób, miejsc? Czy portrafi wyszukiwać informacje o relacjach rodzinnych
         między postaciami wystepującymi w tekście? Rozpoznać funkcje i urzędy pełnione przez głównego
         bohatera przesłanej publikacji? Jak sprawdzi się w roli narzędzia automatycznie przetwarzającego
         całe pakiety testów w celu wydobycia kluczowych informacji? Takie i inne eksperymenty
         opisuję na stronie repozytorium:
         <a href="https://github.com/pjaskulski/gpt_historical_text">gpt_historical_text</a>.
         </p>
+
+        <p>Czy GPT poradzi sobie na przykład z wyciągnięciem z publikacji Stanisława Bodniaka
+        listy osób?
+        Po przesłaniu do modelu kilku akapitów tekstu (<em>"Polska a Bałtyk za ostatniego
+        Jagiellona"</em>)
+        oraz sformułowaniu zapytania:<br>
+
+        <pre>
+W podanym tekście wyszukaj informacje o osobach, znalezione osoby
+wypisz w formie listy, jeżeli są znane funkcje lub urzędy osób
+umieść te informacje w nawiasach obok osób
+       </pre>
+        </p>
+
+        <p>
+        model <strong>text-davnci-003</strong> (uruchomiony z parametrami: <code>temperature=0.0</code>,
+        <code>top_p=1.0</code>, <code>frequency_penalty=0.0</code>,
+        <code>presence_penalty=0.0</code>) zwraca całkiem niezły wynik:
+        <ul>
+            <li>Zygmunt August (król)</li><br>
+            <li>Jan Tarnowski (hetman)</li><br>
+            <li>Piotr Kmita (marszałek koronny)</li><br>
+            <li>Stanisław Hozjusz (bp)</li><br>
+            <li>Jan Ocieski (kanclerz)</li><br>
+            <li>Jan Przerębski (podkanclerzy)</li><br>
+            <li>Marcin Kromer</li><br>
+            <li>Szymon Maricjus-Czystochlebski</li><br>
+            <li>Łukasz Górnicki</li><br>
+            <li>Barnim XI (książę)</li>
+        </ul>
+        </p>
+
+        <p>pomijając jedynie ks. Albrechta.</p>
+
         </section>
     </article>
 
