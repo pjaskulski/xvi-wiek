@@ -1583,7 +1583,7 @@
         <p>Kiedy w listopadzie 2022 roku firma OpenAI
         <label for="12-1" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-1" class="margin-toggle"/>
-        <span class="sidenote"><a href="https://www.openai.com" target="_blank" rel="noopener">openai.com</a>.
+        <span class="sidenote">Strona firmy <a href="https://www.openai.com" target="_blank" rel="noopener">openai.com</a>.
         </span>
         udostępniła publicznie wersję beta
         swojego nowego produktu ChatGPT potrzeba było zaledwie kilku dni by liczba
@@ -1598,7 +1598,8 @@
         można również korzystać poprzez sprzedawane przez OpenAI usługi API
         <label for="12-2" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-2" class="margin-toggle"/>
-        <span class="sidenote"><a href="https://beta.openai.com/overview" target="_blank" rel="noopener">OpenAI API</a>.
+        <span class="sidenote">API jest usługą płatną, jednakże każdy nowy użytkownik otrzymuje
+        bezpłatnie do wykorzystania tokeny o wartości 18$, zob. <a href="https://beta.openai.com/overview" target="_blank" rel="noopener">OpenAI API</a>.
         </span>,
         co umożliwia tworzenie prostych skryptów, które
         przetwarzają teksty z wykorzystaniem modeli o różnej mocy, a także eksperymentowanie
@@ -1615,13 +1616,11 @@
         listy osób?
         Po przesłaniu do modelu kilku akapitów tekstu (<em>"Polska a Bałtyk za ostatniego
         Jagiellona"</em>)
-        oraz sformułowaniu zapytania:<br>
+        oraz zapytania (promptu):<br><br>
 
-        <pre>
-W podanym tekście wyszukaj informacje o osobach, znalezione osoby
-wypisz w formie listy, jeżeli są znane funkcje lub urzędy osób
-umieść te informacje w nawiasach obok osób
-       </pre>
+       <strong>prompt</strong>: <em>W podanym tekście wyszukaj informacje o osobach, znalezione osoby
+       wypisz w formie listy, jeżeli są znane funkcje lub urzędy osób
+       umieść te informacje w nawiasach obok osób</em>
         </p>
 
         <p>
@@ -1644,6 +1643,34 @@ umieść te informacje w nawiasach obok osób
 
         <p>pomijając jedynie ks. Albrechta.</p>
 
+        <p>Inny przykład:<br>
+        <strong>prompt</strong>: <em>W podanym tekście wyszukaj słowa kluczowe będące nazwami własnymi, znalezione słowa kluczowe
+         wypisz w formie listy, w nawiasach obok słowa kluczowego umieść informację
+         o typie słowa kluczowego np. osoba, miejsce, rzeka, morze.</em>
+        </p>
+        <p>
+        Wynik:
+            <ul>
+                <li>Zygmunt August (osoba)</li><br>
+                <li>Malbork (miejsce)</li><br>
+                <li>Królewiec (miejsce)</li><br>
+                <li>Albrecht (osoba)</li><br>
+                <li>Jan Tarnowski (osoba)</li><br>
+                <li>Piotr Kmita (osoba)</li><br>
+                <li>Stanisław Hozjusz (osoba)</li><br>
+                <li>Jan Ocieski (osoba)</li><br>
+                <li>Jan Przerębski (osoba)</li><br>
+                <li>Marcin Kromer (osoba)</li><br>
+                <li>Szymon Maricjus-Czystochlebski (osoba)</li><br>
+                <li>Łukasz Górnicki (osoba)</li><br>
+                <li>Gdańsk (miejsce)</li><br>
+                <li>Wisła (rzeka)</li><br>
+                <li>Barnim XI (osoba)</li><br>
+                <li>Lębork (miejsce)</li><br>
+                <li>Bytów (miejsce)</li><br>
+                <li>Bałtyk (morze)</li><br>
+            </ul>
+        </p>
         </section>
     </article>
 
