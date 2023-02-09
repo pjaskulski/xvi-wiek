@@ -1624,7 +1624,7 @@
         Po przesłaniu do modelu kilku akapitów tekstu (<em>"Polska a Bałtyk za ostatniego
         Jagiellona"</em>
         <label for="12-3" class="margin-toggle sidenote-number"></label>
-        <input type="checkbox" id="12-1" class="margin-toggle"/>
+        <input type="checkbox" id="12-3" class="margin-toggle"/>
         <span class="sidenote">Wybrany <a href="https://github.com/pjaskulski/gpt_historical_text#analiza-ner-fragmentu-publikacji" target="_blank" rel="noopener">fragment</a>.
         </span>)
         oraz zapytania (promptu):<br><br>
@@ -1639,16 +1639,16 @@
         <code>top_p=1.0</code>, <code>frequency_penalty=0.0</code>,
         <code>presence_penalty=0.0</code>) zwraca całkiem niezły wynik:
         <ul>
-            <li>Zygmunt August (król)</li><br>
-            <li>Jan Tarnowski (hetman)</li><br>
-            <li>Piotr Kmita (marszałek koronny)</li><br>
-            <li>Stanisław Hozjusz (bp)</li><br>
-            <li>Jan Ocieski (kanclerz)</li><br>
-            <li>Jan Przerębski (podkanclerzy)</li><br>
-            <li>Marcin Kromer</li><br>
-            <li>Szymon Maricjus-Czystochlebski</li><br>
-            <li>Łukasz Górnicki</li><br>
-            <li>Barnim XI (książę)</li>
+            <li>- Zygmunt August (król)</li><br>
+            <li>- Jan Tarnowski (hetman)</li><br>
+            <li>- Piotr Kmita (marszałek koronny)</li><br>
+            <li>- Stanisław Hozjusz (bp)</li><br>
+            <li>- Jan Ocieski (kanclerz)</li><br>
+            <li>- Jan Przerębski (podkanclerzy)</li><br>
+            <li>- Marcin Kromer</li><br>
+            <li>- Szymon Maricjus-Czystochlebski</li><br>
+            <li>- Łukasz Górnicki</li><br>
+            <li>- Barnim XI (książę)</li>
         </ul>
         </p>
 
@@ -1662,25 +1662,59 @@
         <p>
         Wynik:
             <ul>
-                <li>Zygmunt August (osoba)</li><br>
-                <li>Malbork (miejsce)</li><br>
-                <li>Królewiec (miejsce)</li><br>
-                <li>Albrecht (osoba)</li><br>
-                <li>Jan Tarnowski (osoba)</li><br>
-                <li>Piotr Kmita (osoba)</li><br>
-                <li>Stanisław Hozjusz (osoba)</li><br>
-                <li>Jan Ocieski (osoba)</li><br>
-                <li>Jan Przerębski (osoba)</li><br>
-                <li>Marcin Kromer (osoba)</li><br>
-                <li>Szymon Maricjus-Czystochlebski (osoba)</li><br>
-                <li>Łukasz Górnicki (osoba)</li><br>
-                <li>Gdańsk (miejsce)</li><br>
-                <li>Wisła (rzeka)</li><br>
-                <li>Barnim XI (osoba)</li><br>
-                <li>Lębork (miejsce)</li><br>
-                <li>Bytów (miejsce)</li><br>
-                <li>Bałtyk (morze)</li><br>
+                <li>- Zygmunt August (osoba)</li><br>
+                <li>- Malbork (miejsce)</li><br>
+                <li>- Królewiec (miejsce)</li><br>
+                <li>- Albrecht (osoba)</li><br>
+                <li>- Jan Tarnowski (osoba)</li><br>
+                <li>- Piotr Kmita (osoba)</li><br>
+                <li>- Stanisław Hozjusz (osoba)</li><br>
+                <li>- Jan Ocieski (osoba)</li><br>
+                <li>- Jan Przerębski (osoba)</li><br>
+                <li>- Marcin Kromer (osoba)</li><br>
+                <li>- Szymon Maricjus-Czystochlebski (osoba)</li><br>
+                <li>- Łukasz Górnicki (osoba)</li><br>
+                <li>- Gdańsk (miejsce)</li><br>
+                <li>- Wisła (rzeka)</li><br>
+                <li>- Barnim XI (osoba)</li><br>
+                <li>- Lębork (miejsce)</li><br>
+                <li>- Bytów (miejsce)</li><br>
+                <li>- Bałtyk (morze)</li><br>
             </ul>
+        </p>
+
+        <p>
+        A może coś bardziej skomplikowanego? Na przykład czy model GPT mógłby na podstawie
+        przekazanego tekstu ustalić powiązania rodzinne jego głównego bohatera? Do testu wykorzystany
+        zostanie artykuł na temat Ludwika Wejhera pochodzący z Wikipedii
+        <label for="12-4" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-4" class="margin-toggle"/>
+        <span class="sidenote">
+        <a href="https://pl.wikipedia.org/wiki/Ludwik_Wejher_(zm._1656)" target="_blank" rel="noopener">Ludwik Wejher (zm. 1656)</a> wojewoda pomorski.
+        </span>
+       . Zapytanie (podpowiedź), która ma skłonić model 'davinci' do poprawnej odpowiedzi
+        wygląda tym razem tak:
+        </p>
+
+        <p>
+        <strong>prompt</strong>: <em>Na podstawie podanego tekstu wyszukaj
+        wszystkie relacje rodzinne głównego bohatera (tylko jego krewnych, powinowatych,
+        teściów, szwagrów, szwagierki). Wynik wypisz w formie listy nienumerowanej
+        z rodzajem pokrewieństwa w nawiasie. Na przykład:<br>
+        - Jan Kowalski (brat)<br>
+        - Anna (siostra)<br>
+        Jeżeli w tekście nie ma takich informacji napisz: brak danych.</em>
+        </p>
+
+        <p>Wynik:<br>
+        <ul>
+        <li>- Jan Wejher (ojciec)</li><br>
+        <li>- Anna ze Szczawińskich (matka)</li><br>
+        <li>- Mikołaj Wejher (brat)</li><br>
+        <li>- Jakub Wejher (brat)</li><br>
+        <li>- Gerard Denhoff (teść)</li><br>
+        <li>- Katarzyna Jadwiga z Denhoffów (żona)</li><br>
+        <li>- brak danych (szwagrów, szwagierek)</li><br>
         </p>
         </section>
     </article>
