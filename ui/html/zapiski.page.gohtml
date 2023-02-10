@@ -1590,7 +1590,13 @@
         jego użytkowników osiągnęła milion. Dziś jest ich z pewnością wielokrotnie więcej,
         perspektywa porozmawiania ze sztuczną inteligencją lub zlecenia jej jakiejś pracy
         jest trudna do odparcia. Jakie jednak praktyczne znaczenie może mieć ChatGPT
-        czy duże modele językowe (LLM) dla cyfrowego historyka?</p>
+        czy ogólnie duże modele językowe (LLM) dla cyfrowego historyka?</p>
+
+        <p>Czym jest GPT (Generative Pretrained Transformer), którego najnowszą odsłonę okresla się
+        często jako wersję GPT-3.5? To tzw. duży model językowy (LLM) wytrenowany przez firmę OpenAI
+        na bazie ogromnego zbioru tekstów. Modele tego typu są używane do generowania tekstów, tłumaczenia,
+        ale też do zadań wymagających pewnego rozumienia tekstu.
+        </p>
 
         <p>ChatGPT dostępny jest (obecnie) jedynie w formie interaktywnej. Można z nim porozmawiać
         o historii, sprawdzić poziom wiedzy, a równie często też niewiedzy (czy Jan Amor Tarnowski
@@ -1614,9 +1620,12 @@
         z wyszukiwaniem słów kluczowych, osób, miejsc? Czy potrafi wyszukiwać informacje o relacjach rodzinnych
         między postaciami występującymi w tekście? Rozpoznać funkcje i urzędy pełnione przez głównego
         bohatera przesłanej publikacji? Jak sprawdzi się w roli narzędzia automatycznie przetwarzającego
-        całe pakiety tekstów w celu wydobycia kluczowych informacji? (takie i inne eksperymenty
-        opisuję także na stronie repozytorium:
-        <a href="https://github.com/pjaskulski/gpt_historical_text">gpt_historical_text</a>).
+        całe pakiety tekstów w celu wydobycia kluczowych informacji?
+        <label for="12-3" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-3" class="margin-toggle"/>
+        <span class="sidenote">Takie i inne eksperymenty opisuję także na stronie repozytorium:
+        <a href="https://github.com/pjaskulski/gpt_historical_text">gpt_historical_text</a>.
+        </span>
         </p>
 
         <p>Czy GPT poradzi sobie na przykład z wyciągnięciem z publikacji Stanisława Bodniaka
@@ -1716,6 +1725,50 @@
         <li>- Katarzyna Jadwiga z Denhoffów (żona)</li><br>
         <li>- brak danych (szwagrów, szwagierek)</li><br>
         </p>
+
+        <p> Przykład listy stanowisk lub urzędów dla tej samej postaci (i z
+        tego samego tekstu):</p>
+
+        <p><strong>Prompt</strong>: <em>Na podstawie podanego tekstu wymień wszystkie
+        stanowiska i urzędy głównego bohatera tekstu. Wynik wypisz w formie listy.</em>
+        </p>
+
+        <p>
+        <ol>
+            <li>1. Pułkownik od 1647</li><br>
+            <li>2. Kasztelan elbąski od 1648</li><br>
+            <li>3. Wojewoda pomorski od 1649</li><br>
+            <li>4. Starosta skarżewski</li><br>
+            <li>5. Starosta wałecki</li><br>
+            <li>6. Starosta nowodworski w 1650 roku</li><br>
+        </ol>
+        </p>
+
+        <h4>Skoro jest tak dobrze to dlaczego nie jest :-) </h4>
+
+        <p>Modele GPT-3.5 takie jak 'davinci' są bardzo dobrymi modelami językowymi, nie są jednak
+        sztuczną inteligencją, język nie jest przecież tożsamy z myśleniem. Wiedza modelu
+        trenowanego wieloma gigabajtami tekstów również nie jest całkiem pewna i ścisła.
+        Pytany o fakty model 'davinci' (lub ChatGPT) jest często całkiem poprawny w swoich
+        odpowiedziach, ale potrafi fakty tworzyć, czasami wbrew zwykłej logice, na przykład
+        wspomniane wyżej rzekome uczestnictwo hetmana Tarnowskiego w konfederacji barskiej,
+        mimo iż żył ponad 200 lat wcześniej i nie było to możliwe.</p>
+
+        <p>Nie przeszkadza to przy generowaniu tekstów, udzielaniu łudząco przypominających
+        ludzkie odpowiedzi na zadanie pytania, jednak przy wyciąganiu informacji np.
+        z przekazanych modelowi biografii oczekiwana jest precyzja, powtarzalność wyników,
+        pewność informacji. Model, zależnie od parametrów uruchomienia, może mieć skłonnośc
+        do większego lub mniejszego interpretowania danych i zmyślania faktów, zjawisko to
+        określa się czasem mianem halucynacji. Może też na przykład udzielić odpowiedzi wynikającej
+        z kontekstu - o ile dotyczy to informacji, że syn córki bohatera biografii jest jego wnukiem,
+        to jest cenna umiejętność. Natomiast ustalanie miejsca urodzenia osoby na
+        podstawie informacji, iż bohater pochodził z rodu wywodzącego się z miejscowości X,
+        jest już przesadną interpretacją danych, która może, ale nie musi być prawdą.
+        A podczas automatycznego przetwarzania tekstów poszukujemy faktów. Można się przed
+        tym zabezpieczać używając odpowiednich parametrów modelu, można też zadbać
+        o jak najlepszy tekst zapytania (promptu). Wyniki działania modelu będą jednak
+        wymagały weryfikacji. GPT3.5 nie jest więc narzędziem bezproblemowym, ale czy
+        dżinny zamieszkujące czarodziejskie lampy nie bywały kłopotliwe?</p>
         </section>
     </article>
 
