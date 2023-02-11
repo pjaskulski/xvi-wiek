@@ -1593,9 +1593,25 @@
         czy ogólnie duże modele językowe (LLM) dla cyfrowego historyka?</p>
 
         <p>Czym w ogóle jest GPT (Generative Pretrained Transformer), którego najnowszą odsłonę okresla się
-        często jako wersję GPT-3.5? To właśnie tzw. duży model językowy (LLM) wytrenowany przez firmę OpenAI
-        na bazie ogromnego zbioru tekstów. Modele tego typu są używane do generowania tekstów, tłumaczenia,
-        ale też do zadań wymagających pewnego rozumienia tekstu.
+        często jako wersję GPT-3.5 (InstructGPT)? To właśnie tzw. duży model językowy (LLM)
+        <label for="12-7" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-7" class="margin-toggle"/>
+        <span class="sidenote">zob. <em>Language model</em>: <a href="https://en.wikipedia.org/wiki/Language_model" target="_blank" rel="noopener">Wikipedia</a>.
+        </span>
+        wytrenowany przez firmę OpenAI na bazie ogromnego zbioru tekstów. Modele tego typu
+        są używane do generowania tekstów, tłumaczenia,
+        tworzenia streszczeń, ale też do zadań wymagających pewnego rozumienia tekstu.
+        Można na przykład poprosić model o przygotowanie konspektu artykułu na jakiś temat,
+        oraz listy z podstawową bibliografią, internet jest już pełen artykułów i filmów na temat
+        tego jak ChatGPT wpłynie na pracę akademicką i badania naukowe
+        <label for="12-8" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-8" class="margin-toggle"/>
+        <span class="sidenote">zob. <a href="https://www.lumiere-education.com/post/how-will-chatgpt-change-research-paper-writing"  target="_blank" rel="noopener">How Will ChatGPT Change Research Paper Writing?</a>,
+        <a href="https://www.youtube.com/watch?v=_wZkRXZXFIM" target="_blank" rel="noopener">ChatGPT: A game changer for researchers?</a>,
+        <a href="https://www.youtube.com/watch?v=pwUhj7j7xDw" target="_blank" rel="noopener">Harness the power of AI for research: How ChatGPT is changing the game</a>.
+        </span>.
+        Ale czy tak zaawansowany model, rozumiejący całkiem dobrze język polski, mógłby wykonywać 
+        zadania związane z masowym przetwarzaniem tekstów publikacji i źródeł historycznych?
         </p>
 
         <p>ChatGPT dostępny jest (obecnie) jedynie w formie interaktywnej. Można z nim porozmawiać
@@ -1611,9 +1627,9 @@
         przetwarzają teksty z wykorzystaniem modeli o różnej mocy, a także eksperymentowanie
         z różnymi parametrami zmieniającymi ich charakterystykę. Skrypty te mogą nie tyle pytać
         model o jego wewnętrzną wiedzę, ale mogą wykorzystać umiejętności językowe LLM (Large Language Model)
-        do przetwarzania
-        podanych mu tekstów. Tak naprawdę można to zrobić także podczas sesji z ChatGPT, ale wykorzystanie
-        skryptów i kolekcji tekstów jest chyba wygodniejsze.
+        właśnie do przetwarzania podanych mu tekstów. Tak naprawdę można to zrobić także
+        podczas sesji z ChatGPT, ale wykorzystanie skryptów i kolekcji tekstów jest chyba
+        wygodniejsze.
         </p>
 
         <p>Jak GPT radzi sobie
@@ -1745,7 +1761,7 @@
         </ol>
         </p>
 
-        <p><strong>Skoro jest tak dobrze to dlaczego nie jest :-)</strong></p>
+        <p><strong>Skoro jest tak dobrze... a może wcale nie jest?</strong></p>
 
         <p>Modele GPT-3.5 takie jak 'davinci' są bardzo dobrymi modelami językowymi, nie są jednak
         sztuczną inteligencją, język nie jest przecież tożsamy z myśleniem. Wiedza modelu
@@ -1753,7 +1769,18 @@
         Pytany o fakty model 'davinci' (lub ChatGPT) jest często całkiem poprawny w swoich
         odpowiedziach, ale potrafi fakty tworzyć, czasami wbrew zwykłej logice, na przykład
         wspomniane wyżej rzekome uczestnictwo hetmana Tarnowskiego w konfederacji barskiej,
-        mimo iż żył ponad 200 lat wcześniej i nie było to możliwe.</p>
+        mimo iż żył ponad 200 lat wcześniej i nie było to możliwe.
+        <label for="12-9" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-9" class="margin-toggle"/>
+        <span class="sidenote">
+        Innym problemem są ograniczenia techniczne, model może przetworzyć w jednym
+        zapytaniu 4000 tokenów, przy czym chodzi o sumę zapytania i wyniku. A ponieważ token
+        to często mniej niż wyraz (dłuższe wyrazy dzielone są na kilka tokenów), to realny
+        tekst możliwy do jednorazowego przetworzenia to np. 6 tys. znaków, przy założeniu
+        odpowiedzi o długości 500-800 tokenów. Dłuższe teksty wymagały by albo wstępnego
+        skrócenia, albo podzielenia.
+        </span>
+        </p>
 
         <p>Nie przeszkadza to przy generowaniu tekstów, udzielaniu łudząco przypominających
         ludzkie odpowiedzi na zadanie pytania, jednak przy wyciąganiu informacji np.
