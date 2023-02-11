@@ -1600,8 +1600,8 @@
 
         <p>ChatGPT dostępny jest (obecnie) jedynie w formie interaktywnej. Można z nim porozmawiać
         o historii, sprawdzić poziom wiedzy, a równie często też niewiedzy (czy Jan Amor Tarnowski
-        był konfederatą barskim? Chyba jednak nie...). Ale z modelu stojącego za działaniem ChatGPT
-        można również korzystać poprzez sprzedawane przez OpenAI usługi API
+        był konfederatą barskim? Chyba jednak nie...). Ale z modeli GPT można również korzystać
+        poprzez sprzedawane przez OpenAI usługi API
         <label for="12-2" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-2" class="margin-toggle"/>
         <span class="sidenote">API jest usługą płatną, jednakże każdy nowy użytkownik otrzymuje
@@ -1745,7 +1745,7 @@
         </ol>
         </p>
 
-        <h4>Skoro jest tak dobrze to dlaczego nie jest :-) </h4>
+        <p><strong>Skoro jest tak dobrze to dlaczego nie jest :-)</strong></p>
 
         <p>Modele GPT-3.5 takie jak 'davinci' są bardzo dobrymi modelami językowymi, nie są jednak
         sztuczną inteligencją, język nie jest przecież tożsamy z myśleniem. Wiedza modelu
@@ -1765,11 +1765,88 @@
         to jest cenna umiejętność. Natomiast ustalanie miejsca urodzenia osoby na
         podstawie informacji, iż bohater pochodził z rodu wywodzącego się z miejscowości X,
         jest już przesadną interpretacją danych, która może, ale nie musi być prawdą.
-        A podczas automatycznego przetwarzania tekstów poszukujemy faktów. Można się przed
-        tym zabezpieczać używając odpowiednich parametrów modelu, można też zadbać
-        o jak najlepszy tekst zapytania (promptu). Wyniki działania modelu będą jednak
-        wymagały weryfikacji. GPT3.5 nie jest więc narzędziem bezproblemowym, ale czy
-        dżinny zamieszkujące czarodziejskie lampy nie bywały kłopotliwe?</p>
+        </p>
+
+        <p>Próby wykorzystania dużych modeli językowych do ekstrakcji informacji z tekstów
+        napotykają często problem, którego źródłem jest sam przetwarzany tekst. Język używany
+        w opracowaniach bywa po prostu trudny do interpretacji dla modelu. Przykładem może być 
+        biogram Mariana Świeykowskiego, żyjącego w XIX wieku marszałka szlachty guberni wołyńskiej,
+        pochodzący z Polskiego Słownika Biograficznego (PSB t. 51, 2016-17, s. 377-379)
+        <label for="12-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-5" class="margin-toggle"/>
+        <span class="sidenote">
+        Polski Słowik Biograficzny dostępny jest online w repozytoriach <a href="https://rcin.org.pl/ihpan/dlibra/publication/79352/edition/65205">
+        RCIN</a>, aczkolwiek jest to dostęp limitowany.
+        </span>
+        . Człowiek
+        nie będzie miał problemu z interpretacją informacji podanych w tym tekście, jednak 'davinci-003'
+        poproszony o wypisanie krewnych i powinowatych, wraz z rodzajem relacji rodzinnych,
+        popełnia uparcie błąd dla jednej z 12 spokrewnionych osób, nazywając Rocha Kossowskiego
+        babcią bohatera biogramu. Można podejrzewać, że wynika to z konstrukcji zdania i przyjętego
+        w PSB sposobu zapisywania informacji z unikaniem powtarzania nazwisk czy stosowaniem skrótów.
+        Problematyczne zdanie brzmi: <em>"Ur. prawdopodobnie w Kołodnie (pow. krzemieniecki), był wnukiem
+        Leonarda (Leona) Marcina (zob.) i Rocha Kossowskiego (zob.), synem Adama Macieja (ok. 1780 — 1858),
+        kapitana 1. p. huzarów wojsk[...]"</em> gdzie mamy wymienionych dwóch dziadków bohatera,
+        w tym pierwszy z nich bez podania nazwiska (w domyśle Świeykowski).
+        </p>
+
+        <p>Po uproszczeniu tekstu (w tym powyższego fragmentu do:<em>"Był wnukiem Leonarda Marcina
+        Świeykowskiego a także Rocha Kossowskiego."</em>) model zwraca całkowicie poprawne
+        dane krewnych Mariana Świeykowskiego. Tym razem zapytanie zadano w języku angielskim,
+        stąd angielskie nazwy rodzajów pokrewieństwa.</p>
+
+        <p><strong>Prompt</strong>: Based on the given text, search for
+         all relatives and affinities of the main character. List the result in
+         the form of an unnumbered list with the type of kinship in parentheses.
+         For example:<br>
+         - John Kowalski (brother)<br>
+         - Anna (sister)<br>
+         If there is no information in the text about some types of kinship omit
+         these types.
+        </p>
+
+        <p>
+        Wynik:<br>
+        <ul>
+        <li>- Adam Maciej Świeykowski (father)</li><br>
+        <li>- Krystyna Świeykowski (mother)</li><br>
+        <li>- Leonard Marcin Świeykowski (grandfather)</li><br>
+        <li>- Roch Kossowski (grandfather)</li><br>
+        <li>- Olga Świeykowski (sister)</li><br>
+        <li>- Cezary Poniatowski (brother-in-law)</li><br>
+        <li>- Jadwiga Świeykowski (sister)</li><br>
+        <li>- Izabela Janina Sobańska (wife)</li><br>
+        <li>- Hieronim Sobański (father-in-law)</li><br>
+        <li>- Olga Maria Zofia Świeykowski (daughter)</li><br>
+        <li>- Stefan Grocholski (son-in-law)</li><br>
+        <li>- Maria Świeykowski (daughter)</li><br>
+        <li>- Leon Ledóchowski (son-in-law)</li><br>
+        </ul>
+        </p>
+
+        <p>
+        A przecież podczas automatycznego przetwarzania tekstów poszukujemy faktów,
+        'automatyczność' wyklucza z góry jakąś wstępną interpretacje przez człowieka,
+        chodzi właśnie o przeniesienie pracy na narzędzia informatyczne, by uzyskane dane
+        szybciej i sprawniej wykorzystać np. do tworzenia baz wiedzy.
+        <label for="12-5" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-5" class="margin-toggle"/>
+        <span class="sidenote">
+        Czy model językowy nie mógłby najpierw uprościć, streścić przetwarzanego tekstu
+        a dopiero potem przystąpić do ekstrakcji informacji? Niestety, należy się spodziewać
+        że błędy interpretacyjne, które model popełnia, przeniesie po prostu do uproszczonej wersji.
+        </span>
+        .
+        Problem lepszego przetwarzania bardziej zawiłych tekstów być może zostanie rozwiązany
+        w kolejnych wersjach modeli LLM, plotki głoszą, że GPT-4 pojawi się już w tym roku
+        (i że to ta nowa wersja obsługuje niedawno zaprezentowaną przez Microsoft integrację 
+        AI z wyszukiwarką Bing).
+        Z kolei przed nadinterpretacją lub skłonnościami 'halucynajcymi' modelu można się 
+        zabezpieczać używając odpowiednio jego parametrów, można też zadbać
+        o jak najlepszy tekst zapytania (promptu).
+        Wyniki działania modeli będą jednak zawsze wymagały weryfikacji. GPT-3.5 nie jest więc
+        narzędziem bezproblemowym, ale czy dżinny zamieszkujące czarodziejskie lampy nie
+        bywały kłopotliwe?</p>
         </section>
     </article>
 
