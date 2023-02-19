@@ -1592,8 +1592,9 @@
         jest trudna do odparcia. Jakie jednak praktyczne znaczenie może mieć ChatGPT
         czy ogólnie duże modele językowe (LLM) dla cyfrowego historyka?</p>
 
-        <p>Czym w ogóle jest GPT (Generative Pretrained Transformer), którego najnowszą odsłonę okresla się
-        często jako wersję GPT-3.5 (InstructGPT)? To właśnie tzw. duży model językowy (LLM)
+        <p>Czym w ogóle jest GPT (Generative Pretrained Transformer), którego najnowszą
+        odsłonę okresla się często jako wersję GPT-3.5 (nazywaną też InstructGPT)? To
+        właśnie tzw. duży model językowy (LLM)
         <label for="12-7" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-7" class="margin-toggle"/>
         <span class="sidenote">zob. <em>Language model</em>: <a href="https://en.wikipedia.org/wiki/Language_model" target="_blank" rel="noopener">Wikipedia</a>.
@@ -1780,18 +1781,27 @@
 
         <p>Jak w ogóle model językowy to robi, jak radzi sobie z zadaniami z zakresu NLP,
         użyte powyżej zapytania albo nie zawierają w ogóle przykładów albo jedynie
-        proste przykłady wyników? Możliwości modelu GPT-3.5 wynikają z rozmiarów architektury
+        proste przykłady wyników? Możliwości modelu GPT wynikają z rozmiarów architektury
         sieci (175 miliardów parametrów) oraz rozmiarów danych treningowych, użytych do
-        uczenia - zbiór tekstów liczył około biliona słów. Niektóre z cech modelu były niespodzianką
+        uczenia - zbiór tekstów liczył około biliona słów
+        <label for="12-14" class="margin-toggle sidenote-number"></label>
+        <input type="checkbox" id="12-14" class="margin-toggle"/>
+        <span class="sidenote">
+        Jak wygląda i działa architektura
+        transformerów np. modelu GPT można przeczytać w artykule na blogu Mirosława Mamczura
+        <a href="https://miroslawmamczur.pl/czym-jest-i-jak-dziala-transformer-siec-neuronowa/">
+        Czym jest i jak działa transformer (sieć neuronowa)?</a>
+        </span>.
+        Niektóre z cech modelu GPT-3 były niespodzianką
         nawet dla jego twórców na przykład umiejętność wykonywania poleceń w języku innym niż angielski
         <label for="12-13" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="12-13" class="margin-toggle"/>
         <span class="sidenote">
         <a href="https://twitter.com/janleike/status/1625207251630960640">Jan Leike tweet</a>
         </span>
-        . Mimo, że 93% użytego do trenowaia GPT-3 materiału uczącego to j. angielski,
-        model `davinci-003` radzi sobie całkiem dobrze np. z językiem polskim, a materiały
-        polskie stanowiły zaledwie 0.25% całości!
+        . Mimo, że 93% użytego do trenowaia GPT-3 materiału uczącego to teksty w języku
+        angielskim, model `davinci-003` radzi sobie całkiem dobrze także z innymi językami
+        np. z polskim, a materiały polskie stanowiły zaledwie 0.25% całości!
         </p>
 
         <p><strong>Skoro jest tak dobrze... a może wcale nie jest?</strong></p>
