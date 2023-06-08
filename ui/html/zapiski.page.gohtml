@@ -30,6 +30,7 @@
     <strong>2022-10-30</strong> <a href="#2022-10-30">spaCy i koreferencje, czyli Jerzy bawił we Włoszech a <strong>jego</strong> włości popadały w ruinę</a><br>
     <strong>2023-01-??</strong> <a href="#2023-01-??">Kraken, czyli HTR to jest to</a><br>
     <strong>2023-01-29</strong> <a href="#2023-01-29">Dżin z czarodziejskiej lampy czyli GPT 3.5</a><br>
+    <strong>2023-06-08</strong> <a href="#2023-06-08">Podręczny OCR. Jak odczytywać fragmenty tekstu z obrazów</a><br>
     </p>
     <p>Tłumaczenia i nowe wpisy pojawiają się też na platformie
     <a href="https://medium.com/@piotr.jaskulski">Medium</a>, na przykład:<br>
@@ -1932,5 +1933,67 @@
         bywały kłopotliwe?</p>
         </section>
     </article>
+
+    <article>
+    <hr>
+        <h2 id="2023-06-08">Podręczny OCR. Jak odczytywać fragmenty tekstu z obrazów (<strong>08.06.2023</strong>) </h2>
+
+        <section>
+        <p>
+        Skopiowanie tekstu nie jest problemem w przypadku współczesnych plików pdf, czy stron
+        internetowych, ciągle jednak spotyka się źródła zapisane w fomie pdf-ów bez warstwy
+        tekstowej, czy też w plikach graficznych w rodzaju jpg, djvu. Można je oczywiście poddać 
+        pełnemu rozpoznawaniu OCR w jednym z popularnych programów przeznaczonych do tego celu
+        jak FineReader, jednak często potrzebujemy tylko małego fragmentu tekstu i przydałoby
+        się spontanicznie zaznaczyć go na ekranie komputera i skopiować tekst do schowka.
+        </p>
+
+        <p>Z pomocą przychodzą narzędzia komercyjne w rodzaju ABBY ScreenReader, ale także liczne
+        programy typu opensource, oparte najczęściej na popularnym silniku ocr - tesseract.
+        Jednym z nich jest <a href="https://github.com/ianzhao05/textshot">textshot</a>, którego używam w systemie Ubuntu. Jego instalacja nie jest
+        najprostsza, chyba że na codzień używa się języka programowania Python, wówczas instalacja
+        przebiega podobnie do zwykłych bibliotek rozszerzających możliwości Pythona:
+        <pre>pip install textshot</pre>
+
+        <p>Wcześniej należy zadbać o instalację samego tesseracta, oraz jego pakietów
+        językowych np.:</p>
+
+        <pre>sudo apt install tesseract-ocr</pre>
+        <pre>sudo apt install tesseract-ocr-all</pre>
+
+        <p>Powyższe polecenia zainstalują silnik ocr i wszystkie dostępne języki, listę języków
+        można wyświetlić poprzez komendę:</p>
+
+        <pre>tesseract --list-langs</pre>
+
+        <p>Samą aplikację można uruchomić z linii poleceń, dodając język (lub języki) tekstu,
+        który będzie rozpoznawany:</p>
+
+        <pre>textshot pol</pre>
+
+        <p>
+        Ale dużo praktyczniej jest podpiać jej wywołanie pod skrót klawiszowy w systemie
+        (w Ubuntu Settings -> Keyboard Shortcuts). Po uruchomieniu ekran komputera ulega
+        przyciemnieniu a za pomocą myszy można zaznaczyć fragment, który ma zostać rozpoznany
+        przez OCR. Proces rozpoznawania przeprowadzany jest lokalnie na komputerze użytkownika
+        i nie trwa długo, po chwili wyświetlane jest powiadomienie, a odczytany tekst trafia
+        do systemowego schowka, skąd można go wkleić do pola bazy danych, czy też do notatnika.
+        </p>
+        <img src="/static/img_zapiski/textshot_in_action.png" width="600" alt="textshot w akcji"/>
+
+        <p>
+        Powyżej ilustracja z przykładem rozpoznawania fragmentu pliku w formacje djvu, z rozpoznanym
+        już tekstem w edytorze tekstowym.
+        </p>
+
+        <p>
+        Czy textshot będzie działać w systemie Windows? Prawdopodobnie tak, ale istnieją też inne,
+        prostsze w instalacji programy, również wykorzystujące tesseract ocr, np.
+        <a href="https://github.com/danpla/dpscreenocr">dpScreenOCR</a>, czy też korzystający
+        do rozpoznawania ocr z API systemu Windows <a href="https://learn.microsoft.com/en-us/windows/powertoys/text-extractor">
+        TextExtractor</a>, będący częścią serii PowerToys.
+        </section>
+    </article>
+
 
 {{end}}
