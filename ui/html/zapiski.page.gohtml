@@ -2030,16 +2030,16 @@
         <p>
         Wiedza i fakty są natomiast domeną encyklopedii (np. Wikipedii), a w szczególności baz
         (grafów) wiedzy (knowledge graph - KG), takich jak wikidata.org. Można w ciągu ostatnich
-        kilku miesięcy intensywnego rowoju AI zauwaźyć kilka trendów próbujących łączyć te dwa
+        kilku miesięcy intensywnego rowoju AI zauważyć kilka trendów próbujących łączyć te dwa
         światy: LLM i grafy wiedzy.
         Dość oczywistym pomysłem było zaprzęgnięcie modeli GPT do generowania zapytań w języku
         SPARQL - języku zapytań wykorzystywanym w m.in. Wikidata Query Service (WQS), który -
         szczególnie dla humanistów - nie jest technologią prostą i łatwą w użyciu. I skorzystanie
         ze zdolności modelu językowego do przełożenia pomysłów w języku naturalnym na zapytanie
         w SPARQL jest dziś możliwe, model GPT-4 generuje je całkiem poprawnie. Poproszony na
-        przykład o przygotowanie zapytania zwracającego listę krółów Polski, z ograniczeniem
-        do tych, którzy zmarli między rokiem 1300 a 1650, przygotowuje działający kod SPARQL
-        gotowy do wklejenia w WQS:
+        przykład o przygotowanie zapytania zwracającego listę królów Polski, z ograniczeniem
+        do tych, którzy zmarli między rokiem 1300 a 1650, przygotowuje działający kod SPARQL,
+        który można wkleić i uruchomić w WQS:
         </p>
 
         <pre>
@@ -2070,10 +2070,10 @@ ORDER BY ?data_śmierci
         </span>
         Jednym z wyzwań jest zaznajomienie modelu ze strukturą danych grafu wiedzy, np.
         właściwościami i podstawowymi elementami w wikidata.org (te GPT częściowo zna,
-        ale nie zna struktury np. niezależnych instancji wikibase). Innym weryfikacja poprawności
+        ale nie zna struktury np. niezależnych instancji wikibase). Innym - weryfikacja poprawności
         wygenerowanego zapytania, które może zawierać nie tylko łatwe do wychwycenia błędy formalne,
         skutkujące błędem wykonania (niełatwe z kolei do poprawienia przez osobę słabo znającą SPARQL),
-        ale także zapytania formalnie poprawne lecz zwracające nie całkem poprawne i oczekiwane
+        ale także zapytania formalnie poprawne lecz zwracające nie całkiem poprawne i oczekiwane
         wyniki. Można jednak spodziewać się, że takie mechanizmy będą w niedługim czasie
         dostępne i popularne, uzupełniając możliwości oferowane przez wizualne kreatory zapytań
         w rodzaju Sparnatural czy Wisecube Visual Query Builder.
@@ -2083,7 +2083,7 @@ ORDER BY ?data_śmierci
         Na ostatniej konferencji "Knowledge Graph Conference 2023" Denny Vrandečić (wikidata.org)
         przedstawił wykład o tytule "The Future of Knowledge Graphs in a World of Large Language
         Models", którego omówienie wrzucił też na <a href="https://www.youtube.com/watch?v=WqYBx2gB6vA" target="_blank" rel="noopener">Youtube</a>,
-        warto posłuchać jak możliwości efektywnego wykorzystania modeli językowych wyglądają
+        warto posłuchać jak świat LLM i możliwości efektywnego wykorzystania modeli językowych wyglądają
         z punktu widzenia twórców największej publicznej bazy wiedzy.
         </p>
 
@@ -2094,21 +2094,21 @@ ORDER BY ?data_śmierci
         <label for="14-1" class="margin-toggle sidenote-number"></label>
         <input type="checkbox" id="14-1" class="margin-toggle"/>
         <span class="sidenote">
-        Można o nim poczytać w artykule: "Large Language Model = Knowledge Graph Store? Yes, by Fine-Tuning LLM With KG"
+        Można o nim poczytać np. w artykule: "Large Language Model = Knowledge Graph Store? Yes, by Fine-Tuning LLM With KG"
         (<a href="https://betterprogramming.pub/large-language-model-knowledge-graph-store-yes-by-fine-tuning-llm-with-kg-f88b556959e6" target="_blank" rel="noopener">
         Link</a>).
         </span>, jednak na dłuższą metę wydaje się niepraktyczne. Pierwszym problemem
-        jest koszt procesu douczania później koszt korzystania z douczonego modelu. Jeżeli
-        mowa o skorzystaniu z modeli OpenAI dochodzi do tego jakość modelu bazowego,
-        firma udostępnia do douczania jedynie starsze ze swoich modeli, czyli w najlepszym
+        jest koszt procesu douczania a później koszt korzystania z douczonego modelu. Jeżeli
+        mowa o skorzystaniu z modeli firmy OpenAI dochodzi do tego jakość modelu bazowego,
+        OpenAI udostępnia do douczania jedynie starsze ze swoich modeli, czyli w najlepszym
         przypadku gpt-3 o wyraźnie gorszych możliwościach niż gpt-4, natomiast cena
-        korzystania z douczonego już modelu będzie wyraźnie wyższa niż w przypadku
-        standardowego (lepszego) gpt-4. Innym problemem jest samo douczanie, dane
+        korzystania z douczonego już modelu będzie już wyraźnie wyższa niż w przypadku
+        standardowego (i lepszego) gpt-4. Innym problemem jest samo douczanie, dane
         w grafach wiedzy zmieniają się, są dodawane, poprawiane, jak przeprowadzać 
         ciągłe douczanie modelu? Czy wielokrotne powtarzany fine-tuning nie spowoduje
-        'zapominania' informacji nauczonych w poprzednich sesjach douczania? Czy może
-        douczać model bazowy cyklicznie, na podstawie aktualizowanej bazy wiedzy?
-        Obecnie trudno powiedzieć czy to byłoby wykonalne i skuteczne, na pewno zaś
+        'zapominania' informacji nauczonych w poprzednich sesjach douczania? A może
+        douczać model bazowy cyklicznie od zera, na podstawie aktualizowanej całej bazy wiedzy?
+        Obecnie trudno powiedzieć czy to byłoby wykonalne i skuteczne, na pewno byłoby
         kosztowne.
         </p>
 
@@ -2123,8 +2123,8 @@ ORDER BY ?data_śmierci
         zapytania i na tej podstawie udzielić odpowiedzi w języku naturalnym, nawet
         jeżeli tekst będący podstawą odpowiedzi nie był elementem korpusu uczącego
         w czasie trenowania modelu. Korzystają z takiego mechanizmu na przykład firmy,
-        które mogą użyć swoich wewnętrznych dokumentów i tekstów niedostępnych publicznie,
-        model LLM obsługujący formowy chat może w ten sposób stać się np. asystentem
+        które mogą użyć swoich wewnętrznych dokumentów i tekstów niedostępnych publicznie.
+        Model LLM obsługujący firmowy chat może w ten sposób stać się np. asystentem
         użytkownka skomplikowanego systemu informatycznego i mając dostęp do jego dokumentacji
         udzielać konkretnej odpowiedzi na zadawane przez użytkowników pytania.
         Można też w ten sam sposób stworzć asystenta udzielającego porad na temat
@@ -2134,14 +2134,14 @@ ORDER BY ?data_śmierci
         </p>
 
         <p>
-        Przykład takiego rozwiązania jest opisywany na blogu firmy neo4j - twórców
+        Przykład takiego rozwiązania jest opisywany na blogu firmy Neo4j - twórców
         grafowej bazy danych o tej samej nazwie
         (<a href="https://neo4j.com/developer-blog/context-aware-knowledge-graph-chatbot-with-gpt-4-and-neo4j/" target="_blank" rel="noopener">Link</a>).
         Artykuł omawia tworzenie chatbota, który jest w stanie skorzystać z danych
         zawartych w bazie neo4j. Pytanie użytkownka jest tłumaczone przez gpt na
         instrukcje języka Cypher służące do komunikacji z neo4j, następnie mechanizm
-        chatbota wykorzystuje te instrukcje i pobiera informacje z bazy neoj4, wyniki
-        są przesyłane ponownie do gpt, by ten utworzył na ich podstawie odpowiedź 
+        chatbota wykorzystuje wygenerowane instrukcje i pobiera informacje z bazy neoj4, wyniki
+        przesyłane są ponownie do gpt, by ten utworzył na ich podstawie odpowiedź 
         w języku naturalnym, dopiero ta jest prezentowana użytkownikowi.
         </p>
 
@@ -2151,8 +2151,8 @@ ORDER BY ?data_śmierci
         (<a href="https://medium.com/neo4j/knowledge-graphs-llms-fine-tuning-vs-retrieval-augmented-generation-30e875d63a35" target="_blank" rel="noopener">Link</a>)
         omawia oba podejścia do rozszerzania wiedzy modelu - fine-tuning i rozszerzanie
         z użyciem zewnętrznych informacji (retrieval-augmented), zalety i wady obu
-        rozwiązań, oraz niektóre narzędzia które są wykorzystywane do pobierania danych
-        z zewnętrzych źródeł i przekazywania do kontesktu zapytania dla modelu
+        rozwiązań, oraz niektóre narzędzia, które są wykorzystywane do pobierania danych
+        z zewnętrznych źródeł i przekazywania ich do kontekstu zapytania dla modelu
         (LangChain, LlamaIndex).
         </p>
 
@@ -2162,7 +2162,7 @@ ORDER BY ?data_śmierci
         można wyobrazić sobie korzystanie równolegle z wielu baz wiedzy i zindekswanych
         korpusów tekstów, krytyczną rolę pełnią tu mechanizmy wyszukiwania w tekstach
         i grafach, od ich jakości zależy jakość odpowiedzi. Ograniczeniem jest oczywiście
-        wielkość kontekstu przetwarzanego przez model, można jednak spodziewać się,
+        wielkość kontekstu przetwarzanego przez model, można jednak przyjąć,
         patrząc na prowadzone w tym kierunku prace, że wielkość kontekstu będzie się
         w nowych modelach systematycznie zwiększać.
         </p>
@@ -2184,7 +2184,7 @@ ORDER BY ?data_śmierci
         zapytanie. System korzystający z GPT może wówczas uruchomić daną funkcję pobierając dane
         np. z wikidata.org dotyczące tej postaci i przekazać je w kolejnej iteracji zapytania
         do modelu, który na ich podstawie sformułuje odpowiedź w języku naturalnym. To kolejna
-        funkjconalność rozszerzająca możliwości modeli GPT.
+        funkcjonalność rozszerzająca możliwości modeli GPT.
         </p>
 
         <p>
@@ -2201,8 +2201,8 @@ ORDER BY ?data_śmierci
         i LLM może oczywiście współistnieć i współpracować. Ale czy wobec gwałtownego
         rozwoju modeli językowych, dostępności szybkich baz wektorowych pracochłonne
         tworzenie grafów wiedzy ma sens? Czy model przetwarzający teksty i wyszukujący
-        w nich potrzebną wiedzę, a następnie udzielający odpowiedzi w jezyku naturalnym
-        nie jest bardziej oczekiwanym przez użytkowików narzędziem, niż skomplikowane grafy
+        w nich potrzebną wiedzę, a następnie udzielający odpowiedzi w języku naturalnym
+        nie jest bardziej oczekiwanym przez użytkowników narzędziem, niż skomplikowane grafy
         wiedzy z ich zawiłymi językami zapytań? Nawet jeżeli ten sam model mógłby skorzystać 
         z danych zawartych w grafie, to jeżeli mechanizmy korzystające z samych
         korpusów tekstów będą szybkie i skuteczne, czy praca włożona w tworzenie
